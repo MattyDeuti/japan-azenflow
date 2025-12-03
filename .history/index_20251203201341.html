@@ -43,10 +43,6 @@
     <link rel="preload" href="fonts/inter/inter-v13-latin-800.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/noto-sans-jp/noto-sans-jp-v42-latin_japanese-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- 🚀 OPTIMIZATION 1: Preload critical CSS -->
-    <link rel="preload" href="styles/main.css" as="style">
-    <link rel="preload" href="styles/pages/index.css" as="style">
-
     <!-- Styles globaux (critiques - chargement synchrone) -->
     <link rel="stylesheet" href="styles/main.css">
 
@@ -243,8 +239,7 @@
                             <div class="phone-screen">
                                 <div class="phone-notch"></div>
                                 <div class="phone-content">
-                                    <!-- 🚀 OPTIMIZATION 2: Added fetchpriority="high" for LCP improvement -->
-                                    <video class="phone-video" autoplay loop muted playsinline fetchpriority="high">
+                                    <video class="phone-video" autoplay loop muted playsinline>
                                         <source src="videos/demo-line.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -270,12 +265,11 @@
 
             <div class="azenflow-features-grid">
                 <!-- Card 1 -->
-                <!-- 🚀 OPTIMIZATION 3: Removed loading="lazy" from first visible images -->
                 <div class="azenflow-card reveal-on-scroll">
                     <div class="azenflow-icon" style="display: flex; justify-content: center; align-items: center;">
                         <picture>
                             <source srcset="images/document.webp" type="image/webp">
-                            <img src="images/document.png" alt="AIによるドキュメント学習・自動化" style="width: 6.8rem; height: 6.8rem; object-fit: contain;" width="220" height="220">
+                            <img src="images/document.png" alt="AIによるドキュメント学習・自動化" style="width: 6.8rem; height: 6.8rem; object-fit: contain;" width="220" height="220" loading="lazy">
                         </picture>
                     </div>
                     <h3 class="azenflow-card-title" data-ja="技術的な設定ゼロ" data-en="Zero Technical Setup">
@@ -300,7 +294,7 @@
                     <div class="azenflow-icon" style="display: flex; justify-content: center; align-items: center;">
                         <picture>
                             <source srcset="images/message.webp" type="image/webp">
-                            <img src="images/message.png" alt="定型文ではない自然なAI会話" style="width: 8rem; height: 8rem; object-fit: contain;" width="260" height="260">
+                            <img src="images/message.png" alt="定型文ではない自然なAI会話" style="width: 8rem; height: 8rem; object-fit: contain;" width="260" height="260" loading="lazy">
                         </picture>
                     </div>
                     <h3 class="azenflow-card-title" data-ja="自然なAI会話" data-en="Natural AI Conversations">

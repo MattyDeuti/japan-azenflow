@@ -3,75 +3,89 @@
 
     <!-- Homepage - Priorité maximale -->
     <url>
-        <loc>https://azenflow.com/</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- Services principaux - Haute priorité -->
     <url>
-        <loc>https://azenflow.com/line-chatbot.html</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/line-chatbot.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://azenflow.com/web-chatbot.html</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/web-chatbot.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://azenflow.com/email-assistant.html</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/email-assistant.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://azenflow.jp/translation-chatbot.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Pages utilitaires -->
     <url>
-        <loc>https://azenflow.com/faq.html</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/faq.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://azenflow.com/contact.html</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/contact.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Pages informatives -->
     <url>
-        <loc>https://azenflow.com/about.html</loc>
-        <lastmod>2025-11-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://azenflow.com/chatbot-comparison.html</loc>
-        <lastmod>2025-11-24</lastmod>
+        <loc>https://azenflow.jp/chatbot-comparison.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
+    <url>
+        <loc>https://azenflow.jp/advantages.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Pages informatives -->
+    <url>
+        <loc>https://azenflow.jp/about.html</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
     <!-- Pages légales - Basse priorité mais indexables -->
     <url>
-        <loc>https://azenflow.com/legal-notice.html</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/legal-notice.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
     <url>
-        <loc>https://azenflow.com/privacy-policy.html</loc>
-        <lastmod>2025-11-12</lastmod>
+        <loc>https://azenflow.jp/privacy-policy.html</loc>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

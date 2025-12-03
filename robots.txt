@@ -1,6 +1,6 @@
-# Robots.txt - AzenFlow
-# https://azenflow.com/robots.txt
-# Dernière mise à jour : 12 novembre 2025
+# Robots.txt - AzenFlow Japan
+# https://azenflow.jp/robots.txt
+# Dernière mise à jour : 3 décembre 2025
 
 # ============================================
 # RÈGLES GÉNÉRALES - Tous les bots autorisés
@@ -8,8 +8,8 @@
 User-agent: *
 Allow: /
 
-# Référence au sitemap (10 pages indexables)
-Sitemap: https://azenflow.com/sitemap.xml
+# Référence au sitemap (12 pages indexables)
+Sitemap: https://azenflow.jp/sitemap.xml
 
 # Délai de politesse général (1 seconde entre requêtes)
 Crawl-delay: 1
@@ -79,4 +79,4 @@ Crawl-delay: 0
 # Crawl-delay: 0 = Aucune limite (bots de confiance)
 # Crawl-delay: 1 = 1 seconde entre requêtes (politesse)
 # Allow: / = Tout le site est accessible
-# Sitemap aide l'indexation des 10 pages
+# Sitemap aide l'indexation des 12 pages

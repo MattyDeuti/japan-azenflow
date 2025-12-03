@@ -1,0 +1,82 @@
+# Robots.txt - AzenFlow
+# https://azenflow.com/robots.txt
+# Dernière mise à jour : 12 novembre 2025
+
+# ============================================
+# RÈGLES GÉNÉRALES - Tous les bots autorisés
+# ============================================
+User-agent: *
+Allow: /
+
+# Référence au sitemap (10 pages indexables)
+Sitemap: https://azenflow.com/sitemap.xml
+
+# Délai de politesse général (1 seconde entre requêtes)
+Crawl-delay: 1
+
+# ============================================
+# GOOGLE BOT - Priorité maximale
+# ============================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# ============================================
+# BING BOT
+# ============================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# ============================================
+# AUTRES BOTS COURANTS (SEO)
+# ============================================
+# Yandex (Russie)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Baidu (Chine)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
+
+# ============================================
+# BOTS IA (ChatGPT, Claude, Perplexity)
+# ============================================
+# GPTBot (ChatGPT training)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 0
+
+# Claude (Anthropic)
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 0
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0
+
+# ============================================
+# DISALLOW - Fichiers techniques (optionnel)
+# ============================================
+# Bloquer l'indexation des fichiers système si présents
+# User-agent: *
+# Disallow: /.git/
+# Disallow: /node_modules/
+# Disallow: /.vscode/
+
+# ============================================
+# NOTES
+# ============================================
+# Crawl-delay: 0 = Aucune limite (bots de confiance)
+# Crawl-delay: 1 = 1 seconde entre requêtes (politesse)
+# Allow: / = Tout le site est accessible
+# Sitemap aide l'indexation des 10 pages

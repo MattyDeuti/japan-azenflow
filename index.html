@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================= SEO PRINCIPAL (Ciblage Japon) ================= -->
+    <!-- Titre optimisé : Marque + Bénéfice + Mots-clés -->
+    <title>AzenFlow｜LINE・問い合わせ対応をAIで完全自動化【無料トライアル】</title>
+    
+    <!-- Description optimisée : Structure Problème/Solution -->
+    <meta name="description" content="【月額19,990円〜】LINE公式アカウントやWebサイトの問い合わせ対応をAIで自動化。スタッフを増やさずに24時間365日即レス対応。導入最短1日。FAQや資料を共有するだけで設定完了。まずは2週間無料でお試しください。">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="LINE自動応答, AIチャットボット, カスタマーサポート自動化, 問い合わせ削減, AzenFlow, CS効率化, LINE Bot AI">
+
+    <!-- Canonical : Indique à Google que c'est la page officielle -->
+    <link rel="canonical" href="https://azenflow.jp/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- ================= SOCIAL SEO (LINE & TWITTER) ================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azenflow.jp/">
+    <meta property="og:site_name" content="AzenFlow (アゼンフロー)">
+    <meta property="og:title" content="スタッフを増やさずに、顧客対応をAIで完全自動化 | AzenFlow">
+    <meta property="og:description" content="LINE・Web・メールの問い合わせをAIが3秒で自動回答。導入は資料を共有するだけ。2週間無料トライアル実施中。">
+    <meta property="og:image" content="https://azenflow.jp/images/og-home-japan.jpg">
+    <meta property="og:locale" content="ja_JP">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AzenFlow｜LINE顧客対応をAIで自動化">
+    <meta name="twitter:description" content="問い合わせ対応を80%削減。月額19,990円からのAIチャットボット。">
+    <meta name="twitter:image" content="https://azenflow.jp/images/og-home-japan.jpg">
+
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+
+    <!-- Preload critical fonts (évite le CLS) -->
+    <link rel="preload" href="fonts/inter/inter-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter/inter-v13-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/noto-sans-jp/noto-sans-jp-v42-latin_japanese-700.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Styles globaux (critiques - chargement synchrone) -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Styles de la page (critiques - chargement synchrone) -->
+    <link rel="stylesheet" href="styles/pages/index.css">
+
+    <!-- Styles non-critiques - Async loaded for performance -->
+    <link rel="stylesheet" href="styles/animations.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/fonts.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/components/phone-mockup.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/components/floating-cta.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/components/back-to-top.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/components/cookie-banner.css" media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="styles/animations.css">
+        <link rel="stylesheet" href="styles/fonts.css">
+        <link rel="stylesheet" href="styles/components/phone-mockup.css">
+        <link rel="stylesheet" href="styles/components/floating-cta.css">
+        <link rel="stylesheet" href="styles/components/back-to-top.css">
+        <link rel="stylesheet" href="styles/components/cookie-banner.css">
+    </noscript>
+
+    <!-- Critical CSS (Inline) -->
+    <style>
+    /* ==================== CRITICAL CSS - HERO SECTION ==================== */
+    /* Stabilisation CLS */
+    .logo-image { width: 70px; height: 70px; aspect-ratio: 1 / 1; object-fit: contain; }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 80px; overflow: hidden; background: transparent; }
+    .hero-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; min-height: 100vh; contain: layout paint; }
+    .gradient-orb { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.3; animation: float 25s ease-in-out infinite; contain: layout paint; will-change: transform; }
+    .orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(139, 115, 85, 0.25) 0%, rgba(139, 115, 85, 0) 70%); top: -300px; right: -100px; }
+    .orb-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(168, 144, 128, 0.3) 0%, rgba(139, 92, 246, 0) 70%); bottom: -150px; left: -100px; animation-delay: -8s; }
+    .orb-3 { width: 450px; height: 450px; background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(6, 182, 212, 0) 70%); top: 40%; left: 50%; transform: translate(-50%, -50%); animation-delay: -15s; }
+    @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(30px, -30px) scale(1.05); } 66% { transform: translate(-25px, 25px) scale(0.98); } }
+    .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; padding: 5rem 0; position: relative; z-index: 1; }
+    .hero-title { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.03em; color: #3E362E; }
+    .hero-title div { display: block; margin-bottom: 0.3em; }
+    .hero-text { animation: none; } /* Désactiver l'animation initiale pour LCP */
+    .gradient-text { background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #8B6F47; display: inline-block; }
+    .btn-primary { padding: 1.125rem 2.5rem; background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%); color: white; border: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 24px rgba(139, 115, 85, 0.4); position: relative; overflow: hidden; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(91, 111, 219, 0.5); }
+    .btn-secondary { padding: 1.125rem 2.5rem; background: transparent; color: #8B6F47; border: 2px solid #8B6F47; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s; }
+    .btn-secondary:hover { background: #8B6F47; color: white; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(139, 115, 85, 0.3); }
+    .hero-cta { display: flex; gap: 1.25rem; margin-bottom: 3rem; flex-wrap: wrap; }
+    .hero-trust-badges { display: flex; gap: 2rem; flex-wrap: wrap; font-size: 1rem; color: #6B7280; font-weight: 600; }
+    .hero-trust-badges div { display: flex; align-items: center; gap: 0.5rem; }
+    .hero-trust-badges span { color: #8B6F47; font-size: 1.2em; }
+    /* Mobile responsive for critical CSS */
+    @media (max-width: 768px) {
+        .hero-content { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1rem; }
+        .hero-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+        .hero-title div { word-wrap: break-word; overflow-wrap: break-word; }
+    }
+    @media (max-width: 480px) {
+        .hero-content { padding: 2.5rem 1rem; }
+        .hero-title { font-size: clamp(1.375rem, 5.5vw, 1.75rem); }
+    }
+    @media (max-width: 375px) {
+        .hero-content { padding: 2rem 0.875rem; }
+        .hero-title { font-size: 1.25rem; }
+    }
+    </style>
+
+    <!-- ================= ADVANCED SCHEMA.ORG ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "AzenFlow",
+          "url": "https://azenflow.jp/",
+          "logo": "https://azenflow.jp/images/logo.png",
+          "sameAs": ["https://www.linkedin.com/in/matthias-marin/"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "availableLanguage": ["Japanese", "English"]
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "AzenFlow AI Chatbot",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Cloud, LINE, Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "19990",
+            "priceCurrency": "JPY",
+            "priceValidUntil": "2025-12-31",
+            "description": "LINEチャットボット ベースプラン"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "30",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "featureList": "LINE自動応答, FAQ自動生成, 多言語翻訳, 24時間対応"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://azenflow.jp/"
+          }]
+        }
+      ]
+    }
+    </script>
+    <script src="/scripts/structured-data.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="header-placeholder"></div>
+    <div id="floating-cta-placeholder"></div>
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <!-- H1 UNIQUE et Optimisé -->
+                    <h1 class="hero-title fade-in-up delay-1" style="line-height: 1.2;">
+                        <div style="margin-bottom: 0.3em;" data-ja="スタッフを増やさずに" data-en="Without adding staff">スタッフを増やさずに</div>
+                        <div class="gradient-text hero-gradient-multiline">
+                            <div class="hero-ja-version" data-ja="顧客対応を完全自動化">顧客対応を完全自動化</div>
+                            <div class="hero-en-version">
+                                <div data-en="Fully automate">Fully automate</div>
+                                <div data-en="customer support">customer support</div>
+                            </div>
+                        </div>
+                    </h1>
+
+                    <style>
+                        :lang(ja) .hero-ja-version { display: block; }
+                        :lang(ja) .hero-en-version { display: none; }
+                        :lang(en) .hero-ja-version { display: none; }
+                        :lang(en) .hero-en-version { display: block; }
+                        html:not([lang]) .hero-ja-version { display: block; }
+                        html:not([lang]) .hero-en-version { display: none; }
+                    </style>
+
+                    <div class="hero-subtitle-optimized fade-in-up delay-2">
+                        <div class="hero-speed-highlight" style="font-size: 1.5rem; font-weight: 700; color: #1F2937; line-height: 1.4;" data-ja="3つのAIソリューションで" data-en="With 3 AI solutions">
+                            3つのAIソリューションで
+                        </div>
+                        <div class="hero-human-benefit" style="font-size: 1.25rem; color: #6B7280; margin-top: 0.5rem;" data-ja="あらゆる顧客接点を自動化" data-en="Automate every customer touchpoint">
+                            あらゆる顧客接点を自動化
+                        </div>
+                    </div>
+
+                    <div class="hero-description-optimized fade-in-up delay-2" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
+                        <p style="margin-bottom: 0.8rem; font-size: 1.125rem; color: #1F2937;" data-ja="✓ LINE・Web・Emailの3チャネル対応" data-en="✓ 3 channels: LINE, Web, Email">
+                            <strong style="color: #8B6F47;">✓</strong> <strong>LINE・Web・Email</strong>の3チャネル対応
+                        </p>
+                        <p style="margin-bottom: 0.8rem; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 24時間365日、自動で顧客対応" data-en="✓ 24/7 automated customer support">
+                            <strong style="color: #8B6F47;">✓</strong> <strong>24時間365日</strong>、自動で顧客対応
+                        </p>
+                        <p style="margin-bottom: 0; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 最短当日から利用開始" data-en="✓ Start using from same day">
+                            <strong style="color: #8B6F47;">✓</strong> <strong>最短当日</strong>から利用開始
+                        </p>
+                    </div>
+
+                    <div class="hero-cta fade-in-up delay-3">
+                        <button class="btn-primary pulse" data-ja="無料相談を予約" data-en="Free Consultation">無料相談を予約</button>
+                        <button type="button" class="btn-secondary" id="downloadBrochureBtn" data-ja="資料ダウンロード" data-en="Download Brochure">資料ダウンロード</button>
+                    </div>
+
+                    <div class="trial-offer fade-in-up delay-3">
+                        <p class="trial-text" data-ja="LINEチャットボットを2週間無料でお試し • 初期費用ゼロ • クレカ不要" data-en="Try LINE Chatbot free for 2 weeks • No setup cost • No card required">
+                            <strong>LINEチャットボット</strong>を2週間無料でお試し • 初期費用ゼロ • クレカ不要
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="hero-visual fade-in-right">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-button-left"></div>
+                            <div class="phone-button-right-1"></div>
+                            <div class="phone-button-right-2"></div>
+                            <div class="phone-screen">
+                                <div class="phone-notch"></div>
+                                <div class="phone-content">
+                                    <video class="phone-video" autoplay loop muted playsinline>
+                                        <source src="videos/demo-line.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is AzenFlow Section -->
+    <section class="what-is-azenflow">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="AzenFlowとは？" data-en="What is AzenFlow?">
+                    AzenFlowとは？
+                </h2>
+                <p class="section-subtitle" data-ja="AzenFlowを使えば、AIがあなたの会社の「受付係」になります。LINE、サイト、メールでも質問にすぐ答えてくれるので、お客様を待たせません。" data-en="With AzenFlow, AI becomes your company's 'reliable receptionist.' Whether on LINE, your website, or email, it answers questions instantly, so customers never wait.">
+                    AzenFlowを使えば、AIがあなたの会社の「受付係」になります。LINE、サイト、メールでも質問にすぐ答えてくれるので、お客様を待たせません。
+                </p>
+            </div>
+
+            <div class="azenflow-features-grid">
+                <!-- Card 1 -->
+                <div class="azenflow-card reveal-on-scroll">
+                    <div class="azenflow-icon" style="display: flex; justify-content: center; align-items: center;">
+                        <picture>
+                            <source srcset="images/document.webp" type="image/webp">
+                            <img src="images/document.png" alt="AIによるドキュメント学習・自動化" style="width: 6.8rem; height: 6.8rem; object-fit: contain;" width="220" height="220" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="azenflow-card-title" data-ja="技術的な設定ゼロ" data-en="Zero Technical Setup">
+                        技術的な設定ゼロ
+                    </h3>
+                    <h4 class="azenflow-card-subtitle" data-ja="あなたが共有、私たちが構築" data-en="You Share, We Build">
+                        あなたが共有、私たちが構築
+                    </h4>
+                    <p class="azenflow-card-description" data-ja="FAQやマニュアルなどのビジネス文書をご提供いただくだけで、AIのトレーニングからプラットフォーム統合、最終テストまで、当社が一貫して対応します。お客様がコードを扱う必要はありません。" data-en="Simply send us your FAQs, manuals, or any business documents. Our team handles 100% of the technical setup—AI training, platform integration, and testing. You don't touch a single line of code.">
+                        FAQやマニュアルなどのビジネス文書をご提供いただくだけで、AIのトレーニングからプラットフォーム統合、最終テストまで、当社が一貫して対応します。お客様がコードを扱う必要はありません。
+                    </p>
+                    <div class="azenflow-card-note" data-ja="資料共有から最短1〜2日で準備完了" data-en="Ready in 1-2 days, not weeks">
+                        資料共有から最短1〜2日で準備完了
+                    </div>
+                    <div class="azenflow-card-note" style="margin-top: 0.5rem; font-size: 0.875rem; color: #8B6F47;" data-ja="あなたのデータは厳重に保護されます" data-en="Your data is securely protected">
+                        あなたのデータは厳重に保護されます
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="azenflow-card reveal-on-scroll delay-1">
+                    <div class="azenflow-icon" style="display: flex; justify-content: center; align-items: center;">
+                        <picture>
+                            <source srcset="images/message.webp" type="image/webp">
+                            <img src="images/message.png" alt="定型文ではない自然なAI会話" style="width: 8rem; height: 8rem; object-fit: contain;" width="260" height="260" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="azenflow-card-title" data-ja="自然なAI会話" data-en="Natural AI Conversations">
+                        自然なAI会話
+                    </h3>
+                    <h4 class="azenflow-card-subtitle" data-ja="定型パターンに頼らない、柔軟なAI会話" data-en="Smart, Not Scripted">
+                        定型パターンに頼らない、柔軟なAI会話
+                    </h4>
+                    <p class="azenflow-card-description" data-ja="常に最新のAI（Gemini 2.5、GPT-5）を搭載し、AzenFlowのチャットボットはシナリオや定型パターンに頼らず、文脈を理解して自然に応答します。お客様が尋ねていない情報を推測したり創作したりすることはありません。" data-en="Powered by the world's best AI (GPT-5, Gemini 2.5), our chatbots understand context and respond naturally based on YOUR documentation—never guessing or inventing information customers didn't ask for.">
+                        常に最新のAI（Gemini 2.5、GPT-5）を搭載し、AzenFlowのチャットボットはシナリオや定型パターンに頼らず、文脈を理解して自然に応答します。お客様が尋ねていない情報を推測したり創作したりすることはありません。
+                    </p>
+                    <div class="azenflow-card-note" data-ja="3秒で応答、24時間365日" data-en="Responds in 3 seconds, 24/7">
+                        3秒で応答、24時間365日
+                    </div>
+                    <div class="azenflow-card-note" style="margin-top: 0.5rem;" data-ja="常に最新かつ最適なAI技術を選定し、導入しています" data-en="Always selecting and implementing the latest and best AI technology">
+                        常に最新かつ最適なAI技術を選定し、導入しています。
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="azenflow-card reveal-on-scroll delay-2">
+                    <div class="azenflow-icon" style="display: flex; justify-content: center; align-items: center;">
+                        <picture>
+                            <source srcset="images/hands.webp" type="image/webp">
+                            <img src="images/hands.png" alt="AIと人間のハイブリッド対応" style="width: 11.2rem; height: 11.2rem; object-fit: contain;" width="360" height="360" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="azenflow-card-title" data-ja="人間とAIの協働" data-en="Human-AI Collaboration">
+                        人間とAIの協働
+                    </h3>
+                    <h4 class="azenflow-card-subtitle" data-ja="AIが80%を処理、あなたは重要なことに集中" data-en="AI Handles 80%, You Handle What Matters">
+                        AIが80%を処理、あなたは重要なことに集中
+                    </h4>
+                    <p class="azenflow-card-description" data-ja="AIが繰り返しの質問に即座に回答。複雑なケースは、会話の全文脈とともに自動的にあなたのチームに転送されます。スタッフは高付加価値の仕事に集中でき、お客様は決して待つことがありません。" data-en="AI instantly answers repetitive questions. Complex cases automatically transfer to your team with full conversation context. Your staff focuses on high-value work while customers never wait.">
+                        AIが繰り返しの質問に即座に回答。複雑なケースは、会話の全文脈とともに自動的にあなたのチームに転送されます。スタッフは高付加価値の仕事に集中でき、お客様は決して待つことがありません。
+                    </p>
+                    <div class="azenflow-card-note" data-ja="人間の判断が必要な場合はスマートに引き継ぎ" data-en="Smart handoff when human judgment is needed">
+                        人間の判断が必要な場合はスマートに引き継ぎ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-content">
+                <div class="section-header">
+                    <h2 class="section-title" data-ja="お客様対応、こんな悩みありませんか？" data-en="Are you facing these challenges in customer support?">
+                        お客様対応、こんな悩みありませんか？
+                    </h2>
+                    <p class="section-subtitle" data-ja="多くの企業が同じ課題に直面しています" data-en="Many companies face the same challenges">
+                        多くの企業が同じ課題に直面しています
+                    </p>
+                </div>
+
+                <div class="problem-grid">
+                    <!-- Problem 1 -->
+                    <div class="problem-card-wrapper reveal-on-scroll">
+                        <div class="problem-icon-above">
+                            <picture>
+                                <source srcset="images/waiting.webp" type="image/webp">
+                                <img src="images/waiting.png" alt="顧客の待ち時間が長いことによる機会損失" width="520" height="520" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="problem-card" style="border-left-color: #8B6F47;">
+                            <h3 class="problem-title" style="color: #EF4444;" data-ja="お客様を待たせてしまっている" data-en="Making customers wait">
+                                お客様を待たせてしまっている
+                            </h3>
+                            <p class="problem-description" data-ja="お客様は 5分も待てません。返信が遅れると、その間に競合へ流れてしまいます。" data-en="Customers won't wait 5 minutes. Delayed response means they go to competitors.">
+                                お客様は 5分も待てません。返信が遅れると、その間に競合へ流れてしまいます。
+                            </p>
+                            <div class="problem-stat" data-ja="→ 約70%のお客様が5分以内に離脱" data-en="→ 70% leave within 5 min">
+                                → 約70%のお客様が5分以内に離脱
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem 2 -->
+                    <div class="problem-card-wrapper reveal-on-scroll delay-1">
+                        <div class="problem-icon-above">
+                            <picture>
+                                <source srcset="images/always.webp" type="image/webp">
+                                <img src="images/always.png" alt="同じ質問への繰り返し対応による業務負担" class="problem-icon-always" width="670" height="670" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="problem-card" style="border-left-color: #8B6F47;">
+                            <h3 class="problem-title" style="color: #EF4444;" data-ja="同じ質問への繰り返し対応で業務が止まる" data-en="Handling repetitive questions">
+                                同じ質問への繰り返し対応で業務が止まる
+                            </h3>
+                            <p class="problem-description" data-ja="毎日同じ質問への対応に追われ、スタッフの手が重要な業務まで回らなくなることがあります。" data-en="Staff overwhelmed by simple questions, can't focus on important work.">
+                                毎日同じ質問への対応に追われ、スタッフの手が重要な業務まで回らなくなることがあります。
+                            </p>
+                            <div class="problem-stat" data-ja="→ 問い合わせの約80%は&quot;毎回同じ質問&quot;" data-en="→ 80% of questions are repetitive">
+                                → 問い合わせの約80%は"毎回同じ質問"
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem 3 -->
+                    <div class="problem-card-wrapper reveal-on-scroll delay-2">
+                        <div class="problem-icon-above">
+                            <picture>
+                                <source srcset="images/money.webp" type="image/webp">
+                                <img src="images/money.png" alt="カスタマーサポートの人件費増加" width="520" height="520" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="problem-card" style="border-left-color: #8B6F47;">
+                            <h3 class="problem-title" style="color: #EF4444;" data-ja="カスタマーサポートの人件費が増え続ける" data-en="Support costs keep rising">
+                                カスタマーサポートの人件費が増え続ける
+                            </h3>
+                            <p class="problem-description" data-ja="問い合わせ対応のために人員を増やすしかなく、年間で数百万円規模のコストが発生することも。" data-en="Only option is hiring more people, but labor costs run into millions per year.">
+                                問い合わせ対応のために人員を増やすしかなく、年間で数百万円規模のコストが発生することも。
+                            </p>
+                            <div class="problem-stat" data-ja="→ 年間数百万円の人件費負担" data-en="→ Millions per year in costs">
+                                → 年間数百万円の人件費負担
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="problem-solution reveal-on-scroll delay-5">
+                    <div class="solution-badge">
+                        <span style="color: black;" data-ja="でも、解決策があります" data-en="But there's a solution">
+                             でも、解決策があります
+                        </span>
+                    </div>
+                    <p class="solution-text" data-ja="↓ 実際、どう変わるのか？次のセクションで確認してください ↓" data-en="↓ How does it actually change? Check the next section ↓">
+                        ↓ 実際、どう変わるのか？次のセクションで確認してください ↓
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="all-include-box reveal-on-scroll">
+                <h3 class="all-include-title" data-ja="LINE・Web・Emailで顧客対応を完全自動化" data-en="Fully automate customer support on LINE, Web, and Email">LINE・Web・Emailで顧客対応を完全自動化</h3>
+                <div class="all-include-grid">
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/robot.webp" type="image/webp">
+                                <img src="images/robot.png" alt="24時間365日稼働するAIロボット" class="include-icon-img" width="200" height="200" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="AIが24時間365日対応" data-en="AI handles inquiries 24/7">AIが24時間365日対応</div>
+                            <div class="include-sub-text" data-ja="従業員の代わりにお問い合わせに即座に回答" data-en="Responds to inquiries instantly instead of your employees">従業員の代わりにお問い合わせに即座に回答</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/clock.webp" type="image/webp">
+                                <img src="images/clock.png" alt="スピーディーな導入設定" class="include-icon-img" width="170" height="170" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="スピード導入" data-en="Fast Deployment">スピード導入</div>
+                            <div class="include-sub-text" data-ja="最短1日〜1週間で導入完了（サービスにより異なる）" data-en="Deploy in 1 day to 1 week (varies by service)">最短1日〜1週間で導入完了（サービスにより異なる）</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/message.webp" type="image/webp">
+                                <img src="images/message.png" alt="LINE・Web・メールのマルチチャネル対応" class="include-icon-img" width="260" height="260" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="3チャネル対応" data-en="3 Channel Support">3チャネル対応</div>
+                            <div class="include-sub-text" data-ja="LINE、Webサイト、メールで一貫したAI対応" data-en="Consistent AI support across LINE, website, and email">LINE、Webサイト、メールで一貫したAI対応</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/document.webp" type="image/webp">
+                                <img src="images/document.png" alt="AIによる資料の自動整理と活用" class="include-icon-img" width="220" height="220" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="資料の整理は不要" data-en="No document organization needed">資料の整理は不要</div>
+                            <div class="include-sub-text" data-ja="バラバラな資料でもAIが自動で整理して活用" data-en="AI automatically organizes and utilizes scattered documents">バラバラな資料でもAIが自動で整理して活用</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title" data-ja="AzenFlowの仕組み" data-en="How does AzenFlow work?">
+                    AzenFlowの仕組み
+                </h2>
+                <p class="section-subtitle" data-ja="あなたは資料を提供するだけ。あとは全てお任せください。" data-en="You provide your documentation. We handle everything else.">
+                    あなたは資料を提供するだけ。あとは全てお任せください。
+                </p>
+            </div>
+
+            <!-- 3 Steps Process -->
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step-card-wrapper reveal-on-scroll">
+                    <div class="step-icon-above">
+                        <picture>
+                            <source srcset="images/share.webp" type="image/webp">
+                            <img src="images/share.png" alt="資料共有してAIを学習" class="step-icon-share" width="520" height="520" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="step-card">
+                        <h3 class="step-title" data-ja="資料を共有" data-en="Share your documentation">
+                            資料を共有
+                        </h3>
+                        <p class="step-description" data-ja="FAQ、マニュアル、各種社内資料など、お持ちの資料をお送りください" data-en="Send us your FAQ, product manuals, policies, or any documentation you have.">
+                            FAQ、マニュアル、各種社内資料など、お持ちの資料をお送りください
+                        </p>
+                        <ul class="step-examples">
+                            <li data-ja="既存のFAQページ" data-en="Existing FAQ pages">既存のFAQページ</li>
+                            <li data-ja="カスタマーサービススクリプト" data-en="Customer service scripts">カスタマーサービススクリプト</li>
+                            <li data-ja="商品カタログ" data-en="Product catalogs">商品カタログ</li>
+                            <li data-ja="営業時間、連絡先情報" data-en="Operating hours, contact info">営業時間、連絡先情報</li>
+                            <li data-ja="PDF、文書、Webページ" data-en="Any PDFs, documents, web pages">PDF、文書、Webページ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card-wrapper reveal-on-scroll delay-1">
+                    <div class="step-icon-above">
+                        <picture>
+                            <source srcset="images/set.webp" type="image/webp">
+                            <img src="images/set.png" alt="AzenFlowによる初期設定と構築" class="step-icon-set" width="520" height="520" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="step-card">
+                        <h3 class="step-title" data-ja="全ての設定を実施" data-en="We set up everything">
+                            全ての設定を実施
+                        </h3>
+                        <p class="step-description" data-ja="私たちのチームがAIソリューションを設定します。技術的な作業は一切不要です。" data-en="Our team configures your AI solution. You don't touch anything technical.">
+                            私たちのチームがAIソリューションを設定します。技術的な作業は一切不要です。
+                        </p>
+                        <ul class="step-examples">
+                            <li data-ja="あなたの資料でAIを学習" data-en="AI learns from your documents">あなたの資料でAIを学習</li>
+                            <li data-ja="会社の話し方に合わせる" data-en="Match your company's tone">会社の話し方に合わせる</li>
+                            <li data-ja="LINE・サイト・メールに接続" data-en="Connect to LINE, site, email">LINE・サイト・メールに接続</li>
+                            <li data-ja="人が対応すべき時の切り替え" data-en="Handoff when human needed">人が対応すべき時の切り替え</li>
+                            <li data-ja="動作確認とテスト" data-en="Testing and verification">動作確認とテスト</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card-wrapper reveal-on-scroll delay-2">
+                    <div class="step-icon-above">
+                        <picture>
+                            <source srcset="images/live.webp" type="image/webp">
+                            <img src="images/live.png" alt="AIチャットボットの本番稼働" class="step-icon-live" width="520" height="520" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="step-card">
+                        <h3 class="step-title" data-ja="テスト、承認、そして稼働" data-en="Test, approve, and go live">
+                            テスト、承認、そして稼働
+                        </h3>
+                        <p class="step-description" data-ja="導入前にテスト可能。トライアルはサービスにより異なります。LINEチャットボットと翻訳チャットボットは2週間無料。満足したら本番稼働。" data-en="Test before committing — trial options vary by service. LINE Chatbot and Translation Chatbot include a free 2-week trial. Once satisfied, go live.">
+                            導入前にテスト可能。トライアルはサービスにより異なります。<strong style="color: #8B6F47;">LINEチャットボットと翻訳チャットボットは2週間無料</strong>。満足したら本番稼働。
+                        </p>
+                        <ul class="step-examples">
+                            <li data-ja="実際の会話でテスト" data-en="Try real conversations">実際の会話でテスト</li>
+                            <li data-ja="必要に応じて調整をリクエスト" data-en="Request adjustments if needed">必要に応じて調整をリクエスト</li>
+                            <li data-ja="フィードバックに基づいて改善" data-en="We refine based on feedback">フィードバックに基づいて改善</li>
+                            <li data-ja="トライアル期間中は無料" data-en="No payment during trial">トライアル期間中は無料</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="4つのAIサービス" data-en="Our 4 AI Solutions">4つのAIサービス</h2>
+                <p class="section-subtitle" data-ja="市場最高のAI技術を搭載。即座に回答。完璧な精度。技術的な煩わしさゼロ。" data-en="Powered by the best AI technology on the market. Instant responses. Perfect accuracy. Zero technical hassle.">
+                    市場最高のAI技術を搭載。即座に回答。完璧な精度。技術的な煩わしさゼロ。
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- LINE Chatbot -->
+                <div class="service-card reveal-on-scroll">
+                    <div class="service-badge most-popular" data-ja="最も人気" data-en="MOST POPULAR">最も人気</div>
+                    <div class="service-icon-large">
+                        <picture>
+                            <source srcset="images/zenkun.webp" type="image/webp">
+                            <img src="images/zenkun.png" alt="LINE公式アカウント自動化チャットボット" width="300" height="300" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="service-title" data-ja="LINEチャットボット" data-en="LINE Chatbot">LINEチャットボット</h3>
+                    <p class="service-description" data-ja="日本で最も使われているメッセージアプリで即座にカスタマーサポート。1日でセットアップ完了。" data-en="Instant customer support on Japan's #1 messaging app. Setup in 1 day.">
+                        日本で最も使われているメッセージアプリで即座にカスタマーサポート。1日でセットアップ完了。
+                    </p>
+                    <ul class="service-benefits">
+                        <li data-ja="3秒で24時間365日対応 - 質問の80%を自動化" data-en="Responds in 3 seconds, 24/7 - 80% of questions automated">3秒で24時間365日対応 - 質問の80%を自動化</li>
+                        <li data-ja="日本人の96%がLINEを使用 - 新アプリ不要" data-en="96% of people in Japan use LINE - No new app needed">日本人の96%がLINEを使用 - 新アプリ不要</li>
+                        <li data-ja="多言語サポート - 複数言語で理解・返信" data-en="Multilingual support - Understands multiple languages">多言語サポート - 複数言語で理解・返信</li>
+                        <li data-ja="人間へのスマート転送 - 複雑な質問は自動転送" data-en="Smart handoff to humans - Forwards complex questions">人間へのスマート転送 - 複雑な質問は自動転送</li>
+                    </ul>
+                    <div class="free-trial-badge" data-ja="✨ 2週間無料トライアル • セットアップ費用無料" data-en="✨ 2 WEEKS FREE TRIAL • NO SETUP FEE">
+                        ✨ 2週間無料トライアル • セットアップ費用無料
+                    </div>
+                    <div class="service-pricing-redesigned">
+                        <div class="price-main-small" data-ja="月額¥19,990〜（税抜）" data-en="Starting at ¥19,990/month (excluding tax)">月額¥19,990〜（税抜）</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="line-chatbot.html" class="service-button" data-ja="LINEボットの詳細を見る →" data-en="Learn More About LINE Chatbot →">
+                            LINEボットの詳細を見る →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Chatbot -->
+                <div class="service-card reveal-on-scroll delay-1">
+                    <div class="service-icon-large">
+                        <picture>
+                            <source srcset="images/message.webp" type="image/webp">
+                            <img src="images/message.png" alt="Webサイト用AIチャットボット" width="260" height="260" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="service-title" data-ja="Webサイトチャットボット" data-en="Website Chatbot">Webサイトチャットボット</h3>
+                    <p class="service-description" data-ja="LINEボットと同じ性能を、Webサイトに直接統合。お客様はサイトから離れることなく回答を得られます。" data-en="Same power as LINE bot, but directly on your website. Customers never leave your site.">
+                        LINEボットと同じ性能を、Webサイトに直接統合。お客様はサイトから離れることなく回答を得られます。
+                    </p>
+                    <ul class="service-benefits">
+                        <li data-ja="サイトから離脱せず即座に回答 - コンバージョン率向上" data-en="Instant answers without leaving site - Increases conversions">サイトから離脱せず即座に回答 - コンバージョン率向上</li>
+                        <li data-ja="3秒で同じ応答時間 - 最先端AIを搭載" data-en="Same 3-second response time - Powered by cutting-edge AI">3秒で同じ応答時間 - 最先端AIを搭載</li>
+                        <li data-ja="カスタマイズ可能なデザイン - ブランドに完璧にマッチ" data-en="Customizable design - Matches your brand perfectly">カスタマイズ可能なデザイン - ブランドに完璧にマッチ</li>
+                        <li data-ja="リード獲得モード - 訪問者情報を自動取得" data-en="Lead generation mode - Captures visitor info automatically">リード獲得モード - 訪問者情報を自動取得</li>
+                    </ul>
+                    <div class="trial-badge-conditional" data-ja="✨ 2週間無料トライアル* • 初期費用が必要な場合あり*" data-en="✨ 2 WEEKS FREE TRIAL* • SETUP FEE MAY APPLY*">
+                        ✨ 2週間無料トライアル* • 初期費用が必要な場合あり*
+                    </div>
+                    <p class="price-line" data-ja="月額¥29,990〜（税抜）" data-en="Starting at ¥29,990/month (excluding tax)">月額¥29,990〜（税抜）</p>
+                    <p class="setup-note">
+                        <span data-ja="*無料トライアルと初期費用はWebサイトの既存構成により異なります。" data-en="*Free trial and setup fees depend on your existing website configuration.">*無料トライアルと初期費用はWebサイトの既存構成により異なります。</span>
+                        <a href="contact.html" data-ja="お問い合わせ" data-en="Contact us">お問い合わせ</a><span data-ja="でカスタム見積もりを取得。" data-en=" for a custom quote.">でカスタム見積もりを取得。</span>
+                    </p>
+                    <div style="text-align: center;">
+                        <a href="web-chatbot.html" class="service-button" data-ja="Webボットの詳細を見る →" data-en="Learn More About Website Chatbot →">
+                            Webボットの詳細を見る →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Translation Bot -->
+                <div class="service-card reveal-on-scroll delay-2">
+                    <div class="service-icon-large">
+                        <picture>
+                            <source srcset="images/universal.webp" type="image/webp">
+                            <img src="images/universal.png" alt="LINEリアルタイム翻訳ボット" width="160" height="160" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="service-title" data-ja="LINE翻訳チャットボット" data-en="Real-Time Translation Bot">LINE翻訳チャットボット</h3>
+                    <p class="service-description" data-ja="言語の壁を即座に解消。会話の文脈を記憶して正確な翻訳を実現。" data-en="Break language barriers instantly. Conversation memory for context-aware translations.">
+                        言語の壁を即座に解消。会話の文脈を記憶して正確な翻訳を実現。
+                    </p>
+                    <ul class="service-benefits">
+                        <li data-ja="全言語を理解 - 自動検出して3秒で翻訳" data-en="Understands ALL languages - Auto-detects and translates in 3 seconds">全言語を理解 - 自動検出して3秒で翻訳</li>
+                        <li data-ja="文脈を理解した翻訳 - 会話履歴を記憶して精度向上" data-en="Context-aware translation - Remembers conversation history">文脈を理解した翻訳 - 会話履歴を記憶して精度向上</li>
+                        <li data-ja="市場最高のAI - 複雑な文法の違いも完璧に処理" data-en="Best AI on the market - Handles complex grammar differences">市場最高のAI - 複雑な文法の違いも完璧に処理</li>
+                        <li data-ja="LINEで動作 - シームレスな多言語会話" data-en="Works on LINE - Seamless multilingual conversations">LINEで動作 - シームレスな多言語会話</li>
+                    </ul>
+                    <div class="free-trial-badge" data-ja="✨ 2週間無料トライアル • セットアップ費用無料" data-en="✨ 2 WEEKS FREE TRIAL • NO SETUP FEE">
+                        ✨ 2週間無料トライアル • セットアップ費用無料
+                    </div>
+                    <div class="service-pricing-redesigned">
+                        <div class="price-main-small" data-ja="月額¥9,990〜（税抜）" data-en="Starting at ¥9,990/month (excluding tax)">月額¥9,990〜（税抜）</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="translation-chatbot.html" class="service-button" data-ja="翻訳ボットの詳細を見る →" data-en="Learn More About Translation Bot →">
+                            翻訳ボットの詳細を見る →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Email AI Assistant -->
+                <div class="service-card reveal-on-scroll delay-3">
+                    <div class="service-badge setup-fee-required" data-ja="⚠️ セットアップ費用が必要" data-en="⚠️ SETUP FEE REQUIRED">⚠️ セットアップ費用が必要</div>
+                    <div class="service-icon-large">
+                        <picture>
+                            <source srcset="images/letter.webp" type="image/webp">
+                            <img src="images/letter.png" alt="メール対応自動化AIアシスタント" width="140" height="140" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="service-title" data-ja="メールAIアシスタント" data-en="Email AI Assistant">メールAIアシスタント</h3>
+                    <p class="service-description" data-ja="メールを自動で分類、優先順位付け、返信作成。複雑な案件は適切な担当者に転送。" data-en="Automatically sorts, prioritizes, and responds to emails. Forwards complex cases to the right person.">
+                        メールを自動で分類、優先順位付け、返信作成。複雑な案件は適切な担当者に転送。
+                    </p>
+                    <ul class="service-benefits">
+                        <li data-ja="受信メールを自動分類 - 優先度高、定型、スパム" data-en="Auto-categorizes incoming emails - High priority, routine, spam">受信メールを自動分類 - 優先度高、定型、スパム</li>
+                        <li data-ja="返信ドラフトを生成 - 資料とポリシーに基づく" data-en="Generates draft responses - Based on your documentation">返信ドラフトを生成 - 資料とポリシーに基づく</li>
+                        <li data-ja="スマートルーティング - 適切な担当者に自動転送" data-en="Smart routing - Sends questions to the right team member">スマートルーティング - 適切な担当者に自動転送</li>
+                        <li data-ja="メール業務を70%削減 - 重要業務に集中可能" data-en="Reduces email workload by 70% - Focus on what matters">メール業務を70%削減 - 重要業務に集中可能</li>
+                    </ul>
+                    <div class="free-trial-badge" data-ja="⚠️ 無料トライアルなし • セットアップ費用が必要" data-en="⚠️ NO FREE TRIAL • SETUP FEE REQUIRED">
+                        ⚠️ 無料トライアルなし • セットアップ費用が必要
+                    </div>
+                    <div class="service-pricing-redesigned">
+                        <div class="price-main-small" data-ja="月額¥49,990〜（税抜）" data-en="Starting at ¥49,990/month (excluding tax)">月額¥49,990〜（税抜）</div>
+                        <div class="price-secondary-small" data-ja="セットアップ費用：¥49,900〜（税抜）" data-en="Setup fee: ¥49,900+ (excluding tax)">セットアップ費用：¥49,900〜（税抜）</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="email-assistant.html" class="service-button" data-ja="メールAIの詳細を見る →" data-en="Learn More About Email AI →">
+                            メールAIの詳細を見る →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Solutions Include -->
+            <div class="all-include-box reveal-on-scroll">
+                <h3 class="all-include-title" data-ja="すべてのサービスに含まれるもの" data-en="All Services Include">すべてのサービスに含まれるもの</h3>
+                <div class="all-include-grid">
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/robot.webp" type="image/webp">
+                                <img src="images/robot.png" alt="最新のAI技術" class="include-icon-img" width="200" height="200" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="常に最新・最高のAI" data-en="Always the latest and best AI">常に最新・最高のAI</div>
+                            <div class="include-sub-text" data-ja="GPT-5、Gemini 2.5など、常に最新モデルを使用" data-en="Always using the latest models like GPT-5, Gemini 2.5">GPT-5、Gemini 2.5など、常に最新モデルを使用</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/clock.webp" type="image/webp">
+                                <img src="images/clock.png" alt="24時間365日即時対応" class="include-icon-img" width="170" height="170" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="3秒で応答" data-en="3-second response time">3秒で応答</div>
+                            <div class="include-sub-text" data-ja="24時間365日、毎回即座に回答" data-en="24/7 instant answers, every time">24時間365日、毎回即座に回答</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/update.webp" type="image/webp">
+                                <img src="images/update.png" alt="ナレッジベースの更新" class="include-icon-img" width="170" height="170" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="知識ベースをいつでも更新" data-en="Update your knowledge base anytime">知識ベースをいつでも更新</div>
+                            <div class="include-sub-text" data-ja="FAQ、資料、ルールを必要に応じて変更 • 月2回の無料更新 • 追加更新可能" data-en="Modify FAQs, docs, and rules as needed • 2 free updates/month • Extra updates available">FAQ、資料、ルールを必要に応じて変更 • 月2回の無料更新 • 追加更新可能</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/hands.webp" type="image/webp">
+                                <img src="images/hands.png" alt="AIから人間へのスマート転送" class="include-icon-img" width="360" height="360" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="人間への自動転送" data-en="Smart handoff to humans">人間への自動転送</div>
+                            <div class="include-sub-text" data-ja="AIが回答できない場合、自動的にチームに転送" data-en="If AI can't answer, automatically forwards to your team">AIが回答できない場合、自動的にチームに転送</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/lock.webp" type="image/webp">
+                                <img src="images/lock.png" alt="エンタープライズ級セキュリティ" class="include-icon-img" width="170" height="170" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="エンタープライズ級のセキュリティ" data-en="Enterprise-grade security & encryption">エンタープライズ級のセキュリティ</div>
+                            <div class="include-sub-text" data-ja="HMAC認証、データ暗号化、スパム検出" data-en="HMAC verification, data encryption, spam detection">HMAC認証、データ暗号化、スパム検出</div>
+                        </div>
+                    </div>
+                    <div class="include-item">
+                        <span class="include-icon">
+                            <picture>
+                                <source srcset="images/message.webp" type="image/webp">
+                                <img src="images/message.png" alt="メールサポート付き" class="include-icon-img" width="260" height="260" loading="lazy">
+                            </picture>
+                        </span>
+                        <div class="include-content">
+                            <div class="include-main-text" data-ja="メールサポート付き" data-en="Email support included">メールサポート付き</div>
+                            <div class="include-sub-text" data-ja="営業日24時間以内に返信" data-en="Our team responds within 24 hours (business days)">営業日24時間以内に返信</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="services-final-cta reveal-on-scroll">
+                <h3 class="final-cta-title" data-ja="試すだけでも構いません" data-en="Just try it, no commitment">試すだけでも構いません</h3>
+                <p class="final-cta-text" data-ja="どのサービスがあなたのビジネスに最適か、無料相談でご提案します。" data-en="We'll recommend the best service for your business in a free consultation.">
+                    どのサービスがあなたのビジネスに最適か、無料相談でご提案します。
+                </p>
+                <a href="#contact" class="final-cta-button" data-ja="無料相談を予約する" data-en="BOOK FREE CONSULTATION">
+                    無料相談を予約する
+                </a>
+                <p class="final-cta-subtext" data-ja="トライアルオプションを確認 — サービスにより異なります" data-en="Or explore our trial options — availability varies by service">
+                    トライアルオプションを確認 — サービスにより異なります
+                </p>
+                <p class="trial-details" data-ja="LINEチャットボットと翻訳チャットボットは2週間無料トライアル付き。他のサービスについては、無料相談にて最適なテスト方法をご提案します。" data-en="LINE Chatbot and Translation Chatbot include a free 2-week trial. For other services, we'll discuss the best testing approach during your free consultation.">
+                    LINEチャットボットと翻訳チャットボットは2週間無料トライアル付き。他のサービスについては、無料相談にて最適なテスト方法をご提案します。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="experience-content">
+                <div class="experience-text reveal-on-scroll">
+                    <h2 class="section-title" data-ja="フランスで実証済み、今日本へ" data-en="Battle-Tested in France, Now in Japan">フランスで実証済み、今日本へ</h2>
+                    <h3 class="experience-subtitle" data-ja="フランスから日本へ：実証済みのAI専門知識をお届け" data-en="From France to Japan: Bringing Proven AI Expertise">フランスから日本へ：実証済みのAI専門知識をお届け</h3>
+
+                    <p class="experience-description" data-ja="2023年以来、フランスで30社以上の企業がAIを活用したカスタマーサポートの自動化に成功しました。小規模ECストアから成長中のSaaS企業まで、私たちのソリューションは100万件以上のメッセージを処理し、4.9/5の満足度評価を獲得しています。" data-en="Since 2023, we've helped 30+ businesses in France automate their customer support with AI. From small e-commerce stores to growing SaaS companies, our solutions have processed over 1 million messages with a 4.9/5 satisfaction rate.">
+                        2023年以来、フランスで30社以上の企業がAIを活用したカスタマーサポートの自動化に成功しました。小規模ECストアから成長中のSaaS企業まで、私たちのソリューションは100万件以上のメッセージを処理し、4.9/5の満足度評価を獲得しています。
+                    </p>
+
+                    <p class="experience-description experience-japan" data-ja="今、この実証済みの専門知識を日本へ — LINE・Webサイト・メールを日本語と日本のビジネス文化に最適化してお届けします。" data-en="Now, we're bringing this proven expertise to Japan — fully adapted for LINE, your website, and email in Japanese language and local business culture.">
+                        今、この実証済みの専門知識を日本へ — LINE・Webサイト・メールを日本語と日本のビジネス文化に最適化してお届けします。
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="stats-grid-enhanced">
+                        <div class="stat-box-enhanced">
+                            <div class="stat-icon">
+                                <picture>
+                                    <source srcset="images/company.webp" type="image/webp">
+                                    <img src="images/company.png" alt="導入企業実績" class="stat-icon-img" width="140" height="140" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="stat-number">30+</div>
+                            <div class="stat-text" data-ja="フランス企業" data-en="French Clients">フランス企業</div>
+                            <div class="stat-subtext" data-ja="導入成功" data-en="Successfully deployed">導入成功</div>
+                        </div>
+                        <div class="stat-box-enhanced">
+                            <div class="stat-icon">
+                                <picture>
+                                    <source srcset="images/star.webp" type="image/webp">
+                                    <img src="images/star.png" alt="顧客満足度評価" class="stat-icon-img" width="140" height="140" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="stat-number">4.9/5</div>
+                            <div class="stat-text" data-ja="顧客評価" data-en="Customer Rating">顧客評価</div>
+                            <div class="stat-subtext" data-ja="一貫して高評価" data-en="Consistently high">一貫して高評価</div>
+                        </div>
+                        <div class="stat-box-enhanced">
+                            <div class="stat-icon">
+                                <picture>
+                                    <source srcset="images/robot.webp" type="image/webp">
+                                    <img src="images/robot.png" alt="AI自動化率" class="stat-icon-img" width="200" height="200" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="stat-number">80%+</div>
+                            <div class="stat-text" data-ja="質問自動化率" data-en="Questions Automated">質問自動化率</div>
+                            <div class="stat-subtext" data-ja="AIが大半の質問に回答" data-en="AI handles most Q&A">AIが大半の質問に回答</div>
+                        </div>
+                        <div class="stat-box-enhanced">
+                            <div class="stat-icon">
+                                <picture>
+                                    <source srcset="images/message.webp" type="image/webp">
+                                    <img src="images/message.png" alt="処理メッセージ総数" class="stat-icon-img" width="260" height="260" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="stat-number">1M+</div>
+                            <div class="stat-text" data-ja="処理メッセージ数" data-en="Messages Processed">処理メッセージ数</div>
+                            <div class="stat-subtext" data-ja="2023年から" data-en="Since 2023">2023年から</div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Links -->
+                    <div class="experience-links-enhanced">
+                        <a href="https://azenflow.com/" target="_blank" rel="noopener noreferrer" class="experience-link-card">
+                            <div class="link-card-icon">🌐</div>
+                            <div class="link-card-content">
+                                <h4 class="link-card-title" data-ja="フランス語サイトをご覧ください" data-en="Visit Our French Website">フランス語サイトをご覧ください</h4>
+                                <p class="link-card-subtitle">azenflow.com</p>
+                                <p class="link-card-description" data-ja="インタラクティブチュートリアル & 実際の自動化例" data-en="Interactive tutorials & real automation examples">インタラクティブチュートリアル & 実際の自動化例</p>
+                            </div>
+                            <div class="link-card-arrow">→</div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/matthias-marin/" target="_blank" rel="noopener noreferrer" class="experience-link-card linkedin-card">
+                            <div class="link-card-icon linkedin-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="#0A66C2">
+                                    <path d="M44.5 0h-41C1.6 0 0 1.6 0 3.5v41C0 46.4 1.6 48 3.5 48h41c1.9 0 3.5-1.6 3.5-3.5v-41C48 1.6 46.4 0 44.5 0zM14.2 40.9H7.1V18h7.1v22.9zM10.7 14.9c-2.3 0-4.1-1.8-4.1-4.1s1.8-4.1 4.1-4.1 4.1 1.8 4.1 4.1-1.8 4.1-4.1 4.1zM40.9 40.9h-7.1V29.8c0-2.6 0-6-3.7-6s-4.3 2.9-4.3 5.8v11.3h-7.1V18h6.8v3.1h.1c.9-1.8 3.2-3.7 6.6-3.7 7.1 0 8.4 4.7 8.4 10.7v12.8z"/>
+                                </svg>
+                            </div>
+                            <div class="link-card-content">
+                                <h4 class="link-card-title" data-ja="LinkedInでつながる" data-en="Connect on LinkedIn">LinkedInでつながる</h4>
+                                <p class="link-card-subtitle">
+                                    Matthias Marin - Founder
+                                    <span class="verified-badge" data-ja="✓ 確認済み" data-en="✓ Verified">✓ Verified</span>
+                                </p>
+                                <p class="link-card-description" data-ja="資格と推薦を表示" data-en="View credentials & recommendations">資格と推薦を表示</p>
+                            </div>
+                            <div class="link-card-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safe and Secure Section - SIMPLIFIED -->
+    <section class="security-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title security-title" data-ja="安全・安心にご利用いただけます" data-en="Safe and Secure">
+                    安全・安心にご利用いただけます
+                </h2>
+                <p class="section-subtitle security-subtitle" data-ja="お客様の大切な情報を守ります" data-en="Your important information is protected">
+                    お客様の大切な情報を守ります
+                </p>
+            </div>
+
+            <div class="security-grid">
+                <!-- Card 1: Compliant with Japanese Law -->
+                <div class="security-card reveal-on-scroll">
+                    <div class="security-icon">
+                        <picture>
+                            <source srcset="images/document.webp" type="image/webp">
+                            <img src="images/document.png" alt="日本の法律準拠" style="width: 56px; height: 56px;" width="220" height="220" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="security-card-title" data-ja="日本の法律に準拠" data-en="Compliant with Japanese Law">日本の法律に準拠</h3>
+                    <p class="security-card-description" data-ja="個人情報保護法(APPI)に従い、お客様のデータを適切に管理します。" data-en="We manage your data properly in accordance with Japan's Personal Information Protection Act (APPI).">
+                        個人情報保護法(APPI)に従い、お客様のデータを適切に管理します。
+                    </p>
+                </div>
+
+                <!-- Card 2: Data Safely Stored -->
+                <div class="security-card reveal-on-scroll delay-1">
+                    <div class="security-icon">
+                        <picture>
+                            <source srcset="images/security.webp" type="image/webp">
+                            <img src="images/security.png" alt="データセキュリティ" style="width: 56px; height: 56px;" width="200" height="200" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="security-card-title" data-ja="データは安全に保管" data-en="Data Safely Stored">データは安全に保管</h3>
+                    <p class="security-card-description" data-ja="会話内容は暗号化され、第三者に共有されることは一切ありません。" data-en="All conversations are encrypted and never shared with third parties.">
+                        会話内容は暗号化され、第三者に共有されることは一切ありません。
+                    </p>
+                </div>
+
+                <!-- Card 3: Only Accurate Information -->
+                <div class="security-card reveal-on-scroll delay-2">
+                    <div class="security-icon">
+                        <picture>
+                            <source srcset="images/check.webp" type="image/webp">
+                            <img src="images/check.png" alt="正確な情報提供" style="width: 80.92px; height: 80.92px;" width="240" height="240" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="security-card-title" data-ja="正確な情報のみを提供" data-en="Only Accurate Information">正確な情報のみを提供</h3>
+                    <p class="security-card-description" data-ja="AIはお客様の資料に基づいてのみ回答し、勝手に内容を作り上げることはありません。" data-en="AI only responds based on your documentation and never makes things up.">
+                        AIはお客様の資料に基づいてのみ回答し、勝手に内容を作り上げることはありません。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="security-trust-badges reveal-on-scroll delay-3">
+                <span class="trust-badge" data-ja="✓ 銀行レベルの暗号化" data-en="✓ Bank-level encryption">✓ 銀行レベルの暗号化</span>
+                <span class="trust-badge" data-ja="✓ 自動バックアップ" data-en="✓ Automatic backups">✓ 自動バックアップ</span>
+                <span class="trust-badge" data-ja="✓ 99.9%稼働率" data-en="✓ 99.9% uptime">✓ 99.9%稼働率</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal-on-scroll">
+                <h2 class="cta-title" data-ja="カスタマーサポートを自動化する準備はできていますか？" data-en="Ready to Automate Your Customer Support?">
+                    カスタマーサポートを自動化する準備はできていますか？
+                </h2>
+                <p class="cta-subtitle" data-ja="お電話でご相談いただくか、まずはチャットボットにお尋ねください" data-en="Book a quick call or ask our chatbot if you have questions first">
+                    お電話でご相談いただくか、まずはチャットボットにお尋ねください
+                </p>
+
+                <div class="cta-badges">
+                    <p class="cta-badge-line" data-ja="無料15分相談 • コミットメント不要" data-en="Free 15-min consultation • No commitment required">
+                        無料15分相談 • コミットメント不要
+                    </p>
+                </div>
+
+                <div class="cta-buttons-wrapper">
+                    <a href="contact.html" class="cta-button-primary">
+                        <span class="cta-main-text" data-ja="無料相談を予約" data-en="Book Free Consultation">
+                            <picture>
+                                <source srcset="images/phone.webp" type="image/webp">
+                                <img src="images/phone.png" alt="電話予約" style="width: 42px; height: 42px; display: inline-block; vertical-align: middle; margin-right: 8px;" width="90" height="90" loading="lazy">
+                            </picture> 無料相談を予約
+                        </span>
+                        <span class="cta-sub-text" data-ja="15分通話" data-en="15-minute call">15分通話</span>
+                    </a>
+                    <button onclick="document.getElementById('chatbotToggle')?.click()" class="cta-button-secondary">
+                        <span class="cta-main-text" data-ja="ご質問はありますか？" data-en="Got Questions?">ご質問はありますか？</span>
+                        <span class="cta-sub-text" data-ja="FAQチャットボットと話す" data-en="Talk to our FAQ chatbot">FAQチャットボットと話す</span>
+                    </button>
+                </div>
+
+                <div class="cta-process">
+                    <h3 class="cta-process-title" data-ja="次のステップ：" data-en="What happens next:">次のステップ：</h3>
+                    <ul class="cta-process-list">
+                        <li data-number="1" data-ja="15分の電話でニーズを把握" data-en="15-min call to understand your needs">15分の電話でニーズを把握</li>
+                        <li data-number="2" data-ja="最適なソリューションと料金をご提案" data-en="We recommend the right solution & pricing">最適なソリューションと料金をご提案</li>
+                        <li data-number="3" data-ja="カスタムソリューションを構築（1〜2日）" data-en="Build your custom solution (1-2 days)">カスタムソリューションを構築（1〜2日）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget-placeholder"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Scripts avec defer (non-bloquants) -->
+    <!-- Language Switcher - defer car le texte japonais est déjà dans le HTML -->
+    <script src="scripts/language-switcher.js" defer></script>
+    <script src="scripts/cookie-consent.js" defer></script>
+    <script src="scripts/component-loader.js" defer></script>
+    <script src="scripts/animations.js" defer></script>
+    <script src="scripts/chatbot-widget.js" defer></script>
+    <script src="scripts/floating-cta.js" defer></script>
+    <script src="scripts/back-to-top.js" defer></script>
+    <script src="scripts/table-sticky.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+
+    <!-- PDF Download Modal -->
+    <div id="pdfModal" class="pdf-modal" style="display: none;">
+        <div class="pdf-modal-overlay"></div>
+        <div class="pdf-modal-content">
+            <button type="button" class="pdf-modal-close" aria-label="Close">&times;</button>
+            <div class="pdf-modal-header">
+                <h3 data-ja="資料をダウンロード" data-en="Download Brochure">資料をダウンロード</h3>
+                <p data-ja="以下の情報をご入力ください" data-en="Please fill in the information below">以下の情報をご入力ください</p>
+            </div>
+            <form id="pdfDownloadForm" class="pdf-modal-form">
+                <div class="pdf-form-group">
+                    <input type="text" id="pdfName" name="name" required
+                           placeholder="山田 太郎"
+                           data-placeholder-ja="山田 太郎"
+                           data-placeholder-en="Your Name"
+                           data-ja-label="お名前"
+                           data-en-label="Name">
+                </div>
+                <div class="pdf-form-group">
+                    <input type="email" id="pdfEmail" name="email" required
+                           placeholder="example@company.com"
+                           data-placeholder-ja="example@company.com"
+                           data-placeholder-en="example@company.com">
+                </div>
+                <div class="pdf-form-group">
+                    <input type="tel" id="pdfPhone" name="phone"
+                           placeholder="080-1234-5678"
+                           data-placeholder-ja="080-1234-5678"
+                           data-placeholder-en="080-1234-5678">
+                </div>
+                <div class="pdf-form-group">
+                    <label class="pdf-form-label" data-ja="ご興味のあるサービス" data-en="Service of Interest">ご興味のあるサービス</label>
+                    <select id="pdfService" name="service" class="pdf-form-select">
+                        <option value="" disabled selected data-ja="選択してください" data-en="Please select">選択してください</option>
+                        <option value="line-chatbot" data-ja="LINEチャットボット" data-en="LINE Chatbot">LINEチャットボット</option>
+                        <option value="email-assistant" data-ja="メールアシスタント" data-en="Email Assistant">メールアシスタント</option>
+                        <option value="web-chatbot" data-ja="Webチャットボット" data-en="Web Chatbot">Webチャットボット</option>
+                        <option value="translation" data-ja="翻訳チャットボット" data-en="Translation Chatbot">翻訳チャットボット</option>
+                        <option value="all-services" data-ja="すべてのサービス" data-en="All Services">すべてのサービス</option>
+                        <option value="other" data-ja="その他" data-en="Other">その他</option>
+                    </select>
+                </div>
+                <div class="pdf-form-group pdf-checkbox-group">
+                    <label class="pdf-checkbox-label">
+                        <input type="checkbox" id="pdfConsent" name="consent" required>
+                        <span class="pdf-checkbox-text" data-ja="資料をメールで受け取ることに同意します" data-en="I agree to receive the document by email">資料をメールで受け取ることに同意します</span>
+                    </label>
+                </div>
+                <button type="submit" class="pdf-submit-btn" id="pdfSubmitBtn">
+                    <span data-ja="送信" data-en="Submit">送信</span>
+                </button>
+                <p class="pdf-privacy-note" data-ja="※ 入力いただいた情報はプライバシーポリシーに基づき管理します" data-en="Your information is managed according to our privacy policy">
+                    ※ 入力いただいた情報はプライバシーポリシーに基づき管理します
+                </p>
+            </form>
+            <div id="pdfFormMessage" class="pdf-form-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <style>
+    /* PDF Download Modal Styles */
+    .pdf-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pdf-modal-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+    }
+    .pdf-modal-content {
+        position: relative;
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem;
+        max-width: 420px;
+        width: 90%;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: modalSlideIn 0.3s ease;
+    }
+    @keyframes modalSlideIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .pdf-modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.75rem;
+        color: #6B7280;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0.25rem;
+        transition: color 0.2s;
+    }
+    .pdf-modal-close:hover { color: #1F2937; }
+    .pdf-modal-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    .pdf-modal-header h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1F2937;
+        margin-bottom: 0.5rem;
+    }
+    .pdf-modal-header p {
+        color: #6B7280;
+        font-size: 0.95rem;
+    }
+    .pdf-form-group {
+        margin-bottom: 1rem;
+    }
+    .pdf-form-group input {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        border: 2px solid #E5E7EB;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+    }
+    .pdf-form-group input:focus,
+    .pdf-form-group select:focus {
+        outline: none;
+        border-color: #8B6F47;
+    }
+    .pdf-form-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 0.5rem;
+    }
+    .pdf-form-select {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        border: 2px solid #E5E7EB;
+        border-radius: 10px;
+        font-size: 1rem;
+        background: white;
+        cursor: pointer;
+        transition: border-color 0.2s;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+    }
+    .pdf-checkbox-group {
+        margin: 1rem 0;
+    }
+    .pdf-checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+    .pdf-checkbox-label input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
+        accent-color: #8B6F47;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    .pdf-checkbox-text {
+        font-size: 0.9rem;
+        color: #374151;
+        line-height: 1.4;
+    }
+    .pdf-submit-btn {
+        width: 100%;
+        padding: 1rem;
+        background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pdf-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 111, 71, 0.4);
+    }
+    .pdf-submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+    }
+    .pdf-privacy-note {
+        margin-top: 1rem;
+        font-size: 0.75rem;
+        color: #9CA3AF;
+        text-align: center;
+    }
+    .pdf-form-message {
+        margin-top: 1rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .pdf-form-message.success {
+        background: #D1FAE5;
+        color: #065F46;
+    }
+    .pdf-form-message.error {
+        background: #FEE2E2;
+        color: #991B1B;
+    }
+    @media (max-width: 480px) {
+        .pdf-modal-content {
+            padding: 1.5rem;
+            margin: 1rem;
+        }
+    }
+    </style>
+
+    <script>
+    (function() {
+        'use strict';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('pdfModal');
+            const openBtn = document.getElementById('downloadBrochureBtn');
+            const closeBtn = modal?.querySelector('.pdf-modal-close');
+            const overlay = modal?.querySelector('.pdf-modal-overlay');
+            const form = document.getElementById('pdfDownloadForm');
+            const submitBtn = document.getElementById('pdfSubmitBtn');
+            const messageDiv = document.getElementById('pdfFormMessage');
+
+            if (!modal || !openBtn || !form) return;
+
+            // Open modal
+            openBtn.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close modal
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+                form.reset();
+                messageDiv.style.display = 'none';
+            }
+
+            closeBtn?.addEventListener('click', closeModal);
+            overlay?.addEventListener('click', closeModal);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+            });
+
+            // Form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('pdfName').value.trim();
+                const email = document.getElementById('pdfEmail').value.trim();
+                const phone = document.getElementById('pdfPhone').value.trim();
+                const service = document.getElementById('pdfService').value;
+                const consent = document.getElementById('pdfConsent').checked;
+
+                if (!name || !email || !consent) return;
+
+                // Disable button
+                submitBtn.disabled = true;
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span>...</span>';
+
+                try {
+                    // Send to n8n via contact-form-proxy
+                    const response = await fetch('/.netlify/functions/contact-form-proxy', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            phone: phone,
+                            service: service,
+                            message: 'Brochure download request',
+                            source: 'pdf-download',
+                            consent: true,
+                            language: window.LanguageSwitcher?.getCurrentLanguage() || 'ja'
+                        })
+                    });
+
+                    if (response.ok) {
+                        // Success - show confirmation message
+                        messageDiv.className = 'pdf-form-message success';
+                        messageDiv.innerHTML = window.LanguageSwitcher?.getCurrentLanguage() === 'en'
+                            ? 'Thank you! We will send the document to your email shortly.'
+                            : 'ありがとうございます！資料をメールでお送りいたします。';
+                        messageDiv.style.display = 'block';
+                        form.reset();
+
+                        // Close modal after delay
+                        setTimeout(closeModal, 2500);
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch (error) {
+                    messageDiv.className = 'pdf-form-message error';
+                    messageDiv.innerHTML = window.LanguageSwitcher?.getCurrentLanguage() === 'en'
+                        ? 'An error occurred. Please try again.'
+                        : 'エラーが発生しました。もう一度お試しください。';
+                    messageDiv.style.display = 'block';
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

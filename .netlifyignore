@@ -1,0 +1,19 @@
+# Ignore these folders during Netlify deployment
+.netlify/
+.history/
+node_modules/
+scripts/
+.git/
+.vscode/
+
+# Ignore development files
+*.log
+.env
+.env.*
+*.tmp
+*.temp
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini

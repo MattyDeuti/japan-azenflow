@@ -1,0 +1,3254 @@
+/* ================================================================
+   WEB-CHATBOT.HTML - STYLES SPÉCIFIQUES
+   Fichier: styles/pages/web-chatbot.css
+   Description: Tous les styles spécifiques à la page Web Chatbot
+================================================================ */
+
+/* Table des matières :
+   1. HERO SECTION
+   2. WHY WEB CHATBOT SECTION
+   3. TRUST CARDS & CONVERSATION BUBBLES
+   4. PRICING TABLE
+   5. FAQ SECTION
+   6. DEMO PREVIEW
+   7. RESPONSIVE SPÉCIFIQUE
+*/
+
+/* ==================== MOBILE BREAK FOR JAPANESE ==================== */
+/* Masquer le br sur desktop */
+.mobile-break-ja {
+    display: none;
+}
+
+/* Afficher le br uniquement sur mobile ET en japonais */
+@media (max-width: 768px) {
+    html[lang="ja"] .mobile-break-ja {
+        display: block;
+    }
+}
+
+/* ==================== SECTION HEADERS ==================== */
+.section-header {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-black);
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+/* ==================== 1. HERO SECTION ==================== */
+
+/* Prévenir le débordement horizontal */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* === HERO CONTAINER === */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f9f7f4 0%, #fdfcfa 100%);
+}
+
+/* === HERO BACKGROUND === */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.3;
+}
+
+.orb-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 115, 85, 0.25) 0%, rgba(139, 115, 85, 0) 70%);
+    top: -300px;
+    right: -100px;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(168, 144, 128, 0.3) 0%, rgba(139, 92, 246, 0) 70%);
+    bottom: -150px;
+    left: -100px;
+}
+
+.orb-3 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(6, 182, 212, 0) 70%);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* === HERO CONTENT === */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === HERO TITLE === */
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-title div {
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.hero-title div:first-child {
+    color: #1F2937;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary) 0%, #A68A5C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--primary); /* Fallback color before gradient loads */
+    display: inline-block;
+}
+
+/* === HERO SUBTITLE === */
+.hero-subtitle-optimized {
+    margin-bottom: 2rem;
+}
+
+.hero-subtitle-optimized div {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    color: #6B7280;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* === HERO DESCRIPTION === */
+.hero-description-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-description-optimized {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0 2.5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.hero-description-optimized p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    color: #1F2937;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.hero-description-optimized strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.hero-description-optimized p strong:first-child {
+    color: #8B6F47;
+    margin-right: 0.5rem;
+}
+
+/* Demo preview box - visible sur desktop uniquement */
+.demo-preview-desktop {
+    flex-shrink: 0;
+}
+
+/* === HERO CTA === */
+.hero-cta {
+    display: flex;
+    gap: 1.25rem;
+    margin: 3rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    padding: 1.125rem 2rem;
+    background: var(--gradient-1);
+    color: var(--text-white);
+    border: none;
+    border-radius: var(--border-radius-full);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(91, 111, 219, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    padding: 1.125rem 2rem;
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: var(--border-radius-full);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--text-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(139, 111, 71, 0.3);
+}
+
+/* === CHATBOT WIDGET BUTTON === */
+.btn-chatbot-widget {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.25rem 3rem;
+    background: rgba(139, 111, 71, 0.12);
+    color: #6B5638;
+    border: 2px solid rgba(139, 111, 71, 0.4);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.0625rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(139, 111, 71, 0.2);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.btn-chatbot-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 111, 71, 0.15), transparent);
+    transition: left 0.5s;
+}
+
+.btn-chatbot-widget:hover::before {
+    left: 100%;
+}
+
+.btn-chatbot-widget:hover {
+    transform: translateY(-3px);
+    background: rgba(139, 111, 71, 0.18);
+    border-color: rgba(139, 111, 71, 0.6);
+    box-shadow: 0 8px 24px rgba(139, 111, 71, 0.3);
+}
+
+.btn-chatbot-widget:active {
+    transform: translateY(-1px);
+}
+
+/* Chatbot CTA Section */
+.chatbot-cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, rgba(139, 111, 71, 0.05) 0%, rgba(166, 138, 92, 0.05) 100%);
+    border: 2px solid rgba(139, 111, 71, 0.1);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.chatbot-cta-section p:first-of-type {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 1.5rem;
+}
+
+.chatbot-cta-section p:last-of-type {
+    font-size: 0.875rem;
+    color: #9CA3AF;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* === TRUST BADGES === */
+.hero-trust-badges {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0 3rem;
+    font-size: 0.9375rem;
+    color: #6B7280;
+    font-weight: 600;
+}
+
+.hero-trust-badges div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-trust-badges span {
+    color: #8B6F47;
+    font-size: 1.2em;
+}
+
+/* === OLD HERO STYLES (à conserver pour le moment) === */
+
+.trial-badge {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+    color: #78350F;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.hero-title-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Cacher les badges par défaut (desktop) */
+.demo-badge-mobile,
+.demo-subtitle-mobile {
+    display: none;
+}
+
+/* ==================== 2. WHY WEB CHATBOT SECTION ==================== */
+
+.what-is-azenflow {
+    padding: 8rem 0;
+    background: transparent;
+    position: relative;
+    border-top: 1px solid rgba(139, 111, 71, 0.15);
+}
+
+.what-is-azenflow .section-header {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.what-is-azenflow .section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-black);
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.what-is-azenflow .section-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+/* === AZENFLOW FEATURES GRID === */
+.azenflow-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === AZENFLOW FEATURES GRID HORIZONTAL === */
+.azenflow-features-grid-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* === AZENFLOW CARDS === */
+.azenflow-card {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius-xl);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 2px solid #F3F4F6;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.azenflow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8B6F47 0%, #A68A5C 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.azenflow-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+    border-color: #8B6F47;
+}
+
+.azenflow-card:hover::before {
+    transform: scaleX(1);
+}
+
+.azenflow-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: center;
+}
+
+.azenflow-card-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.azenflow-card-subtitle {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: #8B6F47;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.azenflow-card-description {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.azenflow-card-note {
+    font-size: var(--font-size-sm);
+    color: #8B6F47;
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, rgba(139, 111, 71, 0.05), rgba(139, 111, 71, 0.1));
+    border-radius: var(--border-radius-md);
+    border: 1px solid rgba(139, 111, 71, 0.2);
+}
+
+/* === AZENFLOW CARDS HORIZONTAL === */
+.azenflow-card-horizontal {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: var(--border-radius-xl);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 2px solid #F3F4F6;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.azenflow-card-horizontal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #8B6F47 0%, #A68A5C 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform var(--transition-base);
+}
+
+.azenflow-card-horizontal:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+    border-color: #8B6F47;
+}
+
+.azenflow-card-horizontal:hover::before {
+    transform: scaleY(1);
+}
+
+.azenflow-icon-horizontal {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.azenflow-card-content-horizontal {
+    flex: 1;
+}
+
+.azenflow-card-title-horizontal {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.azenflow-card-description-horizontal {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+/* === SETUP STEPS HORIZONTAL === */
+.setup-steps-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 3rem auto 0;
+    padding: 0;
+}
+
+.setup-step-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.setup-step-horizontal:last-child {
+    flex: 1;
+}
+
+.setup-step-number {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: var(--font-weight-black);
+    box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+    transition: all var(--transition-base);
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.setup-step-horizontal:hover .setup-step-number {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(139, 111, 71, 0.4);
+}
+
+.setup-step-arrow {
+    position: absolute;
+    top: calc(50% + 35px);
+    right: -2rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #8B6F47;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.setup-step-horizontal:last-child .setup-step-arrow {
+    display: none;
+}
+
+.setup-step-content {
+    background: white;
+    padding: 1.75rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid #F3F4F6;
+    transition: all var(--transition-base);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.setup-step-horizontal:hover .setup-step-content {
+    border-color: #8B6F47;
+    box-shadow: 0 6px 20px rgba(139, 111, 71, 0.2);
+    transform: translateY(-4px);
+}
+
+.setup-step-title {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.setup-step-description {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    text-align: center;
+}
+
+/* === HOW IT WORKS FLOW === */
+.how-it-works-flow {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    padding: 0;
+}
+
+.flow-step {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    transition: all var(--transition-base);
+    justify-content: center;
+}
+
+.flow-step:last-child {
+    margin-bottom: 0;
+}
+
+/* Image on left, text on right */
+.flow-step-left {
+    padding-left: 2rem;
+}
+
+/* Text on left, image on right */
+.flow-step-right {
+    padding-right: 2rem;
+}
+
+.flow-step-icon {
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: all var(--transition-base);
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1));
+}
+
+.flow-step:hover .flow-step-icon {
+    transform: scale(1.08);
+    filter: drop-shadow(0 8px 30px rgba(139, 111, 71, 0.25));
+}
+
+.flow-step-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.flow-step-left .flow-step-text {
+    text-align: left;
+}
+
+.flow-step-right .flow-step-text {
+    text-align: right;
+}
+
+.flow-step-title {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.flow-step-description {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.flow-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.flow-arrow svg {
+    opacity: 0.8;
+    transition: all var(--transition-base);
+}
+
+.flow-arrow:hover svg {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flow-step {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .flow-step-left,
+    .flow-step-right {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Force image always on top, text always on bottom */
+    .flow-step-icon {
+        order: 1;
+        width: 150px;
+        height: 150px;
+    }
+
+    .flow-step-text {
+        order: 2;
+    }
+
+    .flow-step-left .flow-step-text,
+    .flow-step-right .flow-step-text {
+        text-align: center;
+    }
+
+    .flow-arrow {
+        margin: 1.5rem 0;
+    }
+
+    .flow-arrow svg {
+        width: 60px;
+        height: 30px;
+    }
+}
+
+.flow-step:last-child .flow-arrow {
+    display: none;
+}
+
+/* ==================== 3. TRUST CARDS & CONVERSATION BUBBLES ==================== */
+
+.qr-code-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.trust-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #8B6F47;
+}
+
+.conversation-bubble {
+    background: #F0F0F0;
+    padding: 1rem 1.25rem;
+    border-radius: 18px 18px 18px 4px;
+    margin-bottom: 0.75rem;
+    max-width: 80%;
+}
+
+.conversation-bubble.bot {
+    background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+    color: white;
+    border-radius: 18px 18px 4px 18px;
+    margin-left: auto;
+}
+
+/* ==================== 3. PRICING TABLE ==================== */
+
+.pricing-table {
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-table th {
+    background: linear-gradient(135deg, rgba(139, 111, 71, 0.1) 0%, rgba(166, 138, 92, 0.1) 100%);
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.pricing-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table .option-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.pricing-table .price {
+    font-size: 1rem;
+    color: #8B6F47;
+    font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+}
+
+.pricing-table .variable-price {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Table responsive wrapper */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ==================== 4. FAQ SECTION ==================== */
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid #E5E7EB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #8B6F47;
+    box-shadow: 0 4px 12px rgba(139, 111, 71, 0.1);
+}
+
+.faq-question {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #1F2937;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.faq-answer {
+    margin-top: 1rem;
+    color: #6B7280;
+    line-height: 1.7;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* ==================== 6. USE CASES & SETUP STEPS GRID RESPONSIVE ==================== */
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.setup-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+/* ==================== 7. RESPONSIVE SPÉCIFIQUE ==================== */
+
+/* Tablette et petit desktop (768px - 1024px) */
+@media (max-width: 1024px) {
+    /* Use Cases & Setup Steps Grid - 2 columns on tablet */
+    .use-cases-grid,
+    .setup-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Why Web Chatbot Section */
+    .azenflow-features-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .what-is-azenflow {
+        padding: 6rem 0;
+    }
+    .hero-title-line {
+        font-size: 2.5rem !important;
+    }
+
+    .trial-badge {
+        font-size: 0.875rem;
+        padding: 0.625rem 1.25rem;
+    }
+}
+
+/* Mobile et tablette (max 768px) */
+@media (max-width: 768px) {
+    /* Use Cases & Setup Steps Grid - 1 column centered on mobile */
+    .use-cases-grid,
+    .setup-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    /* FIX CRITIQUE: Empêcher débordement horizontal */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    /* FIX CRITIQUE: Word-wrap pour tous les éléments de texte */
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* FIX CRITIQUE: Rendre le gradient text visible sur mobile */
+    .gradient-text {
+        background: none !important;
+        -webkit-text-fill-color: var(--primary) !important;
+        color: var(--primary) !important;
+    }
+
+    /* Hero Section - Layout vertical */
+    .hero {
+        min-height: auto;
+        padding: 120px 0 50px;
+    }
+
+    .hero-content {
+        padding: 0 1.25rem;
+        max-width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    /* Hero Title */
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Hero Subtitle */
+    .hero-subtitle-optimized {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle-optimized div {
+        font-size: 1rem;
+    }
+
+    /* Hero Description (checkmarks) */
+    .hero-description-wrapper {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-description-optimized {
+        margin: 1.5rem 0;
+        gap: 0.75rem;
+    }
+
+    .hero-description-optimized p {
+        font-size: 1rem;
+        justify-content: center; /* Centré sur mobile comme les trust badges */
+    }
+
+    /* Hero CTA Buttons */
+    .hero-cta {
+        flex-direction: column;
+        gap: 0.875rem;
+        width: 100%;
+        margin: 2rem 0;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: auto;
+        max-width: 260px;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Hero Trust Badges - Compacts sur mobile */
+    .hero-trust-badges {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start; /* Aligné à gauche sur mobile */
+        margin: 1.5rem 0 2rem;
+    }
+
+    /* Bouton démo mobile - Plus compact */
+    .demo-button-mobile {
+        display: block !important;
+        width: auto !important;
+        max-width: 300px !important;
+        padding: 1rem 1.5rem !important;
+        font-size: 0.9375rem !important;
+        margin: 2rem auto 0 !important;
+    }
+
+    /* Chatbot CTA Section - Mobile */
+    .chatbot-cta-section {
+        padding: 1.75rem 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .chatbot-cta-section p:first-of-type {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Bouton widget chatbot - Responsive */
+    .btn-chatbot-widget {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 0.9375rem;
+    }
+
+    /* Phone mockup - vient EN DERNIER sur mobile */
+    .phone-mockup {
+        width: 280px !important;
+        height: 570px !important;
+        margin: 2rem auto 0;
+        position: relative;
+    }
+
+    .fade-in-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    /* Badge démo pour mobile - Plus compact et mieux positionné */
+    .demo-badge-mobile {
+        display: block !important;
+        background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+        color: white;
+        padding: 0.625rem 1.25rem;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 0.9375rem;
+        margin: 0 auto 1rem;
+        max-width: 280px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+    }
+
+    .demo-subtitle-mobile {
+        display: block !important;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    /* Why Web Chatbot Section */
+    .what-is-azenflow {
+        padding: 4rem 0;
+    }
+
+    .what-is-azenflow .section-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .what-is-azenflow .section-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .azenflow-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .azenflow-icon {
+        font-size: 3rem;
+    }
+
+    .azenflow-card-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .azenflow-card-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    /* Horizontal cards responsive */
+    .azenflow-card-horizontal {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .azenflow-icon-horizontal {
+        width: 60px;
+        height: 60px;
+    }
+
+    .azenflow-icon-horizontal img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .azenflow-icon-horizontal span {
+        font-size: 3.5rem !important;
+    }
+
+    .azenflow-card-title-horizontal {
+        font-size: var(--font-size-lg);
+    }
+
+    .azenflow-card-description-horizontal {
+        font-size: var(--font-size-sm);
+    }
+
+    /* Setup steps responsive - passage en vertical */
+    .setup-steps-horizontal {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .setup-step-horizontal {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .setup-step-horizontal:last-child {
+        flex: 1;
+    }
+
+    .setup-step-arrow {
+        display: none;
+    }
+
+    .setup-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .setup-step-content {
+        width: 100%;
+        min-height: auto;
+        text-align: center;
+    }
+
+    /* Cacher demo preview desktop sur mobile */
+    .demo-preview-desktop {
+        display: none !important;
+    }
+
+    .hero-title-line {
+        white-space: normal !important;
+    }
+
+    .trial-badge {
+        font-size: 0.875rem;
+        padding: 0.625rem 1rem;
+        text-align: center;
+    }
+
+    /* Stats grid - passer en 1 colonne */
+    div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* FIX - Cercles numérotés plus petits sur mobile */
+    /* COMMENTED OUT - Conflicting with ultra-reinforced circle rules at end of file
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"] {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+    */
+
+    /* FIX - Titres de steps moins espacés */
+    h3[style*="font-size: 1.5rem"][style*="margin-bottom: 0.75rem"] {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* FIX - Descriptions de steps */
+    h3[style*="font-size: 1.5rem"] + p {
+        margin-top: 0.5rem !important;
+        font-size: 0.9375rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* FIX - Texte qui déborde - Supprimer white-space: nowrap */
+    h3[style*="white-space: nowrap"] {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        font-size: 1.25rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Container avec padding pour éviter débordement */
+    .container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    h2[style*="font-size: 3rem"] {
+        font-size: 1.75rem !important;
+    }
+
+    h2[style*="font-size: 3.5rem"] {
+        font-size: 2rem !important;
+    }
+
+    /* Before/After section */
+    div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 2rem"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Trust cards */
+    div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Pricing table */
+    .pricing-table {
+        font-size: 0.875rem;
+        min-width: 600px; /* Force minimum width for horizontal scroll */
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 0.875rem !important;
+    }
+
+    .pricing-table .option-icon {
+        font-size: 1.25rem;
+    }
+
+    .pricing-table strong {
+        font-size: 1rem !important;
+    }
+
+    /* Show scroll hint on mobile */
+    .table-scroll-hint {
+        display: block !important;
+    }
+
+    /* CTA buttons spacing */
+    button[style*="padding: 1.25rem 2.5rem"] {
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+
+    button[style*="padding: 1.5rem 3rem"] {
+        padding: 1.125rem 2rem !important;
+        font-size: 1.125rem !important;
+    }
+
+    /* Sections avec trop de padding - réduire sur mobile */
+    section[style*="padding: 6rem 0"] {
+        padding: 4rem 0 !important;
+    }
+
+    /* Divs avec trop de padding - réduire sur mobile */
+    div[style*="padding: 3rem 4rem"] {
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* Contact info grid */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Desktop uniquement */
+@media (min-width: 769px) {
+    .demo-button-mobile {
+        display: none !important;
+    }
+    .demo-badge-mobile {
+        display: none !important;
+    }
+    .demo-subtitle-mobile {
+        display: none !important;
+    }
+}
+
+/* ================================================================
+   USE CASES & SETUP STEPS CARDS - COMPLETE RESPONSIVE OVERHAUL
+   FIX for all screens below 492px (most smartphones)
+================================================================ */
+
+/* Smartphones standards : <492px */
+@media (max-width: 492px) {
+    /* === CONTAINER PRINCIPAL === */
+    section .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        max-width: 100% !important;
+    }
+
+    /* === GRID === */
+    .use-cases-grid,
+    .setup-steps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+    }
+
+    /* === CARTES PRINCIPALES === */
+    /* Cibler TOUTES les cartes avec tous les sélecteurs possibles */
+    .use-cases-grid > div,
+    .use-cases-grid > div[style],
+    .use-cases-grid > div[style*="background: white"],
+    .use-cases-grid > div[style*="padding"],
+    .use-cases-grid > div[style*="border-radius"],
+    .setup-steps-grid > div,
+    .setup-steps-grid > div[style],
+    .setup-steps-grid > div[style*="background: white"],
+    .setup-steps-grid > div[style*="padding"],
+    .setup-steps-grid > div[style*="border-radius"] {
+        padding: 1.25rem 1rem !important; /* Réduire de 2rem à 1.25rem/1rem */
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        border-radius: 16px !important;
+        overflow: hidden !important; /* Empêcher tout débordement */
+    }
+
+    /* === ICÔNES === */
+    .use-cases-grid div[style*="margin-bottom: 1rem"] img,
+    .use-cases-grid img[style*="width: 80px"],
+    .setup-steps-grid div[style*="margin-bottom: 1rem"] img,
+    .setup-steps-grid img[style*="width: 80px"] {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* === TITRES H3 === */
+    .use-cases-grid h3,
+    .use-cases-grid h3[style],
+    .use-cases-grid h3[style*="font-weight"],
+    .use-cases-grid h3[style*="font-size"],
+    .setup-steps-grid h3,
+    .setup-steps-grid h3[style],
+    .setup-steps-grid h3[style*="font-weight"],
+    .setup-steps-grid h3[style*="font-size"] {
+        font-size: 1rem !important; /* Réduire de 1.25rem */
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+        padding: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        hyphens: auto !important;
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    /* === BULLES DE CONVERSATION - MAINTENIR ALIGNEMENT GAUCHE/DROITE === */
+
+    /* Base commune pour toutes les bulles */
+    .conversation-bubble,
+    .conversation-bubble[class],
+    .conversation-bubble[style],
+    div.conversation-bubble {
+        /* Display block pour permettre width auto */
+        display: block !important;
+
+        /* Box model */
+        box-sizing: border-box !important;
+        min-width: 0 !important;
+
+        /* Padding réduit */
+        padding: 0.875rem 0.75rem !important;
+        margin-bottom: 0.875rem !important;
+
+        /* Texte */
+        font-size: 0.875rem !important;
+        line-height: 1.5 !important;
+
+        /* Empêcher débordement */
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow: hidden !important;
+
+        /* Border radius */
+        border-radius: 14px !important;
+    }
+
+    /* === MESSAGE UTILISATEUR (Question) - À GAUCHE === */
+    .conversation-bubble.bot {
+        /* Alignement à gauche avec espace à droite */
+        margin-left: 0 !important;
+        margin-right: auto !important;
+
+        /* Largeur auto pour s'adapter au contenu, max 80% */
+        width: auto !important;
+        max-width: 80% !important;
+
+        /* Couleur (déjà définie globalement, mais on réaffirme) */
+        background: #FFFFFF !important;
+        color: #1F2937 !important;
+    }
+
+    /* === MESSAGE IA (Réponse) - À DROITE === */
+    .conversation-bubble:not(.bot) {
+        /* Alignement à droite avec espace à gauche */
+        margin-left: auto !important;
+        margin-right: 0 !important;
+
+        /* Largeur auto pour s'adapter au contenu, max 80% */
+        width: auto !important;
+        max-width: 80% !important;
+
+        /* Couleur gradient (web-chatbot) */
+        background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%) !important;
+        color: #FFFFFF !important;
+    }
+
+    /* === TOUS LES ÉLÉMENTS DANS LES BULLES === */
+    .conversation-bubble *,
+    .conversation-bubble div,
+    .conversation-bubble span,
+    .conversation-bubble p,
+    .conversation-bubble div[style],
+    .conversation-bubble span[style] {
+        /* FORCER box-sizing partout */
+        box-sizing: border-box !important;
+
+        /* FORCER max-width */
+        max-width: 100% !important;
+
+        /* FORCER word-break */
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+
+        /* Font-size héritée ou réduite */
+        font-size: 0.875rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* === DIVS AVEC MARGIN-BOTTOM === */
+    .conversation-bubble div[style*="margin-bottom"] {
+        margin-bottom: 0.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* === LIENS LONGS === */
+    .conversation-bubble a,
+    .conversation-bubble span[style*="color: #0066cc"],
+    .conversation-bubble span[style*="text-decoration: underline"],
+    .conversation-bubble div[style*="word-wrap: break-word"] span[style*="color"] {
+        /* CRITIQUE: Forcer break sur les URLs longues */
+        word-break: break-all !important;
+        overflow-wrap: anywhere !important;
+
+        display: inline-block !important;
+        max-width: 100% !important;
+
+        font-size: 0.8125rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* === WRAPPER DE LIENS === */
+    .conversation-bubble div[style*="word-wrap: break-word"],
+    .conversation-bubble div[style*="overflow-wrap: break-word"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    /* === EMOJIS ET ICÔNES === */
+    .conversation-bubble div[style*="💰"],
+    .conversation-bubble div[style*="📦"],
+    .conversation-bubble div[style*="🔗"],
+    .conversation-bubble div[style*="📅"],
+    .conversation-bubble div[style*="📸"],
+    .conversation-bubble div[style*="💬"] {
+        font-size: 0.875rem !important;
+        word-break: break-word !important;
+    }
+
+    /* === LISTES À PUCES === */
+    .conversation-bubble div[style*="padding-left: 0.5rem"] {
+        padding-left: 0.375rem !important;
+    }
+
+    .conversation-bubble div[style*="padding-left: 0.5rem"] div {
+        font-size: 0.8125rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+}
+
+/* === iPhone standard et similaires : <414px === */
+@media (max-width: 414px) {
+    section .container {
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+    }
+
+    .use-cases-grid > div,
+    .setup-steps-grid > div {
+        padding: 1rem 0.875rem !important;
+    }
+
+    /* Augmenter légèrement max-width sur petits écrans */
+    .conversation-bubble.bot,
+    .conversation-bubble:not(.bot) {
+        max-width: 82% !important;
+        padding: 0.75rem 0.65rem !important;
+        font-size: 0.8125rem !important; /* 13px */
+    }
+
+    .conversation-bubble div,
+    .conversation-bubble span {
+        font-size: 0.8125rem !important;
+    }
+
+    .conversation-bubble a,
+    .conversation-bubble span[style*="color: #0066cc"] {
+        font-size: 0.75rem !important;
+        word-break: break-all !important;
+    }
+
+    .use-cases-grid h3,
+    .setup-steps-grid h3 {
+        font-size: 0.9375rem !important; /* 15px */
+    }
+
+    .use-cases-grid img[style*="width"],
+    .setup-steps-grid img[style*="width"] {
+        width: 55px !important;
+        height: 55px !important;
+    }
+}
+
+/* === iPhone SE et petits Android : <375px === */
+@media (max-width: 375px) {
+    section .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+
+    .use-cases-grid > div,
+    .setup-steps-grid > div {
+        padding: 0.875rem 0.75rem !important;
+    }
+
+    /* iPhone SE - max-width 85% pour garder l'alignement */
+    .conversation-bubble.bot,
+    .conversation-bubble:not(.bot) {
+        max-width: 85% !important;
+        padding: 0.65rem 0.5rem !important;
+        font-size: 0.75rem !important; /* 12px */
+        border-radius: 12px !important;
+    }
+
+    .conversation-bubble div,
+    .conversation-bubble span {
+        font-size: 0.75rem !important;
+    }
+
+    .conversation-bubble a,
+    .conversation-bubble span[style*="color: #0066cc"] {
+        font-size: 0.6875rem !important; /* 11px */
+        word-break: break-all !important;
+    }
+
+    .conversation-bubble div[style*="padding-left"] {
+        padding-left: 0.375rem !important;
+    }
+
+    .use-cases-grid h3,
+    .setup-steps-grid h3 {
+        font-size: 0.875rem !important; /* 14px */
+    }
+
+    .use-cases-grid img[style*="width"],
+    .setup-steps-grid img[style*="width"] {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+/* === Très petits écrans : <350px === */
+@media (max-width: 350px) {
+    section .container {
+        padding-left: 0.625rem !important;
+        padding-right: 0.625rem !important;
+    }
+
+    .use-cases-grid > div,
+    .setup-steps-grid > div {
+        padding: 0.75rem 0.625rem !important;
+        border-radius: 12px !important;
+    }
+
+    /* Très petits écrans - max-width 88% */
+    .conversation-bubble.bot,
+    .conversation-bubble:not(.bot) {
+        max-width: 88% !important;
+        padding: 0.5rem 0.4rem !important;
+        font-size: 0.6875rem !important; /* 11px */
+        border-radius: 10px !important;
+    }
+
+    .conversation-bubble div,
+    .conversation-bubble span {
+        font-size: 0.6875rem !important;
+    }
+
+    .conversation-bubble a,
+    .conversation-bubble span[style*="color: #0066cc"] {
+        font-size: 0.625rem !important; /* 10px */
+        word-break: break-all !important;
+    }
+
+    .use-cases-grid h3,
+    .setup-steps-grid h3 {
+        font-size: 0.8125rem !important; /* 13px */
+    }
+
+    .use-cases-grid img[style*="width"],
+    .setup-steps-grid img[style*="width"] {
+        width: 45px !important;
+        height: 45px !important;
+    }
+}
+
+/* === Écrans microscopiques : <320px === */
+@media (max-width: 320px) {
+    section .container {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .use-cases-grid > div,
+    .setup-steps-grid > div {
+        padding: 0.625rem 0.5rem !important;
+    }
+
+    /* Écrans microscopiques - max-width 90% pour optimiser l'espace */
+    .conversation-bubble.bot,
+    .conversation-bubble:not(.bot) {
+        max-width: 90% !important;
+        padding: 0.4rem 0.3rem !important;
+        font-size: 0.625rem !important; /* 10px */
+    }
+
+    .conversation-bubble div,
+    .conversation-bubble span {
+        font-size: 0.625rem !important;
+    }
+
+    .conversation-bubble a {
+        font-size: 0.5625rem !important;
+        word-break: break-all !important;
+    }
+
+    .use-cases-grid h3,
+    .setup-steps-grid h3 {
+        font-size: 0.75rem !important; /* 12px */
+    }
+}
+
+/* ================================================================
+   CONVERSATION BUBBLES - NEW LAYOUT (User Left, Bot Right)
+   Message utilisateur (question) → À GAUCHE, fond BLANC
+   Message IA (réponse) → À DROITE, fond GRADIENT MARRON
+================================================================ */
+
+/* === MESSAGE UTILISATEUR (Question) - À GAUCHE, BLANC === */
+.conversation-bubble.bot {
+    /* Alignement à gauche */
+    margin-left: 0 !important;
+    margin-right: auto !important;
+
+    /* Fond BLANC avec bordure */
+    background: #FFFFFF !important;
+    color: #1F2937 !important;
+    border: 2px solid #E5E7EB !important;
+
+    /* Styling */
+    padding: 0.875rem 1rem;
+    border-radius: 18px 18px 18px 4px; /* Coin bas-gauche plus pointu */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* === MESSAGE IA (Réponse) - À DROITE, GRADIENT MARRON === */
+.conversation-bubble:not(.bot) {
+    /* Alignement à droite */
+    margin-left: auto !important;
+    margin-right: 0 !important;
+
+    /* Fond GRADIENT marron/bronze */
+    background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%) !important;
+    color: #FFFFFF !important;
+
+    /* Styling */
+    padding: 0.875rem 1rem;
+    border-radius: 18px 18px 4px 18px; /* Coin bas-droit plus pointu */
+    box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+}
+
+/* Assurer que les textes dans les bulles héritent la bonne couleur */
+.conversation-bubble.bot *,
+.conversation-bubble.bot div,
+.conversation-bubble.bot span {
+    color: #1F2937 !important;
+}
+
+.conversation-bubble:not(.bot) *,
+.conversation-bubble:not(.bot) div,
+.conversation-bubble:not(.bot) span {
+    color: #FFFFFF !important;
+}
+
+/* Liens dans les bulles - Fond BLANC (utilisateur) */
+.conversation-bubble.bot a,
+.conversation-bubble.bot span[style*="color: #0066cc"],
+.conversation-bubble.bot span[style*="color:#0066cc"] {
+    color: #2563EB !important; /* Bleu pour fond blanc */
+    text-decoration: underline;
+}
+
+/* Liens dans les bulles - Fond GRADIENT (IA) */
+.conversation-bubble:not(.bot) a,
+.conversation-bubble:not(.bot) span[style*="color: #0066cc"],
+.conversation-bubble:not(.bot) span[style*="color:#0066cc"] {
+    color: #FFFFFF !important;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Emojis - garder leur couleur native */
+.conversation-bubble [style*="💰"],
+.conversation-bubble [style*="📦"],
+.conversation-bubble [style*="🔗"],
+.conversation-bubble [style*="📅"],
+.conversation-bubble [style*="📸"],
+.conversation-bubble [style*="💬"] {
+    filter: none !important;
+}
+
+/* Responsive - Maintenir les styles sur mobile avec max-width progressifs */
+@media (max-width: 492px) {
+    .conversation-bubble.bot {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        max-width: 80% !important;
+    }
+
+    .conversation-bubble:not(.bot) {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        max-width: 80% !important;
+    }
+}
+
+@media (max-width: 414px) {
+    .conversation-bubble.bot {
+        max-width: 82% !important;
+    }
+
+    .conversation-bubble:not(.bot) {
+        max-width: 82% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .conversation-bubble.bot {
+        max-width: 85% !important;
+    }
+
+    .conversation-bubble:not(.bot) {
+        max-width: 85% !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .conversation-bubble.bot {
+        max-width: 88% !important;
+    }
+
+    .conversation-bubble:not(.bot) {
+        max-width: 88% !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .conversation-bubble.bot {
+        max-width: 90% !important;
+    }
+
+    .conversation-bubble:not(.bot) {
+        max-width: 90% !important;
+    }
+}
+
+/* Très petit mobile (max 480px) */
+@media (max-width: 480px) {
+    /* ==================== FIX CARD OVERFLOW ON SMALL SCREENS (LEGACY - Kept for other elements) ==================== */
+
+    /* Forcer le container principal à être 100% sans débordement */
+    .use-cases-grid,
+    .setup-steps-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    /* CRITICAL: Réduire drastiquement le padding des cartes */
+    .use-cases-grid > div,
+    .use-cases-grid > div[style*="padding: 2rem"],
+    .use-cases-grid > div[style*="padding: 3rem"],
+    .setup-steps-grid > div,
+    .setup-steps-grid > div[style*="padding: 2rem"],
+    .setup-steps-grid > div[style*="padding: 3rem"] {
+        padding: 1rem 0.75rem !important;
+        margin: 0 0 1.5rem 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Réduire tous les espacements internes */
+    .use-cases-grid .conversation-bubble,
+    .setup-steps-grid .conversation-bubble {
+        padding: 0.75rem 0.65rem !important;
+        margin-bottom: 0.75rem !important;
+        font-size: 0.8125rem !important;
+        box-sizing: border-box !important;
+        /* max-width géré par les règles d'alignement gauche/droite */
+    }
+
+    /* Titres plus petits */
+    .use-cases-grid h3,
+    .setup-steps-grid h3 {
+        font-size: 0.9375rem !important;
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Icons plus petits */
+    .use-cases-grid img,
+    .setup-steps-grid img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    /* Hero Section - espacement réduit */
+    .hero {
+        padding: 110px 0 40px;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    /* Hero Title */
+    .hero-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Hero Subtitle */
+    .hero-subtitle-optimized {
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-subtitle-optimized div {
+        font-size: 0.9375rem;
+    }
+
+    /* Hero Description */
+    .hero-description-optimized {
+        margin: 1.25rem 0;
+        gap: 0.65rem;
+    }
+
+    .hero-description-optimized p {
+        font-size: 0.9375rem;
+    }
+
+    /* CTA Buttons */
+    .hero-cta {
+        margin: 1.75rem 0;
+        gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: auto;
+        max-width: 240px;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    /* Trust Badges */
+    .hero-trust-badges {
+        margin: 1.25rem 0 1.75rem;
+        gap: 0.65rem;
+    }
+
+    /* Bouton démo mobile - plus compact */
+    .demo-button-mobile {
+        padding: 1rem 1.75rem !important;
+        font-size: 0.9375rem !important;
+        margin-top: 1.5rem;
+    }
+
+    /* Phone mockup - plus petit sur très petit écran */
+    .phone-mockup {
+        width: 240px !important;
+        height: 488px !important;
+        margin: 1.5rem auto 0;
+    }
+
+    .demo-subtitle-mobile {
+        max-width: 260px;
+        font-size: 0.8125rem;
+    }
+
+    /* Container ultra compact */
+    .container {
+        padding: 0 1rem !important;
+    }
+
+    /* FIX - Checkmarks plus petits */
+    .hero-description-optimized p {
+        font-size: 0.9375rem !important;
+    }
+
+    /* FIX - Trust badges encore plus compacts */
+    .hero-trust-badges {
+        gap: 0.625rem !important;
+        margin: 1.25rem 0 !important;
+    }
+
+    .hero-trust-badges div {
+        font-size: 0.875rem !important;
+    }
+
+    /* FIX - Bouton démo encore plus petit */
+    .demo-button-mobile {
+        max-width: 280px !important;
+        padding: 0.875rem 1.25rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    /* Chatbot CTA Section - 480px */
+    .chatbot-cta-section {
+        padding: 1.5rem 1.25rem;
+        margin-top: 1.25rem;
+    }
+
+    .chatbot-cta-section p:first-of-type {
+        margin-bottom: 0.875rem;
+    }
+
+    /* Bouton widget chatbot - 480px */
+    .btn-chatbot-widget {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* FIX - Cercles numérotés très petits */
+    /* COMMENTED OUT - Conflicting with ultra-reinforced circle rules at end of file
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"] {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    */
+
+    /* FIX - Titres de steps très petits */
+    h3[style*="font-size: 1.5rem"][style*="margin-bottom: 0.75rem"] {
+        font-size: 1.125rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    h3[style*="font-size: 1.5rem"] + p {
+        font-size: 0.875rem !important;
+    }
+
+    /* FIX - Texte long qui déborde */
+    h3[style*="white-space: nowrap"] {
+        font-size: 1.125rem !important;
+    }
+
+    /* Why Web Chatbot Section */
+    .what-is-azenflow {
+        padding: 3rem 0;
+    }
+
+    .what-is-azenflow .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .what-is-azenflow .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .azenflow-card {
+        padding: 1.5rem;
+    }
+
+    .azenflow-icon {
+        font-size: 2.5rem;
+    }
+
+    .azenflow-card-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .azenflow-card-note {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+
+    /* Horizontal cards on very small screens */
+    .azenflow-card-horizontal {
+        padding: 1.25rem;
+    }
+
+    .azenflow-icon-horizontal {
+        width: 50px;
+        height: 50px;
+    }
+
+    .azenflow-icon-horizontal img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .azenflow-icon-horizontal span {
+        font-size: 3rem !important;
+    }
+
+    .azenflow-card-title-horizontal {
+        font-size: var(--font-size-base);
+    }
+
+    .azenflow-card-description-horizontal {
+        font-size: 0.875rem;
+    }
+
+    /* Setup steps very small screens */
+    .setup-step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+
+    .setup-step-title {
+        font-size: var(--font-size-base);
+    }
+
+    .setup-step-description {
+        font-size: 0.8125rem;
+    }
+
+    /* How it works flow responsive */
+    .flow-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .flow-step-content {
+        padding: 1.5rem;
+    }
+
+    .flow-step-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .flow-step-description {
+        font-size: 0.875rem;
+    }
+
+    .flow-arrow {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .hero-title-line {
+        font-size: 1.75rem !important;
+    }
+
+    h2[style*="font-size: 3rem"],
+    h2[style*="font-size: 3.5rem"] {
+        font-size: 1.5rem !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+
+    /* Réduire padding sur très petits écrans */
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .container {
+        padding: 0 1rem !important;
+    }
+
+    /* Stats cards - texte plus petit */
+    div[style*="font-size: 1.5rem"][style*="font-weight: 900"] {
+        font-size: 1.25rem !important;
+    }
+
+    /* Buttons full width on very small screens - exclude utility buttons */
+    button:not(.back-to-top):not(.chatbot-toggle):not(.menu-toggle):not(.lang-switcher):not(.send-button):not(.chatbot-close-btn) {
+        width: 100% !important;
+    }
+}
+
+/* Ultra petit mobile (≤375px) - iPhone SE, etc. */
+@media (max-width: 375px) {
+    /* ==================== FIX CARD OVERFLOW ON ULTRA SMALL SCREENS ==================== */
+
+    /* ENCORE plus compact pour iPhone SE */
+    .use-cases-grid > div,
+    .use-cases-grid > div[style*="padding"],
+    .setup-steps-grid > div,
+    .setup-steps-grid > div[style*="padding"] {
+        padding: 0.875rem 0.625rem !important;
+        margin: 0 0 1.25rem 0 !important;
+    }
+
+    /* Conversation bubbles ultra compactes */
+    .use-cases-grid .conversation-bubble,
+    .setup-steps-grid .conversation-bubble {
+        padding: 0.65rem 0.5rem !important;
+        font-size: 0.75rem !important;
+        margin-bottom: 0.65rem !important;
+    }
+
+    /* Titres ultra petits */
+    .use-cases-grid h3,
+    .setup-steps-grid h3 {
+        font-size: 0.875rem !important;
+        margin-bottom: 0.875rem !important;
+    }
+
+    /* Icons ultra petits */
+    .use-cases-grid img,
+    .setup-steps-grid img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    /* Container ultra compact */
+    .container {
+        padding: 0 0.75rem !important;
+    }
+
+    /* Hero ultra compact */
+    .hero {
+        padding: 100px 0 35px;
+    }
+
+    .hero-content {
+        padding: 0 0.875rem;
+    }
+
+    /* Hero Title ultra compact */
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Hero Subtitle ultra compact */
+    .hero-subtitle-optimized {
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle-optimized div {
+        font-size: 0.875rem;
+    }
+
+    /* Hero Description ultra compact */
+    .hero-description-optimized {
+        margin: 1rem 0;
+        gap: 0.6rem;
+    }
+
+    .hero-description-optimized p {
+        font-size: 0.875rem;
+    }
+
+    /* CTA Buttons ultra compact */
+    .hero-cta {
+        margin: 1.5rem 0;
+        gap: 0.65rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: auto;
+        max-width: 220px;
+        padding: 0.7rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    /* Trust Badges ultra compact */
+    .hero-trust-badges {
+        margin: 1rem 0 1.5rem;
+        gap: 0.6rem;
+    }
+
+    /* Bouton démo mobile ultra compact */
+    .demo-button-mobile {
+        padding: 0.875rem 1.5rem !important;
+        font-size: 0.875rem !important;
+        margin-top: 1.25rem;
+    }
+
+    /* Phone mockup ultra petit */
+    .phone-mockup {
+        width: 200px !important;
+        height: 408px !important;
+        margin: 1.25rem auto 0;
+    }
+
+    .demo-subtitle-mobile {
+        max-width: 220px;
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-title-line {
+        font-size: 1.5rem !important;
+    }
+
+    /* Trial badge ultra petit */
+    .trial-badge {
+        font-size: 0.6875rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    /* FIX - Checkmarks ultra petits */
+    .hero-description-optimized p {
+        font-size: 0.875rem !important;
+    }
+
+    /* FIX - Trust badges ultra compacts */
+    .hero-trust-badges {
+        gap: 0.5rem !important;
+    }
+
+    .hero-trust-badges div {
+        font-size: 0.8125rem !important;
+    }
+
+    /* FIX - Bouton démo ultra petit */
+    .demo-button-mobile {
+        max-width: 260px !important;
+        padding: 0.8rem 1.125rem !important;
+        font-size: 0.8125rem !important;
+    }
+
+    /* Chatbot CTA Section - 375px */
+    .chatbot-cta-section {
+        padding: 1.25rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .chatbot-cta-section p:first-of-type {
+        margin-bottom: 0.75rem;
+    }
+
+    /* Bouton widget chatbot - 375px */
+    .btn-chatbot-widget {
+        padding: 0.8rem 1.25rem;
+        font-size: 0.8125rem;
+    }
+
+    /* FIX - Cercles numérotés ultra petits */
+    /* COMMENTED OUT - Conflicting with ultra-reinforced circle rules at end of file
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"] {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.25rem !important;
+        margin-bottom: 0.625rem !important;
+    }
+    */
+
+    /* FIX - Titres de steps ultra petits */
+    h3[style*="font-size: 1.5rem"][style*="margin-bottom: 0.75rem"] {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    h3[style*="font-size: 1.5rem"] + p {
+        font-size: 0.8125rem !important;
+    }
+
+    /* FIX - Texte long qui déborde - ultra compact */
+    h3[style*="white-space: nowrap"] {
+        font-size: 1rem !important;
+        line-height: 1.35 !important;
+    }
+
+    /* Stats grid - texte ultra petit */
+    div[style*="font-size: 1.5rem"][style*="font-weight: 900"] {
+        font-size: 1rem !important;
+    }
+
+    div[style*="font-size: 0.875rem"] {
+        font-size: 0.75rem !important;
+    }
+
+    /* Titres sections ultra compacts */
+    h2[style*="font-size: 3rem"],
+    h2[style*="font-size: 3.5rem"],
+    h2[style*="font-size: 2rem"] {
+        font-size: 1.25rem !important;
+    }
+
+    .section-title {
+        font-size: 1.25rem !important;
+    }
+
+    h3[style*="font-size: 1.5rem"] {
+        font-size: 1.125rem !important;
+    }
+
+    /* Phone mockup ultra petit */
+    .phone-mockup {
+        width: 200px !important;
+        height: 410px !important;
+    }
+
+    .demo-badge-mobile {
+        font-size: 0.6875rem;
+        padding: 0.5rem 0.875rem;
+    }
+
+    .demo-subtitle-mobile {
+        font-size: 0.6875rem;
+        max-width: 200px;
+    }
+
+    /* Buttons ultra compacts */
+    button[style*="padding: 1.25rem 2.5rem"],
+    button[style*="padding: 1rem 1.5rem"] {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.8125rem !important;
+    }
+
+    button[style*="padding: 1.5rem 3rem"],
+    button[style*="padding: 1.125rem 2rem"] {
+        padding: 0.875rem 1.25rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    /* Cards ultra compactes */
+    .trust-card,
+    .faq-item,
+    div[style*="padding: 1.5rem"] {
+        padding: 1rem !important;
+    }
+
+    /* Sections padding */
+    section[style*="padding: 6rem 0"] {
+        padding: 3rem 0 !important;
+    }
+
+    /* Pricing table */
+    .pricing-table {
+        font-size: 0.75rem;
+        min-width: 550px; /* Force minimum width for horizontal scroll */
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 0.75rem 0.5rem !important;
+    }
+
+    .pricing-table .option-icon {
+        font-size: 1rem;
+        margin-right: 0.35rem !important;
+    }
+
+    .pricing-table strong {
+        font-size: 0.875rem !important;
+    }
+
+    .pricing-table .price {
+        font-size: 0.75rem !important;
+    }
+
+    /* Stats boxes */
+    .stat-box {
+        padding: 1rem !important;
+    }
+
+    .stat-number {
+        font-size: 1.5rem !important;
+    }
+
+    .stat-text {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* ================================================================
+   CRITICAL FIX - FORCE LEFT/RIGHT ALIGNMENT ON MOBILE
+   MUST BE AT THE END to override everything else
+================================================================ */
+
+/* Base pour tous les mobiles */
+@media (max-width: 492px) {
+    /* UTILISATEUR - GAUCHE avec max-width */
+    .conversation-bubble.bot,
+    div.conversation-bubble.bot,
+    .use-cases-grid .conversation-bubble.bot,
+    .use-cases-grid > div .conversation-bubble.bot,
+    .setup-steps-grid .conversation-bubble.bot,
+    .setup-steps-grid > div .conversation-bubble.bot {
+        /* Alignement */
+        display: block !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+
+        /* Largeur CRITIQUE */
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 80% !important;
+
+        /* Forcer le box-sizing */
+        box-sizing: border-box !important;
+    }
+
+    /* IA - DROITE avec max-width */
+    .conversation-bubble:not(.bot),
+    div.conversation-bubble:not(.bot),
+    .use-cases-grid .conversation-bubble:not(.bot),
+    .use-cases-grid > div .conversation-bubble:not(.bot),
+    .setup-steps-grid .conversation-bubble:not(.bot),
+    .setup-steps-grid > div .conversation-bubble:not(.bot) {
+        /* Alignement */
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+
+        /* Largeur CRITIQUE */
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 80% !important;
+
+        /* Forcer le box-sizing */
+        box-sizing: border-box !important;
+    }
+
+    /* S'assurer que le container parent n'empêche pas l'alignement */
+    .use-cases-grid > div,
+    .setup-steps-grid > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+}
+
+/* iPhone standard */
+@media (max-width: 414px) {
+    .conversation-bubble.bot,
+    .use-cases-grid .conversation-bubble.bot,
+    .setup-steps-grid .conversation-bubble.bot {
+        max-width: 82% !important;
+    }
+
+    .conversation-bubble:not(.bot),
+    .use-cases-grid .conversation-bubble:not(.bot),
+    .setup-steps-grid .conversation-bubble:not(.bot) {
+        max-width: 82% !important;
+    }
+}
+
+/* iPhone SE */
+@media (max-width: 375px) {
+    .conversation-bubble.bot,
+    .use-cases-grid .conversation-bubble.bot,
+    .setup-steps-grid .conversation-bubble.bot {
+        max-width: 85% !important;
+    }
+
+    .conversation-bubble:not(.bot),
+    .use-cases-grid .conversation-bubble:not(.bot),
+    .setup-steps-grid .conversation-bubble:not(.bot) {
+        max-width: 85% !important;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 350px) {
+    .conversation-bubble.bot,
+    .use-cases-grid .conversation-bubble.bot,
+    .setup-steps-grid .conversation-bubble.bot {
+        max-width: 88% !important;
+    }
+
+    .conversation-bubble:not(.bot),
+    .use-cases-grid .conversation-bubble:not(.bot),
+    .setup-steps-grid .conversation-bubble:not(.bot) {
+        max-width: 88% !important;
+    }
+}
+
+/* Écrans microscopiques */
+@media (max-width: 320px) {
+    .conversation-bubble.bot,
+    .use-cases-grid .conversation-bubble.bot,
+    .setup-steps-grid .conversation-bubble.bot {
+        max-width: 90% !important;
+    }
+
+    .conversation-bubble:not(.bot),
+    .use-cases-grid .conversation-bubble:not(.bot),
+    .setup-steps-grid .conversation-bubble:not(.bot) {
+        max-width: 90% !important;
+    }
+}
+
+/* OVERRIDE absolu - en cas de conflit persistant */
+@media (max-width: 492px) {
+    .conversation-bubble[style],
+    .conversation-bubble.bot[style],
+    .conversation-bubble:not(.bot)[style] {
+        width: auto !important;
+        max-width: 80% !important;
+    }
+}
+
+/* ================================================================
+   UNIFORM FONT SIZES - Consistent typography within bubbles
+   All text elements inherit from bubble base size
+================================================================ */
+
+/* === DESKTOP - Base Typography === */
+.conversation-bubble,
+.conversation-bubble.bot {
+    font-size: 0.9375rem; /* 15px - taille de base */
+    line-height: 1.6;
+}
+
+/* Forcer l'héritage sur TOUS les éléments internes */
+.conversation-bubble *,
+.conversation-bubble div,
+.conversation-bubble span,
+.conversation-bubble p,
+.conversation-bubble strong,
+.conversation-bubble em,
+.conversation-bubble ul,
+.conversation-bubble ol,
+.conversation-bubble li,
+.conversation-bubble [style] {
+    font-size: inherit !important; /* Hériter de la bulle */
+    line-height: inherit !important;
+}
+
+/* Override pour les attributs style inline qui forcent des tailles */
+.conversation-bubble [style*="font-size"],
+.conversation-bubble span[style*="font-size"],
+.conversation-bubble div[style*="font-size"] {
+    font-size: inherit !important;
+}
+
+/* Liens - légèrement plus petits mais cohérents */
+.conversation-bubble a,
+.conversation-bubble span[style*="color: #0066cc"],
+.conversation-bubble span[style*="color:#0066cc"],
+.conversation-bubble span[style*="text-decoration: underline"] {
+    font-size: 0.875rem !important; /* 14px - juste un peu plus petit */
+    line-height: 1.5 !important;
+}
+
+/* === MOBILE RESPONSIVE TYPOGRAPHY === */
+
+/* Base mobile - 492px */
+@media (max-width: 492px) {
+    .conversation-bubble,
+    .conversation-bubble.bot {
+        font-size: 0.875rem !important; /* 14px */
+        line-height: 1.6 !important;
+    }
+
+    .conversation-bubble *,
+    .conversation-bubble div,
+    .conversation-bubble span,
+    .conversation-bubble p,
+    .conversation-bubble strong,
+    .conversation-bubble li {
+        font-size: inherit !important;
+        line-height: inherit !important;
+    }
+
+    .conversation-bubble a {
+        font-size: 0.8125rem !important; /* 13px */
+        line-height: 1.5 !important;
+    }
+}
+
+/* iPhone standard - 414px */
+@media (max-width: 414px) {
+    .conversation-bubble,
+    .conversation-bubble.bot {
+        font-size: 0.8125rem !important; /* 13px */
+        line-height: 1.6 !important;
+    }
+
+    .conversation-bubble a {
+        font-size: 0.75rem !important; /* 12px */
+        line-height: 1.5 !important;
+    }
+}
+
+/* iPhone SE - 375px */
+@media (max-width: 375px) {
+    .conversation-bubble,
+    .conversation-bubble.bot {
+        font-size: 0.75rem !important; /* 12px */
+        line-height: 1.6 !important;
+    }
+
+    .conversation-bubble a {
+        font-size: 0.6875rem !important; /* 11px */
+        line-height: 1.5 !important;
+    }
+}
+
+/* Très petits écrans - 350px */
+@media (max-width: 350px) {
+    .conversation-bubble,
+    .conversation-bubble.bot {
+        font-size: 0.6875rem !important; /* 11px */
+        line-height: 1.5 !important;
+    }
+
+    .conversation-bubble a {
+        font-size: 0.625rem !important; /* 10px */
+        line-height: 1.4 !important;
+    }
+}
+
+/* Écrans microscopiques - 320px */
+@media (max-width: 320px) {
+    .conversation-bubble,
+    .conversation-bubble.bot {
+        font-size: 0.625rem !important; /* 10px */
+        line-height: 1.5 !important;
+    }
+
+    .conversation-bubble a {
+        font-size: 0.5625rem !important; /* 9px */
+        line-height: 1.4 !important;
+    }
+}
+
+/* ================================================================
+   PRICING SECTION - MOBILE RESPONSIVE FIX
+   Keep badge in top-right but create dedicated space for it
+================================================================ */
+
+/* === DESKTOP - Garder les styles actuels === */
+/* Pas de changement nécessaire sur desktop */
+
+/* === MOBILE BREAKPOINTS === */
+
+/* 768px - Tablets et petits laptops */
+@media (max-width: 768px) {
+    /* Card pricing - augmenter padding-top pour le badge */
+    div[style*="background: linear-gradient(135deg, #8B6F47"][style*="padding: 2.5rem"] {
+        padding-top: 3.5rem !important; /* Plus d'espace pour le badge */
+        padding-bottom: 2rem !important;
+    }
+
+    /* Badge "Cancel anytime" - réduire la taille */
+    div[style*="position: absolute"][style*="top: 1rem"][style*="right: 1rem"],
+    div[style*="position: absolute"][style*="background: #FCD34D"] {
+        top: 0.75rem !important;
+        right: 0.75rem !important;
+        padding: 0.4rem 0.75rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* Réduire légèrement le prix */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] div[style*="font-size: 4rem"] {
+        font-size: 3rem !important; /* 48px au lieu de 64px */
+    }
+}
+
+/* 492px - Smartphones standards */
+@media (max-width: 492px) {
+    /* Card pricing - AUGMENTER padding-top pour espace badge */
+    div[style*="background: linear-gradient(135deg, #8B6F47"][style*="padding: 2.5rem"],
+    div[style*="background: linear-gradient(135deg, #8B6F47"][style*="color: white"] {
+        padding: 3rem 1.5rem 2rem 1.5rem !important;
+        /* 3rem en haut = 48px d'espace pour le badge */
+    }
+
+    /* Badge - PLUS PETIT et bien positionné */
+    div[style*="position: absolute"][style*="background: #FCD34D"],
+    div[style*="position: absolute"][style*="top: 1rem"][style*="right: 1rem"] {
+        position: absolute !important; /* Garder absolute */
+        top: 0.5rem !important; /* 8px du haut */
+        right: 0.5rem !important; /* 8px de la droite */
+        padding: 0.35rem 0.65rem !important;
+        font-size: 0.6875rem !important; /* 11px */
+        border-radius: 25px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Titre "Base Plan" - s'assurer qu'il est en dessous du badge */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] h3[style*="font-size: 1.75rem"] {
+        font-size: 1.375rem !important; /* 22px */
+        margin-bottom: 0.5rem !important;
+        margin-top: 0 !important;
+    }
+
+    /* PRIX - RÉDUCTION MAJEURE */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] div[style*="font-size: 4rem"] {
+        font-size: 2.5rem !important; /* 40px au lieu de 64px */
+        line-height: 1.1 !important;
+        margin: 0.75rem 0 !important;
+    }
+
+    /* "/month" - plus petit */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] span[style*="font-size: 1.5rem"] {
+        font-size: 1.125rem !important; /* 18px */
+    }
+
+    /* "(税抜)" - plus petit */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] p[style*="opacity: 0.75"] {
+        font-size: 0.75rem !important;
+        margin-top: 0.25rem !important;
+    }
+
+    /* Texte descriptif sous le prix */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] p[style*="opacity: 0.95"] {
+        font-size: 0.9375rem !important; /* 15px */
+        margin-top: 0.75rem !important;
+    }
+}
+
+/* 414px - iPhone XR et similaires */
+@media (max-width: 414px) {
+    /* Card pricing - ajuster padding-top */
+    div[style*="background: linear-gradient(135deg, #8B6F47"][style*="padding"] {
+        padding: 2.75rem 1.25rem 1.75rem 1.25rem !important;
+    }
+
+    /* Badge - encore plus compact */
+    div[style*="position: absolute"][style*="background: #FCD34D"] {
+        top: 0.5rem !important;
+        right: 0.5rem !important;
+        padding: 0.3rem 0.6rem !important;
+        font-size: 0.625rem !important; /* 10px */
+    }
+
+    /* Titre */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] h3 {
+        font-size: 1.25rem !important; /* 20px */
+    }
+
+    /* Prix */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] div[style*="font-size: 4rem"] {
+        font-size: 2.25rem !important; /* 36px */
+    }
+
+    /* "/month" */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] span[style*="font-size: 1.5rem"] {
+        font-size: 1rem !important; /* 16px */
+    }
+}
+
+/* 375px - iPhone SE */
+@media (max-width: 375px) {
+    /* Card pricing - padding-top optimal pour petit écran */
+    div[style*="background: linear-gradient(135deg, #8B6F47"][style*="padding"] {
+        padding: 2.5rem 1rem 1.5rem 1rem !important;
+    }
+
+    /* Badge - ultra compact */
+    div[style*="position: absolute"][style*="background: #FCD34D"] {
+        top: 0.4rem !important;
+        right: 0.4rem !important;
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.5625rem !important; /* 9px */
+    }
+
+    /* Titre */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] h3 {
+        font-size: 1.125rem !important; /* 18px */
+        margin-bottom: 0.4rem !important;
+    }
+
+    /* Prix - ULTRA COMPACT */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] div[style*="font-size: 4rem"] {
+        font-size: 2rem !important; /* 32px */
+        margin: 0.5rem 0 !important;
+    }
+
+    /* "/month" */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] span[style*="font-size: 1.5rem"] {
+        font-size: 0.875rem !important; /* 14px */
+    }
+
+    /* Texte descriptif */
+    div[style*="background: linear-gradient(135deg, #8B6F47"] p[style*="opacity: 0.95"] {
+        font-size: 0.875rem !important; /* 14px */
+    }
+}
+
+/* 350px - Très petits écrans */
+@media (max-width: 350px) {
+    div[style*="background: linear-gradient(135deg, #8B6F47"][style*="padding"] {
+        padding: 2.25rem 0.875rem 1.25rem 0.875rem !important;
+    }
+
+    div[style*="background: linear-gradient(135deg, #8B6F47"] div[style*="font-size: 4rem"] {
+        font-size: 1.875rem !important; /* 30px */
+    }
+
+    div[style*="background: linear-gradient(135deg, #8B6F47"] h3 {
+        font-size: 1rem !important; /* 16px */
+    }
+}
+
+/* 320px - Écrans microscopiques */
+@media (max-width: 320px) {
+    div[style*="background: linear-gradient(135deg, #8B6F47"][style*="padding"] {
+        padding: 2rem 0.75rem 1rem 0.75rem !important;
+    }
+
+    div[style*="position: absolute"][style*="background: #FCD34D"] {
+        top: 0.35rem !important;
+        right: 0.35rem !important;
+        padding: 0.2rem 0.4rem !important;
+        font-size: 0.5rem !important; /* 8px */
+    }
+
+    div[style*="background: linear-gradient(135deg, #8B6F47"] div[style*="font-size: 4rem"] {
+        font-size: 1.75rem !important; /* 28px */
+    }
+
+    div[style*="background: linear-gradient(135deg, #8B6F47"] h3 {
+        font-size: 0.9375rem !important; /* 15px */
+    }
+}
+
+/* ================================================================
+   SPACING FIX - Desktop Only
+   Increase space between Setup Steps grid and the note below
+================================================================ */
+@media (min-width: 993px) {
+    /* Target the grid container of setup steps */
+    div[style*="display: grid"][style*="grid-template-columns: repeat(3, 1fr)"][style*="margin-bottom: 3rem"] {
+        margin-bottom: 5rem !important; /* Augmenter de 3rem à 5rem */
+    }
+
+    /* Alternative: Target by parent section */
+    section div[style*="display: grid"][style*="grid-template-columns: repeat(3, 1fr)"] {
+        margin-bottom: 5rem !important;
+    }
+
+    /* Or target the note box directly to add margin-top */
+    div[style*="background: rgba(139, 111, 71, 0.05)"][style*="padding: 1.5rem"],
+    div[style*="background: rgba(139, 111, 71, 0.08)"][style*="padding: 1.5rem"] {
+        margin-top: 3rem !important; /* Ajouter espace au-dessus de la note */
+    }
+}
+
+/* ================================================================
+   CRITICAL FIX - FORCE PERFECT CIRCLES ON ALL SCREENS
+   ULTRA-REINFORCED RULES - MUST BE AT THE VERY END
+   These rules MUST be the last ones to win the CSS cascade
+================================================================ */
+
+/* === ULTRA-SPECIFIC SELECTORS FOR CIRCLES === */
+
+/* Base - All circles regardless of screen size */
+.setup-step-number,
+.setup-steps-grid div[style*="border-radius: 50%"]:not(.chatbot-widget *),
+div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+div[style*="width: 80px"][style*="height: 80px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+div[style*="width: 60px"][style*="height: 60px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+div[style*="width: 50px"][style*="height: 50px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+div[style*="width: 45px"][style*="height: 45px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+div[style*="width: 40px"][style*="height: 40px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+div[style*="display: flex"][style*="align-items: center"][style*="justify-content: center"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+section div[style*="border-radius: 50%"][style*="background"]:not(.chatbot-widget *),
+div[style*="border-radius: 50%"][style*="font-size"][style*="font-weight"]:not(.chatbot-widget *) {
+    /* FORCE PERFECT CIRCLE - Can't be overridden */
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* === DESKTOP - Base Size 100×100px === */
+@media (min-width: 769px) {
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+    .setup-step-number {
+        width: 100px !important;
+        height: 100px !important;
+        min-width: 100px !important;
+        min-height: 100px !important;
+        max-width: 100px !important;
+        max-height: 100px !important;
+        font-size: 3rem !important;
+    }
+}
+
+/* === TABLET - 768px → 60×60px === */
+@media (max-width: 768px) {
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+    div[style*="border-radius: 50%"][style*="background: linear-gradient"]:not(.chatbot-widget *),
+    .setup-step-number {
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px !important;
+        min-height: 60px !important;
+        max-width: 60px !important;
+        max-height: 60px !important;
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* === MOBILE LARGE - 492px → 55×55px === */
+@media (max-width: 492px) {
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+    div[style*="border-radius: 50%"][style*="background: linear-gradient"]:not(.chatbot-widget *),
+    .setup-step-number {
+        width: 55px !important;
+        height: 55px !important;
+        min-width: 55px !important;
+        min-height: 55px !important;
+        max-width: 55px !important;
+        max-height: 55px !important;
+        font-size: 1.625rem !important;
+        margin-bottom: 0.875rem !important;
+    }
+}
+
+/* === MOBILE STANDARD - 414px → 50×50px === */
+@media (max-width: 414px) {
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+    div[style*="border-radius: 50%"][style*="background: linear-gradient"]:not(.chatbot-widget *),
+    .setup-step-number {
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+        min-height: 50px !important;
+        max-width: 50px !important;
+        max-height: 50px !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+}
+
+/* === MOBILE SMALL - 375px → 45×45px === */
+@media (max-width: 375px) {
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+    div[style*="border-radius: 50%"][style*="background: linear-gradient"]:not(.chatbot-widget *),
+    .setup-step-number {
+        width: 45px !important;
+        height: 45px !important;
+        min-width: 45px !important;
+        min-height: 45px !important;
+        max-width: 45px !important;
+        max-height: 45px !important;
+        font-size: 1.375rem !important;
+        margin-bottom: 0.625rem !important;
+    }
+}
+
+/* === MOBILE EXTRA SMALL - 350px → 43×43px === */
+@media (max-width: 350px) {
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+    div[style*="border-radius: 50%"][style*="background: linear-gradient"]:not(.chatbot-widget *),
+    .setup-step-number {
+        width: 43px !important;
+        height: 43px !important;
+        min-width: 43px !important;
+        min-height: 43px !important;
+        max-width: 43px !important;
+        max-height: 43px !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* === MOBILE ULTRA SMALL - 320px → 40×40px === */
+@media (max-width: 320px) {
+    div[style*="width: 100px"][style*="height: 100px"][style*="border-radius: 50%"]:not(.chatbot-widget *),
+    div[style*="border-radius: 50%"][style*="background: linear-gradient"]:not(.chatbot-widget *),
+    .setup-step-number {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+        font-size: 1.25rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* ==================== OPTION CARDS MOBILE LAYOUT ==================== */
+/* Layout pour Options 4 et 5 (ナレッジベース拡張, メッセージ量追加) */
+
+@media (max-width: 768px) {
+    .option-card-mobile {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+    }
+
+    .option-card-mobile .option-card-inner {
+        display: flex !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+
+    .option-card-mobile .option-icon-pic {
+        flex-shrink: 0 !important;
+        width: 60px !important;
+    }
+
+    .option-card-mobile .option-icon-pic img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .option-card-mobile .option-main-text {
+        flex: 1 !important;
+    }
+
+    .option-card-mobile .option-main-text h4 {
+        margin-bottom: 0.25rem !important;
+        font-size: 1rem !important;
+    }
+
+    .option-card-mobile .option-main-text p {
+        margin: 0 !important;
+        font-size: 0.875rem !important;
+    }
+
+    .option-card-mobile .option-example {
+        width: 100% !important;
+        padding-top: 0.75rem !important;
+        border-top: 1px solid rgba(139, 111, 71, 0.15) !important;
+    }
+
+    .option-card-mobile .option-example p {
+        margin: 0 !important;
+        font-size: 0.8125rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .option-card-mobile .option-example p:first-child {
+        margin-bottom: 0.25rem !important;
+    }
+
+    /* Prix initial - mettre la fourchette en dessous sur mobile */
+    .fee-amount-mobile {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.25rem !important;
+    }
+
+    .fee-amount-mobile .currency,
+    .fee-amount-mobile .amount {
+        display: inline !important;
+    }
+
+    .fee-amount-mobile .fee-range {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 0.25rem !important;
+    }
+}

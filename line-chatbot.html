@@ -1,0 +1,1863 @@
+html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="顧客対応の一次応答をLINEで自動化。難しい質問だけ人へ。導入は最短その日中。2週間の無料トライアル付き。">
+    
+    <!-- ================= SEO CRITIQUE : CANONICAL ================= -->
+    <!-- Remplace l'URL ci-dessous par l'URL réelle de ta page pour éviter le contenu dupliqué -->
+    <link rel="canonical" href="https://azenflow.jp/line-chatbot.html">
+
+    <!-- ================= UX & CTR : FAVICON ================= -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- ================= SOCIAL SEO : OPEN GRAPH (LINE, FACEBOOK) ================= -->
+    <!-- Ces balises contrôlent l'apparence du lien lorsqu'il est partagé -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azenflow.jp/line-chatbot.html">
+    <meta property="og:title" content="LINEチャットボット｜顧客対応を3秒で自動化｜AzenFlow">
+    <meta property="og:description" content="顧客対応の一次応答をLINEで自動化。難しい質問だけ人へ。導入は最短その日中。2週間の無料トライアル付き。">
+    <meta property="og:image" content="https://azenflow.jp/images/og-share-image.jpg"> <!-- Image recommandée : 1200x630px -->
+    <meta property="og:site_name" content="AzenFlow">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- ================= SOCIAL SEO : TWITTER CARDS ================= -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LINEチャットボット｜顧客対応を3秒で自動化｜AzenFlow">
+    <meta name="twitter:description" content="顧客対応の一次応答をLINEで自動化。導入は最短その日中。">
+    <meta name="twitter:image" content="https://azenflow.jp/images/og-share-image.jpg">
+
+    <title>LINEチャットボット｜顧客対応を3秒で自動化｜AzenFlow</title>
+    
+    <!-- Styles globaux -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <!-- Styles de la page -->
+    <link rel="stylesheet" href="styles/pages/line-chatbot.css">
+
+    <!-- Composants -->
+    <link rel="stylesheet" href="styles/components/phone-mockup.css">
+    <link rel="stylesheet" href="styles/components/floating-cta.css">
+    <link rel="stylesheet" href="styles/components/back-to-top.css">
+    <link rel="stylesheet" href="styles/components/cookie-banner.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="styles/fonts.css">
+    <!-- Structured Data SEO -->
+    <script src="/scripts/structured-data.js"></script>
+
+    <!-- Mobile Optimizations -->
+    <style>
+        /* Hide phone mockup on mobile only - keeps CTAs above the fold */
+        @media (max-width: 768px) {
+            .phone-mockup,
+            .hero-visual-wrapper {
+                display: none !important;
+            }
+
+            /* Ensure hero is compact on mobile */
+            .hero-section,
+            .hero {
+                padding-top: 80px !important;
+                padding-bottom: 2rem !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            /* Ensure CTAs are visible */
+            .hero-cta {
+                margin-top: 1.5rem !important;
+            }
+
+            /* Show mobile LINE button, hide QR */
+            .qr-demo-box {
+                display: none !important;
+            }
+            .demo-button-mobile {
+                display: block !important;
+            }
+        }
+
+        /* Desktop: mockup stays visible at its current position */
+        @media (min-width: 769px) {
+            .phone-mockup,
+            .hero-visual-wrapper {
+                display: block !important;
+            }
+
+            /* Desktop: Show QR code, hide mobile button */
+            .qr-demo-box {
+                display: block !important;
+            }
+            .demo-button-mobile {
+                display: none !important;
+            }
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ==================== USE CASES TABS SYSTEM ==================== */
+
+        /* Desktop: All cases visible, no tabs */
+        @media (min-width: 769px) {
+            .use-cases-tabs {
+                display: none !important;
+            }
+
+            .case-card {
+                display: block !important;
+            }
+        }
+
+        /* Mobile: Tabs system active */
+        @media (max-width: 768px) {
+            /* Show tabs navigation */
+            .use-cases-tabs {
+                display: block !important;
+            }
+
+            /* CRITICAL: Hide ALL cases by default - STRONGEST RULES */
+            .use-cases-content .case-card {
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* CRITICAL: Show ONLY active case */
+            .use-cases-content .case-card.active {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                height: auto !important;
+                overflow: visible !important;
+                margin-bottom: 1rem !important;
+                padding: 2rem !important;
+                animation: fadeInCase 0.3s ease-in-out;
+            }
+
+            /* Tab button styles */
+            .tab-btn {
+                transition: all 0.3s ease;
+            }
+
+            .tab-btn.active {
+                color: #8B7347 !important;
+                border-bottom-color: #8B7347 !important;
+            }
+
+            .tab-btn:not(.active) {
+                color: #6b7280 !important;
+                border-bottom-color: transparent !important;
+            }
+
+            .tab-btn:hover {
+                color: #8B7347 !important;
+                background: rgba(139, 115, 85, 0.05);
+            }
+
+            /* Reduce padding on mobile */
+            .case-card {
+                padding: 1.5rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            /* Fade in animation */
+            @keyframes fadeInCase {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        /* Smooth scrolling for tabs */
+        .tabs-nav {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tabs-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* ==================== PRICING FEATURES ==================== */
+        /* Unified features styling */
+        .pricing-features-standard h4 {
+            color: #4b5563;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .feature-standard {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-standard .checkmark {
+            color: #8B7347;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+
+        .feature-standard .content h5 {
+            color: #1f2937;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0 0 0.2rem 0;
+        }
+
+        .feature-standard .content p {
+            color: #6b7280;
+            font-size: 0.85rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Pricing highlights */
+        .pricing-highlight {
+            background: rgba(139, 115, 85, 0.05);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 3px solid #8B7347;
+        }
+
+        .pricing-highlight p {
+            margin: 0.5rem 0;
+            color: #4b5563;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Optional features examples */
+        .option-example {
+            background: #f9fafb;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 2px solid #8B7347;
+        }
+
+        .option-example p {
+            margin: 0;
+            color: #4b5563;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .pricing-highlight {
+                padding: 0.8rem 1rem;
+            }
+
+            /* ==================== ACCURACY & TRUST SECTION ==================== */
+            .accuracy-trust-section h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .accuracy-feature-card {
+                padding: 1.5rem !important;
+            }
+
+            .track-record > div {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+
+            .track-record > div > div {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .track-record > div > div:last-child {
+                border-bottom: none;
+            }
+
+            .security-privacy > div {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* CTA hover effect */
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4) !important;
+        }
+
+        /* Trust section - Desktop horizontal layout */
+        @media (min-width: 769px) {
+            .trust-bullets-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+
+        /* Trust bullet cards hover effect */
+        .trust-bullet-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15) !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Floating CTA Button -->
+    <div id="floating-cta-placeholder"></div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in-up delay-1" style="line-height: 1.2;">
+                        <div style="margin-bottom: 0.3em;" data-ja="3秒で一次対応。" data-en="First response in 3 seconds.">3秒で一次対応。</div>
+                        <div class="gradient-text" data-ja="AIがLINEでお客様を逃さない。" data-en="AI on LINE never misses a customer.">AIがLINEでお客様を逃さない。</div>
+                    </h1>
+
+                    <div class="hero-subtitle-optimized fade-in-up delay-2" style="margin-top: 1.5rem;">
+                        <div style="font-size: 1.25rem; color: var(--text-secondary); line-height: 1.6;" data-ja="顧客対応の一次応答をLINEで自動化。難しい質問だけ人へ。" data-en="Automate first-response on LINE. Humans only for complex cases.">
+                            顧客対応の一次応答をLINEで自動化。難しい質問だけ人へ。
+                        </div>
+                    </div>
+
+                    <!-- Description avec checkmarks -->
+                    <div class="hero-description-optimized fade-in-up delay-2" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
+                        <p style="margin-bottom: 0.8rem; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 80%の問い合わせを自動対応" data-en="✓ 80% of inquiries handled automatically">
+                            <strong>✓</strong> <strong>80%</strong>の問い合わせを自動対応
+                        </p>
+                        <p style="margin-bottom: 0.8rem; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 最短1日で導入可能" data-en="✓ Launch in as fast as 1 day">
+                            <strong>✓</strong> <strong>最短1日</strong>で導入可能
+                        </p>
+                        <p style="margin-bottom: 0; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 技術知識不要・資料共有のみ" data-en="✓ No technical knowledge needed - just share docs">
+                            <strong>✓</strong> <strong>技術知識不要</strong>・資料共有のみ
+                        </p>
+                    </div>
+
+                    <!-- Boutons CTA -->
+                    <div class="hero-cta fade-in-up delay-3">
+                        <button onclick="window.location.href='#demo'" class="btn-primary pulse" data-ja="今すぐデモを試す" data-en="Try Demo Now">今すぐデモを試す</button>
+                        <button onclick="window.location.href='contact.html'" class="btn-secondary" data-ja="無料相談を予約" data-en="Book Free Consultation">無料相談を予約</button>
+                    </div>
+
+                    <!-- Trust badges -->
+                    <div class="hero-trust-badges fade-in-up delay-3" style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; font-size: 1rem; color: #4B5563; font-weight: 600;">
+                        <div data-ja="✓ 2週間無料トライアル" data-en="✓ 2-week free trial">
+                            <span style="color: #8B6F47;">✓</span> 2週間無料トライアル
+                        </div>
+                        <div data-ja="✓ いつでも解約可能" data-en="✓ Cancel anytime">
+                            <span style="color: #8B6F47;">✓</span> いつでも解約可能
+                        </div>
+                        <div data-ja="✓ クレカ登録不要" data-en="✓ No credit card required">
+                            <span style="color: #8B6F47;">✓</span> クレカ登録不要
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in-right">
+                    <!-- Wrapper pour téléphone (mockup) -->
+                    <div class="hero-visual-wrapper">
+                        <div class="phone-mockup">
+                            <div class="phone-frame">
+                                <div class="phone-button-left"></div>
+                                <div class="phone-button-right-1"></div>
+                                <div class="phone-button-right-2"></div>
+                                <div class="phone-screen">
+                                    <div class="phone-notch"></div>
+                                    <div class="phone-content">
+                                        <video class="phone-video" autoplay loop muted playsinline>
+                                            <source src="videos/demo-line.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why LINE Integration is Effective -->
+    <section class="what-is-azenflow">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="なぜLINE連携が効果的なのか" data-en="Why LINE Integration Works">なぜLINE連携が効果的なのか</h2>
+            </div>
+
+            <div class="azenflow-features-grid-horizontal">
+                <!-- Benefit 1 -->
+                <div class="azenflow-card-horizontal reveal-on-scroll">
+                    <div class="azenflow-icon-horizontal">
+                        <picture>
+        <source srcset="images/line.webp" type="image/webp">
+        <img src="images/line.png" alt="LINE" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+    </picture>
+                    </div>
+                    <div class="azenflow-card-content-horizontal">
+                        <h3 class="azenflow-card-title-horizontal" data-ja="日本人の約96%がLINEを利用" data-en="96% of Japanese use LINE">
+                            日本人の約96%がLINEを利用
+                        </h3>
+                        <p class="azenflow-card-description-horizontal" data-ja="ほとんどのユーザーがすでにLINEを使っており、「友だち追加」だけで、すぐに問い合わせ対応を開始できます。" data-en="Most users already have LINE - just add as friend to start customer support.">
+                            ほとんどのユーザーがすでにLINEを使っており、「友だち追加」だけで、すぐに問い合わせ対応を開始できます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="azenflow-card-horizontal reveal-on-scroll delay-1">
+                    <div class="azenflow-icon-horizontal">
+                        <picture>
+        <source srcset="images/duo.webp" type="image/webp">
+        <img src="images/duo.png" alt="Duo" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+    </picture>
+                    </div>
+                    <div class="azenflow-card-content-horizontal">
+                        <h3 class="azenflow-card-title-horizontal" data-ja="新規顧客の獲得" data-en="Acquire New Customers">
+                            新規顧客の獲得
+                        </h3>
+                        <p class="azenflow-card-description-horizontal" data-ja="問い合わせを通じて信頼関係を構築し、長期的な顧客との絆を育成" data-en="Build trust through inquiries and nurture long-term customer relationships">
+                            問い合わせを通じて信頼関係を構築し、長期的な顧客との絆を育成
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="azenflow-card-horizontal reveal-on-scroll delay-2">
+                    <div class="azenflow-icon-horizontal">
+                        <picture>
+        <source srcset="images/247.webp" type="image/webp">
+        <img src="images/247.png" alt="24/7" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+    </picture>
+                    </div>
+                    <div class="azenflow-card-content-horizontal">
+                        <h3 class="azenflow-card-title-horizontal" data-ja="営業時間外でもAIが自動対応" data-en="AI auto-response after hours">
+                            営業時間外でもAIが自動対応
+                        </h3>
+                        <p class="azenflow-card-description-horizontal" data-ja="夜間・休日の問い合わせにも3秒以内で返信。営業時間外の「機会損失」を防ぎます。" data-en="Reply within 3 seconds even nights/weekends. Prevent missed opportunities.">
+                            夜間・休日の問い合わせにも3秒以内で返信。営業時間外の「機会損失」を防ぎます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="azenflow-card-horizontal reveal-on-scroll delay-3">
+                    <div class="azenflow-icon-horizontal">
+                        <picture>
+        <source srcset="images/document.webp" type="image/webp">
+        <img src="images/document.png" alt="Document" style="width: 80px; height: 80px; object-fit: contain;" width="220" height="220" loading="lazy">
+    </picture>
+                    </div>
+                    <div class="azenflow-card-content-horizontal">
+                        <h3 class="azenflow-card-title-horizontal" data-ja="顧客ごとの履歴・やり取りを一元管理" data-en="Centralized customer history">
+                            顧客ごとの履歴・やり取りを一元管理
+                        </h3>
+                        <p class="azenflow-card-description-horizontal" data-ja="以前の会話の履歴をもとに、より自然でスムーズなサポートが可能。人手による対応との切り替えも自動で。" data-en="Based on past conversation history, provide smoother support. Auto-switch to human support.">
+                            以前の会話の履歴をもとに、より自然でスムーズなサポートが可能。人手による対応との切り替えも自動で。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="azenflow-card-horizontal reveal-on-scroll delay-4">
+                    <div class="azenflow-icon-horizontal">
+                        <picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="Check" style="width: 120px; height: 120px; object-fit: contain;" width="240" height="240" loading="lazy">
+    </picture>
+                    </div>
+                    <div class="azenflow-card-content-horizontal">
+                        <h3 class="azenflow-card-title-horizontal" data-ja="すべてが一箇所で完結" data-en="Everything in one place">
+                            すべてが一箇所で完結
+                        </h3>
+                        <p class="azenflow-card-description-horizontal" data-ja="自動返信、リンク共有、連絡先の案内 - すべてLINE上で自動化、追加ツール不要。" data-en="Auto-replies, link sharing, contact info forwarding - all automated on LINE without extra tools.">
+                            自動返信、リンク共有、連絡先の案内 - すべてLINE上で自動化、追加ツール不要。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Steps - Quick Setup -->
+    <section style="padding: 6rem 0; background: linear-gradient(135deg, rgba(139, 111, 71, 0.04) 0%, rgba(166, 138, 92, 0.04) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="たった1日で導入完了" data-en="Setup in 1 Day">たった1日で導入完了</h2>
+                <p class="section-subtitle" data-ja="FAQや資料を共有し、動作を指定するだけ" data-en="Just share your FAQs or documentation, specify behaviors">FAQや資料を共有し、動作を指定するだけ</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                <div class="reveal-on-scroll" style="text-align: center;">
+                    <div class="step-circle">1</div>
+                    <h3 style="font-weight: var(--font-weight-bold); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);" data-ja="LINE連携" data-en="Connect to LINE">LINE連携</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; font-size: 1rem;" data-ja="既存のLINE公式アカウントと連携" data-en="Link your existing LINE Official Account">既存のLINE公式アカウントと連携</p>
+                </div>
+
+                <div class="reveal-on-scroll delay-1" style="text-align: center;">
+                    <div class="step-circle">2</div>
+                    <h3 style="font-weight: var(--font-weight-bold); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);" data-ja="資料共有 + AI設定" data-en="Share docs + AI Setup">資料共有 + AI設定</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; font-size: 1rem;" data-ja="FAQ、マニュアル、製品資料を共有。AIの口調・話し方、スタッフへの転送タイミング、リンクやメールの自動送信を簡単に設定できます。" data-en="Share FAQs, manuals, and product docs. Easily configure AI tone and style, when to transfer to staff, and automatic link/email sending.">FAQ、マニュアル、製品資料を共有。AIの口調・話し方、スタッフへの転送タイミング、リンクやメールの自動送信を簡単に設定できます。</p>
+                </div>
+
+                <div class="reveal-on-scroll delay-2" style="text-align: center;">
+                    <div class="step-circle">3</div>
+                    <h3 style="font-weight: var(--font-weight-bold); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);" data-ja="公開" data-en="Go Live">公開</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; font-size: 1rem;" data-ja="テスト後、すぐに公開" data-en="Test then go live">テスト後、すぐに公開</p>
+                </div>
+            </div>
+
+            <div class="reveal-on-scroll delay-3" style="background: white; border-radius: 24px; padding: 2.5rem; max-width: 900px; margin: 0 auto; border: 2px solid #8B6F47; box-shadow: 0 4px 20px rgba(139, 111, 71, 0.15);">
+                <h3 style="font-weight: var(--font-weight-bold); font-size: 1.75rem; margin-bottom: 1.5rem; text-align: center; color: #8B6F47;" data-ja="LINE公式アカウントをお持ちでない場合" data-en="No LINE Official Account?">LINE公式アカウントをお持ちでない場合</h3>
+                <p style="text-align: center; color: var(--text-secondary); font-size: 1.125rem; line-height: 1.8;" data-ja="公式アカウントお持ちでない方は直接ご説明いたします。お気軽にご相談ください" data-en="If you don't have an official account, we'll explain directly. Feel free to contact us.">
+                    公式アカウントお持ちでない方は直接ご説明いたします。<br>お気軽にご相談ください
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section style="padding: 6rem 0; background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="仕組み" data-en="How It Works">仕組み</h2>
+            </div>
+
+            <div class="how-it-works-flow">
+                <!-- Step 1 - Image Left -->
+                <div class="flow-step flow-step-left reveal-on-scroll">
+                    <picture>
+        <source srcset="images/askline.webp" type="image/webp">
+        <img src="images/askline.png" alt="Ask on LINE" class="flow-step-icon" width="420" height="420" loading="lazy">
+    </picture>
+                    <div class="flow-step-text">
+                        <h3 class="flow-step-title" data-ja="お客様がLINEでメッセージ" data-en="Customer Messages on LINE">お客様がLINEでメッセージ</h3>
+                        <p class="flow-step-description" data-ja="24時間365日対応 - いつでもどこからでも即座につながる" data-en="Available 24/7 - instant connection from anywhere">24時間365日対応 - いつでもどこからでも即座につながる</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">
+                    <svg width="40" height="80" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 0 L20 65" stroke="#8B6F47" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M10 55 L20 70 L30 55" stroke="#8B6F47" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+
+                <!-- Step 2 - Image Right -->
+                <div class="flow-step flow-step-right reveal-on-scroll delay-1">
+                    <div class="flow-step-text">
+                        <h3 class="flow-step-title" data-ja="AIが御社の資料を検索" data-en="AI Searches Your Documents">AIが御社の資料を検索</h3>
+                        <p class="flow-step-description" data-ja="御社のFAQ、マニュアル、社内資料のみから回答 外部データや推測は使用しません" data-en="Only answers from YOUR FAQs, manuals & internal docs No external data or guessing">御社のFAQ、マニュアル、社内資料のみから回答 外部データや推測は使用しません</p>
+                    </div>
+                    <picture>
+        <source srcset="images/aifaq.webp" type="image/webp">
+        <img src="images/aifaq.png" alt="AI searches FAQs" class="flow-step-icon" width="420" height="420" loading="lazy">
+    </picture>
+                </div>
+                <div class="flow-arrow">
+                    <svg width="40" height="80" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 0 L20 65" stroke="#8B6F47" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M10 55 L20 70 L30 55" stroke="#8B6F47" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+
+                <!-- Step 3 - Image Left -->
+                <div class="flow-step flow-step-left reveal-on-scroll delay-2">
+                    <picture>
+        <source srcset="images/3sec.webp" type="image/webp">
+        <img src="images/3sec.png" alt="Reply within 3 seconds" class="flow-step-icon" width="420" height="420" loading="lazy">
+    </picture>
+                    <div class="flow-step-text">
+                        <h3 class="flow-step-title" data-ja="3秒以内に回答" data-en="Reply within 3 seconds">3秒以内に回答</h3>
+                        <p class="flow-step-description" data-ja="正確な回答、関連リンク、または連絡先を提供" data-en="Provides accurate answer, relevant link, or contact info">正確な回答、関連リンク、または連絡先を提供</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">
+                    <svg width="40" height="80" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 0 L20 65" stroke="#8B6F47" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M10 55 L20 70 L30 55" stroke="#8B6F47" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+
+                <!-- Step 4 - Image Right -->
+                <div class="flow-step flow-step-right reveal-on-scroll delay-3">
+                    <div class="flow-step-text">
+                        <h3 class="flow-step-title" data-ja="難しい質問は担当者へ" data-en="Difficult questions to your team">難しい質問は担当者へ</h3>
+                        <p class="flow-step-description" data-ja="AIが対応できない質問は自動的に担当者へ転送" data-en="Questions AI can't handle are automatically sent to your team">AIが対応できない質問は自動的に担当者へ転送</p>
+                    </div>
+                    <picture>
+        <source srcset="images/hardquest.webp" type="image/webp">
+        <img src="images/hardquest.png" alt="Complex questions forwarded" class="flow-step-icon" width="420" height="420" loading="lazy">
+    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases-section" style="padding: 6rem 0; background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="業界別の活用例" data-en="Use Cases">業界別の活用例</h2>
+            </div>
+
+            <!-- Texte explicatif -->
+            <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.7;"
+                   data-ja="以下は、お客様がAIチャットボットに質問する実際の会話例です。業界ごとに異なるニーズに対応できることをご確認ください。"
+                   data-en="Below are real conversation examples where customers ask questions to your AI chatbot. See how it adapts to different industry needs.">
+                    以下は、お客様がAIチャットボットに質問する実際の会話例です。業界ごとに異なるニーズに対応できることをご確認ください。
+                </p>
+            </div>
+
+            <!-- Tabs Navigation (Mobile Only) -->
+            <div class="use-cases-tabs" style="display: none; max-width: 800px; margin: 0 auto 2rem;">
+                <div class="tabs-nav" style="display: flex; justify-content: center; border-bottom: 2px solid #e5e7eb; overflow-x: auto;">
+                    <button class="tab-btn active" data-tab="ecommerce" style="flex: 1; padding: 1rem 1.5rem; font-weight: 700; font-size: 1rem; border: none; background: none; cursor: pointer; border-bottom: 3px solid #8B7347; color: #8B7347; transition: all 0.3s ease;">
+                        <span data-ja="EC" data-en="EC">EC</span>
+                    </button>
+                    <button class="tab-btn" data-tab="bookings" style="flex: 1; padding: 1rem 1.5rem; font-weight: 700; font-size: 1rem; border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; color: #6b7280; transition: all 0.3s ease;">
+                        <span data-ja="予約" data-en="Salon">予約</span>
+                    </button>
+                    <button class="tab-btn" data-tab="education" style="flex: 1; padding: 1rem 1.5rem; font-weight: 700; font-size: 1rem; border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; color: #6b7280; transition: all 0.3s ease;">
+                        <span data-ja="教育" data-en="School">教育</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="use-cases-grid use-cases-content">
+                <!-- E-commerce Use Case -->
+                <div class="case-card reveal-on-scroll active" data-case="ecommerce" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);">
+                    <div style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: center;"><picture>
+        <source srcset="images/commerce.webp" type="image/webp">
+        <img src="images/commerce.png" alt="E-commerce" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+    </picture></div>
+                    <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem; text-align: center; color: #8B6F47;" data-ja="EC（化粧品ストア）" data-en="E-COMMERCE (Cosmetics Store)">EC（化粧品ストア）</h3>
+
+                    <div class="conversation-bubble bot">
+                        <span data-ja="混合肌で赤みがあるんですが、どのクリームを使えばいいですか？" data-en="I have combination skin with redness. Which cream should I use?">混合肌で赤みがあるんですが、どのクリームを使えばいいですか？</span>
+                    </div>
+                    <div class="conversation-bubble">
+                        <div style="margin-bottom: 0.75rem;">
+                            <span data-ja="赤みのある混合肌には、スージング ハイドラバランス クリームがおすすめです：" data-en="For combination skin with redness, I recommend our Soothing Hydra-Balance Cream:">赤みのある混合肌には、スージング ハイドラバランス クリームがおすすめです：</span>
+                        </div>
+                        <div style="margin-bottom: 0.5rem; padding-left: 0.5rem;">
+                            <div data-ja="・赤みを軽減（ツボクサエキス配合）" data-en="- Reduces redness (centella asiatica extract)">・赤みを軽減（ツボクサエキス配合）</div>
+                            <div data-ja="・ベタつかず保湿" data-en="- Hydrates without being greasy">・ベタつかず保湿</div>
+                            <div data-ja="・敏感な混合肌に最適" data-en="- Perfect for sensitive combination skin">・敏感な混合肌に最適</div>
+                            <div data-ja="・評価：4.8⭐（2,450件）" data-en="- Rating: 4.8⭐ (2,450 reviews)">・評価：4.8⭐（2,450件）</div>
+                        </div>
+                        <div style="margin-bottom: 0.5rem;">
+                            <div data-ja="💰 価格：¥3,800" data-en="💰 Price: ¥3,800">💰 価格：¥3,800</div>
+                            <div data-ja="📦 在庫あり - 24時間以内発送" data-en="📦 In stock - Ships within 24h">📦 在庫あり - 24時間以内発送</div>
+                            <div style="word-wrap: break-word; overflow-wrap: break-word;">
+                                <span data-ja="🔗 " data-en="🔗 ">🔗 </span><span style="color: #0066cc; text-decoration: underline;" data-ja="https://shop.example.com/products/hydra-balance-cream" data-en="https://shop.example.com/products/hydra-balance-cream">https://shop.example.com/products/hydra-balance-cream</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <span data-ja="クレンザーも一緒にご案内しましょうか？" data-en="Need help choosing a cleanser to go with it?">クレンザーも一緒にご案内しましょうか？</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bookings Use Case -->
+                <div class="case-card reveal-on-scroll delay-1" data-case="bookings" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);">
+                    <div style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: center;"><picture>
+        <source srcset="images/bookings.webp" type="image/webp">
+        <img src="images/bookings.png" alt="Bookings" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+    </picture></div>
+                    <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem; text-align: center; color: #8B6F47;" data-ja="予約（ヘアサロン）" data-en="BOOKINGS (Hair Salon)">予約（ヘアサロン）</h3>
+
+                    <div class="conversation-bubble bot">
+                        <span data-ja="土曜日の午前中にカラー＋カットの予約できますか？" data-en="Do you have availability Saturday morning for color + cut?">土曜日の午前中にカラー＋カットの予約できますか？</span>
+                    </div>
+                    <div class="conversation-bubble">
+                        <div style="margin-bottom: 0.75rem;">
+                            <span data-ja="カラー＋カットは約2.5時間かかります。" data-en="Color + cut takes approximately 2.5 hours.">カラー＋カットは約2.5時間かかります。</span>
+                        </div>
+                        <div style="margin-bottom: 0.75rem;">
+                            <div data-ja="📅 リアルタイムの空き状況確認と予約：" data-en="📅 To check real-time availability and book:">📅 リアルタイムの空き状況確認と予約：</div>
+                            <div style="word-wrap: break-word; overflow-wrap: break-word;">
+                                <span data-ja="🔗 " data-en="🔗 ">🔗 </span><span style="color: #0066cc; text-decoration: underline;" data-ja="https://salon.example.com/booking/saturday" data-en="https://salon.example.com/booking/saturday">https://salon.example.com/booking/saturday</span>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 0.75rem;">
+                            <div data-ja="💰 料金：" data-en="💰 Pricing:">💰 料金：</div>
+                            <div style="padding-left: 0.5rem;">
+                                <div data-ja="・フルカラー：¥12,000" data-en="- Full color: ¥12,000">・フルカラー：¥12,000</div>
+                                <div data-ja="・カット＆スタイリング：¥4,500" data-en="- Cut & styling: ¥4,500">・カット＆スタイリング：¥4,500</div>
+                                <div data-ja="・合計：¥16,500" data-en="- Total: ¥16,500">・合計：¥16,500</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 0.5rem;">
+                            <div data-ja="📸 プロのアドバイス：希望のカラーの参考写真をお持ちください" data-en="📸 Pro tip: Bring a reference photo of your desired color">📸 プロのアドバイス：希望のカラーの参考写真をお持ちください</div>
+                            <div data-ja="💬 当店のユキとアイコがカラートリートメントを得意としています" data-en="💬 Our stylists Yuki and Aiko specialize in color treatments">💬 当店のユキとアイコがカラートリートメントを得意としています</div>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <span data-ja="施術について何かご質問はありますか？" data-en="Any questions about the process?">施術について何かご質問はありますか？</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Use Case -->
+                <div class="case-card reveal-on-scroll delay-2" data-case="education" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);">
+                    <div style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: center;"><picture>
+        <source srcset="images/education.webp" type="image/webp">
+        <img src="images/education.png" alt="Education" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+    </picture></div>
+                    <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem; text-align: center; color: #8B6F47;" data-ja="教育（学習塾）" data-en="EDUCATION (Cram School)">教育（学習塾）</h3>
+
+                    <div class="conversation-bubble bot">
+                        <span data-ja="息子が小学6年生で数学が苦手なんですが、入試対策コースはありますか？" data-en="My son is in 6th grade and struggling with math. Do you have entrance exam prep courses?">息子が小学6年生で数学が苦手なんですが、入試対策コースはありますか？</span>
+                    </div>
+                    <div class="conversation-bubble">
+                        <div style="margin-bottom: 0.75rem;">
+                            <span data-ja="はい、ございます！小学6年生の数学コースは入試対策に特化しています。" data-en="Yes, we do! Our 6th grade math course focuses on entrance exam prep.">はい、ございます！小学6年生の数学コースは入試対策に特化しています。</span>
+                        </div>
+                        <div style="margin-bottom: 0.75rem;">
+                            <div data-ja="📚 コース情報：" data-en="📚 Course info:">📚 コース情報：</div>
+                            <div style="padding-left: 0.5rem;">
+                                <div data-ja="・月/水/金 17:00-19:00" data-en="- Mon/Wed/Fri 5-7pm">・月/水/金 17:00-19:00</div>
+                                <div data-ja="・¥45,000/月" data-en="- ¥45,000/month">・¥45,000/月</div>
+                                <div data-ja="・1クラス最大8名" data-en="- Max 8 students per class">・1クラス最大8名</div>
+                                <div data-ja="・4月開始" data-en="- Starts in April">・4月開始</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 0.75rem;">
+                            <span data-ja="昨年は生徒の94%が志望校に合格しました。" data-en="94% of our students passed their target schools last year.">昨年は生徒の94%が志望校に合格しました。</span>
+                        </div>
+                        <div style="margin-bottom: 0.75rem;">
+                            <div style="word-wrap: break-word; overflow-wrap: break-word; margin-bottom: 0.3rem;">
+                                <span data-ja="🔗 " data-en="🔗 ">🔗 </span><span style="color: #0066cc; text-decoration: underline;" data-ja="https://school.example.com/courses/grade6-math" data-en="https://school.example.com/courses/grade6-math">https://school.example.com/courses/grade6-math</span>
+                            </div>
+                            <div style="word-wrap: break-word; overflow-wrap: break-word;">
+                                <span data-ja="🔗 " data-en="🔗 ">🔗 </span><span style="color: #0066cc; text-decoration: underline;" data-ja="https://school.example.com/trial-lesson" data-en="https://school.example.com/trial-lesson">https://school.example.com/trial-lesson</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 0.75rem;">
+                            <span data-ja="体験授業のご予約はいかがですか？" data-en="Would you like to schedule a trial class?">体験授業のご予約はいかがですか？</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" style="padding: 6rem 0; background: var(--bg-secondary);">
+        <div class="container">
+            <div class="reveal-on-scroll" style="text-align: center; max-width: 1100px; margin: 0 auto;">
+                <!-- Header -->
+                <div style="margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 1rem; color: var(--text-primary);" data-ja="実際に体験してみましょう" data-en="Try Our Demo Chatbot">実際に体験してみましょう</h2>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary);" data-ja="デモボットをLINEで試して、機能を確認できます" data-en="Test our demo bot on LINE to see how it works">デモボットをLINEで試して、機能を確認できます</p>
+                </div>
+
+                <!-- Demo Bot Card -->
+                <div style="background: linear-gradient(135deg, rgba(6, 199, 85, 0.05) 0%, rgba(0, 185, 0, 0.05) 100%); border: 2px solid #06C755; border-radius: 30px; padding: 3rem; margin-bottom: 3rem; box-shadow: 0 10px 40px rgba(6, 199, 85, 0.15);">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <span style="background: #06C755; color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 700; font-size: 0.875rem;" data-ja="無料デモ体験" data-en="Free Demo">無料デモ体験</span>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+                        <!-- QR Code - Desktop only -->
+                        <div class="qr-demo-box" style="text-align: center;">
+                            <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--text-primary);" data-ja="QRコードをスキャン" data-en="Scan QR Code">QRコードをスキャン</h3>
+                            <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <div style="width: 160px; height: 160px; background: white; margin: 0 auto; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 8px; border: 2px solid #06C755;">
+                                    <picture>
+        <source srcset="images/qrcode.webp" type="image/webp">
+        <img src="images/qrcode.png" alt="LINE Demo QR Code" style="width: 100%; height: 100%; object-fit: contain;" width="400" height="400" loading="lazy">
+    </picture>
+                                </div>
+                                <p style="color: #06C755; font-weight: 700; margin-top: 1rem; font-size: 0.875rem;" data-ja="デモボットと会話" data-en="Chat with demo bot">デモボットと会話</p>
+                            </div>
+                        </div>
+
+                        <!-- Bouton LINE - Mobile only -->
+                        <div class="demo-button-mobile" style="text-align: center; display: none;">
+                            <button onclick="window.location.href='https://line.me/R/ti/p/@729bzjdq'" style="padding: 1.5rem 3rem; background: linear-gradient(135deg, #06C755 0%, #00B900 100%); color: white; border: none; border-radius: 50px; font-weight: 700; font-size: 1.25rem; cursor: pointer; box-shadow: 0 15px 40px rgba(6, 199, 85, 0.4); transition: all 0.3s ease; margin-bottom: 1rem;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 20px 50px rgba(6, 199, 85, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(6, 199, 85, 0.4)'">
+                                <span data-ja="LINEで今すぐデモ体験" data-en="Try Demo on LINE Now">LINEで今すぐデモ体験</span>
+                            </button>
+                            <p style="color: var(--text-secondary); font-size: 0.875rem;" data-ja="タップしてLINEアプリで開く" data-en="Tap to open in LINE app">タップしてLINEアプリで開く</p>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div style="max-width: 400px; text-align: left;">
+                            <h4 style="font-weight: 700; font-size: 1.125rem; margin-bottom: 1rem; color: var(--text-primary);" data-ja="デモで試せること：" data-en="What you can test:">デモで試せること：</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start; gap: 0.5rem;">
+                                    <span style="color: #06C755; font-size: 1.25rem;">✓</span>
+                                    <span style="color: var(--text-secondary);" data-ja="自然な会話の流れを体験" data-en="Experience natural conversation flow">自然な会話の流れを体験</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start; gap: 0.5rem;">
+                                    <span style="color: #06C755; font-size: 1.25rem;">✓</span>
+                                    <span style="color: var(--text-secondary);" data-ja="FAQ自動応答の精度を確認" data-en="Check FAQ auto-response accuracy">FAQ自動応答の精度を確認</span>
+                                </li>
+                                <li style="padding: 0.5rem 0; display: flex; align-items: start; gap: 0.5rem;">
+                                    <span style="color: #06C755; font-size: 1.25rem;">✓</span>
+                                    <span style="color: var(--text-secondary);" data-ja="レスポンス速度をテスト" data-en="Test response speed">レスポンス速度をテスト</span>
+                                </li>
+                            </ul>
+                            <div style="background: rgba(6, 199, 85, 0.1); padding: 1rem; border-radius: 12px; margin-top: 1.5rem; border-left: 4px solid #06C755;">
+                                <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;" data-ja="💡 これはデモです。実際のサービスをご希望の場合は、下記からお問い合わせください。" data-en="💡 This is a demo. To get your own chatbot, contact us below.">💡 これはデモです。実際のサービスをご希望の場合は、下記からお問い合わせください。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section style="padding: 6rem 0; background: white;">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2 class="section-title" data-ja="シンプルで明確な料金" data-en="Simple, Clear Pricing">シンプルで明確な料金</h2>
+                <p style="font-size: 1.25rem; color: var(--text-primary); margin: 1rem 0; font-weight: 600;" data-ja="AIで顧客対応を自動化 - 月¥19,990から" data-en="Automate customer support with AI - From ¥19,990/month">AIで顧客対応を自動化 - 月¥19,990から</p>
+                <div style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%); border-radius: 50px; margin-bottom: 0.5rem;">
+                    <h3 style="font-size: 1.25rem; font-weight: 900; color: #78350F; margin: 0;" data-ja="2週間無料トライアル（クレジットカード不要）" data-en="2-Week Free Trial (No credit card required)">2週間無料トライアル（クレジットカード不要）</h3>
+                </div>
+                <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem;" data-ja="いつでも解約OK・契約縛りなし" data-en="Cancel anytime - No commitments">いつでも解約OK・契約縛りなし</p>
+            </div>
+
+            <!-- Base Plan -->
+            <div style="max-width: 900px; margin: 0 auto 4rem;" class="reveal-on-scroll">
+                <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); border: 3px solid #8B6F47;">
+                    <div style="background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%); color: white; padding: 2.5rem; text-align: center; position: relative;">
+                        <h3 style="font-size: 1.75rem; font-weight: var(--font-weight-bold); margin-bottom: 0.5rem;" data-ja="ベースプラン" data-en="Base Plan">ベースプラン</h3>
+                        <div style="font-size: 4rem; font-weight: var(--font-weight-black); line-height: 1; margin: 1rem 0;">
+                            <span>¥19,990</span>
+                            <span style="font-size: 1.5rem; opacity: 0.9;" data-ja="/月（税抜）" data-en="/month (excl. tax)">/月（税抜）</span>
+                        </div>
+                    </div>
+
+                    <div style="padding: 2.5rem;">
+                        <!-- ROI & Value -->
+                        <div class="pricing-highlight">
+                            <p style="font-weight: 700; font-size: 1rem; margin: 0 0 0.75rem 0;" data-ja="コスト比較：" data-en="Cost Comparison:">コスト比較：</p>
+                            <p data-ja="正社員1名を雇用 ≈ ¥150,000/月" data-en="Full-time employee ≈ ¥150,000/month">正社員1名を雇用 ≈ ¥150,000/月</p>
+                            <p data-ja="→ 当サービスで約87%削減" data-en="→ Save ~87% with our service">→ 当サービスで約87%削減</p>
+                        </div>
+
+                        <!-- Included Features -->
+                        <div class="pricing-features-standard">
+                            <h4 data-ja="含まれる機能" data-en="Included Features" style="text-align: center; font-size: 1.3rem; margin-bottom: 1.5rem;">含まれる機能</h4>
+
+                            <div class="feature-standard">
+                                <div class="checkmark">✓</div>
+                                <div class="content">
+                                    <h5 data-ja="3秒以内の即時返信" data-en="Instant replies within 3 seconds">3秒以内の即時返信</h5>
+                                    <p data-ja="待たせないスムーズな対応" data-en="Seamless support without wait times">待たせないスムーズな対応</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-standard">
+                                <div class="checkmark">✓</div>
+                                <div class="content">
+                                    <h5 data-ja="AIが80％の質問に自動回答" data-en="AI handles 80% of inquiries automatically">AIが80％の質問に自動回答</h5>
+                                    <p data-ja="よくある質問をAIが解決し、スタッフの負担を大幅削減" data-en="Resolves common questions, dramatically reducing staff workload">よくある質問をAIが解決し、スタッフの負担を大幅削減</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-standard">
+                                <div class="checkmark">✓</div>
+                                <div class="content">
+                                    <h5 data-ja="LINE公式アカウントと連携" data-en="LINE Official Account integration">LINE公式アカウントと連携</h5>
+                                    <p data-ja="お客様とのやり取りをLINE上で自動化" data-en="Automate customer interactions on LINE">お客様とのやり取りをLINE上で自動化</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-standard">
+                                <div class="checkmark">✓</div>
+                                <div class="content">
+                                    <h5 data-ja="リンク送信／連絡先案内にも対応" data-en="Link sharing & contact info support">リンク送信／連絡先案内にも対応</h5>
+                                    <p data-ja="基本的なデータを自動で可視化" data-en="Automatically visualize basic data">基本的なデータを自動で可視化</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-standard">
+                                <div class="checkmark">✓</div>
+                                <div class="content">
+                                    <h5 data-ja="月3,000メッセージまで対応" data-en="Up to 3,000 messages/month">月3,000メッセージまで対応</h5>
+                                    <p data-ja="中小企業でも安心のボリューム" data-en="Comfortable volume for SMEs">中小企業でも安心のボリューム</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-standard">
+                                <div class="checkmark">✓</div>
+                                <div class="content">
+                                    <h5 data-ja="自然な日本語のAIチャット" data-en="Natural Japanese AI chat">自然な日本語のAIチャット</h5>
+                                    <p data-ja="丁寧・フレンドリー・中立などトーン調整OK" data-en="Adjustable tone: polite, friendly, or neutral">丁寧・フレンドリー・中立などトーン調整OK</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-standard">
+                                <div class="checkmark">✓</div>
+                                <div class="content">
+                                    <h5 data-ja="FAQや社内資料をAIに登録可能" data-en="Upload FAQs & internal docs to AI">FAQや社内資料をAIに登録可能</h5>
+                                    <p data-ja="最大7,500文字まで - ほとんどの中小企業に十分な容量" data-en="Up to 7,500 characters - Sufficient capacity for most small businesses">最大7,500文字まで - ほとんどの中小企業に十分な容量</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Options Cards -->
+            <div class="reveal-on-scroll delay-1" style="max-width: 1100px; margin: 0 auto;">
+                <h3 style="font-weight: var(--font-weight-bold); font-size: 2rem; margin-bottom: 1rem; text-align: center; color: var(--text-primary);">
+                    <span data-ja="オプション機能（含まれていません）" data-en="Optional Features (Not Included)">オプション機能（含まれていません）</span>
+                </h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.125rem;" data-ja="必要に応じて後から追加できます" data-en="Add as needed">必要に応じて後から追加できます</p>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- Option 1 -->
+                    <div class="azenflow-card-horizontal reveal-on-scroll" style="background: white; padding: 2rem 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); border: 2px solid #F3F4F6; transition: all 0.3s ease; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; flex: 1;">
+                            <picture>
+        <source srcset="images/universal.webp" type="image/webp">
+        <img src="images/universal.png" alt="Universal" style="width: 80px; height: 80px; object-fit: contain; flex-shrink: 0;" width="160" height="160" loading="lazy">
+    </picture>
+                            <div style="flex: 1;">
+                                <h4 style="font-weight: var(--font-weight-bold); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);" data-ja="追加言語" data-en="Additional Languages">追加言語</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;" data-ja="言語を追加（EN、CN、KR、FR等）" data-en="Add languages (EN, CN, KR, FR, etc.)">言語を追加（EN、CN、KR、FR等）</p>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.25rem; font-weight: var(--font-weight-bold); color: #8B6F47; white-space: nowrap;" data-ja="+¥5,000 /言語・月" data-en="+¥5,000 /language/month">+¥5,000 /言語・月</div>
+                    </div>
+
+                    <!-- Option 2 -->
+                    <div class="azenflow-card-horizontal reveal-on-scroll delay-1" style="background: white; padding: 2rem 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); border: 2px solid #F3F4F6; transition: all 0.3s ease; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; flex: 1;">
+                            <picture>
+        <source srcset="images/brain.webp" type="image/webp">
+        <img src="images/brain.png" alt="Brain" style="width: 80px; height: 80px; object-fit: contain; flex-shrink: 0;" width="160" height="160" loading="lazy">
+    </picture>
+                            <div style="flex: 1;">
+                                <h4 style="font-weight: var(--font-weight-bold); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);" data-ja="会話記憶機能" data-en="Conversation Memory">会話記憶機能</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;" data-ja="チャットボットが会話の文脈を保持（より関連性の高い応答、顧客フォローアップ、ECカート管理）" data-en="Chatbot retains conversation context (more relevant responses, customer follow-up, cart management)">チャットボットが会話の文脈を保持<br>（より関連性の高い応答、顧客フォローアップ、ECカート管理）</p>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.25rem; font-weight: var(--font-weight-bold); color: #8B6F47; white-space: nowrap;" data-ja="+¥10,000 /月" data-en="+¥10,000 /month">+¥10,000 /月</div>
+                    </div>
+
+                    <!-- Option 3 -->
+                    <div class="azenflow-card-horizontal reveal-on-scroll delay-2" style="background: white; padding: 2rem 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); border: 2px solid #F3F4F6; transition: all 0.3s ease; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; flex: 1;">
+                            <picture>
+        <source srcset="images/report.webp" type="image/webp">
+        <img src="images/report.png" alt="Report" style="width: 80px; height: 80px; object-fit: contain; flex-shrink: 0;" width="160" height="160" loading="lazy">
+    </picture>
+                            <div style="flex: 1;">
+                                <h4 style="font-weight: var(--font-weight-bold); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);" data-ja="週次分析レポート" data-en="Weekly Analysis Report">週次分析レポート</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;" data-ja="よくある質問・検出された課題を分析。毎週PDFレポートをメール送信" data-en="Analyze FAQs & detected issues. Weekly PDF report via email">よくある質問・検出された課題を分析。毎週PDFレポートをメール送信</p>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.25rem; font-weight: var(--font-weight-bold); color: #8B6F47; white-space: nowrap;" data-ja="+¥10,000 /月" data-en="+¥10,000 /month">+¥10,000 /月</div>
+                    </div>
+
+                    <!-- Option 4 -->
+                    <div class="azenflow-card-horizontal option-card-mobile reveal-on-scroll delay-3" style="background: white; padding: 2rem 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); border: 2px solid #F3F4F6; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div class="option-card-inner" style="display: flex; align-items: center; gap: 1.5rem; flex: 1;">
+                            <picture class="option-icon-pic">
+                                <source srcset="images/books.webp" type="image/webp">
+                                <img src="images/books.png" alt="Books" style="width: 80px; height: 80px; object-fit: contain; flex-shrink: 0;" width="160" height="160" loading="lazy">
+                            </picture>
+                            <div class="option-main-text" style="flex: 1;">
+                                <h4 style="font-weight: var(--font-weight-bold); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);" data-ja="ナレッジベース拡張" data-en="Knowledge Base Expansion">ナレッジベース拡張</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;" data-ja="基本7,500文字含む → 追加1,000文字毎に+¥1,000" data-en="Base 7,500 chars included → +¥1,000 per additional 1,000 chars">基本7,500文字含む → 追加1,000文字毎に+¥1,000</p>
+                            </div>
+                        </div>
+                        <div class="option-example">
+                            <p data-ja="💡 例：10,000文字使用の場合" data-en="💡 Example: Using 10,000 characters">💡 例：10,000文字使用の場合</p>
+                            <p data-ja="7,500（含む）+ 2,500（追加）= +¥3,000/月" data-en="7,500 (included) + 2,500 (extra) = +¥3,000/month">7,500（含む）+ 2,500（追加）= +¥3,000/月</p>
+                        </div>
+                    </div>
+
+                    <!-- Option 5 -->
+                    <div class="azenflow-card-horizontal option-card-mobile reveal-on-scroll delay-4" style="background: white; padding: 2rem 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); border: 2px solid #F3F4F6; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div class="option-card-inner" style="display: flex; align-items: center; gap: 1.5rem; flex: 1;">
+                            <picture class="option-icon-pic">
+                                <source srcset="images/message.webp" type="image/webp">
+                                <img src="images/message.png" alt="Message" style="width: 80px; height: 80px; object-fit: contain; flex-shrink: 0;" width="260" height="260" loading="lazy">
+                            </picture>
+                            <div class="option-main-text" style="flex: 1;">
+                                <h4 style="font-weight: var(--font-weight-bold); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);" data-ja="メッセージ量追加" data-en="Additional Messages">メッセージ量追加</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;" data-ja="基本3,000件含む → 追加1,000件毎に+¥1,000" data-en="Base 3,000 included → +¥1,000 per additional 1,000 messages">基本3,000件含む → 追加1,000件毎に+¥1,000</p>
+                            </div>
+                        </div>
+                        <div class="option-example">
+                            <p data-ja="💡 例：月5,000件使用の場合" data-en="💡 Example: Using 5,000 messages/month">💡 例：月5,000件使用の場合</p>
+                            <p data-ja="3,000（含む）+ 2,000（追加）= +¥2,000/月" data-en="3,000 (included) + 2,000 (extra) = +¥2,000/month">3,000（含む）+ 2,000（追加）= +¥2,000/月</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usage Stats & Enterprise Note -->
+                <div style="margin-top: 3rem; text-align: center;">
+                    <div class="pricing-highlight" style="max-width: 700px; margin: 0 auto 1.5rem;">
+                        <p style="font-size: 1rem; margin: 0 0 0.5rem 0;" data-ja="参考：当社顧客の平均使用量は2,400件/月" data-en="Reference: Average customer uses 2,400 msgs/month">参考：当社顧客の平均使用量は2,400件/月</p>
+                        <p style="font-size: 0.95rem; font-weight: 600; color: #8B6F47; margin: 0;" data-ja="→ 約80%のお客様が追加料金なしでご利用中" data-en="→ ~80% of customers stay within included limit">→ 約80%のお客様が追加料金なしでご利用中</p>
+                    </div>
+
+                    <div style="background: rgba(139, 115, 85, 0.05); padding: 1.5rem; border-radius: 12px; max-width: 700px; margin: 0 auto; border: 1px solid rgba(139, 115, 85, 0.2);">
+                        <p style="font-size: 1rem; font-weight: 600; margin: 0 0 0.5rem 0; color: var(--text-primary);" data-ja="月10,000件を超える場合" data-en="For volumes exceeding 10,000/month">月10,000件を超える場合</p>
+                        <p style="font-size: 0.9rem; margin: 0; color: var(--text-secondary);" data-ja="エンタープライズプランをご案内します（専任サポート付き）" data-en="We offer Enterprise plans (with dedicated support)">エンタープライズプランをご案内します（専任サポート付き）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Safe -->
+    <!-- ==================== TRUST SECTION (SIMPLIFIED) ==================== -->
+    <section style="padding: 4rem 0; background: linear-gradient(135deg, rgba(139, 115, 85, 0.03) 0%, white 100%);">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="section-title" data-ja="信頼できるAI" data-en="AI You Can Trust">信頼できるAI</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin-top: 1rem;" data-ja="正確で、安全で、御社がコントロール" data-en="Accurate, safe, and under your control">正確で、安全で、御社がコントロール</p>
+            </div>
+
+            <!-- 3 Simple Bullets -->
+            <div class="trust-bullets-grid" style="display: grid; gap: 1.5rem; max-width: 1100px; margin: 0 auto 3rem;">
+                <div class="trust-bullet-card" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 2px solid #8B7347; display: flex; align-items: center; gap: 1rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; flex-shrink: 0;">✓</div>
+                    <div>
+                        <h4 style="font-weight: 400; color: #8B7347; font-size: 1.125rem; margin: 0;" data-ja="御社の資料のみから回答" data-en="Only answers from YOUR documents">御社の資料のみから回答</h4>
+                    </div>
+                </div>
+
+                <div class="trust-bullet-card" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 2px solid #8B7347; display: flex; align-items: center; gap: 1rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; flex-shrink: 0;">✓</div>
+                    <div>
+                        <h4 style="font-weight: 400; color: #8B7347; font-size: 1.125rem; margin: 0;" data-ja="不確実な質問は人間が対応" data-en="Humans handle uncertain cases">不確実な質問は人間が対応</h4>
+                    </div>
+                </div>
+
+                <div class="trust-bullet-card" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 2px solid #8B7347; display: flex; align-items: center; gap: 1rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; flex-shrink: 0;">✓</div>
+                    <div>
+                        <h4 style="font-weight: 400; color: #8B7347; font-size: 1.125rem; margin: 0;" data-ja="99%以上の正確性" data-en="99%+ accuracy rate">99%以上の正確性</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Stat -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 0.95rem; color: #6b7280;" data-ja="100,000件以上の応答に基づく実績" data-en="Based on 100,000+ customer interactions">100,000件以上の応答に基づく実績</p>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center;">
+                <a href="#demo-section" class="cta-primary smooth-scroll" style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, #8B7347 0%, #A68A5C 100%); color: white; padding: 1.2rem 2.5rem; border-radius: 12px; font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3); transition: all 0.3s ease;">
+                    <span data-ja="2週間無料で試す" data-en="Start 2-Week Free Trial">2週間無料で試す</span>
+                    <span style="font-size: 1.3rem;">→</span>
+                </a>
+                <p style="margin-top: 1rem; color: #6b7280; font-size: 0.85rem;">
+                    <span data-ja="クレジットカード不要 • いつでも解約OK" data-en="No credit card required • Cancel anytime">クレジットカード不要 • いつでも解約OK</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION (NESTED ACCORDION) ==================== -->
+<section style="padding: 6rem 0; background: white;" itemscope itemtype="https://schema.org/FAQPage">
+    
+    <!-- CSS spécifique pour cette FAQ améliorée -->
+    <style>
+        /* Style pour l'entête de la question (cliquable) */
+        .faq-question-header {
+            cursor: pointer;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .faq-question-header:hover h4 {
+            color: #8B7347;
+        }
+        
+        /* La question elle-même */
+        .faq-question-header h4 {
+            font-size: 1.05rem; 
+            font-weight: 600; 
+            color: var(--text-primary); 
+            margin: 0;
+            flex: 1;
+            padding-right: 1rem;
+        }
+
+        /* L'icône +/- à côté de la question */
+        .faq-question-icon {
+            font-size: 1.2rem;
+            color: #8B7347;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        /* La réponse (cachée par défaut) */
+        .faq-answer-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        
+        /* État ouvert de la réponse */
+        .faq-answer-wrapper.open {
+            opacity: 1;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Séparateur entre les items */
+        .faq-item {
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+            <h2 class="section-title" data-ja="よくある質問" data-en="Frequently Asked Questions">よくある質問</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-top: 1rem;" data-ja="カテゴリーをクリックして質問を選んでください" data-en="Click a category, then click a question">カテゴリーをクリックして質問を選んでください</p>
+        </div>
+
+        <!-- FAQ Categories -->
+        <div style="max-width: 900px; margin: 0 auto;">
+
+            <!-- ========== CATEGORY 1: Setup & Installation ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <!-- Category Header -->
+                <div onclick="toggleCategory('setup')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="導入・セットアップ" data-en="Setup & Installation">導入・セットアップ</h3>
+                    </div>
+                    <span id="setup-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <!-- Category Questions Container -->
+                <div id="setup-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q1 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="技術的な知識がなくても導入できますか？" data-en="Can I implement this without technical knowledge?">技術的な知識がなくても導入できますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、一切不要です。御社はFAQや資料を弊社に送っていただくだけで、セットアップから設定まですべて弊社が代行します。プログラミングやコーディングの知識は必要ありません。" data-en="No technical knowledge required. Simply send us your FAQs, product manuals, and documentation—we handle everything else. Our team configures your LINE Official Account chatbot, sets up AI responses, and tests thoroughly before launch. No coding or programming skills needed. Most businesses go live within 1-3 days with zero technical work on their end.">
+                                        はい、一切不要です。御社はFAQや資料を弊社に送っていただくだけで、セットアップから設定まですべて弊社が代行します。プログラミングやコーディングの知識は必要ありません。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="導入までどのくらい時間がかかりますか？" data-en="How long does setup take?">導入までどのくらい時間がかかりますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="最短1日で稼働開始できます。御社から資料をいただいた後、弊社がAIの設定とテストを完了し、準備が整い次第ご連絡します。通常、資料受領から1〜3営業日以内に本番運用を開始できます。" data-en="You can go live in as little as 1 day. After receiving your documentation, we configure the AI chatbot, connect it to your LINE Official Account, and run comprehensive tests. Typically, your LINE chatbot is ready within 1-3 business days. We notify you once everything is set up and ready for customer interactions.">
+                                        最短1日で稼働開始できます。御社から資料をいただいた後、弊社がAIの設定とテストを完了し、準備が整い次第ご連絡します。通常、資料受領から1〜3営業日以内に本番運用を開始できます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="導入に何が必要ですか？" data-en="What do I need to provide for setup?">導入に何が必要ですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="既存のFAQ、商品マニュアル、価格表、よくある問い合わせ内容などの資料を弊社にお送りください。Word、PDF、Excel、テキストファイルなど、どの形式でも対応可能です。" data-en="Simply send us your existing FAQs, product manuals, price lists, and common customer inquiries. We accept any format—Word documents, PDFs, Excel files, or plain text. The AI learns exclusively from your provided materials to ensure accurate, brand-consistent responses. You can update or add documents anytime after launch.">
+                                        既存のFAQ、商品マニュアル、価格表、よくある問い合わせ内容などの資料を弊社にお送りください。Word、PDF、Excel、テキストファイルなど、どの形式でも対応可能です。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div> <!-- Spacer at bottom of category -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CATEGORY 2: Pricing & Commitment ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <div onclick="toggleCategory('pricing')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="料金・契約" data-en="Pricing & Commitment">料金・契約</h3>
+                    </div>
+                    <span id="pricing-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <div id="pricing-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q4 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="月3,000件のメッセージを超えたらどうなりますか？" data-en="What happens if I exceed 3,000 messages?">月3,000件のメッセージを超えたらどうなりますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.5rem;" data-ja="超過分は1,000件ごとに¥1,000の追加料金で自動対応します。例：月5,000件使用の場合、基本¥19,990 + 追加¥2,000 = 合計¥21,990です。" data-en="Overage is automatically handled at ¥1,000 per additional 1,000 messages. For example, if you use 5,000 messages in a month: ¥19,990 (base) + ¥2,000 (overage) = ¥21,990 total. No service interruption—your LINE chatbot continues working seamlessly.">
+                                        超過分は1,000件ごとに¥1,000の追加料金で自動対応します。例：月5,000件使用の場合、基本¥19,990 + 追加¥2,000 = 合計¥21,990です。
+                                    </p>
+                                    <p style="color: #8B7347; line-height: 1.7; margin: 0; font-size: 0.95rem;" data-ja="💡 当社顧客平均2,400件/月 - 80%が追加料金なし" data-en="💡 Reference: Our average customer uses 2,400 messages/month—about 80% stay within the included limit with no extra charges.">
+                                        💡 当社顧客平均2,400件/月 - 80%が追加料金なし
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="無料チャットボットとの違いは？" data-en="Difference from free chatbots?">無料チャットボットとの違いは？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="無料ツールは決められたシナリオのみ。当サービスは：AIが御社資料を理解し文脈に応じた自然な回答、複雑な質問は人間へ自動転送、会話履歴の保存・分析可能、80%の問い合わせを自動化します。" data-en="Free chatbots only follow rigid, pre-written scripts and break when customers ask unexpected questions. Our AI-powered LINE chatbot understands context, learns from your actual business documents, and provides natural, conversational responses. Key differences: AI handles 80% of inquiries automatically, complex questions are seamlessly forwarded to staff, conversation history is saved for analysis, and responses improve over time based on real interactions.">
+                                        無料ツールは決められたシナリオのみ。当サービスは：AIが御社資料を理解し文脈に応じた自然な回答、複雑な質問は人間へ自動転送、会話履歴の保存・分析可能、80%の問い合わせを自動化します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="解約は簡単ですか？" data-en="Is cancellation easy?">解約は簡単ですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、いつでもワンクリックで解約可能。違約金・最低利用期間なし。2週間無料トライアルで試して、満足できなければそのまま終了できます（クレジットカード登録不要）。" data-en="Yes, cancel anytime with one click—no penalties, no minimum commitment period. Start with our 2-week free trial (no credit card required) to test the LINE chatbot with your actual customers. If you're not satisfied, simply don't continue—no questions asked, no cancellation fees, no hassle.">
+                                        はい、いつでもワンクリックで解約可能。違約金・最低利用期間なし。2週間無料トライアルで試して、満足できなければそのまま終了できます（クレジットカード登録不要）。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q7 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="LINE公式アカウントがなくても利用できますか？" data-en="Can I use this without a LINE Official Account?">LINE公式アカウントがなくても利用できますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、ご利用いただけます。LINE公式アカウントをお持ちでない場合は、無料で代行作成いたします。また、設定方法の動画ガイドもご用意していますので、ご自身で作成することも可能です。" data-en="Yes, you can still use our service. If you don't have a LINE Official Account yet, we'll create one for you free of charge as part of the setup process. Alternatively, we provide video guides if you prefer to set it up yourself. Either way, we ensure your LINE chatbot is fully operational.">
+                                        はい、ご利用いただけます。LINE公式アカウントをお持ちでない場合は、無料で代行作成いたします。また、設定方法の動画ガイドもご用意していますので、ご自身で作成することも可能です。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CATEGORY 3: AI Functionality ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <div onclick="toggleCategory('functionality')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="機能・信頼性" data-en="Functionality & Reliability">機能・信頼性</h3>
+                    </div>
+                    <span id="functionality-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <div id="functionality-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q7 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="AIはどのように私のビジネスを学習しますか？" data-en="How does AI learn my business?">AIはどのように私のビジネスを学習しますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="御社からFAQ、マニュアル、価格表などの資料をお送りいただくだけです。弊社がこれらをAIに読み込ませ、設定します。AIは御社が提供した情報のみに基づいて応答します。" data-en="Simply send us your FAQs, product manuals, price lists, and any relevant business documents. We configure the AI to learn exclusively from your materials—it never pulls information from external sources or makes assumptions. This ensures every response is accurate, brand-consistent, and reflects your actual products and policies. You can update the knowledge base anytime.">
+                                        御社からFAQ、マニュアル、価格表などの資料をお送りいただくだけです。弊社がこれらをAIに読み込ませ、設定します。AIは御社が提供した情報のみに基づいて応答します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q8 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="AIが答えを知らない場合はどうなりますか？" data-en="What if AI doesn't know?">AIが答えを知らない場合はどうなりますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="AIは推測や適当な回答は絶対にしません。「その情報は持っていません」と正直に伝え、適切な連絡先（メール、電話など）へお客様を案内します。" data-en="The AI never guesses or fabricates information. When it encounters a question outside its knowledge base, it honestly tells the customer 'I don't have that information' and automatically provides your preferred contact method—email, phone number, or contact form. Complex inquiries can also be flagged for staff follow-up, ensuring no customer concern goes unaddressed.">
+                                        AIは推測や適当な回答は絶対にしません。「その情報は持っていません」と正直に伝え、適切な連絡先（メール、電話など）へお客様を案内します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q9 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="日本語と英語の両方に対応できますか？" data-en="Japanese and English support?">日本語と英語の両方に対応できますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい。標準プランは日本語のみですが、英語、中国語、韓国語、フランス語などを1言語あたり月額¥5,000で追加できます。インバウンド観光客や海外顧客対応に最適です。" data-en="Yes, multilingual support is available. The base plan includes Japanese, and you can add English, Chinese, Korean, French, and other languages for +¥5,000 per language per month. This is ideal for businesses serving international tourists or overseas customers through LINE. Each language is configured separately to ensure natural, native-quality responses.">
+                                        はい。標準プランは日本語のみですが、英語、中国語、韓国語、フランス語などを1言語あたり月額¥5,000で追加できます。インバウンド観光客や海外顧客対応に最適です。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q10 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="お客様は何かインストールする必要がありますか？" data-en="Do customers need to install anything?">お客様は何かインストールする必要がありますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="いいえ。既にLINEを使っている方（日本の96%）は、御社のLINE公式アカウントを友だち追加するだけで即座にチャット可能です。" data-en="No installation required for your customers. Since 96% of Japanese residents already use LINE, they simply add your LINE Official Account as a friend and can start chatting immediately. No app downloads, no account creation, no friction—just instant access to AI-powered customer support through the messaging app they already use daily.">
+                                        いいえ。既にLINEを使っている方（日本の96%）は、御社のLINE公式アカウントを友だち追加するだけで即座にチャット可能です。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CATEGORY 4: Security & Results ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <div onclick="toggleCategory('security')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="セキュリティ・成果" data-en="Security & Results">セキュリティ・成果</h3>
+                    </div>
+                    <span id="security-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <div id="security-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q11 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="会話データは誰がアクセスできますか？" data-en="Who accesses the data?">会話データは誰がアクセスできますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="御社のみがアクセス可能です。弊社は技術サポート目的でのみアクセスし、第三者とのデータ共有は一切ありません。SSL/TLS暗号化、GDPR準拠のデータ処理を実施。" data-en="Only your business can access conversation data. We access it solely for technical support purposes and never share data with third parties. All communications are protected with SSL/TLS encryption, and our data processing complies with GDPR standards. Your customer conversations remain private, secure, and under your control at all times.">
+                                        御社のみがアクセス可能です。弊社は技術サポート目的でのみアクセスし、第三者とのデータ共有は一切ありません。SSL/TLS暗号化、GDPR準拠のデータ処理を実施。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q12 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="効果が出るまでどのくらいかかりますか？" data-en="How long to see results?">効果が出るまでどのくらいかかりますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="導入初日から効果を実感できます。多くのお客様が1週間以内にスタッフ対応時間40-60%削減、顧客満足度向上を実現しています。" data-en="You'll see results from Day 1—your LINE chatbot starts handling customer inquiries immediately after launch. Most clients report 40-60% reduction in staff response time within the first week. Customer satisfaction typically improves as well, since inquiries get answered in under 3 seconds, 24/7, including nights and weekends when staff aren't available.">
+                                        導入初日から効果を実感できます。多くのお客様が1週間以内にスタッフ対応時間40-60%削減、顧客満足度向上を実現しています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q14 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="AIの回答精度はどのくらいですか？" data-en="How accurate is the AI?">AIの回答精度はどのくらいですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="100,000件以上の顧客対話データに基づき、99%以上の精度を達成しています。AIは御社の資料からのみ回答するため、ハルシネーション（でたらめな回答）のリスクを最小限に抑えています。不確実な質問は推測せず、人間のスタッフに転送します。" data-en="Based on over 100,000 customer interactions, our AI achieves 99%+ accuracy. Since the AI only answers from your provided documents, hallucination risk (fabricated responses) is minimized. When the AI encounters questions it can't answer confidently, it doesn't guess—it honestly tells customers and forwards the inquiry to your staff for human follow-up.">
+                                        100,000件以上の顧客対話データに基づき、99%以上の精度を達成しています。AIは御社の資料からのみ回答するため、ハルシネーション（でたらめな回答）のリスクを最小限に抑えています。不確実な質問は推測せず、人間のスタッフに転送します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Post-FAQ CTA -->
+        <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, rgba(139, 115, 85, 0.05) 0%, rgba(166, 138, 92, 0.05) 100%); border-radius: 20px;">
+
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);"
+                data-ja="まだご不明な点はありますか？"
+                data-en="Still have questions?">
+                まだご不明な点はありますか？
+            </h3>
+
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;"
+               data-ja="実際にチャットボットを試してご確認ください"
+               data-en="Try our chatbot to see for yourself">
+                実際にチャットボットを試してご確認ください
+            </p>
+
+            <!-- UN SEUL BOUTON PRINCIPAL -->
+            <a href="#demo" class="smooth-scroll"
+               style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, #8B7347 0%, #A68A5C 100%); color: white; padding: 1.2rem 2.5rem; border-radius: 12px; font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3); transition: all 0.3s ease;">
+                <span data-ja="💬 デモを試す" data-en="💬 Try Demo">💬 デモを試す</span>
+                <span>→</span>
+            </a>
+
+            <!-- LIEN TEXTE SIMPLE (pas un bouton) -->
+            <p style="margin-top: 1.5rem; font-size: 1rem; color: var(--text-secondary);">
+                <span data-ja="または " data-en="Or ">または </span>
+                <a href="contact.html" style="color: #8B7347; text-decoration: underline; font-weight: 600;"
+                   data-ja="無料相談を予約"
+                   data-en="book a free consultation">
+                    無料相談を予約
+                </a>
+                <span data-ja=" — 契約義務なし" data-en=" — no commitment"> — 契約義務なし</span>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- FAQ Accordion JavaScript (Optimized for Nested Logic) -->
+    <script>
+    // Fonction pour ouvrir/fermer les CATÉGORIES principales
+    function toggleCategory(categoryId) {
+        const questionsDiv = document.getElementById(categoryId + '-questions');
+        const icon = document.getElementById(categoryId + '-icon');
+        
+        // Vérifie si c'est ouvert (en se basant sur max-height non nul)
+        const isOpen = questionsDiv.style.maxHeight && questionsDiv.style.maxHeight !== '0px';
+        
+        if (isOpen) {
+            // Fermeture
+            questionsDiv.style.maxHeight = '0';
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            // Ouverture : On met une grande valeur pour permettre aux questions internes de s'ouvrir
+            // "scrollHeight" donne la hauteur du contenu, mais si on ouvre des questions ensuite, ça va grandir.
+            // On ajoute un buffer ou on met une valeur très grande.
+            questionsDiv.style.maxHeight = (questionsDiv.scrollHeight + 2000) + 'px'; 
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // Fonction pour ouvrir/fermer les QUESTIONS individuelles
+    function toggleAnswer(headerElement) {
+        // Le "frère" suivant est le wrapper de la réponse
+        const answerWrapper = headerElement.nextElementSibling;
+        const icon = headerElement.querySelector('.faq-question-icon');
+        const isOpening = !answerWrapper.classList.contains('open');
+
+        // 1. Toggle de la classe "open" et du max-height
+        if (isOpening) {
+            answerWrapper.classList.add('open');
+            answerWrapper.style.maxHeight = answerWrapper.scrollHeight + "px";
+            icon.textContent = "−"; // Change le + en -
+            icon.style.fontSize = "1.5rem"; // Ajustement visuel pour le tiret
+        } else {
+            answerWrapper.classList.remove('open');
+            answerWrapper.style.maxHeight = "0";
+            icon.textContent = "+";
+            icon.style.fontSize = "1.2rem";
+        }
+
+        // 2. CRITIQUE : Ajuster la hauteur de la CATÉGORIE parente
+        // Si on n'augmente pas la taille du parent, le contenu qui s'ouvre sera coupé (hidden).
+        const parentCategory = headerElement.closest('.category-content');
+        if (parentCategory && parentCategory.style.maxHeight !== '0px') {
+            // On recalcule la nouvelle hauteur nécessaire
+            // On ajoute la hauteur de la réponse qu'on vient d'ouvrir (ou on laisse telle quelle si on ferme)
+            // L'astuce simple : définir le parent sur une très grande valeur tant qu'il est ouvert.
+            // Dans toggleCategory, on a mis +2000px, ce qui devrait suffire pour la plupart des cas.
+            // Si besoin de plus de précision, on peut faire :
+            parentCategory.style.maxHeight = (parentCategory.scrollHeight + answerWrapper.scrollHeight) + 'px';
+        }
+    }
+
+    // Ouvrir la première catégorie par défaut au chargement
+    document.addEventListener('DOMContentLoaded', function() {
+        toggleCategory('setup');
+    });
+    </script>
+</section>
+
+    <!-- FAQ Accordion JavaScript -->
+    <script>
+    function toggleCategory(categoryId) {
+        const questionsDiv = document.getElementById(categoryId + '-questions');
+        const icon = document.getElementById(categoryId + '-icon');
+        
+        // Check if currently open
+        const isOpen = questionsDiv.style.maxHeight && questionsDiv.style.maxHeight !== '0px';
+        
+        if (isOpen) {
+            // Close
+            questionsDiv.style.maxHeight = '0';
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            // Open
+            questionsDiv.style.maxHeight = questionsDiv.scrollHeight + 'px';
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // Open first category by default on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        toggleCategory('setup');
+    });
+    </script>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget-placeholder"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Cookie Consent Script - MUST load BEFORE analytics -->
+    <script src="scripts/cookie-consent.js"></script>
+
+    <!-- Schema.org FAQPage - Complete 14 Questions for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "技術的な知識がなくても導入できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、一切不要です。御社はFAQや資料を弊社に送っていただくだけで、セットアップから設定まですべて弊社が代行します。プログラミングやコーディングの知識は必要ありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "導入までどのくらい時間がかかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "最短1日で稼働開始できます。御社から資料をいただいた後、弊社がAIの設定とテストを完了し、準備が整い次第ご連絡します。通常、資料受領から1〜3営業日以内に本番運用を開始できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "導入に何が必要ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "既存のFAQ、商品マニュアル、価格表、よくある問い合わせ内容などの資料を弊社にお送りください。Word、PDF、Excel、テキストファイルなど、どの形式でも対応可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "月3,000件のメッセージを超えたらどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "超過分は1,000件ごとに¥1,000の追加料金で自動対応します。例：月5,000件使用の場合、基本¥19,990 + 追加¥2,000 = 合計¥21,990です。当社顧客平均2,400件/月 - 80%が追加料金なし。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "無料チャットボットとの違いは？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "無料ツールは決められたシナリオのみ。当サービスは：AIが御社資料を理解し文脈に応じた自然な回答、複雑な質問は人間へ自動転送、会話履歴の保存・分析可能、80%の問い合わせを自動化します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "解約は簡単ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、いつでもワンクリックで解約可能。違約金・最低利用期間なし。2週間無料トライアルで試して、満足できなければそのまま終了できます（クレジットカード登録不要）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "LINE公式アカウントがなくても利用できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、ご利用いただけます。LINE公式アカウントをお持ちでない場合は、無料で代行作成いたします。また、設定方法の動画ガイドもご用意していますので、ご自身で作成することも可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIはどのように私のビジネスを学習しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "御社からFAQ、マニュアル、価格表などの資料をお送りいただくだけです。弊社がこれらをAIに読み込ませ、設定します。AIは御社が提供した情報のみに基づいて応答します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIが答えを知らない場合はどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AIは推測や適当な回答は絶対にしません。「その情報は持っていません」と正直に伝え、適切な連絡先（メール、電話など）へお客様を案内します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "日本語以外の言語にも対応できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。標準プランは日本語のみですが、英語、中国語、韓国語、フランス語などを1言語あたり月額¥5,000で追加できます。インバウンド観光客や海外顧客対応に最適です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "お客様は何かインストールする必要がありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。既にLINEを使っている方（日本の96%）は、御社のLINE公式アカウントを友だち追加するだけで即座にチャット可能です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "会話データは誰がアクセスできますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "御社のみがアクセス可能です。弊社は技術サポート目的でのみアクセスし、第三者とのデータ共有は一切ありません。SSL/TLS暗号化、GDPR準拠のデータ処理を実施。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "効果が出るまでどのくらいかかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "導入初日から効果を実感できます。多くのお客様が1週間以内にスタッフ対応時間40-60%削減、顧客満足度向上を実現しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AIの回答精度はどのくらいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100,000件以上の顧客対話データに基づき、99%以上の精度を達成しています。AIは御社の資料からのみ回答するため、ハルシネーション（でたらめな回答）のリスクを最小限に抑えています。不確実な質問は推測せず、人間のスタッフに転送します。"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="scripts/language-switcher.js"></script>
+    <script src="scripts/component-loader.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/chatbot-widget.js"></script>
+    <script src="scripts/floating-cta.js"></script>
+    <script src="scripts/back-to-top.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <!-- Use Cases Tabs System Script -->
+    <script>
+    // ==================== USE CASES TABS SYSTEM ====================
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Only run on mobile
+        if (window.innerWidth <= 768) {
+            initUseCasesTabs();
+        }
+
+        // Re-init on resize
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                if (window.innerWidth <= 768) {
+                    initUseCasesTabs();
+                }
+            }, 250);
+        });
+    });
+
+    function initUseCasesTabs() {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const caseCards = document.querySelectorAll('.case-card');
+        const useCasesContent = document.querySelector('.use-cases-content');
+
+        if (!tabButtons.length || !caseCards.length) return;
+
+        // Tab click handlers
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetCase = this.getAttribute('data-tab');
+                switchCase(targetCase);
+            });
+        });
+
+        // Swipe handlers for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (useCasesContent) {
+            useCasesContent.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            useCasesContent.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+        }
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) < swipeThreshold) return;
+
+            const activeTab = document.querySelector('.tab-btn.active');
+            if (!activeTab) return;
+
+            const currentIndex = Array.from(tabButtons).indexOf(activeTab);
+            let newIndex;
+
+            if (diff > 0) {
+                // Swipe left - next case
+                newIndex = Math.min(currentIndex + 1, tabButtons.length - 1);
+            } else {
+                // Swipe right - previous case
+                newIndex = Math.max(currentIndex - 1, 0);
+            }
+
+            const targetTab = tabButtons[newIndex];
+            if (targetTab) {
+                const targetCase = targetTab.getAttribute('data-tab');
+                switchCase(targetCase);
+            }
+        }
+
+        function switchCase(targetCase) {
+            console.log('🔄 Switching to case:', targetCase);
+
+            // Update tabs
+            tabButtons.forEach(btn => {
+                if (btn.getAttribute('data-tab') === targetCase) {
+                    btn.classList.add('active');
+                    btn.style.color = '#8B7347';
+                    btn.style.borderBottomColor = '#8B7347';
+                } else {
+                    btn.classList.remove('active');
+                    btn.style.color = '#6b7280';
+                    btn.style.borderBottomColor = 'transparent';
+                }
+            });
+
+            // Update cases - FORCE INLINE STYLES
+            let activeCard = null;
+            caseCards.forEach(card => {
+                const cardCase = card.getAttribute('data-case');
+                if (cardCase === targetCase) {
+                    console.log('✅ Showing case:', cardCase);
+                    card.classList.add('active');
+                    // FORCE show with inline styles
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                    card.style.visibility = 'visible';
+                    card.style.height = 'auto';
+                    card.style.overflow = 'visible';
+                    card.style.marginBottom = '1rem';
+                    card.style.padding = '2rem';
+                    activeCard = card;
+                } else {
+                    console.log('❌ Hiding case:', cardCase);
+                    card.classList.remove('active');
+                    // FORCE hide with inline styles
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                    card.style.visibility = 'hidden';
+                    card.style.height = '0';
+                    card.style.overflow = 'hidden';
+                    card.style.margin = '0';
+                    card.style.padding = '0';
+                }
+            });
+
+            // Smooth scroll to active card on mobile - IMPROVED
+            if (activeCard && window.innerWidth <= 768) {
+                // Petit délai pour laisser le CSS s'appliquer
+                setTimeout(() => {
+                    activeCard.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+
+                    // Ajuster légèrement pour tenir compte du header fixe
+                    setTimeout(() => {
+                        window.scrollBy({
+                            top: -80,
+                            behavior: 'smooth'
+                        });
+                    }, 300);
+                }, 50);
+            }
+        }
+    }
+    </script>
+</body>
+</html>

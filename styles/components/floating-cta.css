@@ -1,0 +1,116 @@
+/* ==================== FLOATING CTA BUTTON ==================== */
+
+/* Bulle flottante - cachée par défaut sur desktop */
+.floating-cta {
+    display: none;
+    position: fixed;
+    top: 85px; /* Juste en dessous du header */
+    right: 1rem;
+    z-index: 1001; /* Au-dessus du header (z-index: 1000) */
+    animation: slideInFromRight 0.5s ease-out;
+    pointer-events: auto;
+}
+
+.floating-cta-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.floating-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+}
+
+.floating-cta-button:active {
+    transform: translateY(0);
+}
+
+/* Animation d'entrée */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Afficher la bulle flottante sur tablette et mobile */
+@media (max-width: 1024px) {
+    .floating-cta {
+        display: block;
+    }
+}
+
+/* Ajustements pour mobile */
+@media (max-width: 768px) {
+    .floating-cta {
+        top: 62px; /* Juste en dessous du header mobile */
+        right: 0.75rem;
+    }
+
+    .floating-cta-button {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.8125rem;
+        box-shadow: 0 3px 10px rgba(139, 111, 71, 0.4);
+    }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+    .floating-cta {
+        top: 62px;
+        right: 0.5rem;
+    }
+
+    .floating-cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Ultra petit mobile (iPhone SE) */
+@media (max-width: 375px) {
+    .floating-cta {
+        top: 62px;
+        right: 0.5rem;
+    }
+
+    .floating-cta-button {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.6875rem;
+    }
+}
+
+/* ==================== MASQUER SUR PAGE CONTACT ==================== */
+
+/* Masquer le floating CTA sur la page contact */
+body.contact-page .floating-cta {
+    display: none !important;
+}
+
+/* Masquer le floating CTA quand le chatbot est ouvert */
+body:has(.chatbot-window.active) .floating-cta {
+    display: none !important;
+}
+
+/* Masquer le floating CTA quand le menu burger est ouvert */
+body:has(.nav-menu.active) .floating-cta {
+    display: none !important;
+}

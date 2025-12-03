@@ -1,0 +1,1967 @@
+/* ================================================================
+   PRIVACY POLICY PAGE - PROFESSIONAL CSS
+   Fichier: styles/pages/privacy-policy.css
+   Description: Styles professionnels pour la page politique de confidentialité
+================================================================ */
+
+/* ==================== TABLE OF CONTENTS ====================
+   1. HERO SECTION
+   2. TABLE OF CONTENTS CARDS
+   3. CONTENT SECTIONS
+   4. HIGHLIGHT BOXES
+   5. DATA CARDS (Stats)
+   6. TABLES
+   7. LISTS & ITEMS
+   8. CTA SECTION
+   9. ANIMATIONS
+   10. RESPONSIVE - TABLET
+   11. RESPONSIVE - MOBILE
+   12. RESPONSIVE - SMALL MOBILE
+   13. DARK MODE SUPPORT (optional)
+============================================================== */
+
+/* ==================== 1. HERO SECTION ==================== */
+.privacy-hero,
+.advantages-hero {
+    position: relative;
+    padding: 10rem 0 5rem;
+    overflow: hidden;
+    background: transparent;
+}
+
+.privacy-hero .hero-background,
+.advantages-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.privacy-hero .gradient-orb,
+.advantages-hero .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+}
+
+.privacy-hero .orb-1,
+.advantages-hero .orb-1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(139, 111, 71, 0.12);
+    top: -150px;
+    left: -100px;
+    animation: float 20s ease-in-out infinite;
+}
+
+.privacy-hero .orb-2,
+.advantages-hero .orb-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(59, 130, 246, 0.1);
+    top: 50%;
+    right: -100px;
+    animation: float-reverse 25s ease-in-out infinite;
+}
+
+.privacy-hero .orb-3,
+.advantages-hero .orb-3 {
+    width: 300px;
+    height: 300px;
+    background: rgba(168, 144, 128, 0.1);
+    bottom: -100px;
+    left: 30%;
+    animation: float 18s ease-in-out infinite;
+}
+
+.privacy-hero .hero-content,
+.advantages-hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.privacy-hero .hero-title,
+.advantages-hero .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.privacy-hero .hero-subtitle,
+.advantages-hero .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+/* Hero Stats Row */
+.privacy-hero .hero-stats,
+.advantages-hero .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.privacy-hero .hero-stats .stat-card,
+.advantages-hero .hero-stats .stat-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 111, 71, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 160px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.privacy-hero .hero-stats .stat-card:hover,
+.advantages-hero .hero-stats .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-hero .stat-icon,
+.advantages-hero .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-hero .stat-value,
+.advantages-hero .stat-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.privacy-hero .stat-label,
+.advantages-hero .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ==================== 2. TABLE OF CONTENTS ==================== */
+.toc-section {
+    background: transparent;
+    padding: 4rem 0;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin: 2.5rem 0;
+}
+
+.toc-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.toc-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-1);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.toc-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(139, 111, 71, 0.15);
+}
+
+.toc-card:hover::before {
+    transform: scaleX(1);
+}
+
+.toc-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.toc-card:hover .toc-icon {
+    transform: scale(1.15);
+}
+
+.toc-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+/* ==================== 3. CONTENT SECTIONS ==================== */
+.privacy-section,
+.message-section {
+    padding: 4rem 0;
+    position: relative;
+}
+
+/* Removed alternating gray backgrounds - uniform white background */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-title .title-icon {
+    font-size: 1.5rem;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 0.75rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--primary); /* Fallback color before gradient loads */
+}
+
+/* Message Content Container */
+.message-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.message-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.message-text:last-child {
+    margin-bottom: 0;
+}
+
+.message-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 1.5rem 0 1rem;
+}
+
+/* ==================== 4. HIGHLIGHT BOXES ==================== */
+.highlight-box,
+.adoption-highlight {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid #e5e7eb;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.highlight-box:hover,
+.adoption-highlight:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-light);
+}
+
+.highlight-box:last-child,
+.adoption-highlight:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-blue-light);
+    border-radius: 12px;
+}
+
+.highlight-text {
+    flex: 1;
+}
+
+.highlight-text strong {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-text p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Special highlight variants */
+.highlight-info {
+    background: linear-gradient(135deg, #f0f9ff 0%, #f9fafb 100%) !important;
+    border-color: #bfdbfe !important;
+}
+
+.highlight-warning {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+    border-color: #fbbf24 !important;
+}
+
+.highlight-success {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%) !important;
+    border-color: #22c55e !important;
+}
+
+.highlight-danger {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%) !important;
+    border-color: #ef4444 !important;
+}
+
+/* ==================== 5. STAT CARDS ==================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(139, 111, 71, 0.12);
+    border-color: var(--primary-light);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-card .stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.stat-card .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.stat-card .stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* ==================== 6. TABLES ==================== */
+.company-table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.company-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.company-table th,
+.company-table td {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.company-table th {
+    background: var(--bg-blue-light);
+    font-weight: 600;
+    color: var(--text-primary);
+    width: 35%;
+    white-space: nowrap;
+}
+
+.company-table td {
+    color: var(--text-secondary);
+}
+
+.company-table tr:last-child th,
+.company-table tr:last-child td {
+    border-bottom: none;
+}
+
+.company-table tr:hover td {
+    background: var(--bg-gray-soft);
+}
+
+.company-table a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s ease;
+}
+
+.company-table a:hover {
+    text-decoration-color: var(--primary);
+}
+
+/* ==================== 7. LISTS & ITEMS ==================== */
+.support-system-section {
+    padding: 4rem 0;
+}
+
+.support-phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.support-phase {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.support-phase:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 12px 40px rgba(139, 111, 71, 0.1);
+    transform: translateY(-4px);
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--bg-blue-light);
+}
+
+.phase-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-blue-light);
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.phase-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.phase-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.phase-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    align-items: flex-start;
+}
+
+.phase-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.item-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.item-icon .check-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.item-content strong {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.item-content span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ==================== 8. CTA SECTION ==================== */
+.cta-section {
+    background: transparent;
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    display: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    color: var(--text-primary, #1f2937);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-title img {
+    width: 68px;
+    height: auto;
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.cta-buttons-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.cta-button-primary,
+.cta-button-secondary {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    border-radius: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 220px;
+}
+
+.cta-button-primary {
+    background: var(--primary, #8b6f47);
+    color: white;
+    box-shadow: 0 4px 20px rgba(139, 111, 71, 0.25);
+}
+
+.cta-button-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(139, 111, 71, 0.35);
+}
+
+.cta-button-secondary {
+    background: white;
+    color: var(--primary, #8b6f47);
+    border: 2px solid var(--primary, #8b6f47);
+}
+
+.cta-button-secondary:hover {
+    background: var(--bg-blue-light, #f0f9ff);
+    transform: translateY(-4px);
+}
+
+.cta-main-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.cta-main-text img {
+    width: 42px;
+    height: 42px;
+}
+
+.cta-sub-text {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 0.25rem;
+}
+
+.cta-process {
+    margin-top: 1.5rem;
+}
+
+.cta-process-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cta-process-list a {
+    color: var(--primary, #8b6f47);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s ease;
+}
+
+.cta-process-list a:hover {
+    text-decoration-color: var(--primary, #8b6f47);
+}
+
+.cta-process-list li {
+    color: var(--text-secondary, #6b7280);
+}
+
+/* ==================== 9. ANIMATIONS ==================== */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -30px) scale(1.05);
+    }
+    66% {
+        transform: translate(-25px, 25px) scale(0.98);
+    }
+}
+
+@keyframes float-reverse {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(-30px, 30px) scale(1.05);
+    }
+    66% {
+        transform: translate(25px, -25px) scale(0.98);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* ==================== 10. RESPONSIVE - TABLET (768px - 1024px) ==================== */
+@media (max-width: 1024px) {
+    .privacy-hero,
+    .advantages-hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .toc-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+
+    .toc-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .support-phases {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-buttons-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ==================== 11. RESPONSIVE - MOBILE (481px - 767px) ==================== */
+@media (max-width: 767px) {
+    .privacy-hero,
+    .advantages-hero {
+        padding: 7rem 0 3rem;
+    }
+
+    .privacy-hero .hero-title,
+    .advantages-hero .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .privacy-hero .hero-subtitle,
+    .advantages-hero .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .privacy-hero .hero-stats,
+    .advantages-hero .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .privacy-hero .hero-stats .stat-card,
+    .advantages-hero .hero-stats .stat-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .privacy-section,
+    .message-section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .toc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .toc-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .toc-icon {
+        font-size: 2rem;
+    }
+
+    .toc-title {
+        font-size: 0.85rem;
+    }
+
+    .highlight-box,
+    .adoption-highlight {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .highlight-icon {
+        margin: 0 auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-card .stat-icon {
+        font-size: 2rem;
+    }
+
+    .stat-card .stat-value {
+        font-size: 1rem;
+    }
+
+    .company-table th,
+    .company-table td {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .company-table th {
+        width: 40%;
+    }
+
+    .support-phase {
+        padding: 1.5rem;
+    }
+
+    .phase-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .phase-icon {
+        margin: 0 auto;
+    }
+
+    .cta-section {
+        padding: 4rem 0;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-title img {
+        width: 50px;
+    }
+
+    .cta-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-process-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* ==================== 12. RESPONSIVE - SMALL MOBILE (≤480px) ==================== */
+@media (max-width: 480px) {
+    .privacy-hero,
+    .advantages-hero {
+        padding: 6rem 0 2.5rem;
+    }
+
+    .privacy-hero .hero-title,
+    .advantages-hero .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .privacy-hero .hero-subtitle,
+    .advantages-hero .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .privacy-hero .hero-stats .stat-card,
+    .advantages-hero .hero-stats .stat-card {
+        padding: 1rem 1.25rem;
+    }
+
+    .privacy-hero .stat-icon,
+    .advantages-hero .stat-icon {
+        font-size: 1.5rem;
+    }
+
+    .privacy-hero .stat-value,
+    .advantages-hero .stat-value {
+        font-size: 1rem;
+    }
+
+    .privacy-hero .stat-label,
+    .advantages-hero .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .privacy-section,
+    .message-section {
+        padding: 2.5rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .section-title .title-icon {
+        font-size: 1.25rem;
+    }
+
+    .toc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .toc-card {
+        padding: 1rem 0.75rem;
+        border-radius: 12px;
+    }
+
+    .toc-icon {
+        font-size: 1.5rem;
+    }
+
+    .toc-title {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+
+    .highlight-box,
+    .adoption-highlight {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .highlight-icon {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .highlight-text strong {
+        font-size: 1rem;
+    }
+
+    .highlight-text p,
+    .message-text {
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .stat-card {
+        padding: 1.25rem 0.75rem;
+        border-radius: 12px;
+    }
+
+    .stat-card .stat-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .stat-card .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .stat-card .stat-value {
+        font-size: 0.9rem;
+    }
+
+    .company-table-wrapper {
+        border-radius: 12px;
+    }
+
+    .company-table th,
+    .company-table td {
+        padding: 0.875rem;
+        font-size: 0.85rem;
+    }
+
+    .support-phase {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    .phase-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .phase-title {
+        font-size: 1rem;
+    }
+
+    .phase-item {
+        padding: 0.75rem 0;
+    }
+
+    .item-content strong {
+        font-size: 0.9rem;
+    }
+
+    .item-content span {
+        font-size: 0.85rem;
+    }
+
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-title {
+        font-size: 1.25rem;
+        gap: 0.75rem;
+    }
+
+    .cta-title img {
+        width: 40px;
+    }
+
+    .cta-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+    }
+
+    .cta-main-text {
+        font-size: 0.9rem;
+    }
+
+    .cta-main-text img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cta-sub-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* ==================== 13. ULTRA SMALL MOBILE (≤375px) ==================== */
+@media (max-width: 375px) {
+    .privacy-hero,
+    .advantages-hero {
+        padding: 5.5rem 0 2rem;
+    }
+
+    .privacy-hero .hero-title,
+    .advantages-hero .hero-title {
+        font-size: 1.35rem;
+    }
+
+    .toc-grid {
+        gap: 0.4rem;
+    }
+
+    .toc-card {
+        padding: 0.875rem 0.5rem;
+    }
+
+    .toc-icon {
+        font-size: 1.35rem;
+    }
+
+    .toc-title {
+        font-size: 0.7rem;
+    }
+
+    .highlight-box,
+    .adoption-highlight {
+        padding: 1rem;
+    }
+
+    .stats-grid {
+        gap: 0.5rem;
+    }
+
+    .stat-card {
+        padding: 1rem 0.5rem;
+    }
+
+    .stat-card .stat-icon {
+        font-size: 1.5rem;
+    }
+
+    .stat-card .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .stat-card .stat-value {
+        font-size: 0.85rem;
+    }
+
+    .company-table th {
+        width: 35%;
+    }
+
+    .company-table th,
+    .company-table td {
+        padding: 0.75rem 0.625rem;
+        font-size: 0.8rem;
+    }
+
+    .cta-title {
+        font-size: 1.15rem;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .privacy-hero .hero-background,
+    .advantages-hero .hero-background,
+    .cta-section::before {
+        display: none;
+    }
+
+    .toc-card,
+    .stat-card,
+    .highlight-box,
+    .adoption-highlight,
+    .support-phase {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .cta-section {
+        background: #f5f5f5 !important;
+        color: #333;
+    }
+
+    .cta-title,
+    .cta-subtitle {
+        color: #333;
+    }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+    .gradient-orb,
+    .toc-card,
+    .stat-card,
+    .highlight-box,
+    .support-phase,
+    .reveal-on-scroll {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Focus states for keyboard navigation */
+.toc-card:focus,
+.cta-button-primary:focus,
+.cta-button-secondary:focus,
+.company-table a:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .toc-card,
+    .stat-card,
+    .highlight-box,
+    .support-phase {
+        border-width: 3px;
+    }
+
+    .gradient-text {
+        -webkit-text-fill-color: var(--primary);
+    }
+}
+
+/* ==================== UTILITY CLASSES FOR INLINE STYLES ==================== */
+
+/* Highlight box - Info (blue) - Section 1 Introduction */
+.highlight-info-blue {
+    background: linear-gradient(135deg, #f0f9ff 0%, #f9fafb 100%) !important;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid #e5e7eb;
+}
+
+/* Highlight box - Legal (yellow) - Section 4 */
+.highlight-legal {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid #fbbf24;
+}
+
+/* Highlight box - Success (green) - Section 7 */
+.highlight-rights {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%) !important;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid #22c55e;
+}
+
+/* Highlight box - Warning (orange) - Section 8 Essential */
+.highlight-cookie-essential {
+    background: #fff7ed !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #fb923c;
+}
+
+/* Highlight box - Analytics (yellow) - Section 8 */
+.highlight-cookie-analytics {
+    background: #fef3c7 !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #eab308;
+}
+
+/* Highlight box - Functional (blue) - Section 8 */
+.highlight-cookie-functional {
+    background: #dbeafe !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #3b82f6;
+}
+
+/* Highlight box - Policy Change (amber) - Section 10 */
+.highlight-policy-change {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid #f59e0b;
+}
+
+/* White box with border - Section 3, 5 */
+.highlight-white {
+    background: white !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+}
+
+/* Content grid for stacked items */
+.content-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+/* List styling for legal sections */
+.legal-list {
+    line-height: 1.8;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.legal-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Service providers list */
+.providers-list {
+    line-height: 2;
+    margin-left: 1.5rem;
+}
+
+/* Rights section grid */
+.rights-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Rights phase paragraph */
+.rights-description {
+    padding: 0 1rem;
+}
+
+/* Rights message content margin */
+.rights-cta {
+    margin-top: 2rem;
+}
+
+/* Cookie grid */
+.cookie-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Security grid */
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Data retention grid */
+.retention-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* CTA process list styling */
+.cta-process-inline {
+    list-style: none;
+    padding: 0;
+}
+
+.cta-process-inline li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+/* Text emphasis */
+.text-emphasis {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.text-large {
+    font-size: 1.1rem;
+}
+
+/* ==================== ALIGNMENT & CENTERING FIXES ==================== */
+
+/* Force all sections to center their content */
+.message-section .container,
+.support-system-section .container,
+.privacy-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Center section headers properly */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.section-header .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Center highlight boxes content */
+.adoption-highlight,
+.highlight-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Content grid - ensure items are centered */
+.content-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-grid .adoption-highlight {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+/* Stats/Retention/Security grids - center properly */
+.retention-grid,
+.security-grid,
+.cookie-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.retention-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.security-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cookie-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Legal list - better alignment */
+.legal-list {
+    line-height: 2;
+    margin-left: 0;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    list-style-position: outside;
+}
+
+.legal-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+}
+
+/* Providers list - better alignment */
+.providers-list {
+    line-height: 2.2;
+    margin-left: 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+    list-style-position: outside;
+}
+
+.providers-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Rights section - 3 column grid */
+.rights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rights-grid .support-phase {
+    text-align: center;
+}
+
+.rights-grid .phase-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rights-description {
+    text-align: center;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+/* Support phases - ensure proper grid */
+.support-phases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+/* Table centering */
+.company-table-wrapper {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+/* CTA Process list inline */
+.cta-process-inline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cta-process-inline li {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-secondary, #6b7280);
+    font-size: 0.95rem;
+}
+
+/* TOC grid - ensure good layout */
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 2.5rem auto 0;
+}
+
+/* ==================== RESPONSIVE FIXES ==================== */
+
+@media (max-width: 1024px) {
+    .retention-grid,
+    .security-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .support-phases {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .retention-grid,
+    .security-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .rights-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .rights-grid .support-phase {
+        text-align: center;
+    }
+
+    .adoption-highlight,
+    .highlight-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .highlight-icon {
+        margin: 0 auto 1rem;
+    }
+
+    .highlight-text {
+        text-align: center;
+    }
+
+    .legal-list,
+    .providers-list {
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+
+    .toc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .cta-process-inline {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cta-process-inline li {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .retention-grid,
+    .security-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .message-section .container,
+    .support-system-section .container {
+        padding: 0 1rem;
+    }
+
+    .toc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .toc-card {
+        padding: 1rem 0.5rem;
+    }
+
+    .toc-icon {
+        font-size: 1.5rem;
+    }
+
+    .toc-title {
+        font-size: 0.7rem;
+    }
+}
+
+/* ==================== FINAL CENTERING FIXES ==================== */
+
+/* Section 1: Introduction - Center the highlight box */
+#section-1 .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+#section-1 .adoption-highlight {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Section 3: How We Use - Center content grid items */
+#section-3 .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-3 .content-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+#section-3 .adoption-highlight {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Section 4: Legal Basis - Center highlight box */
+#section-4 .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-4 .adoption-highlight {
+    max-width: 900px;
+    width: 100%;
+}
+
+#section-4 .legal-list {
+    text-align: left;
+    max-width: 100%;
+}
+
+/* Section 5: Sharing - Center content */
+#section-5 .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#section-5 .adoption-highlight {
+    max-width: 800px;
+    width: 100%;
+}
+
+#section-5 .message-subtitle {
+    text-align: center;
+    margin: 2rem auto 1rem;
+}
+
+#section-5 .providers-list {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* Section 6: Retention - Center grid */
+#section-6 .message-content {
+    display: flex;
+    justify-content: center;
+}
+
+#section-6 .retention-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Section 7: Rights - Center grid and CTA */
+#section-7 .rights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#section-7 .rights-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+#section-7 .rights-cta .adoption-highlight {
+    max-width: 700px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Section 8: Cookies - Center grid */
+#section-8 .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-8 .cookie-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+#section-8 .adoption-highlight {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Section 9: Security - Center grid */
+#section-9 .message-content {
+    display: flex;
+    justify-content: center;
+}
+
+#section-9 .security-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Section 10: Policy Changes - Center content */
+#section-10 .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-10 .adoption-highlight {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Section 11: Contact - Center table */
+#section-11 .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-11 .company-table-wrapper {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ==================== RESPONSIVE FOR NEW FIXES ==================== */
+
+@media (max-width: 1024px) {
+    #section-6 .retention-grid,
+    #section-9 .security-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #section-7 .rights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    #section-6 .retention-grid,
+    #section-9 .security-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    #section-7 .rights-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    #section-3 .adoption-highlight,
+    #section-5 .adoption-highlight,
+    #section-8 .adoption-highlight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #section-3 .highlight-text,
+    #section-5 .highlight-text,
+    #section-8 .highlight-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #section-6 .retention-grid,
+    #section-9 .security-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+}
+
+/* ==================== GENERAL CENTERING (for legal-notice & other pages) ==================== */
+
+/* Center all message-content containers */
+.message-section .message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Center all adoption-highlight boxes */
+.message-section .adoption-highlight {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Center all company tables */
+.message-section .company-table-wrapper {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Center support-phases grid */
+.support-system-section .support-phases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Responsive for general centering */
+@media (max-width: 767px) {
+    .support-system-section .support-phases {
+        grid-template-columns: 1fr;
+    }
+
+    .message-section .adoption-highlight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .message-section .adoption-highlight .highlight-text {
+        text-align: center;
+    }
+}

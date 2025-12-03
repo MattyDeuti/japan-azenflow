@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================= SEO PRINCIPAL ================= -->
+    <title>LINEグループ翻訳ボット｜複数人の会話を自然につなぐ｜AzenFlow</title>
+    <meta name="description" content="国際チーム・多言語家族向けグループ翻訳。複数人が異なる言語を話しても、文脈を理解して自然な翻訳を実現。LINE上で3秒対応。月額¥9,990〜。2週間無料トライアル。">
+    <meta name="keywords" content="LINEグループ翻訳, 国際チーム, 多言語会議, グループ翻訳ボット, AI翻訳, リアルタイム翻訳, AzenFlow, 多言語対応">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://azenflow.jp/translation-chatbot.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- ================= SOCIAL SEO ================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azenflow.jp/translation-chatbot.html">
+    <meta property="og:title" content="LINEグループ翻訳ボット｜複数人の会話を自然につなぐ｜AzenFlow">
+    <meta property="og:description" content="国際チーム・多言語家族向けグループ翻訳。複数人が異なる言語を話しても、文脈を理解して自然な翻訳を実現。">
+    <meta property="og:image" content="https://azenflow.jp/images/og-translation.jpg">
+    <meta property="og:site_name" content="AzenFlow">
+    <meta property="og:locale" content="ja_JP">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LINEグループ翻訳ボット｜複数人の会話を自然につなぐ｜AzenFlow">
+    <meta name="twitter:description" content="国際チーム・多言語家族のためのグループ翻訳。月額¥9,990〜">
+    <meta name="twitter:image" content="https://azenflow.jp/images/og-translation.jpg">
+
+    <!-- Styles globaux -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <!-- Styles de la page -->
+    <link rel="stylesheet" href="styles/pages/translation-chatbot.css">
+
+    <!-- Composants -->
+    <link rel="stylesheet" href="styles/components/floating-cta.css">
+    <link rel="stylesheet" href="styles/components/back-to-top.css">
+    <link rel="stylesheet" href="styles/components/cookie-banner.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="styles/fonts.css">
+
+    <!-- Structured Data SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "AzenFlow Translation Chatbot",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "LINE",
+          "offers": {
+            "@type": "Offer",
+            "price": "9990",
+            "priceCurrency": "JPY",
+            "priceValidUntil": "2025-12-31",
+            "description": "LINE翻訳チャットボット ベースプラン"
+          },
+          "featureList": "文脈理解翻訳, 全言語対応, 会話履歴記憶, 3秒翻訳"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "ホーム",
+              "item": "https://azenflow.jp/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "LINE翻訳チャットボット",
+              "item": "https://azenflow.jp/translation-chatbot.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script src="/scripts/structured-data.js"></script>
+
+    <!-- Mobile Optimizations -->
+    <style>
+        @media (max-width: 768px) {
+            .hero-section,
+            .hero {
+                padding: 2rem 1rem !important;
+            }
+            .hero-cta {
+                margin-top: 1.5rem !important;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Use Cases Tabs - Mobile */
+        @media (max-width: 768px) {
+            .use-cases-tabs {
+                display: block !important;
+            }
+            .use-cases-content .case-card {
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .use-cases-content .case-card.active {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                height: auto !important;
+                overflow: visible !important;
+                margin-bottom: 1rem !important;
+                padding: 2rem !important;
+                animation: fadeInCase 0.3s ease-in-out;
+            }
+            .tab-btn.active {
+                color: #8B7347 !important;
+                border-bottom-color: #8B7347 !important;
+            }
+            @keyframes fadeInCase {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        }
+
+        @media (min-width: 769px) {
+            .use-cases-tabs {
+                display: none !important;
+            }
+            .case-card {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Floating CTA Button -->
+    <div id="floating-cta-placeholder"></div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in-up delay-1" style="line-height: 1.2;">
+                        <div style="margin-bottom: 0.3em;" data-ja="グループ会話の翻訳。" data-en="Translation for group conversations.">グループ会話の翻訳。</div>
+                        <div class="gradient-text" data-ja="複数人の会話を自然につなぐ。" data-en="Naturally connecting multilingual teams.">複数人の会話を自然につなぐ。</div>
+                    </h1>
+
+                    <div class="hero-subtitle-optimized fade-in-up delay-2" style="margin-top: 1.5rem;">
+                        <div style="font-size: 1.25rem; color: var(--text-secondary); line-height: 1.6;" data-ja="LINEグループ内で複数人が異なる言語を話しても、会話の流れを記憶して自然な翻訳を実現。国際チームや多言語家族の必須ツール。" data-en="Even when multiple people speak different languages in a LINE group, it remembers the conversation flow for natural translations. Essential for international teams and multilingual families.">
+                            LINEグループ内で複数人が異なる言語を話しても、会話の流れを記憶して自然な翻訳を実現。国際チームや多言語家族の必須ツール。
+                        </div>
+                    </div>
+
+                    <!-- Description avec checkmarks -->
+                    <div class="hero-description-optimized fade-in-up delay-2" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
+                        <p style="margin-bottom: 0.8rem; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 会話履歴で文脈を理解" data-en="✓ Understands context from conversation history">
+                            <strong style="color: #8B6F47;">✓</strong> <strong>会話履歴</strong>で文脈を理解
+                        </p>
+                        <p style="margin-bottom: 0.8rem; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 常に最新・最高のAIモデルを使用" data-en="✓ Always uses the latest & best AI model">
+                            <strong style="color: #8B6F47;">✓</strong> 常に<strong>最新・最高のAIモデル</strong>を使用
+                        </p>
+                        <p style="margin-bottom: 0; font-size: 1.125rem; color: #1F2937;" data-ja="✓ 全言語対応・自動検出" data-en="✓ All languages supported with auto-detection">
+                            <strong style="color: #8B6F47;">✓</strong> <strong>全言語対応</strong>・自動検出
+                        </p>
+                    </div>
+
+                    <!-- Boutons CTA -->
+                    <div class="hero-cta fade-in-up delay-3">
+                        <button onclick="window.location.href='contact.html'" class="btn-primary pulse" data-ja="無料トライアルを申し込む" data-en="Request Free Trial">無料トライアルを申し込む</button>
+                        <button onclick="window.location.href='contact.html'" class="btn-secondary" data-ja="詳しく相談する" data-en="Discuss Your Needs">詳しく相談する</button>
+                    </div>
+
+                    <!-- Trust badges -->
+                    <div class="hero-trust-badges fade-in-up delay-3" style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; font-size: 1rem; color: #4B5563; font-weight: 600;">
+                        <div data-ja="✓ 2週間無料トライアル" data-en="✓ 2-week free trial">
+                            <span style="color: #8B6F47;">✓</span> 2週間無料トライアル
+                        </div>
+                        <div data-ja="✓ セットアップ費用無料" data-en="✓ No setup fee">
+                            <span style="color: #8B6F47;">✓</span> セットアップ費用無料
+                        </div>
+                        <div data-ja="✓ いつでも解約可能" data-en="✓ Cancel anytime">
+                            <span style="color: #8B6F47;">✓</span> いつでも解約可能
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY DIFFERENT SECTION ==================== -->
+    <section class="why-different-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="なぜ従来の翻訳ツールより優れているのか" data-en="Why It's Better Than Traditional Translators">なぜ従来の翻訳ツールより優れているのか</h2>
+                <p class="section-subtitle" data-ja="複数人の会話でも、誰が何を言ったか記憶し、文脈を理解した翻訳を実現" data-en="Even with multiple people talking, remembers who said what for context-aware translations">
+                    複数人の会話でも、誰が何を言ったか記憶し、文脈を理解した翻訳を実現
+                </p>
+            </div>
+
+            <div class="comparison-grid">
+                <!-- Traditional Translators -->
+                <div class="comparison-card traditional reveal-on-scroll">
+                    <div class="comparison-header negative">
+                        <span class="comparison-icon">❌</span>
+                        <h3 data-ja="従来の翻訳ツール" data-en="Traditional Translators">従来の翻訳ツール</h3>
+                        <p class="comparison-subtitle" data-ja="Google翻訳・DeepL など" data-en="Google Translate, DeepL, etc.">Google翻訳・DeepL など</p>
+                    </div>
+                    <ul class="comparison-list">
+                        <li data-ja="1文ずつ独立して翻訳" data-en="Translates each sentence independently">
+                            <span class="list-icon negative">✗</span>
+                            1文ずつ独立して翻訳
+                        </li>
+                        <li data-ja="前後の文脈を考慮しない" data-en="Doesn't consider surrounding context">
+                            <span class="list-icon negative">✗</span>
+                            前後の文脈を考慮しない
+                        </li>
+                        <li data-ja="「彼」「それ」が何を指すか分からない" data-en="Can't understand what 'he' or 'it' refers to">
+                            <span class="list-icon negative">✗</span>
+                            「彼」「それ」が何を指すか分からない
+                        </li>
+                        <li data-ja="直訳的で不自然な表現" data-en="Literal, unnatural expressions">
+                            <span class="list-icon negative">✗</span>
+                            直訳的で不自然な表現
+                        </li>
+                        <li data-ja="専門用語の一貫性がない" data-en="Inconsistent terminology">
+                            <span class="list-icon negative">✗</span>
+                            専門用語の一貫性がない
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AzenFlow Translator -->
+                <div class="comparison-card azenflow reveal-on-scroll delay-1">
+                    <div class="comparison-header positive">
+                        <span class="comparison-icon">✓</span>
+                        <h3 data-ja="AzenFlow翻訳ボット" data-en="AzenFlow Translation Bot">AzenFlow翻訳ボット</h3>
+                        <p class="comparison-subtitle" data-ja="文脈理解型AI翻訳" data-en="Context-Aware AI Translation">文脈理解型AI翻訳</p>
+                    </div>
+                    <ul class="comparison-list">
+                        <li data-ja="会話全体の流れを記憶" data-en="Remembers entire conversation flow">
+                            <span class="list-icon positive">✓</span>
+                            会話全体の流れを記憶
+                        </li>
+                        <li data-ja="前後の文脈から最適な訳を選択" data-en="Selects optimal translation from context">
+                            <span class="list-icon positive">✓</span>
+                            前後の文脈から最適な訳を選択
+                        </li>
+                        <li data-ja="代名詞の参照先を正確に把握" data-en="Accurately tracks pronoun references">
+                            <span class="list-icon positive">✓</span>
+                            代名詞の参照先を正確に把握
+                        </li>
+                        <li data-ja="自然で流暢な表現" data-en="Natural, fluent expressions">
+                            <span class="list-icon positive">✓</span>
+                            自然で流暢な表現
+                        </li>
+                        <li data-ja="専門用語を一貫して使用" data-en="Consistent terminology throughout">
+                            <span class="list-icon positive">✓</span>
+                            専門用語を一貫して使用
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Example Demonstration -->
+            <div class="context-example reveal-on-scroll delay-2">
+                <h3 class="example-title" data-ja="💡 文脈理解の具体例" data-en="💡 Context Understanding Example">💡 文脈理解の具体例</h3>
+                <div class="example-conversation">
+                    <div class="example-message original">
+                        <span class="message-label" data-ja="会話の流れ" data-en="Conversation Flow">会話の流れ</span>
+                        <p data-ja="「田中さんが来週東京に来ます。彼に会いたいですか？」" data-en="'Tanaka-san is coming to Tokyo next week. Do you want to meet him?'">"田中さんが来週東京に来ます。彼に会いたいですか？"</p>
+                    </div>
+                    <div class="example-translations">
+                        <div class="translation-result bad">
+                            <span class="result-label" data-ja="❌ 従来の翻訳" data-en="❌ Traditional">❌ 従来の翻訳</span>
+                            <p data-ja="「彼」→ "he" のみ（誰のことか不明）" data-en="'Him' → Just 'he' (unclear who)">"彼" → "he" のみ（誰のことか不明）</p>
+                        </div>
+                        <div class="translation-result good">
+                            <span class="result-label" data-ja="✓ AzenFlow" data-en="✓ AzenFlow">✓ AzenFlow</span>
+                            <p data-ja="「彼」→ "Tanaka-san"（文脈から自動判断）" data-en="'Him' → 'Tanaka-san' (auto-determined from context)">"彼" → "Tanaka-san"（文脈から自動判断）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KEY FEATURES SECTION ==================== -->
+    <section class="key-features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="主な特徴" data-en="Key Features">主な特徴</h2>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1: Latest AI -->
+                <div class="feature-card reveal-on-scroll">
+                    <div class="feature-icon">
+                        <picture>
+                            <source srcset="images/robot.webp" type="image/webp">
+                            <img src="images/robot.png" alt="最新AI" style="width: 80px; height: 80px; object-fit: contain;" width="200" height="200" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="feature-title" data-ja="常に最新・最高のAIを使用" data-en="Always the Latest & Best AI">常に最新・最高のAIを使用</h3>
+                    <p class="feature-description" data-ja="GPT-4o、Gemini 2.5、Claude など、その時点で最も優れたAIモデルを自動採用。新しいモデルが登場すれば即座に切り替え、常に最高品質の翻訳を提供します。" data-en="Automatically uses the best AI model available—GPT-4o, Gemini 2.5, Claude, etc. When a better model emerges, we switch immediately to always deliver top-quality translations.">
+                        GPT-4o、Gemini 2.5、Claude など、その時点で最も優れたAIモデルを自動採用。新しいモデルが登場すれば即座に切り替え、常に最高品質の翻訳を提供します。
+                    </p>
+                    <div class="feature-badge" data-ja="AI自動アップグレード" data-en="Auto AI Upgrade">Auto AI Upgrade</div>
+                </div>
+
+                <!-- Feature 2: Conversation Memory -->
+                <div class="feature-card reveal-on-scroll delay-1">
+                    <div class="feature-icon">
+                        <picture>
+                            <source srcset="images/document.webp" type="image/webp">
+                            <img src="images/document.png" alt="会話記憶" style="width: 80px; height: 80px; object-fit: contain;" width="220" height="220" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="feature-title" data-ja="会話履歴を記憶" data-en="Remembers Conversation History">会話履歴を記憶</h3>
+                    <p class="feature-description" data-ja="直前の会話内容を記憶し、文脈に沿った適切な翻訳を実現。「彼」「それ」「あの件」などの代名詞も、前後関係から正確に翻訳します。" data-en="Remembers recent conversation content for context-appropriate translations. Pronouns like 'he,' 'it,' and 'that matter' are accurately translated based on context.">
+                        直前の会話内容を記憶し、文脈に沿った適切な翻訳を実現。「彼」「それ」「あの件」などの代名詞も、前後関係から正確に翻訳します。
+                    </p>
+                    <div class="feature-badge" data-ja="文脈理解翻訳" data-en="Context-Aware">Context-Aware</div>
+                </div>
+
+                <!-- Feature 3: All Languages -->
+                <div class="feature-card reveal-on-scroll delay-2">
+                    <div class="feature-icon">
+                        <picture>
+                            <source srcset="images/universal.webp" type="image/webp">
+                            <img src="images/universal.png" alt="全言語対応" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="feature-title" data-ja="全言語対応・自動検出" data-en="All Languages with Auto-Detection">全言語対応・自動検出</h3>
+                    <p class="feature-description" data-ja="100以上の言語に対応。入力言語を自動検出し、設定した出力言語に即座に翻訳。日本語⇔英語はもちろん、中国語、韓国語、フランス語など、あらゆる組み合わせに対応。" data-en="Supports 100+ languages. Auto-detects input language and instantly translates to your set output language. Japanese⇔English and any combination including Chinese, Korean, French, and more.">
+                        100以上の言語に対応。入力言語を自動検出し、設定した出力言語に即座に翻訳。日本語⇔英語はもちろん、中国語、韓国語、フランス語など、あらゆる組み合わせに対応。
+                    </p>
+                    <div class="feature-badge" data-ja="100言語以上" data-en="100+ Languages">100+ Languages</div>
+                </div>
+
+                <!-- Feature 4: 3 Second Response -->
+                <div class="feature-card reveal-on-scroll delay-3">
+                    <div class="feature-icon">
+                        <picture>
+                            <source srcset="images/clock.webp" type="image/webp">
+                            <img src="images/clock.png" alt="3秒翻訳" style="width: 80px; height: 80px; object-fit: contain;" width="170" height="170" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="feature-title" data-ja="3秒で翻訳完了" data-en="Translation in 3 Seconds">3秒で翻訳完了</h3>
+                    <p class="feature-description" data-ja="メッセージを送信すると、3秒以内に翻訳結果が返信されます。リアルタイムの会話でもストレスなく使えるスピード。24時間365日、いつでも利用可能。" data-en="Send a message and receive the translation within 3 seconds. Fast enough for real-time conversations without stress. Available 24/7, anytime.">
+                        メッセージを送信すると、3秒以内に翻訳結果が返信されます。リアルタイムの会話でもストレスなく使えるスピード。24時間365日、いつでも利用可能。
+                    </p>
+                    <div class="feature-badge" data-ja="24時間365日" data-en="24/7 Available">24/7 Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== USE CASES SECTION ==================== -->
+    <section class="use-cases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="こんな場面で活躍" data-en="Perfect For These Situations">こんな場面で活躍</h2>
+                <p class="section-subtitle" data-ja="様々なシーンで言語の壁を解消" data-en="Breaking language barriers in various situations">
+                    様々なシーンで言語の壁を解消
+                </p>
+            </div>
+
+            <!-- Mobile Tabs -->
+            <div class="use-cases-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-case="travel" data-ja="Travel" data-en="Travel">Travel</button>
+                    <button class="tab-btn" data-case="couple" data-ja="国際カップル" data-en="Couples">国際カップル</button>
+                    <button class="tab-btn" data-case="business" data-ja="ビジネス" data-en="Business">ビジネス</button>
+                    <button class="tab-btn" data-case="study" data-ja="留学・学習" data-en="Study">留学・学習</button>
+                </div>
+            </div>
+
+            <div class="use-cases-content">
+                <!-- Travel Use Case -->
+                <div class="case-card active reveal-on-scroll" data-case="travel">
+                    <div class="case-icon">
+                        <picture>
+                            <source srcset="images/earth.webp" type="image/webp">
+                            <img src="images/earth.png" alt="Travel" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="case-title" data-ja="国際観光グループ" data-en="International Tourist Groups">International Tourist Groups</h3>
+
+                    <div class="conversation-demo">
+                        <div class="conversation-bubble user">
+                            <span data-ja="佐藤（日本人ガイド）：次は浅草寺に行きます。" data-en="Sato (JP Guide): Next, we'll go to Sensoji Temple.">佐藤（日本人ガイド）：次は浅草寺に行きます。</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 EN/FR/ZH</span>
+                            <span data-ja="Next, we'll go to Sensoji Temple." data-en="Ensuite, nous irons au temple Sensoji. / 接下来我们去浅草寺。">Next, we'll go to Sensoji Temple. / Ensuite... / 接下来...</span>
+                        </div>
+                        <div class="conversation-bubble bot">
+                            <span data-ja="Mark (米国)：How long will we stay there?" data-en="Mark (USA): How long will we stay there?">Mark (米国)：How long will we stay there?</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 JP</span>
+                            <span data-ja="Mark：そこにどのくらい滞在しますか？" data-en="Mark: How long will we stay there?">Mark：そこにどのくらい滞在しますか？</span>
+                        </div>
+                        <div class="conversation-bubble user">
+                            <span data-ja="佐藤：約1時間です。そこでお土産も買えます。" data-en="Sato: About 1 hour. You can buy souvenirs there.">佐藤：約1時間です。そこでお土産も買えます。</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 EN/FR/ZH</span>
+                            <span data-ja="About 1 hour. You can buy souvenirs there." data-en="Environ 1 heure. Vous pouvez y acheter des souvenirs. / 大约1小时。可以在那里买纪念品。">About 1 hour. You can buy souvenirs there...</span>
+                        </div>
+                    </div>
+
+                    <div class="case-benefits">
+                        <span data-ja="✓ グループ全員が理解" data-en="✓ Everyone understands">✓ グループ全員が理解</span>
+                        <span data-ja="✓ 複数言語に自動対応" data-en="✓ Multi-language support">✓ 複数言語に自動対応</span>
+                        <span data-ja="✓ ガイドの負担軽減" data-en="✓ Reduces guide workload">✓ ガイドの負担軽減</span>
+                    </div>
+                </div>
+
+                <!-- International Couple Use Case -->
+                <div class="case-card reveal-on-scroll delay-1" data-case="couple">
+                    <div class="case-icon">
+                        <picture>
+                            <source srcset="images/hands.webp" type="image/webp">
+                            <img src="images/hands.png" alt="カップル" style="width: 80px; height: 80px; object-fit: contain;" width="360" height="360" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="case-title" data-ja="多言語家族グループ" data-en="Multilingual Family Groups">Multilingual Family Groups</h3>
+
+                    <div class="conversation-demo">
+                        <div class="conversation-bubble user">
+                            <span data-ja="由美（妻・日本人）：週末のパーティー、何時に行く？" data-en="Yumi (Wife, JP): What time should we go to the party this weekend?">由美（妻・日本人）：週末のパーティー、何時に行く？</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 EN/FR</span>
+                            <span data-ja="What time should we go to the party this weekend?" data-en="À quelle heure on va à la fête ce week-end?">What time should we go to the party this weekend? / À quelle heure...</span>
+                        </div>
+                        <div class="conversation-bubble bot">
+                            <span data-ja="John (夫・米国)：7 PM sounds good. Mom, can you babysit?" data-en="John (Husband, USA): 7 PM sounds good. Mom, can you babysit?">John (夫・米国)：7 PM sounds good. Mom, can you babysit?</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 JP/FR</span>
+                            <span data-ja="19時がいいかな。お母さん、子守りできる？" data-en="19時がいいかな。お母さん、子守りできる？ / 19h ça va. Maman, tu peux garder les enfants?">19時がいいかな。お母さん、子守りできる？ / 19h ça va...</span>
+                        </div>
+                        <div class="conversation-bubble user">
+                            <span data-ja="Marie (義母・フランス人)：Oui, bien sûr! À quelle heure tu rentres?" data-en="Marie (Mother-in-law, FR): Oui, bien sûr! À quelle heure tu rentres?">Marie (義母・フランス人)：Oui, bien sûr! À quelle heure tu rentres?</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 JP/EN</span>
+                            <span data-ja="はい、もちろん！何時に帰る予定？" data-en="Yes, of course! What time will you be back?">はい、もちろん！何時に帰る予定？ / Yes, of course!...</span>
+                        </div>
+                    </div>
+
+                    <p class="case-note" data-ja="💡 3人の異なる言語話者が、それぞれ自分の言語で自然に会話" data-en="💡 Three speakers of different languages converse naturally in their own languages">
+                        💡 3人の異なる言語話者が、それぞれ自分の言語で自然に会話
+                    </p>
+
+                    <div class="case-benefits">
+                        <span data-ja="✓ 家族全員が参加できる" data-en="✓ Whole family participates">✓ 家族全員が参加できる</span>
+                        <span data-ja="✓ 誰が誰かを自動判別" data-en="✓ Auto-identifies speakers">✓ 誰が誰かを自動判別</span>
+                        <span data-ja="✓ 3言語以上も対応" data-en="✓ Supports 3+ languages">✓ 3言語以上も対応</span>
+                    </div>
+                </div>
+
+                <!-- Business Use Case -->
+                <div class="case-card reveal-on-scroll delay-2" data-case="business">
+                    <div class="case-icon">
+                        <picture>
+                            <source srcset="images/document.webp" type="image/webp">
+                            <img src="images/document.png" alt="ビジネス" style="width: 80px; height: 80px; object-fit: contain;" width="220" height="220" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="case-title" data-ja="国際チーム会議" data-en="International Team Meetings">International Team Meetings</h3>
+
+                    <div class="conversation-demo">
+                        <div class="conversation-bubble user">
+                            <span data-ja="田中（日本・PM）：新機能のリリース日は6月15日で問題ないですか？" data-en="Tanaka (JP, PM): Is June 15th okay for the new feature release date?">田中（日本・PM）：新機能のリリース日は6月15日で問題ないですか？</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 EN/ZH</span>
+                            <span data-ja="Is June 15th okay for the new feature release date?" data-en="新功能的发布日期定在6月15日可以吗？">Is June 15th okay for the new feature release date? / 6月15日...</span>
+                        </div>
+                        <div class="conversation-bubble bot">
+                            <span data-ja="Sarah (米国・Dev)：I need 2 more days for testing. June 17th?" data-en="Sarah (USA, Dev): I need 2 more days for testing. June 17th?">Sarah (米国・Dev)：I need 2 more days for testing. June 17th?</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 JP/ZH</span>
+                            <span data-ja="Sarah：テストにあと2日必要です。6月17日はどうですか？" data-en="Sarah：我需要多2天测试时间。6月17日怎么样？">Sarah：テストにあと2日必要です。6月17日は... / Sarah：我需要...</span>
+                        </div>
+                        <div class="conversation-bubble user">
+                            <span data-ja="李（中国・QA）：17号可以，我会完成最终检查。" data-en="Li (China, QA): 17号可以，我会完成最终检查。">李（中国・QA）：17号可以，我会完成最终检查。</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 JP/EN</span>
+                            <span data-ja="李：17日で大丈夫です。最終チェックを完了します。" data-en="Li: 17th works for me. I'll complete the final check.">李：17日で大丈夫です。最終チェックを... / Li: 17th works...</span>
+                        </div>
+                    </div>
+
+                    <p class="case-note" data-ja="💡 国際チームのプロジェクト会議も、全員がリアルタイムで理解・参加" data-en="💡 International team project meetings where everyone understands and participates in real-time">
+                        💡 国際チームのプロジェクト会議も、全員がリアルタイムで理解・参加
+                    </p>
+
+                    <div class="case-benefits">
+                        <span data-ja="✓ 会議の生産性向上" data-en="✓ Boost meeting productivity">✓ 会議の生産性向上</span>
+                        <span data-ja="✓ 専門用語も正確に" data-en="✓ Accurate technical terms">✓ 専門用語も正確に</span>
+                        <span data-ja="✓ 決定が早くなる" data-en="✓ Faster decisions">✓ 決定が早くなる</span>
+                    </div>
+                </div>
+
+                <!-- Study Use Case -->
+                <div class="case-card reveal-on-scroll delay-3" data-case="study">
+                    <div class="case-icon">
+                        <picture>
+                            <source srcset="images/education.webp" type="image/webp">
+                            <img src="images/education.png" alt="学習" style="width: 80px; height: 80px; object-fit: contain;" width="160" height="160" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="case-title" data-ja="国際学生グループ" data-en="International Student Groups">International Student Groups</h3>
+
+                    <div class="conversation-demo">
+                        <div class="conversation-bubble user">
+                            <span data-ja="健太（日本人学生）：明日のプレゼン、誰が最初に発表する？" data-en="Kenta (JP Student): Who's presenting first tomorrow?">健太（日本人学生）：明日のプレゼン、誰が最初に発表する？</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 EN/ES</span>
+                            <span data-ja="Who's presenting first tomorrow?" data-en="¿Quién presenta primero mañana?">Who's presenting first tomorrow? / ¿Quién presenta...</span>
+                        </div>
+                        <div class="conversation-bubble bot">
+                            <span data-ja="Emma (英国学生)：I can go first. Anyone want to help with my slides?" data-en="Emma (UK Student): I can go first. Anyone want to help with my slides?">Emma (英国学生)：I can go first. Anyone want to help with my slides?</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 JP/ES</span>
+                            <span data-ja="Emma：私が最初でもいいよ。スライド手伝ってくれる人いる？" data-en="Emma: Puedo ir primero. ¿Alguien quiere ayudarme con mis diapositivas?">Emma：私が最初でもいいよ。スライド... / Emma: Puedo ir...</span>
+                        </div>
+                        <div class="conversation-bubble user">
+                            <span data-ja="Carlos (スペイン学生)：¡Claro! ¿Qué parte necesitas?" data-en="Carlos (Spain Student): ¡Claro! ¿Qué parte necesitas?">Carlos (スペイン学生)：¡Claro! ¿Qué parte necesitas?</span>
+                        </div>
+                        <div class="translation-bubble">
+                            <span class="translation-label">🔄 JP/EN</span>
+                            <span data-ja="Carlos：もちろん！どの部分が必要？" data-en="Carlos: Of course! Which part do you need?">Carlos：もちろん！どの部分が必要？ / Carlos: Of course!...</span>
+                        </div>
+                    </div>
+
+                    <div class="case-benefits">
+                        <span data-ja="✓ グループ課題が楽に" data-en="✓ Easier group projects">✓ グループ課題が楽に</span>
+                        <span data-ja="✓ 留学生も孤立しない" data-en="✓ No student left behind">✓ 留学生も孤立しない</span>
+                        <span data-ja="✓ 語学も自然に上達" data-en="✓ Natural language improvement">✓ 語学も自然に上達</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRICING SECTION ==================== -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ja="シンプルな料金プラン" data-en="Simple Pricing">シンプルな料金プラン</h2>
+                <p class="section-subtitle" data-ja="必要な機能がすべて含まれています" data-en="Everything you need is included">
+                    必要な機能がすべて含まれています
+                </p>
+            </div>
+
+            <!-- Base Plan -->
+            <div style="max-width: 900px; margin: 0 auto 4rem;" class="reveal-on-scroll">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-ja="ベースプラン" data-en="Base Plan">ベースプラン</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">¥9,990</span>
+                            <span class="price-period" data-ja="/月（税抜）" data-en="/month (excl. tax)">/月（税抜）</span>
+                        </div>
+                        <p class="pricing-tagline" data-ja="Google翻訳の10倍自然な翻訳を、月額1万円以下で" data-en="10x more natural than Google Translate, under ¥10,000/month">
+                            Google翻訳の10倍自然な翻訳を、月額1万円以下で
+                        </p>
+                    </div>
+
+                    <div class="pricing-body">
+                        <!-- Value Comparison -->
+                        <div class="pricing-highlight">
+                            <p style="font-weight: 700; margin-bottom: 0.5rem;" data-ja="💰 プロ翻訳者と比較：" data-en="💰 Compared to professional translators:">💰 プロ翻訳者と比較：</p>
+                            <p data-ja="翻訳者に依頼 = 1文字あたり¥10〜30" data-en="Professional translator = ¥10-30 per character">翻訳者に依頼 = 1文字あたり¥10〜30</p>
+                            <p data-ja="→ 月1万文字で¥100,000以上" data-en="→ 10,000 characters/month = ¥100,000+">→ 月1万文字で¥100,000以上</p>
+                            <p style="color: #8B6F47; font-weight: 700;" data-ja="→ 当サービスなら90%以上削減" data-en="→ Save 90%+ with our service">→ 当サービスなら90%以上削減</p>
+                        </div>
+
+                        <!-- Features -->
+                        <div class="pricing-features">
+                            <h4 data-ja="含まれる機能" data-en="Included Features">含まれる機能</h4>
+
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div class="feature-content">
+                                    <h5 data-ja="文脈理解型AI翻訳" data-en="Context-Aware AI Translation">文脈理解型AI翻訳</h5>
+                                    <p data-ja="会話履歴を記憶し、自然な翻訳を実現" data-en="Remembers conversation for natural translations">会話履歴を記憶し、自然な翻訳を実現</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div class="feature-content">
+                                    <h5 data-ja="常に最新AIモデルを使用" data-en="Always Latest AI Model">常に最新AIモデルを使用</h5>
+                                    <p data-ja="GPT-4o、Gemini 2.5など最高品質のAIを自動採用" data-en="Auto-adopts best AI: GPT-4o, Gemini 2.5, etc.">GPT-4o、Gemini 2.5など最高品質のAIを自動採用</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div class="feature-content">
+                                    <h5 data-ja="3秒以内の即時翻訳" data-en="Instant Translation in 3 Seconds">3秒以内の即時翻訳</h5>
+                                    <p data-ja="24時間365日、いつでも利用可能" data-en="Available 24/7, anytime">24時間365日、いつでも利用可能</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div class="feature-content">
+                                    <h5 data-ja="全言語対応（100言語以上）" data-en="All Languages (100+)">全言語対応（100言語以上）</h5>
+                                    <p data-ja="入力言語を自動検出、あらゆる言語ペアに対応" data-en="Auto-detects input language, any language pair">入力言語を自動検出、あらゆる言語ペアに対応</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div class="feature-content">
+                                    <h5 data-ja="月5,000メッセージまで" data-en="Up to 5,000 Messages/Month">月5,000メッセージまで</h5>
+                                    <p data-ja="個人・小規模利用に十分な容量" data-en="Sufficient for personal & small-scale use">個人・小規模利用に十分な容量</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <div class="feature-content">
+                                    <h5 data-ja="LINE公式アカウント連携" data-en="LINE Official Account Integration">LINE公式アカウント連携</h5>
+                                    <p data-ja="既存のLINE環境でそのまま利用" data-en="Use within your existing LINE environment">既存のLINE環境でそのまま利用</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="pricing-cta">
+                            <a href="contact.html" class="btn-primary-large" data-ja="2週間無料で試す" data-en="Try Free for 2 Weeks">2週間無料で試す</a>
+                            <p class="cta-note" data-ja="クレジットカード不要 • いつでも解約可能" data-en="No credit card required • Cancel anytime">クレジットカード不要 • いつでも解約可能</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Options -->
+            <div class="reveal-on-scroll delay-1" style="max-width: 900px; margin: 0 auto;">
+                <h3 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 2rem; text-align: center; color: var(--text-primary);" data-ja="オプション機能" data-en="Optional Features">オプション機能</h3>
+
+                <div class="options-grid">
+                    <!-- Option 1 -->
+                    <div class="option-card">
+                        <div class="option-icon"><picture><source srcset="images/report.webp" type="image/webp"><img src="images/report.png" alt="" width="48" height="48" loading="lazy" style="display: block; margin: 0 auto;"></picture></div>
+                        <div class="option-content">
+                            <h4 data-ja="メッセージ追加パック" data-en="Additional Messages">メッセージ追加パック</h4>
+                            <p data-ja="月5,000メッセージ追加" data-en="+5,000 messages/month">月5,000メッセージ追加</p>
+                        </div>
+                        <div class="option-price">
+                            <span data-ja="+¥5,000/月" data-en="+¥5,000/mo">+¥5,000/月</span>
+                        </div>
+                    </div>
+
+                    <!-- Option 2 -->
+                    <div class="option-card">
+                        <div class="option-icon"><picture><source srcset="images/company.webp" type="image/webp"><img src="images/company.png" alt="" width="48" height="48" loading="lazy" style="display: block; margin: 0 auto;"></picture></div>
+                        <div class="option-content">
+                            <h4 data-ja="専門用語辞書登録" data-en="Custom Terminology">専門用語辞書登録</h4>
+                            <p data-ja="業界固有の用語を登録して一貫した翻訳" data-en="Register industry-specific terms for consistent translations">業界固有の用語を登録して一貫した翻訳</p>
+                        </div>
+                        <div class="option-price">
+                            <span data-ja="+¥10,000/月" data-en="+¥10,000/mo">+¥10,000/月</span>
+                        </div>
+                    </div>
+
+                    <!-- Option 3 -->
+                    <div class="option-card">
+                        <div class="option-icon"><picture><source srcset="images/duo.webp" type="image/webp"><img src="images/duo.png" alt="" width="48" height="48" loading="lazy" style="display: block; margin: 0 auto;"></picture></div>
+                        <div class="option-content">
+                            <h4 data-ja="チーム共有（5ユーザーまで）" data-en="Team Sharing (up to 5 users)">チーム共有（5ユーザーまで）</h4>
+                            <p data-ja="同じボットを複数人で利用" data-en="Multiple users can use the same bot">同じボットを複数人で利用</p>
+                        </div>
+                        <div class="option-price">
+                            <span data-ja="+¥15,000/月" data-en="+¥15,000/mo">+¥15,000/月</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION (NESTED ACCORDION) ==================== -->
+<section style="padding: 6rem 0; background: white;" id="faq" itemscope itemtype="https://schema.org/FAQPage">
+
+    <!-- CSS spécifique pour cette FAQ améliorée -->
+    <style>
+        /* Style pour l'entête de la question (cliquable) */
+        .faq-question-header {
+            cursor: pointer;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .faq-question-header:hover h4 {
+            color: #8B7347;
+        }
+
+        /* La question elle-même */
+        .faq-question-header h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+            flex: 1;
+            padding-right: 1rem;
+        }
+
+        /* L'icône +/- à côté de la question */
+        .faq-question-icon {
+            font-size: 1.2rem;
+            color: #8B7347;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        /* La réponse (cachée par défaut) */
+        .faq-answer-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        /* État ouvert de la réponse */
+        .faq-answer-wrapper.open {
+            opacity: 1;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Séparateur entre les items */
+        .faq-item {
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+    <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+            <h2 class="section-title" data-ja="よくある質問" data-en="Frequently Asked Questions">よくある質問</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-top: 1rem;" data-ja="LINE翻訳チャットボットについて、お客様からよくいただくご質問" data-en="Common questions about our LINE Translation Chatbot">LINE翻訳チャットボットについて、お客様からよくいただくご質問</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+
+            <!-- ========== CATEGORY 1: 仕組み・使い方 (4 questions) ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <div onclick="toggleCategory('howto')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="仕組み・使い方" data-en="How It Works">How It Works</h3>
+                    </div>
+                    <span id="howto-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <div id="howto-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q1 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="LINE翻訳チャットボットとは何ですか？" data-en="What is the LINE Translation Chatbot?">LINE翻訳チャットボットとは何ですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="LINEグループ内で複数人の会話をリアルタイムで翻訳するAIサービスです。日本語、英語、中国語など異なる言語を話すメンバーが、それぞれの母国語で会話できます。ボットが「通訳」として機能し、各メッセージを参加者全員が理解できる言語に3秒以内で翻訳します。" data-en="An AI service that translates multi-person conversations in LINE groups in real-time. Members speaking different languages can communicate in their native languages. The bot acts as an 'interpreter,' translating each message within 3 seconds so all participants can understand.">
+                                        LINEグループ内で複数人の会話をリアルタイムで翻訳するAIサービスです。日本語、英語、中国語など異なる言語を話すメンバーが、それぞれの母国語で会話できます。ボットが「通訳」として機能し、各メッセージを参加者全員が理解できる言語に3秒以内で翻訳します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="グループLINEでどのように使いますか？" data-en="How do I use it in a LINE group?">グループLINEでどのように使いますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="翻訳ボットをLINEグループに招待するだけです。メンバーが送信したメッセージは、ボットが自動検出し設定した言語に翻訳して返信します。日本語のメッセージは英語に、英語のメッセージは日本語に自動翻訳。特別な操作は不要で、普段通りにメッセージを送るだけです。" data-en="Simply invite the translation bot to your LINE group. Messages are auto-detected and translated to configured language(s). Japanese to English, English to Japanese—automatically. No special commands needed, just chat normally.">
+                                        翻訳ボットをLINEグループに招待するだけです。メンバーが送信したメッセージは、ボットが自動検出し設定した言語に翻訳して返信します。日本語のメッセージは英語に、英語のメッセージは日本語に自動翻訳。特別な操作は不要で、普段通りにメッセージを送るだけです。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="導入に技術的な知識は必要ですか？" data-en="Do I need technical knowledge?">導入に技術的な知識は必要ですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="いいえ、一切不要です。お申し込み後、弊社がすべてのセットアップを代行します。お客様は翻訳ボットをグループに招待するだけで利用開始。最短1日で導入完了し、すぐに多言語コミュニケーションを始められます。" data-en="No technical knowledge required. After sign-up, we handle all setup. You simply invite the bot to your group and start using it. Setup takes as little as 1 day.">
+                                        いいえ、一切不要です。お申し込み後、弊社がすべてのセットアップを代行します。お客様は翻訳ボットをグループに招待するだけで利用開始。最短1日で導入完了し、すぐに多言語コミュニケーションを始められます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="会話データは安全ですか？" data-en="Is conversation data secure?">会話データは安全ですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、安全です。SSL/TLS暗号化による通信保護、第三者へのデータ共有なし、個人情報保護法（APPI）準拠、AIの学習に会話データを使用しません。ビジネスの機密情報を含む会話にも安心してご利用いただけます。" data-en="Yes, secure. SSL/TLS encryption, no third-party data sharing, APPI compliant, conversation data not used for AI training. Safe for business conversations with confidential information.">
+                                        はい、安全です。SSL/TLS暗号化による通信保護、第三者へのデータ共有なし、個人情報保護法（APPI）準拠、AIの学習に会話データを使用しません。ビジネスの機密情報を含む会話にも安心してご利用いただけます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CATEGORY 2: 翻訳品質 (4 questions) ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <div onclick="toggleCategory('quality')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="翻訳品質・対応言語" data-en="Translation Quality & Languages">翻訳品質・対応言語</h3>
+                    </div>
+                    <span id="quality-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <div id="quality-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q5 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="Google翻訳やDeepLより優れている点は？" data-en="What makes it better than Google Translate or DeepL?">Google翻訳やDeepLより優れている点は？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.75rem;" data-ja="最大の違いは「文脈理解」です。Google翻訳やDeepLは1文ずつ独立して翻訳しますが、当サービスは会話の流れを記憶します。" data-en="The biggest difference is 'context understanding.' Google Translate and DeepL translate each sentence independently, but our service remembers conversation flow.">
+                                        最大の違いは「文脈理解」です。Google翻訳やDeepLは1文ずつ独立して翻訳しますが、当サービスは会話の流れを記憶します。
+                                    </p>
+                                    <p style="color: #8B7347; line-height: 1.7; margin: 0; font-size: 0.95rem;" data-ja="💡 例：「彼に伝えて」→ 従来は「Tell him」のみ。当サービスは文脈から「Tell Tanaka-san」と正確に翻訳。また常に最新AI（GPT-4o、Gemini 2.5等）を使用します。" data-en="💡 Example: 'Tell him' → Traditional tools just say 'Tell him.' We understand context and translate to 'Tell Tanaka-san.' We also always use the latest AI (GPT-4o, Gemini 2.5, etc.).">
+                                        💡 例：「彼に伝えて」→ 従来は「Tell him」のみ。当サービスは文脈から「Tell Tanaka-san」と正確に翻訳。また常に最新AI（GPT-4o、Gemini 2.5等）を使用します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="「文脈を理解する」とは具体的にどういうことですか？" data-en="What does 'understanding context' mean specifically?">「文脈を理解する」とは具体的にどういうことですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="AIが直前の会話内容を記憶し翻訳に活用します。① 代名詞の解決：「彼」「それ」が何を指すか正確に把握 ② 専門用語の一貫性：同じ訳語を継続使用 ③ トーンの維持：ビジネスでは敬語、カジュアルではフレンドリーな表現を自動判断します。" data-en="AI remembers recent conversation for translation. ① Pronoun resolution: accurately identifies what 'he' or 'it' refers to ② Terminology consistency: uses same translations throughout ③ Tone maintenance: auto-selects formal or casual expressions based on context.">
+                                        AIが直前の会話内容を記憶し翻訳に活用します。① 代名詞の解決：「彼」「それ」が何を指すか正確に把握 ② 専門用語の一貫性：同じ訳語を継続使用 ③ トーンの維持：ビジネスでは敬語、カジュアルではフレンドリーな表現を自動判断します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q7 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="対応している言語は何ですか？" data-en="What languages are supported?">対応している言語は何ですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.5rem;" data-ja="100以上の言語に対応。主要言語：🇯🇵日本語 🇺🇸英語 🇨🇳中国語 🇰🇷韓国語 🇫🇷フランス語 🇪🇸スペイン語 🇩🇪ドイツ語 🇹🇭タイ語 🇻🇳ベトナム語 🇵🇹ポルトガル語 など" data-en="100+ languages supported. Major languages: 🇯🇵Japanese 🇺🇸English 🇨🇳Chinese 🇰🇷Korean 🇫🇷French 🇪🇸Spanish 🇩🇪German 🇹🇭Thai 🇻🇳Vietnamese 🇵🇹Portuguese and more">
+                                        100以上の言語に対応。主要言語：🇯🇵日本語 🇺🇸英語 🇨🇳中国語 🇰🇷韓国語 🇫🇷フランス語 🇪🇸スペイン語 🇩🇪ドイツ語 🇹🇭タイ語 🇻🇳ベトナム語 🇵🇹ポルトガル語 など
+                                    </p>
+                                    <p style="color: #8B7347; line-height: 1.7; margin: 0; font-size: 0.95rem;" data-ja="💡 入力言語は自動検出。設定不要で即座に翻訳開始します。" data-en="💡 Input language auto-detected. Translation starts instantly without configuration.">
+                                        💡 入力言語は自動検出。設定不要で即座に翻訳開始します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q8 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="翻訳にどのくらい時間がかかりますか？" data-en="How long does translation take?">翻訳にどのくらい時間がかかりますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="3秒以内に翻訳結果が返信されます。リアルタイムの会話でもストレスなく使えるスピードです。24時間365日いつでも利用可能で、夜間や休日でも即座に翻訳されます。" data-en="Translation results returned within 3 seconds. Fast enough for real-time conversations. Available 24/7, including nights and holidays.">
+                                        3秒以内に翻訳結果が返信されます。リアルタイムの会話でもストレスなく使えるスピードです。24時間365日いつでも利用可能で、夜間や休日でも即座に翻訳されます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CATEGORY 3: 料金・トライアル (4 questions) ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <div onclick="toggleCategory('pricing')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="料金・無料トライアル" data-en="Pricing & Free Trial">料金・無料トライアル</h3>
+                    </div>
+                    <span id="pricing-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <div id="pricing-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q9 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="料金はいくらですか？" data-en="How much does it cost?">料金はいくらですか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="月額¥9,990（税抜）です。含まれる機能：✓ 文脈理解型AI翻訳 ✓ 100以上の言語対応 ✓ 月5,000メッセージ ✓ 24時間365日利用可能 ✓ セットアップ費用無料。プロ翻訳者（月¥100,000以上）と比べて90%以上のコスト削減が可能です。" data-en="¥9,990/month (excl. tax). Includes: ✓ Context-aware AI translation ✓ 100+ languages ✓ 5,000 messages/month ✓ 24/7 availability ✓ Free setup. Save 90%+ compared to professional translators (¥100,000+/month).">
+                                        月額¥9,990（税抜）です。含まれる機能：✓ 文脈理解型AI翻訳 ✓ 100以上の言語対応 ✓ 月5,000メッセージ ✓ 24時間365日利用可能 ✓ セットアップ費用無料。プロ翻訳者（月¥100,000以上）と比べて90%以上のコスト削減が可能です。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q10 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="無料トライアルはありますか？" data-en="Is there a free trial?">無料トライアルはありますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.5rem;" data-ja="はい、2週間の無料トライアルをご用意しています。実際の会話でAI翻訳の品質をお試しいただけます。" data-en="Yes, we offer a 2-week free trial to test AI translation quality with real conversations.">
+                                        はい、<strong>2週間の無料トライアル</strong>をご用意しています。実際の会話でAI翻訳の品質をお試しいただけます。
+                                    </p>
+                                    <p style="color: #8B7347; line-height: 1.7; margin: 0; font-size: 0.95rem;" data-ja="💡 お問い合わせフォームからご連絡ください。クレジットカード登録不要・自動課金なし。継続希望の場合のみお支払い手続きをご案内します。" data-en="💡 Contact us via inquiry form. No credit card required, no auto-billing. Payment only if you choose to continue.">
+                                        💡 お問い合わせフォームからご連絡ください。クレジットカード登録不要・自動課金なし。継続希望の場合のみお支払い手続きをご案内します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q11 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="月5,000メッセージを超えたらどうなりますか？" data-en="What if I exceed 5,000 messages/month?">月5,000メッセージを超えたらどうなりますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="上限に近づくとお知らせします。① 追加パック（+5,000メッセージ = +¥5,000/月）を申し込む、または ② 翌月のリセットを待つ、の2択です。上限を超えてもサービスは自動停止するため、予期せぬ追加料金は発生しません。" data-en="We notify you when approaching the limit. Options: ① Add message pack (+5,000 = +¥5,000/month) or ② Wait for monthly reset. Service auto-stops at limit—no unexpected charges.">
+                                        上限に近づくとお知らせします。① 追加パック（+5,000メッセージ = +¥5,000/月）を申し込む、または ② 翌月のリセットを待つ、の2択です。上限を超えてもサービスは自動停止するため、予期せぬ追加料金は発生しません。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q12 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="解約はいつでもできますか？" data-en="Can I cancel anytime?">解約はいつでもできますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、いつでも解約可能です。解約手数料・違約金・最低利用期間は一切ありません。月末までにご連絡いただければ、翌月からサービスが停止します。" data-en="Yes, cancel anytime. No fees, no penalties, no minimum commitment. Contact us by month-end and service stops from the following month.">
+                                        はい、いつでも解約可能です。解約手数料・違約金・最低利用期間は一切ありません。月末までにご連絡いただければ、翌月からサービスが停止します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CATEGORY 4: 活用シーン (4 questions) ========== -->
+            <div style="margin-bottom: 1.5rem; border: 2px solid #8B7347; border-radius: 12px; overflow: hidden; background: white;">
+                <div onclick="toggleCategory('usecases')" style="padding: 1.5rem 2rem; background: white; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;" data-ja="活用シーン" data-en="Use Cases">Use Cases</h3>
+                    </div>
+                    <span id="usecases-icon" style="font-size: 1.5rem; color: #8B7347; transition: transform 0.3s ease;">▼</span>
+                </div>
+
+                <div id="usecases-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <div style="padding: 0 2rem;">
+
+                        <!-- Q13 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="国際カップル・国際結婚の家族に使えますか？" data-en="Can international couples and families use this?">国際カップル・国際結婚の家族に使えますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、最適な活用シーンです。日本人の配偶者と外国人の義理の両親を含む家族グループLINEで、全員が母国語で会話できます。日本語は英語に、英語は日本語に自動翻訳。「義理の家族との会話がスムーズになった」と多くのお声をいただいています。" data-en="Yes, a perfect use case. In family LINE groups with Japanese spouses and foreign in-laws, everyone communicates in their native language. Japanese auto-translates to English and vice versa. Many users say 'Communication with in-laws became so much smoother.'">
+                                        はい、最適な活用シーンです。日本人の配偶者と外国人の義理の両親を含む家族グループLINEで、全員が母国語で会話できます。日本語は英語に、英語は日本語に自動翻訳。「義理の家族との会話がスムーズになった」と多くのお声をいただいています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q14 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="海外取引先とのビジネス会話に使えますか？" data-en="Can I use it for business with overseas partners?">海外取引先とのビジネス会話に使えますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、多くの企業様にご利用いただいています。海外のサプライヤー、パートナー、クライアントとのLINEグループでリアルタイムの多言語コミュニケーションが可能。ビジネス文脈を理解し、敬語やフォーマルな表現も適切に翻訳。通訳を手配する手間とコストを大幅に削減できます。" data-en="Yes, used by many companies. Real-time multilingual communication with overseas suppliers, partners, and clients in LINE groups. Understands business context, appropriately translates formal expressions. Significantly reduces interpreter costs and hassle.">
+                                        はい、多くの企業様にご利用いただいています。海外のサプライヤー、パートナー、クライアントとのLINEグループでリアルタイムの多言語コミュニケーションが可能。ビジネス文脈を理解し、敬語やフォーマルな表現も適切に翻訳。通訳を手配する手間とコストを大幅に削減できます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q15 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="外国人従業員との社内コミュニケーションに使えますか？" data-en="Can I use it with foreign employees?">外国人従業員との社内コミュニケーションに使えますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、特に技能実習生や外国人スタッフを雇用している企業様に好評です。日本人と外国人スタッフ混在のグループLINEで、業務連絡や日程調整をスムーズに行えます。ベトナム語、中国語、タガログ語、インドネシア語など、技能実習生の多い国の言語にも対応しています。" data-en="Yes, especially popular with companies employing technical interns and foreign staff. Smooth work communication and scheduling in mixed Japanese/foreign staff LINE groups. Supports Vietnamese, Chinese, Tagalog, Indonesian—languages common among technical interns.">
+                                        はい、特に技能実習生や外国人スタッフを雇用している企業様に好評です。日本人と外国人スタッフ混在のグループLINEで、業務連絡や日程調整をスムーズに行えます。ベトナム語、中国語、タガログ語、インドネシア語など、技能実習生の多い国の言語にも対応しています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q16 -->
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-question-header" onclick="toggleAnswer(this)">
+                                <h4 itemprop="name" data-ja="旅行中の多国籍グループで使えますか？" data-en="Can I use it for multinational travel groups?">旅行中の多国籍グループで使えますか？</h4>
+                                <span class="faq-question-icon">+</span>
+                            </div>
+                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、旅行中の多言語コミュニケーションに最適です。日本人と外国人の友人グループで旅行する際、行き先の相談や待ち合わせ場所の連絡を全員が理解できます。道案内、レストランでの注文、緊急時の対応など、様々な場面で言語の壁を解消します。" data-en="Yes, perfect for multilingual travel communication. When traveling with Japanese and foreign friends, everyone understands destination discussions and meeting point coordination. Breaks language barriers for directions, restaurant orders, emergencies, and more.">
+                                        はい、旅行中の多言語コミュニケーションに最適です。日本人と外国人の友人グループで旅行する際、行き先の相談や待ち合わせ場所の連絡を全員が理解できます。道案内、レストランでの注文、緊急時の対応など、様々な場面で言語の壁を解消します。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 1.5rem;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Post-FAQ CTA -->
+        <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, rgba(139, 115, 85, 0.05) 0%, rgba(166, 138, 92, 0.05) 100%); border-radius: 20px;">
+
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);"
+                data-ja="まだご不明な点はありますか？"
+                data-en="Still have questions?">
+                まだご不明な点はありますか？
+            </h3>
+
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;"
+               data-ja="実際にチャットボットを試してご確認ください"
+               data-en="Try our chatbot to see for yourself">
+                実際にチャットボットを試してご確認ください
+            </p>
+
+            <!-- UN SEUL BOUTON PRINCIPAL -->
+            <a href="#demo" class="smooth-scroll"
+               style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, #8B7347 0%, #A68A5C 100%); color: white; padding: 1.2rem 2.5rem; border-radius: 12px; font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3); transition: all 0.3s ease;">
+                <span data-ja="💬 デモを試す" data-en="💬 Try Demo">💬 デモを試す</span>
+                <span>→</span>
+            </a>
+
+            <!-- LIEN TEXTE SIMPLE (pas un bouton) -->
+            <p style="margin-top: 1.5rem; font-size: 1rem; color: var(--text-secondary);">
+                <span data-ja="または " data-en="Or ">または </span>
+                <a href="contact.html" style="color: #8B7347; text-decoration: underline; font-weight: 600;"
+                   data-ja="無料相談を予約"
+                   data-en="book a free consultation">
+                    無料相談を予約
+                </a>
+                <span data-ja=" — 契約義務なし" data-en=" — no commitment"> — 契約義務なし</span>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- FAQ Accordion JavaScript (Optimized for Nested Logic) -->
+    <script>
+    // Fonction pour ouvrir/fermer les CATÉGORIES principales
+    function toggleCategory(categoryId) {
+        const questionsDiv = document.getElementById(categoryId + '-questions');
+        const icon = document.getElementById(categoryId + '-icon');
+
+        // Vérifie si c'est ouvert (en se basant sur max-height non nul)
+        const isOpen = questionsDiv.style.maxHeight && questionsDiv.style.maxHeight !== '0px';
+
+        if (isOpen) {
+            // Fermeture
+            questionsDiv.style.maxHeight = '0';
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            // Ouverture : On met une grande valeur pour permettre aux questions internes de s'ouvrir
+            // "scrollHeight" donne la hauteur du contenu, mais si on ouvre des questions ensuite, ça va grandir.
+            // On ajoute un buffer ou on met une valeur très grande.
+            questionsDiv.style.maxHeight = (questionsDiv.scrollHeight + 2000) + 'px';
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // Fonction pour ouvrir/fermer les QUESTIONS individuelles
+    function toggleAnswer(headerElement) {
+        // Le "frère" suivant est le wrapper de la réponse
+        const answerWrapper = headerElement.nextElementSibling;
+        const icon = headerElement.querySelector('.faq-question-icon');
+        const isOpening = !answerWrapper.classList.contains('open');
+
+        // 1. Toggle de la classe "open" et du max-height
+        if (isOpening) {
+            answerWrapper.classList.add('open');
+            answerWrapper.style.maxHeight = answerWrapper.scrollHeight + "px";
+            icon.textContent = "−"; // Change le + en -
+            icon.style.fontSize = "1.5rem"; // Ajustement visuel pour le tiret
+        } else {
+            answerWrapper.classList.remove('open');
+            answerWrapper.style.maxHeight = "0";
+            icon.textContent = "+";
+            icon.style.fontSize = "1.2rem";
+        }
+
+        // 2. CRITIQUE : Ajuster la hauteur de la CATÉGORIE parente
+        // Si on n'augmente pas la taille du parent, le contenu qui s'ouvre sera coupé (hidden).
+        const parentCategory = headerElement.closest('.category-content');
+        if (parentCategory && parentCategory.style.maxHeight !== '0px') {
+            // On recalcule la nouvelle hauteur nécessaire
+            // On ajoute la hauteur de la réponse qu'on vient d'ouvrir (ou on laisse telle quelle si on ferme)
+            // L'astuce simple : définir le parent sur une très grande valeur tant qu'il est ouvert.
+            // Dans toggleCategory, on a mis +2000px, ce qui devrait suffire pour la plupart des cas.
+            // Si besoin de plus de précision, on peut faire :
+            parentCategory.style.maxHeight = (parentCategory.scrollHeight + answerWrapper.scrollHeight) + 'px';
+        }
+    }
+
+    // Ouvrir la première catégorie par défaut au chargement
+    document.addEventListener('DOMContentLoaded', function() {
+        toggleCategory('howto');
+    });
+    </script>
+</section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal-on-scroll">
+                <h2 class="cta-title" data-ja="言語の壁を超えましょう" data-en="Break Through Language Barriers">
+                    <picture>
+                        <source srcset="images/universal.webp" type="image/webp">
+                        <img src="images/universal.png" alt="翻訳" style="width: 68px; height: auto; display: inline-block; vertical-align: middle; margin-right: 8px; object-fit: contain;" width="160" height="160" loading="lazy">
+                    </picture>
+                    言語の壁を超えましょう
+                </h2>
+                <p class="cta-subtitle" data-ja="2週間の無料トライアルで、翻訳品質をお確かめください" data-en="Try our translation quality with a 2-week free trial">
+                    2週間の無料トライアルで、翻訳品質をお確かめください
+                </p>
+
+                <div class="cta-badges">
+                    <p class="cta-badge-line" data-ja="セットアップ費用無料 • クレジットカード不要 • いつでも解約可能" data-en="No setup fee • No credit card required • Cancel anytime">
+                        セットアップ費用無料 • クレジットカード不要 • いつでも解約可能
+                    </p>
+                </div>
+
+                <div class="cta-buttons-wrapper">
+                    <a href="contact.html" class="cta-button-primary">
+                        <span class="cta-main-text" data-ja="無料トライアルを始める" data-en="Start Free Trial">
+                            無料トライアルを始める
+                        </span>
+                        <span class="cta-sub-text" data-ja="2週間無料" data-en="2 weeks free">2週間無料</span>
+                    </a>
+                    <a href="contact.html" class="cta-button-secondary">
+                        <span class="cta-main-text" data-ja="詳しく相談する" data-en="Discuss Your Needs">詳しく相談する</span>
+                        <span class="cta-sub-text" data-ja="専門スタッフが対応" data-en="Expert staff support">専門スタッフが対応</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget-placeholder"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="scripts/cookie-consent.js"></script>
+    <script src="scripts/language-switcher.js"></script>
+    <script src="scripts/component-loader.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/chatbot-widget.js"></script>
+    <script src="scripts/floating-cta.js"></script>
+    <script src="scripts/back-to-top.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <!-- Page-specific Scripts -->
+    <script>
+        // Use Cases Tabs (Mobile)
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const caseCards = document.querySelectorAll('.case-card');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const caseId = this.getAttribute('data-case');
+
+                    // Update active tab
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Update active case card
+                    caseCards.forEach(card => {
+                        if (card.getAttribute('data-case') === caseId) {
+                            card.classList.add('active');
+                        } else {
+                            card.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

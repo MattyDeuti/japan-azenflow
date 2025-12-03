@@ -1,0 +1,210 @@
+/* Cookie Banner - RGPD Compliant */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 0.5s ease-out;
+    pointer-events: none;
+}
+
+.cookie-banner-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem 2rem;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(139, 111, 71, 0.2);
+    pointer-events: auto;
+}
+
+.cookie-banner-text {
+    flex: 1;
+}
+
+.cookie-banner-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary, #1F2937);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.cookie-banner-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary, #4B5563);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.6;
+}
+
+.cookie-banner-link {
+    font-size: 0.875rem;
+    color: var(--primary, #4F46E5);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cookie-banner-link:hover {
+    color: var(--primary-dark, #3730A3);
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cookie-btn-accept {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.cookie-btn-accept:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.cookie-btn-accept:active {
+    transform: translateY(0);
+}
+
+.cookie-btn-decline {
+    background: transparent;
+    color: var(--text-secondary, #4B5563);
+    border: 2px solid rgba(139, 111, 71, 0.3);
+}
+
+.cookie-btn-decline:hover {
+    background: rgba(139, 111, 71, 0.1);
+    border-color: rgba(139, 111, 71, 0.5);
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.cookie-banner.hiding {
+    animation: slideDown 0.4s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cookie-banner {
+        padding: 1rem;
+    }
+
+    .cookie-banner-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        align-items: stretch;
+    }
+
+    .cookie-banner-text {
+        text-align: center;
+    }
+
+    .cookie-banner-title {
+        font-size: 1.1rem;
+    }
+
+    .cookie-banner-description {
+        font-size: 0.9rem;
+    }
+
+    .cookie-banner-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cookie-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Accessibility */
+.cookie-banner:focus-within {
+    outline: 2px solid var(--primary, #4F46E5);
+    outline-offset: 4px;
+}
+
+.cookie-btn:focus {
+    outline: 2px solid var(--primary, #4F46E5);
+    outline-offset: 2px;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    .cookie-banner-content {
+        background: rgba(31, 41, 55, 0.95);
+        border-color: rgba(166, 138, 92, 0.3);
+    }
+
+    .cookie-banner-title {
+        color: #F9FAFB;
+    }
+
+    .cookie-banner-description {
+        color: #D1D5DB;
+    }
+
+    .cookie-btn-decline {
+        color: #D1D5DB;
+        border-color: rgba(166, 138, 92, 0.4);
+    }
+
+    .cookie-btn-decline:hover {
+        background: rgba(166, 138, 92, 0.2);
+    }
+}
+
+/* Print styles */
+@media print {
+    .cookie-banner {
+        display: none !important;
+    }
+}

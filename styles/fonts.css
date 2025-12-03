@@ -1,0 +1,108 @@
+/* ================================================================
+   FONTS LOCALES - AzenFlow
+   Fichier: styles/fonts.css
+   Description: Google Fonts hébergées localement pour performance
+================================================================ */
+
+/* ==================== NOTO SANS JP ==================== */
+
+/* Noto Sans JP - Light (300) */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/noto-sans-jp/noto-sans-jp-v42-latin_japanese-300.woff2') format('woff2');
+}
+
+/* Noto Sans JP - Regular (400) */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/noto-sans-jp/noto-sans-jp-v42-latin_japanese-regular.woff2') format('woff2');
+}
+
+/* Noto Sans JP - Medium (500) */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/noto-sans-jp/noto-sans-jp-v42-latin_japanese-500.woff2') format('woff2');
+}
+
+/* Noto Sans JP - Bold (700) */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/noto-sans-jp/noto-sans-jp-v42-latin_japanese-700.woff2') format('woff2');
+}
+
+/* Noto Sans JP - Black (900) */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/noto-sans-jp/noto-sans-jp-v42-latin_japanese-900.woff2') format('woff2');
+}
+
+/* ==================== INTER ==================== */
+
+/* Inter - Light (300) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/inter/inter-v13-latin-300.woff2') format('woff2');
+}
+
+/* Inter - Regular (400) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/inter/inter-v13-latin-regular.woff2') format('woff2');
+}
+
+/* Inter - Medium (500) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/inter/inter-v13-latin-500.woff2') format('woff2');
+}
+
+/* Inter - SemiBold (600) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/inter/inter-v13-latin-600.woff2') format('woff2');
+}
+
+/* Inter - Bold (700) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/inter/inter-v13-latin-700.woff2') format('woff2');
+}
+
+/* Inter - ExtraBold (800) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../fonts/inter/inter-v13-latin-800.woff2') format('woff2');
+}

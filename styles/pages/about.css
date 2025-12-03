@@ -1,0 +1,1317 @@
+/* ==================== ABOUT PAGE STYLES ==================== */
+
+/* ==================== HERO SECTION ==================== */
+.about-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0 6rem;
+    overflow: hidden;
+    /* Background géré par section dans main.css */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(139, 115, 85, 0.3) 0%, transparent 70%);
+    top: -10%;
+    right: -10%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 197, 176, 0.4) 0%, transparent 70%);
+    bottom: -5%;
+    left: -5%;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* ==================== MVV DETAILED SECTION ==================== */
+.mvv-detailed-section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 50%, #FFFFFF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.mvv-detailed-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.2), transparent);
+}
+
+/* === BLOCK CONTAINER === */
+.mvv-detailed-block {
+    max-width: 1100px;
+    margin: 0 auto 5rem;
+    padding: 3.5rem 3rem;
+    background: white;
+    border-radius: var(--border-radius-xl);
+    box-shadow: 0 4px 20px rgba(139, 115, 85, 0.08);
+    border: 1px solid rgba(139, 115, 85, 0.1);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.mvv-detailed-block:last-child {
+    margin-bottom: 0;
+}
+
+.mvv-detailed-block:hover {
+    box-shadow: 0 8px 32px rgba(139, 115, 85, 0.15);
+    transform: translateY(-4px);
+}
+
+/* === HEADER === */
+.mvv-detailed-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.mvv-label {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: rgba(139, 115, 85, 0.1);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius-full);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.mvv-detailed-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.mvv-detailed-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ==================== VALUES SECTION ==================== */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.02) 0%, rgba(139, 115, 85, 0.05) 100%);
+    border: 2px solid rgba(139, 115, 85, 0.15);
+    border-radius: var(--border-radius-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.value-card:hover::before {
+    left: 100%;
+}
+
+.value-card:hover {
+    background: rgba(139, 115, 85, 0.08);
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(139, 115, 85, 0.2);
+}
+
+.value-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.25rem;
+    line-height: 1;
+    filter: grayscale(0.2);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+.value-icon img {
+    max-width: 60px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.value-card:hover .value-icon {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.value-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.value-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary);
+    opacity: 0.7;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+/* ==================== MISSION SECTION ==================== */
+.mission-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.mission-headline {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.mission-text {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.mission-text strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.mission-services {
+    background: rgba(139, 115, 85, 0.05);
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    margin: 2rem 0;
+    border-left: 4px solid var(--primary);
+}
+
+.services-intro {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+.services-list li {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    padding-left: 0;
+    position: relative;
+    line-height: 1.6;
+}
+
+.mission-goal {
+    background: linear-gradient(135deg, var(--primary) 0%, #9d7f57 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    margin-top: 2.5rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(139, 111, 71, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-goal::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+.mission-goal strong {
+    font-size: 1.375rem;
+    font-weight: 800;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ==================== VISION SECTION ==================== */
+.vision-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.vision-headline {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.vision-problem {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, rgba(255, 107, 107, 0.1) 100%);
+    border-left: 4px solid #ff6b6b;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 2rem;
+}
+
+.vision-text {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.vision-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.vision-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(139, 115, 85, 0.05);
+    border-radius: var(--border-radius-md);
+    border: 1px solid rgba(139, 115, 85, 0.1);
+    transition: all var(--transition-base);
+}
+
+.vision-benefits li:hover {
+    background: rgba(139, 115, 85, 0.1);
+    border-color: var(--primary);
+    transform: translateX(8px);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 50px;
+}
+
+.benefit-icon img {
+    max-width: 40px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.benefit-text {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.vision-philosophy {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: rgba(139, 115, 85, 0.08);
+    border-radius: var(--border-radius-lg);
+    font-style: italic;
+}
+
+.vision-target {
+    background: rgba(139, 115, 85, 0.08);
+    border-left: 5px solid var(--primary);
+    padding: 2.5rem;
+    margin-top: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 16px rgba(139, 115, 85, 0.15);
+}
+
+.vision-target strong {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.7;
+}
+
+/* ==================== MESSAGE SECTION ==================== */
+.message-section {
+    padding: 6rem 0;
+    /* Background géré par section dans main.css */
+    display: flex;
+    justify-content: center;
+}
+
+.message-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-content {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 2.5rem;
+    background: white;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.message-content:last-child {
+    margin-bottom: 0;
+}
+
+.message-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.message-text {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    text-align: left;
+}
+
+/* ==================== TEAM SECTION ==================== */
+.team-section {
+    padding: 6rem 0;
+    background: #FFFFFF;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 115, 85, 0.1);
+    border-radius: var(--border-radius-xl);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.team-member-photo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid rgba(139, 111, 71, 0.2);
+    box-shadow: 0 8px 24px rgba(139, 111, 71, 0.2);
+    transition: all 0.3s ease;
+}
+
+.team-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-member-photo {
+    border-color: var(--primary);
+    box-shadow: 0 12px 32px rgba(139, 111, 71, 0.3);
+}
+
+.team-card:hover .team-photo {
+    transform: scale(1.05);
+}
+
+.team-member-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.team-member-role {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.team-member-role-secondary {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ==================== COMPANY INFO SECTION ==================== */
+.company-info-section {
+    padding: 6rem 0;
+    /* Background géré par section dans main.css */
+}
+
+.company-table-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.company-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.company-table tr {
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.company-table tr:last-child {
+    border-bottom: none;
+}
+
+.company-table th {
+    text-align: left;
+    padding: 1.5rem 2rem;
+    background: rgba(139, 115, 85, 0.05);
+    font-weight: 700;
+    color: var(--primary);
+    width: 30%;
+    vertical-align: top;
+}
+
+.company-table td {
+    padding: 1.5rem 2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.company-table a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.company-table a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+/* ==================== COMMON STYLES ==================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+/* ==================== CTA SECTION ==================== */
+.cta-section {
+    padding: 8rem 2rem;
+    background: transparent;
+    color: var(--text-primary);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(139, 111, 71, 0.15);
+}
+
+/* Animated background elements */
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 30s linear infinite;
+}
+
+.cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -20%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+    animation: rotate 40s linear infinite reverse;
+}
+
+/* === CTA CONTENT === */
+.cta-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* === CTA TITLE === */
+.cta-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: var(--font-weight-black);
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    line-height: var(--line-height-tight);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* === CTA SUBTITLE === */
+.cta-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+/* === CTA BADGES === */
+.cta-badges {
+    margin-bottom: 3rem;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.cta-badge-line {
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary);
+    line-height: var(--line-height-relaxed);
+    margin: 0.5rem 0;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: rgba(139, 111, 71, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-full);
+    border: 2px solid var(--primary);
+}
+
+.cta-disclaimer {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #6B5D4F;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* === CTA BUTTONS WRAPPER === */
+.cta-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+/* === CTA BUTTONS === */
+.cta-button-primary,
+.cta-button-secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 1.75rem 3rem;
+    border-radius: var(--border-radius-full);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    width: 48%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Primary Button (Book Consultation) */
+.cta-button-primary {
+    background: #FFFFFF;
+    color: #8B6F47;
+    border: none;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button-primary:hover::before {
+    left: 100%;
+}
+
+.cta-button-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    background: #FAFAFA;
+}
+
+.cta-button-primary:active {
+    transform: translateY(-2px);
+}
+
+/* Secondary Button (FAQ) */
+.cta-button-secondary {
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.cta-button-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(139, 111, 71, 0.1);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.cta-button-secondary:hover::before {
+    opacity: 1;
+}
+
+.cta-button-secondary:hover {
+    background: rgba(139, 111, 71, 0.08);
+    transform: translateY(-3px);
+    border-color: var(--primary-dark);
+    box-shadow: 0 15px 40px rgba(139, 111, 71, 0.25);
+}
+
+/* === BUTTON TEXT === */
+.cta-main-text {
+    display: block;
+    font-size: clamp(1rem, 2.5vw, 1.375rem);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.cta-sub-text {
+    display: block;
+    font-size: clamp(0.75rem, 2vw, 0.9375rem);
+    font-weight: var(--font-weight-semibold);
+    opacity: 0.85;
+}
+
+.cta-button-secondary .cta-sub-text {
+    opacity: 0.9;
+}
+
+/* === CTA PROCESS === */
+.cta-process {
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.cta-process-title {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cta-process-list {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    line-height: 2;
+    list-style: none;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-process-list li {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    padding-left: 3rem;
+    background: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-lg);
+    border-left: 4px solid var(--primary);
+    border: 2px solid var(--primary);
+    position: relative;
+    transition: all var(--transition-base);
+    width: fit-content;
+    flex-shrink: 0;
+}
+
+.cta-process-list li:hover {
+    transform: translateX(10px);
+    background: rgba(139, 111, 71, 0.05);
+    border-left-color: var(--primary-dark);
+}
+
+.cta-process-list li::before {
+    content: attr(data-number);
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-black);
+    font-size: var(--font-size-xs);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .about-hero {
+        min-height: 50vh;
+        padding: 100px 0 4rem;
+    }
+
+    .mvv-detailed-section,
+    .message-section,
+    .team-section,
+    .company-info-section {
+        padding: 4rem 0;
+    }
+
+    /* === MVV DETAILED RESPONSIVE === */
+    .mvv-detailed-block {
+        padding: 2.5rem 1.75rem;
+        margin-bottom: 3rem;
+    }
+
+    .mvv-detailed-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .mvv-label {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .mvv-detailed-title {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+
+    .mvv-detailed-subtitle {
+        font-size: 1rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .value-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .value-icon {
+        font-size: 3rem;
+    }
+
+    .value-title {
+        font-size: 1.25rem;
+    }
+
+    .value-subtitle {
+        font-size: 0.8125rem;
+    }
+
+    .value-description {
+        font-size: 0.9375rem;
+    }
+
+    .mission-headline,
+    .vision-headline {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .mission-text,
+    .vision-text {
+        font-size: 1rem;
+    }
+
+    .mission-services {
+        padding: 1.5rem;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-goal {
+        padding: 2rem 1.5rem;
+    }
+
+    .mission-goal strong {
+        font-size: 1.125rem;
+    }
+
+    .vision-problem {
+        padding: 1.25rem;
+    }
+
+    .vision-benefits {
+        gap: 0.75rem;
+    }
+
+    .vision-benefits li {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .benefit-icon {
+        font-size: 1.75rem;
+    }
+
+    .benefit-text {
+        font-size: 1rem;
+    }
+
+    .vision-philosophy {
+        font-size: 1.0625rem;
+        padding: 1.25rem;
+        margin: 2rem 0;
+    }
+
+    .vision-target {
+        padding: 2rem 1.5rem;
+    }
+
+    .vision-target strong {
+        font-size: 1.0625rem;
+    }
+
+    .message-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .message-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .team-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
+        object-position: center 20%;
+        transform: scale(1.25);
+    }
+
+    .team-card:hover .team-photo {
+        transform: scale(1.3);
+    }
+
+    .team-member-name {
+        font-size: 1.5rem;
+    }
+
+    .company-table th,
+    .company-table td {
+        padding: 1.25rem 1.5rem;
+        display: block;
+        width: 100%;
+    }
+
+    .company-table th {
+        padding-bottom: 0.5rem;
+    }
+
+    .company-table td {
+        padding-top: 0.5rem;
+    }
+
+    .cta-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .cta-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 1.25rem;
+    }
+
+    .cta-subtitle {
+        font-size: clamp(0.875rem, 3vw, 1.125rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-badge-line {
+        font-size: clamp(0.75rem, 2.5vw, 1rem);
+        padding: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
+    }
+
+    .cta-buttons-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        width: 100%;
+        padding: 1.5rem 2rem;
+    }
+
+    .cta-main-text {
+        font-size: clamp(0.875rem, 3vw, 1.125rem);
+    }
+
+    .cta-sub-text {
+        font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+    }
+
+    .cta-process-title {
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-process-list {
+        font-size: clamp(0.875rem, 2.5vw, 1rem);
+        line-height: 2;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .cta-process-list li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        margin: 0;
+        width: auto;
+        background: none;
+        border: none;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .cta-process-list li:hover {
+        transform: none;
+        background: none;
+    }
+
+    .cta-process-list li::before {
+        content: attr(data-number) ".";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: auto;
+        background: none;
+        color: var(--primary);
+        font-weight: var(--font-weight-bold);
+        font-size: 1rem;
+        display: block;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* MVV Detailed small mobile */
+    .mvv-detailed-block {
+        padding: 2rem 1.25rem;
+    }
+
+    .mvv-label {
+        font-size: 0.6875rem;
+        padding: 0.35rem 0.85rem;
+    }
+
+    .mvv-detailed-title {
+        font-size: clamp(1.75rem, 5vw, 2rem);
+    }
+
+    .mvv-detailed-subtitle {
+        font-size: 0.9375rem;
+    }
+
+    .value-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .value-icon {
+        font-size: 2.5rem;
+    }
+
+    .value-title {
+        font-size: 1.125rem;
+    }
+
+    .value-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .value-description {
+        font-size: 0.875rem;
+        line-height: 1.7;
+    }
+
+    .mission-headline,
+    .vision-headline {
+        font-size: 1.375rem;
+    }
+
+    .mission-text,
+    .vision-text {
+        font-size: 0.9375rem;
+    }
+
+    .mission-services {
+        padding: 1.25rem;
+    }
+
+    .mission-goal {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .mission-goal strong {
+        font-size: 1rem;
+    }
+
+    .vision-problem {
+        padding: 1rem;
+    }
+
+    .vision-philosophy {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .vision-target {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .vision-target strong {
+        font-size: 1rem;
+    }
+
+    .cta-section {
+        padding: 3rem 1rem;
+    }
+
+    .cta-title {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+
+    .cta-subtitle {
+        font-size: clamp(0.8125rem, 2.5vw, 1rem);
+    }
+
+    .cta-badge-line {
+        font-size: clamp(0.6875rem, 2vw, 0.875rem);
+        padding: 0;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .cta-main-text {
+        font-size: clamp(0.8125rem, 2.5vw, 1rem);
+    }
+
+    .cta-sub-text {
+        font-size: clamp(0.6875rem, 2vw, 0.8125rem);
+    }
+
+    .cta-process-list {
+        font-size: clamp(0.8125rem, 2vw, 0.9375rem);
+        line-height: 1.75;
+    }
+
+    .cta-process-list li {
+        padding: 0.375rem 0;
+        padding-left: 1.25rem;
+        margin: 0;
+    }
+
+    .cta-process-list li::before {
+        font-size: 0.8125rem;
+    }
+}

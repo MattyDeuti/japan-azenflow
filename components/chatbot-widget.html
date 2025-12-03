@@ -1,0 +1,554 @@
+<div class="chatbot-widget" id="chatbotWidget">
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <picture>
+            <source srcset="images/zenkun.webp" type="image/webp">
+            <img src="images/zenkun.png" alt="Zenkun AI" class="icon-chat chatbot-toggle-icon" width="300" height="300" loading="lazy">
+        </picture>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <picture>
+                    <source srcset="images/zenkun.webp" type="image/webp">
+                    <img src="images/zenkun.png" alt="Zenkun AI Assistant" class="chatbot-avatar-img" width="300" height="300" loading="lazy">
+                </picture>
+            </div>
+            <div class="chatbot-info">
+                <h4 data-ja="AzenFlowサポート" data-en="AzenFlow Support">AzenFlowサポート</h4>
+                <span class="chatbot-status" data-ja="オンライン" data-en="Online">オンライン</span>
+            </div>
+            <!-- Bouton fermeture dans le header -->
+            <button class="chatbot-close-btn" id="chatbotCloseBtn" aria-label="Close chatbot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-content" data-ja="こんにちは！AzenFlowのAIアシスタントです。ご質問がありましたら、お気軽にお尋ねください。" data-en="Hello! I'm AzenFlow's AI assistant. Please feel free to ask any questions you may have.">
+                    こんにちは！AzenFlowのAIアシスタントです。ご質問がありましたら、お気軽にお尋ねください。
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbot-input">
+            <div class="input-wrapper">
+                <input type="text" placeholder="メッセージを入力... (450文字)" data-placeholder-ja="メッセージを入力... (450文字)" data-placeholder-en="Type message... (450 max)" maxlength="450" id="chatbotInput">
+                <span class="char-counter" id="charCounter">0/450</span>
+            </div>
+            <button class="send-button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Chatbot Widget Styles */
+.chatbot-widget {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(139, 111, 71, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(139, 111, 71, 0.6);
+}
+
+.chatbot-toggle svg {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.chatbot-toggle-icon {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.chatbot-toggle:hover .chatbot-toggle-icon {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.icon-close {
+    opacity: 0;
+}
+
+.chatbot-toggle.active .icon-chat {
+    opacity: 0;
+}
+
+.chatbot-toggle.active .icon-close {
+    opacity: 1;
+}
+
+.chatbot-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 380px;
+    height: 550px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.chatbot-window.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.chatbot-header {
+    background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative; /* Pour le bouton absolu */
+}
+
+.chatbot-avatar {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    overflow: visible;
+}
+
+.chatbot-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.chatbot-avatar:hover .chatbot-avatar-img {
+    transform: scale(1.1);
+}
+
+.chatbot-info h4 {
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+}
+
+.chatbot-status {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+/* Bouton de fermeture dans le header */
+.chatbot-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.chatbot-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.chatbot-close-btn:active {
+    transform: scale(0.95);
+}
+
+.chatbot-close-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    background: #F9FAFB;
+}
+
+.message {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.message-content {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.bot-message .message-content {
+    background: white;
+    color: #1F2937;
+    border: 1px solid #E5E7EB;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .message-content {
+    background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+    color: white;
+}
+
+.chatbot-input {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-top: 1px solid #E5E7EB;
+    background: white;
+    border-radius: 0 0 20px 20px;
+}
+
+.input-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 0.75rem 4rem 0.75rem 1rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.chatbot-input input::placeholder {
+    font-size: 0.8rem;
+}
+
+.chatbot-input input:focus {
+    border-color: #8B6F47;
+}
+
+.char-counter {
+    position: absolute;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: #6B7280;
+    pointer-events: none;
+    font-weight: 500;
+}
+
+.char-counter.warning {
+    color: #F59E0B;
+}
+
+.char-counter.danger {
+    color: #EF4444;
+}
+
+.send-button {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(139, 111, 71, 0.4);
+}
+
+.send-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Typing indicator */
+.typing-indicator .message-content {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: #9CA3AF;
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* Links in chatbot messages */
+.chatbot-link {
+    color: #8B6F47;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.chatbot-link:hover {
+    color: #A68A5C;
+    text-decoration: none;
+}
+
+.chatbot-link:visited {
+    color: #6B5536;
+}
+
+/* Links in bot messages */
+.bot-message .chatbot-link {
+    color: #8B6F47;
+}
+
+/* Links in user messages (white on brown background) */
+.user-message .chatbot-link {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.user-message .chatbot-link:hover {
+    color: #f0f0f0;
+}
+
+/* Warning messages (rate limiting, etc.) */
+.warning-message .message-content {
+    background: #FFF3CD;
+    color: #856404;
+    border-left: 4px solid #FFC107;
+    font-weight: 500;
+}
+
+/* ==================== RESPONSIVE MOBILE ==================== */
+@media (max-width: 768px) {
+    /* Position du widget (container principal) */
+    .chatbot-widget {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    /* Bouton toggle (icône ronde pour ouvrir/fermer) */
+    .chatbot-toggle {
+        width: 56px;
+        height: 56px;
+    }
+
+    .chatbot-toggle svg,
+    .chatbot-toggle-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* 🎯 WIDGET PAR DÉFAUT : Position en BAS (clavier fermé) */
+    .chatbot-window {
+        position: fixed;
+        bottom: 75px !important;  /* Position BAS par défaut */
+        top: auto !important;
+        right: 1rem;
+
+        width: calc(100vw - 2rem);
+        max-width: 400px;
+
+        /* Hauteur FLEXIBLE quand clavier fermé (pour lecture confortable) */
+        height: auto;
+        max-height: calc(100vh - 150px);
+        min-height: 300px;
+
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        /* Transition smooth pour l'animation */
+        transition: top 0.3s ease, bottom 0.3s ease, height 0.3s ease;
+    }
+
+    /* 🔥 WIDGET AVEC CLAVIER OUVERT : Position optimisée, 50% hauteur */
+    .chatbot-window.keyboard-active {
+        /* Positionner en haut avec espace pour header site */
+        bottom: auto !important;
+        top: 60px !important;
+
+        /* 🎯 HAUTEUR 50% pour laisser 50% au clavier */
+        height: 50vh !important;
+        max-height: none !important;
+        min-height: 0 !important;
+    }
+
+    /* Header du chatbot (avatar + titre + statut) */
+    .chatbot-header {
+        flex-shrink: 0; /* Ne jamais compresser */
+        padding: 1rem;
+        position: relative;
+        min-height: 70px; /* Hauteur stable */
+    }
+
+    /* Container des messages - zone scrollable */
+    .chatbot-messages {
+        flex: 1; /* Prend tout l'espace disponible */
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 1rem;
+        min-height: 150px;
+        background: #F9FAFB;
+
+        /* Smooth scrolling iOS */
+        -webkit-overflow-scrolling: touch;
+
+        /* Assurer que le scroll est toujours possible */
+        overscroll-behavior: contain;
+    }
+
+    /* Zone de saisie - toujours visible en bas du widget */
+    .chatbot-input {
+        flex-shrink: 0; /* Ne jamais compresser */
+        padding: 1rem;
+        background: white;
+        border-top: 1px solid #E5E7EB;
+        border-radius: 0 0 20px 20px;
+        min-height: 70px; /* Hauteur stable */
+    }
+
+    /* Input text - empêcher le zoom automatique iOS */
+    .chatbot-input input {
+        font-size: 16px !important; /* iOS ne zoom pas si ≥16px */
+        padding: 0.75rem 4rem 0.75rem 1rem;
+        width: 100%;
+    }
+
+    /* Placeholder plus petit sur mobile */
+    .chatbot-input input::placeholder {
+        font-size: 0.75rem;
+    }
+
+    /* Compteur de caractères sur mobile */
+    .char-counter {
+        font-size: 0.7rem;
+        right: 0.75rem;
+    }
+
+    /* Bouton d'envoi */
+    .send-button {
+        flex-shrink: 0;
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Bouton de fermeture sur mobile - plus grand et accessible */
+    .chatbot-close-btn {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        top: 1.25rem;
+        right: 1.25rem;
+    }
+
+    .chatbot-close-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Très petits mobiles (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .chatbot-window {
+        width: calc(100vw - 1.5rem);
+        right: 0.75rem;
+        min-height: 250px;
+    }
+
+    .chatbot-window.keyboard-active {
+        /* 🎯 HAUTEUR 50% aussi sur petits écrans */
+        height: 50vh !important;
+        max-height: none !important;
+        top: 60px !important;
+    }
+}
+</style>

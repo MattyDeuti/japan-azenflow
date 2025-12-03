@@ -1,0 +1,49 @@
+<!-- ============================================ -->
+<!-- HEADER / NAVIGATION COMPONENT               -->
+<!-- Fichier: components/header.html             -->
+<!-- ============================================ -->
+
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-content">
+            <!-- Logo avec image -->
+            <a href="index.html" class="logo">
+                <img src="images/azenflow-logo.webp" alt="AzenFlow Logo" class="logo-image" width="70" height="70">
+                <span class="logo-text">AzenFlow</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link" data-ja="ホーム" data-en="Home">ホーム</a></li>
+                <li class="dropdown">
+                    <a href="index.html#services" class="nav-link" data-ja="サービスと価格" data-en="Services and prices">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="line-chatbot.html" data-ja="LINEチャットボット" data-en="LINE Chatbot">LINEチャットボット</a>
+                        <a href="email-assistant.html" data-ja="メールアシスタント" data-en="Email Assistant">メールアシスタント</a>
+                        <a href="web-chatbot.html" data-ja="Webチャットボット" data-en="Web Chatbot">Webチャットボット</a>
+                        <a href="translation-chatbot.html" data-ja="翻訳チャットボット" data-en="Translation Chatbot">翻訳チャットボット</a>
+                    </div>
+                </li>
+                <li><a href="chatbot-comparison.html" class="nav-link" data-ja="強み" data-en="Advantages">強み</a></li>
+                <li><a href="faq.html" class="nav-link" data-ja="よくある質問" data-en="FAQ">よくある質問</a></li>
+                <li><a href="about.html" class="nav-link" data-ja="会社概要" data-en="About">会社概要</a></li>
+                <li><a href="contact.html" class="nav-link" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="cta-button" data-ja="無料相談" data-en="Free Consultation">無料相談</button>
+                
+                <!-- Bouton de langue simplifié - tout à droite -->
+                <button class="lang-switcher" id="langSwitcher" aria-label="Language Switcher">
+                    <span class="lang-flag">🇺🇸</span>
+                    <span class="lang-code">EN</span>
+                </button>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu Toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

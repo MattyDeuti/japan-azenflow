@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AzenFlowと他社のチャットボットを徹底比較。シナリオ型・キーワード型との違い、価格、機能面での優位性をご確認ください。">
+    <meta name="keywords" content="チャットボット比較, AI比較, LINE Bot, カスタマーサポート, AzenFlow">
+    <link rel="canonical" href="https://azenflow.jp/chatbot-comparison.html">
+    <title>チャットボット比較｜AzenFlow</title>
+
+    <!-- Styles globaux -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <!-- Styles de la page -->
+    <link rel="stylesheet" href="styles/pages/chatbot-comparison.css">
+
+    <!-- Composants -->
+    <link rel="stylesheet" href="styles/components/floating-cta.css">
+    <link rel="stylesheet" href="styles/components/back-to-top.css">
+    <link rel="stylesheet" href="styles/components/cookie-banner.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="styles/fonts.css">
+    <!-- Structured Data SEO -->
+    <script src="/scripts/structured-data.js"></script>
+</head>
+<body class="chatbot-comparison-page">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Floating CTA Button -->
+    <div id="floating-cta-placeholder"></div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="advantages-hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in-up delay-1">
+                        <span class="title-line" data-ja="私たちは圧倒的な" data-en="We provide overwhelming">私たちは圧倒的な</span>
+                        <span class="title-line gradient-text" data-ja="バランス型AIソリューション" data-en="Balanced AI Solutions">バランス型AIソリューション</span>
+                        <span class="title-line" data-ja="を提供します" data-en="">を提供します</span>
+                    </h1>
+
+                    <p class="hero-subtitle fade-in-up delay-2" data-ja="「AIの柔軟さ」＋「手軽さ」＋「導入しやすい価格帯」" data-en='"AI Flexibility" + "Ease of Use" + "Affordable Pricing"'>
+                        「AIの柔軟さ」＋「手軽さ」＋「導入しやすい価格帯」
+                    </p>
+
+                    <div class="hero-cta fade-in-up delay-3">
+                        <button onclick="window.location.href='contact.html'" class="btn-primary pulse" data-ja="無料相談を予約" data-en="Free Consultation">無料相談を予約</button>
+                        <button onclick="window.location.href='#comparison'" class="btn-secondary" data-ja="強みを見る" data-en="See Our Strengths">強みを見る</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Comparison Section -->
+    <section class="detailed-comparison-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title gradient-text" data-ja="他社との比較" data-en="Comparison with Competitors">Comparison with Competitors</h2>
+                <p class="section-subtitle" data-ja="AzenFlowの圧倒的なバランスをご確認ください" data-en="See AzenFlow's overwhelming balance">AzenFlowの圧倒的なバランスをご確認ください</p>
+
+                <!-- Note d'information -->
+                <div class="comparison-info-note reveal-on-scroll" style="margin-top: 1rem;">
+                    <div class="info-note-content">
+                        <div>
+                            <p class="info-note-text" data-ja="<strong class='text-primary-brown'>この比較について：</strong><br>このページではチャットボット（LINE・Webチャット）のみを比較しています。<br><br><strong class='text-primary-brown'>メールアシスタント</strong>は革新的な新製品で、現在日本市場に競合他社がいないため、この比較には含まれていません。" data-en="<strong class='text-primary-brown'>About this comparison:</strong><br>This page compares chatbots only (LINE & Web Chat).<br><br><strong class='text-primary-brown'>Email Assistant</strong> is an innovative new product with no competitors in the Japanese market, so it's not included in this comparison.">
+                                <strong class="text-primary-brown">この比較について：</strong><br>このページではチャットボット（LINE・Webチャット）のみを比較しています。<br><br><strong class="text-primary-brown">メールアシスタント</strong>は革新的な新製品で、現在日本市場に競合他社がいないため、この比較には含まれていません。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table: 4社比較表 -->
+            <div class="comparison-table-container reveal-on-scroll">
+                <h3 class="table-title" style="text-align: center;" data-ja="4社比較表（A社・B社・C社・Azenflow）" data-en="4-Company Comparison (A, B, C, Azenflow)">4社比較表（A社・B社・C社・Azenflow）</h3>
+                <div class="table-scroll-hint" data-ja="← スワイプして全体を表示 →" data-en="← Swipe to see more →">← スワイプして全体を表示 →</div>
+                <div class="table-wrapper">
+                    <table class="detailed-comparison-table">
+                        <thead>
+                            <tr>
+                                <th data-ja="サービス" data-en="Service">サービス</th>
+                                <th data-ja="導入のしやすさ" data-en="Ease of Setup">導入のしやすさ</th>
+                                <th data-ja="月額費用" data-en="Monthly Fee">月額費用</th>
+                                <th data-ja="AI性能レベル" data-en="AI Performance">AI性能レベル</th>
+                                <th data-ja="初期費用" data-en="Setup Fee">初期費用</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-ja="A社" data-en="Company A">A社</td>
+                                <td data-ja="やや難しい" data-en="Somewhat Difficult">やや難しい</td>
+                                <td data-ja="50〜400万円" data-en="¥500k-4M">50〜400万円</td>
+                                <td data-ja="高" data-en="High">高</td>
+                                <td data-ja="10〜50万円" data-en="¥100k-500k">10〜50万円</td>
+                            </tr>
+                            <tr>
+                                <td data-ja="B社" data-en="Company B">B社</td>
+                                <td data-ja="中程度" data-en="Medium">中程度</td>
+                                <td data-ja="約10万円〜" data-en="~¥100k">約10万円〜</td>
+                                <td data-ja="高" data-en="High">高</td>
+                                <td data-ja="約20万円〜" data-en="~¥200k">約20万円〜</td>
+                            </tr>
+                            <tr>
+                                <td data-ja="C社" data-en="Company C">C社</td>
+                                <td data-ja="普通" data-en="Average">普通</td>
+                                <td data-ja="9万円" data-en="¥90k">9万円</td>
+                                <td data-ja="中" data-en="Medium">中</td>
+                                <td data-ja="20万円" data-en="¥200k">20万円</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong style="color: #EF4444;" data-ja="Azenflow" data-en="Azenflow">Azenflow</strong></td>
+                                <td><strong style="color: #EF4444;" data-ja="非常に簡単（最短1日）" data-en="Very Easy (1 day min)">非常に簡単（最短1日）</strong></td>
+                                <td><strong style="color: #EF4444;" data-ja="約2万円〜" data-en="¥20k~">約2万円〜</strong></td>
+                                <td><strong style="color: #EF4444;" data-ja="高（多言語＋記憶学習対応）" data-en="High (Multilingual+Learning)">高（多言語＋記憶学習対応）</strong></td>
+                                <td><strong style="color: #EF4444;" data-ja="LINE：¥0 ／ Web：プランによる" data-en="LINE: ¥0 / Web: Plan-based">LINE：¥0 ／ Web：プランによる</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="comparison-note reveal-on-scroll delay-2">
+                <p data-ja="※ 上記は一般的な比較です。各社の具体的なプランや料金は変動する可能性があります。" data-en="* General comparison. Specific plans and pricing may vary.">
+                    ※ 上記は一般的な比較です。各社の具体的なプランや料金は変動する可能性があります。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Comparison Section -->
+    <section class="chatbot-comparison-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title gradient-text">
+                    <span data-ja="「シナリオ型ではない」AIサービス" data-en="Not a Scenario-Based Chatbot">Not a Scenario-Based Chatbot</span>
+                </h2>
+                <p class="section-subtitle" data-ja="従来のチャットボットとの決定的な違い" data-en="The decisive difference from traditional chatbots">従来のチャットボットとの決定的な違い</p>
+            </div>
+
+            <div class="comparison-cards-grid">
+                <!-- Card 1: Scenario-Based Chatbot (BAD) -->
+                <div class="comparison-card bad-example reveal-on-scroll">
+                    <div class="card-header">
+                        <h3 class="card-title" data-ja="シナリオ型チャットボット" data-en="Scenario-Based Chatbot">シナリオ型チャットボット</h3>
+                        <span class="card-badge bad" data-ja="古い技術" data-en="Old Tech">古い技術</span>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-description" data-ja="回答ごとに複数の選択肢を選択する必要がある" data-en="Users must select from multiple choices for each response">
+                            回答ごとに複数の選択肢を選択する必要がある
+                        </div>
+
+                        <div class="chatbot-simulation">
+                            <div class="chat-message bot">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-bubble">
+                                    <span data-ja="ご用件をお選びください" data-en="Please select your inquiry">ご用件をお選びください</span>
+                                </div>
+                            </div>
+
+                            <div class="button-choices">
+                                <button class="choice-btn" data-ja="口座開設" data-en="Open Account">口座開設</button>
+                                <button class="choice-btn" data-ja="ネットバンク" data-en="Online Banking">ネットバンク</button>
+                                <button class="choice-btn selected" data-ja="各種ローン" data-en="Loans">各種ローン</button>
+                            </div>
+
+                            <div class="chat-message user">
+                                <div class="message-bubble">
+                                    <span data-ja="各種ローン" data-en="Loans">各種ローン</span>
+                                </div>
+                                <div class="message-avatar">👤</div>
+                            </div>
+
+                            <div class="chat-message bot">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-bubble">
+                                    <span data-ja="ローンの種類をお選びください" data-en="Select loan type">ローンの種類をお選びください</span>
+                                </div>
+                            </div>
+
+                            <div class="button-choices">
+                                <button class="choice-btn" data-ja="住宅ローン" data-en="Mortgage">住宅ローン</button>
+                                <button class="choice-btn" data-ja="カーローン" data-en="Car Loan">カーローン</button>
+                                <button class="choice-btn" data-ja="教育ローン" data-en="Education Loan">教育ローン</button>
+                            </div>
+
+                            <div class="more-steps" data-ja="..." data-en="...">...</div>
+
+                            <div class="scenario-insight">
+                                <span>⏱️ 遅くて不便</span>
+                            </div>
+                        </div>
+
+                        <div class="card-problems">
+                            <div class="problem-item">
+                                <span class="problem-icon">⚠️</span>
+                                <span data-ja="何度もボタンを押す必要がある" data-en="Must click buttons repeatedly">何度もボタンを押す必要がある</span>
+                            </div>
+                            <div class="problem-item">
+                                <span class="problem-icon">⚠️</span>
+                                <span data-ja="柔軟な質問ができない" data-en="Cannot ask flexible questions">柔軟な質問ができない</span>
+                            </div>
+                            <div class="problem-item">
+                                <span class="problem-icon">⚠️</span>
+                                <span data-ja="時間がかかる" data-en="Time-consuming">時間がかかる</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Keyword-Based Chatbot (MEDIUM) -->
+                <div class="comparison-card medium-example reveal-on-scroll delay-1">
+                    <div class="card-header">
+                        <h3 class="card-title" data-ja="キーワード型チャットボット" data-en="Keyword-Based Chatbot">キーワード型チャットボット</h3>
+                        <span class="card-badge medium" data-ja="理解しない" data-en="No Understanding">理解しない</span>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-description" data-ja="キーワードを検索するだけ 質問の意味を理解できない" data-en="Only searches for keywords. Cannot understand the meaning of questions">
+                            キーワードを検索するだけ<br>質問の意味を理解できない
+                        </div>
+
+                        <div class="chatbot-simulation">
+                            <div class="chat-message user">
+                                <div class="message-bubble">
+                                    <span data-ja="印鑑をなくしました。どうすればいいですか？" data-en="I lost my seal. What should I do?">印鑑をなくしました。どうすればいいですか？</span>
+                                </div>
+                                <div class="message-avatar">👤</div>
+                            </div>
+
+                            <div class="keyword-detection">
+                                <div class="keyword-box">
+                                    <span class="keyword-label" data-ja="検出されたキーワード:" data-en="Detected keywords:">検出されたキーワード:</span>
+                                    <div class="keyword-tags">
+                                        <span class="keyword-tag">"印鑑"</span>
+                                        <span class="keyword-tag">"なくした"</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-message bot">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-bubble">
+                                    <p class="keyword-response-note" data-ja="「印鑑」を含む記事を検索しました:" data-en="Found articles containing '印鑑':">
+                                        「印鑑」を含む記事を検索しました:
+                                    </p>
+                                    <div class="button-choices vertical">
+                                        <button class="choice-btn" data-ja="印鑑証明書の取得方法" data-en="How to get seal certificate">印鑑証明書の取得方法</button>
+                                        <button class="choice-btn" data-ja="印鑑登録の手続き" data-en="Seal registration process">印鑑登録の手続き</button>
+                                        <button class="choice-btn" data-ja="届出印について" data-en="About registered seal">届出印について</button>
+                                        <button class="choice-btn irrelevant" data-ja="印鑑の選び方（無関係）" data-en="How to choose a seal (irrelevant)">印鑑の選び方（無関係）</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="confusion-note">
+                                <span data-ja="❓ 紛失したことを理解していない" data-en="❓ Doesn't understand it was lost">❓ 紛失したことを理解していない</span>
+                            </div>
+                        </div>
+
+                        <div class="card-problems">
+                            <div class="problem-item">
+                                <span class="problem-icon">⚠️</span>
+                                <span data-ja="キーワードしか見ていない" data-en="Only looks at keywords">キーワードしか見ていない</span>
+                            </div>
+                            <div class="problem-item">
+                                <span class="problem-icon">⚠️</span>
+                                <span data-ja="文脈を理解できない" data-en="Cannot understand context">文脈を理解できない</span>
+                            </div>
+                            <div class="problem-item">
+                                <span class="problem-icon">⚠️</span>
+                                <span data-ja="無関係な結果も表示" data-en="Shows irrelevant results">無関係な結果も表示</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: AzenFlow (EXCELLENT) -->
+                <div class="comparison-card excellent-example reveal-on-scroll delay-2">
+                    <div class="card-header">
+                        <h3 class="card-title" data-ja="AzenFlow" data-en="AzenFlow">AzenFlow</h3>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-description" data-ja="自然な会話で即座に回答 正確で関連性の高い情報を提供" data-en="Instant answers through natural conversation. Accurate and relevant information">
+                            自然な会話で即座に回答<br>正確で関連性の高い情報を提供
+                        </div>
+
+                        <div class="chatbot-simulation">
+                            <div class="chat-message user">
+                                <div class="message-bubble">
+                                    <span data-ja="印鑑をなくしました。どうすればいいですか？" data-en="I lost my seal. What should I do?">印鑑をなくしました。どうすればいいですか？</span>
+                                </div>
+                                <div class="message-avatar">👤</div>
+                            </div>
+
+                            <div class="chat-message bot instant">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-bubble">
+                                    <div class="instant-badge" data-ja="⚡ 3秒で回答" data-en="⚡ 3 sec response">⚡ 3秒で回答</div>
+                                    <p data-ja="印鑑を紛失された場合は、すぐに以下の手続きをお願いします：" data-en="If you lost your seal, please follow these steps immediately:">
+                                        印鑑を紛失された場合は、すぐに以下の手続きをお願いします：
+                                    </p>
+                                    <ol>
+                                        <li data-ja="最寄りの支店にご連絡（080-3498-0640）" data-en="Contact nearest branch (080-3498-0640)">最寄りの支店にご連絡（080-3498-0640）</li>
+                                        <li data-ja="印鑑喪失届を提出" data-en="Submit seal loss report">印鑑喪失届を提出</li>
+                                        <li data-ja="新しい印鑑で改印手続き" data-en="Re-register with new seal">新しい印鑑で改印手続き</li>
+                                    </ol>
+                                    <p data-ja="詳細はこちら: [印鑑紛失の手続きガイド]" data-en="Details here: [Seal Loss Procedure Guide]">
+                                        詳細はこちら: <a href="#">📄 印鑑紛失の手続きガイド</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="azenflow-insight">
+                                <span data-ja="✨ 速くて便利" data-en="✨ Fast & Convenient">✨ 速くて便利</span>
+                            </div>
+                        </div>
+
+                        <div class="card-benefits">
+                            <div class="benefit-item">
+                                <picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="benefit-icon-img" width="240" height="240" loading="lazy">
+    </picture>
+                                <span data-ja="3秒で即座に回答" data-en="Instant 3-second response">3秒で即座に回答</span>
+                            </div>
+                            <div class="benefit-item">
+                                <picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="benefit-icon-img" width="240" height="240" loading="lazy">
+    </picture>
+                                <span data-ja="自然な会話が可能" data-en="Natural conversation">自然な会話が可能</span>
+                            </div>
+                            <div class="benefit-item">
+                                <picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="benefit-icon-img" width="240" height="240" loading="lazy">
+    </picture>
+                                <span data-ja="正確で詳細な回答" data-en="Accurate detailed answers">正確で詳細な回答</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Adoption in Japan Section -->
+    <section class="ai-adoption-section">
+        <div class="container">
+            <!-- Titre principal centré -->
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span data-ja="日本企業の「生成AI導入率」がまだ低い" data-en="Japan's 'Generative AI Adoption Rate' is Still Low">Japan's 'Generative AI Adoption Rate' is Still Low</span>
+                </h2>
+            </div>
+
+            <!-- Layout 2 colonnes en dessous -->
+            <div class="adoption-content">
+                <!-- Colonne gauche : Texte (sans titre) -->
+                <div class="adoption-text">
+                    <p class="adoption-description" data-ja="中小企業のAI導入率は わずか16％前後（2024年調査）。その中でも「生成AIを業務に活用している」企業はさらに少ない。多くの企業が「気にはなっているが、難しそう・コストが不安」と感じています。" data-en="AI adoption rate among SMEs is only around 16% (2024 survey). Even fewer companies are 'using generative AI in business operations.' Many companies feel 'interested but concerned about difficulty and costs.'">
+                        中小企業のAI導入率は わずか16％前後（2024年調査）。その中でも「生成AIを業務に活用している」企業はさらに少ない。多くの企業が「気にはなっているが、難しそう・コストが不安」と感じています。
+                    </p>
+
+                    <div class="adoption-highlight">
+                        <div class="highlight-text" data-ja="AzenFlowの「初期費用0円・資料をアップするだけ」という導入しやすさは、この「第一歩」を踏み出しやすいです" data-en="AzenFlow's 'Zero initial cost - just upload documents' ease of implementation makes this 'first step' easier to take">
+                            <strong>AzenFlowの「初期費用0円・資料をアップするだけ」</strong>という導入しやすさは、この「第一歩」を踏み出しやすいです
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne droite : Graphique -->
+                <div class="adoption-chart">
+                    <h3 class="chart-title" data-ja="日本の中小企業におけるAI導入率（2024年調査）" data-en="AI Adoption Rate Among Japanese SMEs (2024 Survey)">
+                        日本の中小企業におけるAI導入率（2024年調査）
+                    </h3>
+
+                    <!-- Container flex : graphique + légende côte à côte -->
+                    <div class="chart-container">
+                        <div class="chart-visual">
+                            <!-- SVG du graphique circulaire -->
+                            <svg viewBox="0 0 400 400" class="chart-svg" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Cercle de fond (gris clair) - 84% -->
+                        <circle cx="200" cy="200" r="140"
+                                fill="none"
+                                stroke="#E5E7EB"
+                                stroke-width="80"
+                                stroke-dasharray="880"
+                                stroke-dashoffset="0" />
+
+                        <!-- Segment 1 - Generative AI (marron foncé) - 11.7% -->
+                        <circle cx="200" cy="200" r="140"
+                                fill="none"
+                                stroke="#8B6F47"
+                                stroke-width="80"
+                                stroke-dasharray="103 777"
+                                stroke-dashoffset="0"
+                                transform="rotate(-90 200 200)" />
+
+                        <!-- Segment 2 - AI Non-Gen (marron clair) - 4.3% -->
+                        <circle cx="200" cy="200" r="140"
+                                fill="none"
+                                stroke="#A68A5C"
+                                stroke-width="80"
+                                stroke-dasharray="38 842"
+                                stroke-dashoffset="-103"
+                                transform="rotate(-90 200 200)" />
+
+                        <!-- Texte au centre - 16% -->
+                        <text x="200" y="220"
+                              text-anchor="middle"
+                              font-size="72"
+                              font-weight="900"
+                              fill="#8B6F47">16%</text>
+
+                        <!-- Sous-texte -->
+                        <text x="200" y="260"
+                              text-anchor="middle"
+                              font-size="18"
+                              font-weight="500"
+                              fill="#6B7280"
+                              data-ja="AI導入率" data-en="AI Adoption">AI導入率</text>
+                            </svg>
+                        </div>
+
+                        <!-- Légende -->
+                        <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color legend-color-primary"></div>
+                            <span class="legend-percentage">11.7%</span>
+                            <span class="legend-text" data-ja="生成AI導入済み" data-en="Generative AI Adopted">生成AI導入済み</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color legend-color-secondary"></div>
+                            <span class="legend-percentage">4.3%</span>
+                            <span class="legend-text" data-ja="AI導入済み（非生成AI）" data-en="AI Adopted (Non-Generative)">AI導入済み（非生成AI）</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color legend-color-inactive"></div>
+                            <span class="legend-percentage">84.0%</span>
+                            <span class="legend-text" data-ja="AI未導入" data-en="AI Not Adopted">AI未導入</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support System Section -->
+    <section class="support-system-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title gradient-text" data-ja="Azenflowの安心サポート体制" data-en="Azenflow's Comprehensive Support System">
+                    Azenflow's Comprehensive Support System
+                </h2>
+            </div>
+
+            <div class="support-phases">
+                <!-- Phase 1: Before Implementation -->
+                <div class="support-phase reveal-on-scroll">
+                    <div class="phase-header">
+                        <div class="phase-icon"><picture>
+        <source srcset="images/document.webp" type="image/webp">
+        <img src="images/document.png" alt="Document" class="phase-icon-img" width="220" height="220" loading="lazy">
+    </picture></div>
+                        <h3 class="phase-title" data-ja="【導入前】" data-en="【Before Implementation】">【導入前】</h3>
+                    </div>
+                    <ul class="phase-list">
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="ヒアリング" data-en="Consultation">ヒアリング</strong>
+                                <span data-ja="企業の業種・課題・目的を丁寧にヒアリング" data-en="Carefully understanding your industry, challenges, and objectives">企業の業種・課題・目的を丁寧にヒアリング</span>
+                            </div>
+                        </li>
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="資料の共有" data-en="Document Preparation">資料の共有</strong>
+                                <span data-ja="AIが分かりやすいようにこちらで整理" data-en="We organize your documents for optimal AI understanding">AIが分かりやすいようにこちらで整理</span>
+                            </div>
+                        </li>
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="無料デモ／トライアル" data-en="Free Demo/Trial">無料デモ／トライアル</strong>
+                                <span data-ja="実際に操作しながら使用感を確認可能" data-en="Test the system hands-on to verify usability">実際に操作しながら使用感を確認可能</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2: During Implementation -->
+                <div class="support-phase reveal-on-scroll delay-1">
+                    <div class="phase-header">
+                        <div class="phase-icon"><picture><source srcset="images/roue.webp" type="image/webp"><img src="images/roue.png" alt="" width="48" height="48" loading="lazy" style="display: block; margin: 0 auto;"></picture></div>
+                        <h3 class="phase-title" data-ja="【導入時】" data-en="【During Implementation】">【導入時】</h3>
+                    </div>
+                    <ul class="phase-list">
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="初期設定サポート" data-en="Initial Setup Support">初期設定サポート</strong>
+                                <span data-ja="LINE連携やサイト埋め込みもスタッフが代行またはサポート" data-en="Our staff handles or assists with LINE integration and website embedding">LINE連携やサイト埋め込みもスタッフが代行またはサポート</span>
+                            </div>
+                        </li>
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="AI学習の確認" data-en="AI Training Verification">AI学習の確認</strong>
+                                <span data-ja="アップロード後、AIの回答精度を一緒にチェック" data-en="We verify AI response accuracy together after upload">アップロード後、AIの回答精度を一緒にチェック</span>
+                            </div>
+                        </li>
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="テスト対応と改善提案" data-en="Testing & Improvement">テスト対応と改善提案</strong>
+                                <span data-ja="よくある質問を使って動作テスト→改善アドバイス" data-en="Test with common questions and provide improvement advice">よくある質問を使って動作テスト→改善アドバイス</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3: After Implementation -->
+                <div class="support-phase reveal-on-scroll delay-2">
+                    <div class="phase-header">
+                        <div class="phase-icon"><picture><source srcset="images/shield.webp" type="image/webp"><img src="images/shield.png" alt="" width="48" height="48" loading="lazy" style="display: block; margin: 0 auto;"></picture></div>
+                        <h3 class="phase-title" data-ja="【導入後】" data-en="【After Implementation】">【導入後】</h3>
+                    </div>
+                    <ul class="phase-list">
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="定期メンテナンス・アップデート" data-en="Regular Maintenance">定期メンテナンス・アップデート</strong>
+                                <span data-ja="AIモデルやデータベースを最新化" data-en="Keep AI models and databases up-to-date">AIモデルやデータベースを最新化</span>
+                            </div>
+                        </li>
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="チャット・メールサポート" data-en="Chat/Email Support">チャット・メールサポート</strong>
+                                <span data-ja="運用中の疑問やトラブルに即対応" data-en="Quick response to operational questions and issues">運用中の疑問やトラブルに即対応</span>
+                            </div>
+                        </li>
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="新機能追加サポート" data-en="New Feature Support">新機能追加サポート</strong>
+                                <span data-ja="必要に応じてLINE・サイト連携や多言語対応を追加支援" data-en="Add LINE/website integration or multilingual support as needed">必要に応じてLINE・サイト連携や多言語対応を追加支援</span>
+                            </div>
+                        </li>
+                        <li class="phase-item">
+                            <div class="item-icon"><picture>
+        <source srcset="images/check.webp" type="image/webp">
+        <img src="images/check.png" alt="check" class="check-icon" width="240" height="240" loading="lazy">
+    </picture></div>
+                            <div class="item-content">
+                                <strong data-ja="セキュリティ対策" data-en="Security Measures">セキュリティ対策</strong>
+                                <span data-ja="データ暗号化、アクセス制限、ログ管理を標準実装" data-en="Standard implementation of data encryption, access control, and log management">データ暗号化、アクセス制限、ログ管理を標準実装</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal-on-scroll">
+                <h2 class="cta-title" data-ja="カスタマーサポートを自動化する準備はできていますか？" data-en="Ready to Automate Your Customer Support?">
+                    カスタマーサポートを自動化する準備はできていますか？
+                </h2>
+                <p class="cta-subtitle" data-ja="お電話でご相談いただくか、まずはチャットボットにお尋ねください" data-en="Book a quick call or ask our chatbot if you have questions first">
+                    お電話でご相談いただくか、まずはチャットボットにお尋ねください
+                </p>
+
+                <div class="cta-badges">
+                    <p class="cta-badge-line" data-ja="無料15分相談 • コミットメント不要" data-en="Free 15-min consultation • No commitment required">
+                        無料15分相談 • コミットメント不要
+                    </p>
+                </div>
+
+                <div class="cta-buttons-wrapper">
+                    <a href="contact.html" class="cta-button-primary">
+                        <span class="cta-main-text" data-ja="無料相談を予約" data-en="Book Free Consultation">
+                            <picture>
+                                <source srcset="images/phone.webp" type="image/webp">
+                                <img src="images/phone.png" alt="電話予約" style="width: 42px; height: 42px; display: inline-block; vertical-align: middle; margin-right: 8px;" width="90" height="90" loading="lazy">
+                            </picture> 無料相談を予約
+                        </span>
+                        <span class="cta-sub-text" data-ja="15分通話" data-en="15-minute call">15分通話</span>
+                    </a>
+                    <button onclick="document.getElementById('chatbotToggle')?.click()" class="cta-button-secondary">
+                        <span class="cta-main-text" data-ja="ご質問はありますか？" data-en="Got Questions?">ご質問はありますか？</span>
+                        <span class="cta-sub-text" data-ja="FAQチャットボットと話す" data-en="Talk to our FAQ chatbot">FAQチャットボットと話す</span>
+                    </button>
+                </div>
+
+                <div class="cta-process">
+                    <h3 class="cta-process-title" data-ja="次のステップ：" data-en="What happens next:">次のステップ：</h3>
+                    <ul class="cta-process-list">
+                        <li data-number="1" data-ja="15分の電話でニーズを把握" data-en="15-min call to understand your needs">15分の電話でニーズを把握</li>
+                        <li data-number="2" data-ja="最適なソリューションと料金をご提案" data-en="We recommend the right solution & pricing">最適なソリューションと料金をご提案</li>
+                        <li data-number="3" data-ja="カスタムソリューションを構築（1〜2日）" data-en="Build your custom solution (1-2 days)">カスタムソリューションを構築（1〜2日）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget-placeholder"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Cookie Consent Script - MUST load BEFORE analytics -->
+    <script src="scripts/cookie-consent.js"></script>
+
+    <!-- Scripts -->
+    <script src="scripts/language-switcher.js"></script>
+    <script src="scripts/component-loader.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/chatbot-widget.js"></script>
+    <script src="scripts/floating-cta.js"></script>
+    <script src="scripts/back-to-top.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -609,7 +609,7 @@
                     <div class="service-icon-large">
                         <picture>
                             <source srcset="images/zenkun.webp" type="image/webp">
-                            <img src="images/zenkun.png" alt="LINE公式アカウント自動化チャットボット" width="300" height="300" loading="lazy">
+                            <img src="images/zenkun.png" alt="LINE公式アカウント自動化チャットボット" width="300" height="300">
                         </picture>
                     </div>
                     <h3 class="service-title" data-ja="LINEチャットボット" data-en="LINE Chatbot">LINEチャットボット</h3>
@@ -1051,7 +1051,159 @@
     <!-- Scripts avec defer (non-bloquants) -->
     <!-- Language Switcher - defer car le texte japonais est déjà dans le HTML -->
     <script src="scripts/language-switcher.js" defer></script>
-    <script src="scripts/cookie-consent.js"></script>
+    <script>
+    // Cookie Consent (inlined for performance)
+    (function() {
+        'use strict';
+        const CONFIG = {
+            STORAGE_KEY: 'azenflow_cookie_consent',
+            EXPIRY_DAYS: 395,
+            GA_MEASUREMENT_ID: 'G-XXXXXXXXXX',
+            CONSENT_STATES: { ACCEPTED: 'accepted', REJECTED: 'rejected', PENDING: 'pending' }
+        };
+        const CookieConsent = {
+            init() {
+                if (this.isDoNotTrackEnabled()) {
+                    console.log('[Cookie Consent] Do Not Track is enabled - respecting user preference');
+                    this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);
+                    return;
+                }
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', () => this.setup());
+                } else {
+                    this.setup();
+                }
+            },
+            setup() {
+                const consent = this.getConsent();
+                if (consent.status === CONFIG.CONSENT_STATES.PENDING || this.isConsentExpired(consent)) {
+                    this.showBanner();
+                } else if (consent.status === CONFIG.CONSENT_STATES.ACCEPTED) {
+                    this.initGoogleAnalytics();
+                }
+                this.attachEventListeners();
+            },
+            getConsent() {
+                try {
+                    const stored = localStorage.getItem(CONFIG.STORAGE_KEY);
+                    if (!stored) return { status: CONFIG.CONSENT_STATES.PENDING, timestamp: null };
+                    return JSON.parse(stored);
+                } catch (error) {
+                    console.error('[Cookie Consent] Error reading consent:', error);
+                    return { status: CONFIG.CONSENT_STATES.PENDING, timestamp: null };
+                }
+            },
+            saveConsent(status) {
+                try {
+                    const consent = { status: status, timestamp: Date.now(), version: '1.0' };
+                    localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(consent));
+                    console.log('[Cookie Consent] Consent saved:', status);
+                } catch (error) {
+                    console.error('[Cookie Consent] Error saving consent:', error);
+                }
+            },
+            isConsentExpired(consent) {
+                if (!consent.timestamp) return true;
+                const expiryTime = CONFIG.EXPIRY_DAYS * 24 * 60 * 60 * 1000;
+                return (Date.now() - consent.timestamp) > expiryTime;
+            },
+            isDoNotTrackEnabled() {
+                return navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.msDoNotTrack === '1';
+            },
+            showBanner() {
+                const showBannerElement = () => {
+                    const banner = document.getElementById('cookie-banner');
+                    if (banner) {
+                        banner.style.display = 'flex';
+                        if (window.LanguageSwitcher && window.LanguageSwitcher.currentLang) {
+                            window.LanguageSwitcher.applyTranslations();
+                        }
+                    } else {
+                        console.warn('[Cookie Consent] Banner element not found');
+                    }
+                };
+                if (document.getElementById('cookie-banner')) {
+                    showBannerElement();
+                } else {
+                    document.addEventListener('componentsLoaded', showBannerElement);
+                }
+            },
+            hideBanner() {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) {
+                    banner.classList.add('hiding');
+                    setTimeout(() => {
+                        banner.style.display = 'none';
+                        banner.classList.remove('hiding');
+                    }, 400);
+                }
+            },
+            attachEventListeners() {
+                document.addEventListener('click', (e) => {
+                    if (e.target.id === 'cookie-accept' || e.target.closest('#cookie-accept')) {
+                        e.preventDefault();
+                        this.handleAccept();
+                    } else if (e.target.id === 'cookie-decline' || e.target.closest('#cookie-decline')) {
+                        e.preventDefault();
+                        this.handleDecline();
+                    }
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        const banner = document.getElementById('cookie-banner');
+                        if (banner && banner.style.display !== 'none') {
+                            this.handleDecline();
+                        }
+                    }
+                });
+            },
+            handleAccept() {
+                console.log('[Cookie Consent] User accepted cookies');
+                this.saveConsent(CONFIG.CONSENT_STATES.ACCEPTED);
+                this.hideBanner();
+                this.initGoogleAnalytics();
+                window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { consent: CONFIG.CONSENT_STATES.ACCEPTED } }));
+            },
+            handleDecline() {
+                console.log('[Cookie Consent] User declined cookies');
+                this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);
+                this.hideBanner();
+                window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { consent: CONFIG.CONSENT_STATES.REJECTED } }));
+            },
+            initGoogleAnalytics() {
+                if (CONFIG.GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
+                    console.warn('[Cookie Consent] Google Analytics ID not configured');
+                    return;
+                }
+                if (window.gtag || document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) {
+                    console.log('[Cookie Consent] Google Analytics already loaded');
+                    return;
+                }
+                console.log('[Cookie Consent] Loading Google Analytics...');
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${CONFIG.GA_MEASUREMENT_ID}`;
+                document.head.appendChild(script);
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { window.dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', CONFIG.GA_MEASUREMENT_ID, { 'anonymize_ip': true, 'cookie_flags': 'SameSite=None;Secure' });
+                console.log('[Cookie Consent] Google Analytics initialized');
+            },
+            hasAnalyticsConsent() {
+                const consent = this.getConsent();
+                return consent.status === CONFIG.CONSENT_STATES.ACCEPTED && !this.isConsentExpired(consent);
+            },
+            revokeConsent() {
+                this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);
+                window.location.reload();
+            }
+        };
+        window.CookieConsent = CookieConsent;
+        CookieConsent.init();
+    })();
+    </script>
     <script src="scripts/component-loader.js" defer></script>
     <script src="scripts/animations.js" defer></script>
     <script src="scripts/chatbot-widget.js" defer></script>

@@ -2152,13 +2152,12 @@
 }
 
 .services-icon img {
-    display: block;  /* Change de inline-block à block */
-    width: 320px;  /* 160px × 2 (80px × 2 × 2 = 80px × 4 au total) */
-    height: 320px; /* 160px × 2 (80px × 2 × 2 = 80px × 4 au total) */
+    display: block;  /* Block supprime l'espace sous l'image */
+    width: 320px;
+    height: 320px;
     object-fit: contain;
-    margin: 0 auto;  /* Centre horizontalement et supprime marges verticales */
-    padding: 0;  /* Supprime les paddings par défaut */
-    vertical-align: top;  /* Aligne en haut pour éviter l'espace */
+    margin: 0 auto;  /* Centre horizontalement */
+    padding: 0;
 }
 
 /* Style spécifique pour le header de la section services */

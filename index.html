@@ -252,10 +252,13 @@
                             <div class="phone-screen">
                                 <div class="phone-notch"></div>
                                 <div class="phone-content">
-                                    <!-- 🚀 OPTIMIZATION 2: Added fetchpriority="high" for LCP improvement -->
-                                    <video class="phone-video" autoplay loop muted playsinline fetchpriority="high">
-                                        <source src="videos/demo-line.mp4" type="video/mp4">
+                                    <!-- 🚀 OPTIMIZATION 2: Video loads only on desktop (>768px) to save mobile bandwidth -->
+                                    <video class="phone-video" autoplay loop muted playsinline preload="none" data-desktop-only="true">
+                                        <source data-src="videos/demo-line.mp4" type="video/mp4">
                                     </video>
+                                    <script>
+                                    if(window.innerWidth>768){const v=document.querySelector('.phone-video[data-desktop-only]');if(v){const s=v.querySelector('source');if(s&&s.dataset.src){s.src=s.dataset.src;v.load()}}}
+                                    </script>
                                 </div>
                             </div>
                         </div>

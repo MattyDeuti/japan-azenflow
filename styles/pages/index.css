@@ -144,6 +144,7 @@
 .hero-title div {
     display: block;
     margin-bottom: 0.3em;
+    white-space: nowrap; /* Empêche le retour à la ligne sur desktop */
 }
 
 .gradient-text {
@@ -500,6 +501,7 @@
 
     /* FIX: "Don't make customers wait." sur 2 lignes maximum */
     .hero-title div {
+        white-space: normal; /* Permet le retour à la ligne sur mobile */
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: none;

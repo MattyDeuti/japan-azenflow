@@ -138,6 +138,10 @@ html, body {
     letter-spacing: -0.03em;
 }
 
+.hero-title div {
+    white-space: nowrap; /* Empêche le retour à la ligne sur desktop */
+}
+
 .gradient-text {
     background: var(--gradient-1);
     -webkit-background-clip: text;
@@ -1160,6 +1164,10 @@ html, body {
 
     .hero-title {
         font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .hero-title div {
+        white-space: normal; /* Permet le retour à la ligne sur mobile */
     }
 
     .hero-cta {

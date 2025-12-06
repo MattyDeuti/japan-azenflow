@@ -749,6 +749,9 @@ a {
     bottom: 2rem;
     right: 2rem;
     z-index: 999;
+    width: 60px;
+    height: 60px;
+    contain: layout style; /* Évite CLS lors du chargement dynamique */
 }
 
 .chatbot-toggle {

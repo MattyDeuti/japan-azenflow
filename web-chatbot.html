@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="styles/components/hero-segmentation.css">
 
     <link rel="stylesheet" href="styles/fonts.css">
-    <script src="/scripts/structured-data.js"></script>
 
     <style>
         /* ==================== USE CASES TABS SYSTEM ==================== */
@@ -240,6 +239,231 @@
             }
         }
     </style>
+
+    <!-- ================= ADVANCED SCHEMA.ORG ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://azenflow.jp/web-chatbot.html#service",
+          "name": "Webチャットボット",
+          "alternateName": ["Web AIチャットボット", "サイトチャットボット", "ウェブチャット", "Webサイト自動応答"],
+          "description": "Webサイト訪問者の質問に3秒未満で自動応答。24時間365日稼働のAIチャットボットで顧客対応を効率化。離脱を防ぎ、問い合わせを逃しません。導入は最短1〜2日。",
+          "url": "https://azenflow.jp/web-chatbot.html",
+          "image": "https://azenflow.jp/images/og-share-image.jpg",
+          "provider": {
+            "@id": "https://azenflow.jp/#organization"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Japan",
+            "alternateName": "日本"
+          },
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": "中小企業",
+            "geographicArea": {
+              "@type": "Country",
+              "name": "JP"
+            }
+          },
+          "serviceType": "Webサイト向けAIチャットボット",
+          "category": "カスタマーサポート自動化",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceType": "Website Chat Widget",
+            "servicePlatform": "Web Browser"
+          },
+          "offers": {
+            "@type": "Offer",
+            "name": "Webチャットボット 月額プラン",
+            "price": "29990",
+            "priceCurrency": "JPY",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "29990",
+              "priceCurrency": "JPY",
+              "unitText": "月額（税抜）",
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "3000",
+                "unitText": "メッセージ/月"
+              }
+            },
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "eligibleRegion": {
+              "@type": "Country",
+              "name": "JP"
+            }
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Webチャットボット導入プラン",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "開発者向けプラン（Developer Plan）",
+                "description": "自分でウィジェットを開発できる方向け。Webhook URL + API認証情報を提供。2週間無料トライアル付き。フロントエンド開発スキルが必要。",
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "0",
+                    "priceCurrency": "JPY",
+                    "unitText": "初期費用"
+                  },
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "29990",
+                    "priceCurrency": "JPY",
+                    "unitText": "月額（税抜）"
+                  }
+                ],
+                "availability": "https://schema.org/InStock"
+              },
+              {
+                "@type": "Offer",
+                "name": "フルサポートプラン（Full Support Plan）",
+                "description": "全て私たちにおまかせ。カスタムデザインのチャットウィジェット、サイトへの完全インストール、デザイン＋ブランディング調整を代行。3〜5日で導入完了。",
+                "priceSpecification": [
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "19000",
+                    "priceCurrency": "JPY",
+                    "minPrice": "19000",
+                    "maxPrice": "49000",
+                    "unitText": "初期費用（税抜）",
+                    "description": "シンプルサイト¥19,000〜エンタープライズ¥49,000"
+                  },
+                  {
+                    "@type": "UnitPriceSpecification",
+                    "price": "29990",
+                    "priceCurrency": "JPY",
+                    "unitText": "月額（税抜）"
+                  }
+                ],
+                "availability": "https://schema.org/InStock"
+              }
+            ]
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Webサイト顧客対応の自動化",
+            "description": "サイト訪問者への24時間自動応答、離脱率低下、問い合わせ対応80%削減"
+          },
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59",
+            "description": "24時間365日稼働"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://azenflow.jp/web-chatbot.html#webpage",
+          "url": "https://azenflow.jp/web-chatbot.html",
+          "name": "Webチャットボット｜サイト訪問者に3秒未満で自動応答｜AzenFlow",
+          "description": "サイト訪問者の質問に3秒未満で自動応答。24/7稼働のAIチャットボットで離脱を防止。月額¥29,990。開発者向けは初期費用¥0、2週間無料トライアル付き。",
+          "isPartOf": {
+            "@id": "https://azenflow.jp/#website"
+          },
+          "about": {
+            "@id": "https://azenflow.jp/web-chatbot.html#service"
+          },
+          "mainEntity": {
+            "@id": "https://azenflow.jp/web-chatbot.html#service"
+          },
+          "inLanguage": "ja-JP",
+          "datePublished": "2025-01-01",
+          "dateModified": "2025-06-01"
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://azenflow.jp/web-chatbot.html#howto",
+          "name": "Webチャットボットの導入方法",
+          "description": "AzenFlowのWebチャットボットを導入するプロセス。開発者プランなら最短当日、フルサポートプランなら3〜5日で導入完了。",
+          "totalTime": "P2D",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "資料送付",
+              "text": "FAQ・マニュアル・価格表などをメールで送信します。",
+              "url": "https://azenflow.jp/web-chatbot.html#step1"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "AI設定",
+              "text": "AzenFlowがAIの設定とWebhook提供を当日完了します。",
+              "url": "https://azenflow.jp/web-chatbot.html#step2"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "ウィジェット統合",
+              "text": "開発者プランなら自分でウィジェット開発（4〜10時間目安）、フルサポートプランなら全て代行（3〜5日）します。",
+              "url": "https://azenflow.jp/web-chatbot.html#step3"
+            }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://azenflow.jp/web-chatbot.html#software",
+          "name": "AzenFlow Webチャットボット",
+          "alternateName": "アゼンフロー Webチャットボット",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Customer Service Software",
+          "operatingSystem": "Web Browser (Chrome, Safari, Firefox, Edge)",
+          "availableOnDevice": ["Desktop", "Mobile", "Tablet"],
+          "browserRequirements": "JavaScript対応ブラウザ",
+          "offers": {
+            "@type": "Offer",
+            "price": "29990",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          },
+          "featureList": [
+            "3秒未満の自動応答",
+            "24時間365日稼働",
+            "AIが80%の質問に自動回答",
+            "Webhook API連携",
+            "リンク・連絡先の自動案内",
+            "月3,000メッセージまで対応",
+            "自然な日本語のAIチャット",
+            "FAQや社内資料をAIに登録可能（最大7,500文字）",
+            "モバイル＆デスクトップ完全対応",
+            "トーン調整可能（丁寧・フレンドリー・中立）"
+          ],
+          "screenshot": "https://azenflow.jp/images/og-share-image.jpg",
+          "author": {
+            "@id": "https://azenflow.jp/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://azenflow.jp/web-chatbot.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "ホーム",
+              "item": "https://azenflow.jp/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Webチャットボット",
+              "item": "https://azenflow.jp/web-chatbot.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -1522,31 +1746,6 @@
 
     <script>
     (function(){'use strict';const CONFIG={STORAGE_KEY:'azenflow_cookie_consent',EXPIRY_DAYS:395,GA_MEASUREMENT_ID:'G-XXXXXXXXXX',CONSENT_STATES:{ACCEPTED:'accepted',REJECTED:'rejected',PENDING:'pending'}};const CookieConsent={init(){if(this.isDoNotTrackEnabled()){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);return}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>this.setup())}else{this.setup()}},setup(){const consent=this.getConsent();if(consent.status===CONFIG.CONSENT_STATES.PENDING||this.isConsentExpired(consent)){this.showBanner()}else if(consent.status===CONFIG.CONSENT_STATES.ACCEPTED){this.initGoogleAnalytics()}this.attachEventListeners()},getConsent(){try{const stored=localStorage.getItem(CONFIG.STORAGE_KEY);if(!stored)return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null};return JSON.parse(stored)}catch(e){return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null}}},saveConsent(status){try{localStorage.setItem(CONFIG.STORAGE_KEY,JSON.stringify({status:status,timestamp:Date.now(),version:'1.0'}))}catch(e){}},isConsentExpired(consent){if(!consent.timestamp)return true;return(Date.now()-consent.timestamp)>CONFIG.EXPIRY_DAYS*24*60*60*1000},isDoNotTrackEnabled(){return navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.msDoNotTrack==='1'},showBanner(){const show=()=>{const banner=document.getElementById('cookie-banner');if(banner){banner.style.display='flex';if(window.LanguageSwitcher&&window.LanguageSwitcher.currentLang){window.LanguageSwitcher.applyTranslations()}}};if(document.getElementById('cookie-banner')){show()}else{document.addEventListener('componentsLoaded',show)}},hideBanner(){const banner=document.getElementById('cookie-banner');if(banner){banner.classList.add('hiding');setTimeout(()=>{banner.style.display='none';banner.classList.remove('hiding')},400)}},attachEventListeners(){document.addEventListener('click',(e)=>{if(e.target.id==='cookie-accept'||e.target.closest('#cookie-accept')){e.preventDefault();this.handleAccept()}else if(e.target.id==='cookie-decline'||e.target.closest('#cookie-decline')){e.preventDefault();this.handleDecline()}});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){const banner=document.getElementById('cookie-banner');if(banner&&banner.style.display!=='none'){this.handleDecline()}}})},handleAccept(){this.saveConsent(CONFIG.CONSENT_STATES.ACCEPTED);this.hideBanner();this.initGoogleAnalytics();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.ACCEPTED}}))},handleDecline(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);this.hideBanner();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.REJECTED}}))},initGoogleAnalytics(){if(CONFIG.GA_MEASUREMENT_ID==='G-XXXXXXXXXX')return;if(window.gtag||document.querySelector('script[src*="googletagmanager.com/gtag/js"]'))return;const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.GA_MEASUREMENT_ID;document.head.appendChild(script);window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',CONFIG.GA_MEASUREMENT_ID,{'anonymize_ip':true,'cookie_flags':'SameSite=None;Secure'})},hasAnalyticsConsent(){const consent=this.getConsent();return consent.status===CONFIG.CONSENT_STATES.ACCEPTED&&!this.isConsentExpired(consent)},revokeConsent(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);window.location.reload()}};window.CookieConsent=CookieConsent;CookieConsent.init()})();
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "技術的な知識がなくても導入できますか？", "acceptedAnswer": { "@type": "Answer", "text": "プランによります。「フルサポートプラン」なら技術知識は一切不要です。FAQや資料を送るだけで、弊社がウィジェット開発からサイト設置まで全て代行します。「開発者プラン」はWebhook APIを使って自分でチャットウィジェットを開発できる方向けです。" } },
-        { "@type": "Question", "name": "導入までどのくらい時間がかかりますか？", "acceptedAnswer": { "@type": "Answer", "text": "「フルサポートプラン」は3〜5営業日でウィジェット完成+サイト設置完了。「開発者プラン」は当日中にWebhook URL・API・ドキュメント提供+AI設定済み。その後、御社が4〜10時間でチャットウィジェットを開発・設置します。" } },
-        { "@type": "Question", "name": "「開発者プラン」には何が含まれますか？", "acceptedAnswer": { "@type": "Answer", "text": "Webhook URL、API認証情報、技術ドキュメント、そして御社の資料で設定済みのAIチャットボットを提供します。ウィジェットやサンプルコードは含まれません。チャットウィジェットのUI開発とサイトへの統合は、お客様ご自身で行っていただきます。" } },
-        { "@type": "Question", "name": "「フルサポートプラン」には何が含まれますか？", "acceptedAnswer": { "@type": "Answer", "text": "カスタムチャットウィジェット開発、御社サイトへの設置、デザインカスタマイズ（色・フォント・ロゴ）、設定済みAI（御社資料で学習済み）、優先サポート、月次レポートが含まれます。技術知識は一切不要です。" } },
-        { "@type": "Question", "name": "料金体系を教えてください", "acceptedAnswer": { "@type": "Answer", "text": "月額¥29,990（税抜・月3,000メッセージ含む）。初期費用：開発者プラン ¥0、フルサポートプラン ¥19,000〜49,000（ウィジェット複雑度による）。どちらも月額料金は同じです。" } },
-        { "@type": "Question", "name": "月3,000件のメッセージを超えたらどうなりますか？", "acceptedAnswer": { "@type": "Answer", "text": "超過分は1,000件ごとに¥1,000の追加料金で自動対応します。例：月5,000件使用の場合、基本¥29,990 + 追加¥2,000 = 合計¥31,990（税抜）です。" } },
-        { "@type": "Question", "name": "無料トライアルはありますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。開発者プラン限定で2週間の無料トライアルがあります。クレジットカード登録不要で、AIのセットアップ・API・ドキュメント提供。フルサポートプランは無料トライアルなし（カスタム開発のため）。" } },
-        { "@type": "Question", "name": "いつでも解約できますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、いつでも解約可能です。違約金なし、最低利用期間なし。開発者プランは2週間無料トライアル後に自動解約（継続しない場合）。両プランとも次回請求日の5日前までに解約すれば、翌月以降の請求はありません。" } },
-        { "@type": "Question", "name": "AIはどのように私のビジネスを学習しますか？", "acceptedAnswer": { "@type": "Answer", "text": "御社のFAQ、商品マニュアル、価格表などの資料をお送りいただくだけです。弊社がこれらの資料をAIシステムに読み込ませ、最適化します。AIは御社が提供した資料のみから回答します（インターネット検索や推測は一切しません）。" } },
-        { "@type": "Question", "name": "AIが答えを知らない場合はどうなりますか？", "acceptedAnswer": { "@type": "Answer", "text": "AIは推測や適当な回答は絶対にしません。答えがわからない場合、「その情報は持っていません」と正直に伝え、適切な連絡先（メール、電話、お問い合わせフォーム）へお客様を誘導します。" } },
-        { "@type": "Question", "name": "AIの精度はどのくらいですか？", "acceptedAnswer": { "@type": "Answer", "text": "99%以上の精度です。10万件以上の顧客対応データに基づいた実績です。AIは御社資料のみを参照するため、間違った情報を提供することはほぼありません。不明な場合は正直に「わからない」と答えます。" } },
-        { "@type": "Question", "name": "複数の言語に対応できますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。標準プランで日本語対応。英語、中国語、韓国語、フランス語、スペイン語など他言語は1言語あたり月額¥5,000で追加可能です。各言語ごとに翻訳済み資料をご提供いただくか、弊社で翻訳（別料金）します。" } },
-        { "@type": "Question", "name": "データは安全ですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。すべての通信はSSL/TLS暗号化済み。御社のデータは御社専用の隔離された環境で保管され、他社と共有されることは一切ありません。弊社は技術サポート目的でのみアクセスし、GDPR・プライバシー法に準拠しています。" } },
-        { "@type": "Question", "name": "デザインをカスタマイズできますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。「フルサポートプラン」では御社のブランドカラー、ロゴ、デザインに合わせてカスタムウィジェットを開発します。「開発者プラン」ではウィジェットを自分でゼロから開発するため、デザインは100%自由です。" } },
-        { "@type": "Question", "name": "どのようなウェブサイトで使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "WordPress、Shopify、Wix、Squarespace、カスタムHTML/ReactサイトなどすべてのWebプラットフォームで動作します。モバイル・デスクトップ両対応。JavaScriptが動作するサイトなら設置可能です。" } },
-        { "@type": "Question", "name": "応答速度はどのくらいですか？", "acceptedAnswer": { "@type": "Answer", "text": "3秒未満で回答します。簡単な質問は1〜2秒、複雑な質問でも5秒以内に回答します。御社のサーバーやインターネット接続の影響を受けません（すべてクラウドで処理）。" } }
-      ]
-    }
     </script>
 
     <script src="scripts/language-switcher.js" defer></script>

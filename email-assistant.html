@@ -26,7 +26,257 @@
     <link rel="stylesheet" href="styles/components/cookie-banner.css">
 
     <link rel="stylesheet" href="styles/fonts.css">
-    <script src="/scripts/structured-data.js"></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://azenflow.jp/email-assistant.html#service",
+      "name": "メールアシスタント",
+      "alternateName": ["AIメールアシスタント", "メール自動化", "Email Assistant", "受信トレイ自動分類"],
+      "description": "受信メールを自動で分類し、優先順位付け。重要なメールは即通知、定型的な質問にはAIが返信案を生成。メールの80%を自動処理し、月間16万円以上の人件費削減を実現。",
+      "url": "https://azenflow.jp/email-assistant.html",
+      "image": "https://azenflow.jp/images/og-share-image.jpg",
+      "provider": {
+        "@id": "https://azenflow.jp/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Japan",
+        "alternateName": "日本"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "中小企業",
+        "geographicArea": {
+          "@type": "Country",
+          "name": "JP"
+        }
+      },
+      "serviceType": "メール自動化・AI分類サービス",
+      "category": "業務効率化・カスタマーサポート自動化",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Email Integration",
+        "servicePlatform": ["Gmail", "Google Workspace", "Outlook", "Microsoft 365"]
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "メールAIアシスタント",
+        "price": "49990",
+        "priceCurrency": "JPY",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49990",
+          "priceCurrency": "JPY",
+          "unitText": "月額（税抜）",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": "3000",
+            "unitText": "メール/月"
+          }
+        },
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2025-12-31",
+        "eligibleRegion": {
+          "@type": "Country",
+          "name": "JP"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "メールアシスタント導入プラン",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Gmail / Outlook 標準プラン",
+            "description": "Gmail、Google Workspace、Outlook、Microsoft 365向け。OAuth 2.0認証でセキュア接続。1〜2営業日で本番稼働。",
+            "priceSpecification": [
+              {
+                "@type": "UnitPriceSpecification",
+                "price": "49990",
+                "priceCurrency": "JPY",
+                "unitText": "初期費用（税抜・一回のみ）"
+              },
+              {
+                "@type": "UnitPriceSpecification",
+                "price": "49990",
+                "priceCurrency": "JPY",
+                "unitText": "月額（税抜）"
+              }
+            ],
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "カスタム・レガシープラットフォーム",
+            "description": "Yahoo! Mail Business、独自IMAPサーバー、レガシーシステム（Lotus Notes等）向け。カスタムAPI統合開発込み。3〜5営業日で本番稼働。",
+            "priceSpecification": [
+              {
+                "@type": "UnitPriceSpecification",
+                "price": "99000",
+                "priceCurrency": "JPY",
+                "unitText": "初期費用（税抜・一回のみ）"
+              },
+              {
+                "@type": "UnitPriceSpecification",
+                "price": "49990",
+                "priceCurrency": "JPY",
+                "unitText": "月額（税抜）"
+              }
+            ],
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "serviceOutput": {
+        "@type": "Thing",
+        "name": "メール業務の自動化",
+        "description": "メール80%自動処理、月間16万円以上の人件費削減、1日4時間以上の時間節約、3分以内の返信生成"
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "24時間365日自動処理"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://azenflow.jp/email-assistant.html#webpage",
+      "url": "https://azenflow.jp/email-assistant.html",
+      "name": "メールアシスタント｜受信トレイを自動分類・返信生成｜AzenFlow",
+      "description": "受信メールを自動で分類し、優先順位付け。重要なメールは即通知、定型的な質問にはAIが返信案を生成。月額¥49,990でメールの80%を自動処理。",
+      "isPartOf": {
+        "@id": "https://azenflow.jp/#website"
+      },
+      "about": {
+        "@id": "https://azenflow.jp/email-assistant.html#service"
+      },
+      "mainEntity": {
+        "@id": "https://azenflow.jp/email-assistant.html#service"
+      },
+      "inLanguage": "ja-JP",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-06-01"
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://azenflow.jp/email-assistant.html#howto",
+      "name": "メールアシスタントの導入方法",
+      "description": "AzenFlowのメールアシスタントを導入する3ステップ。Gmail/Outlookなら1〜2営業日で本番稼働。技術的な作業は一切不要。",
+      "totalTime": "P2D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "JPY",
+        "value": "49990",
+        "description": "Gmail/Outlook初期費用"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "要件ヒアリング",
+          "text": "貴社のメール業務における課題とニーズを一緒に整理。どのメールをどう処理するか、どんな条件で振り分けるか、誰に通知するか、最適なルールとアクションを一緒に設計します。技術的な知識は不要です。",
+          "url": "https://azenflow.jp/email-assistant.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "私たちが全て構築",
+          "text": "AzenFlowがn8nワークフロー、AI設定、統合を全て実装。メール認証は安全な一時アクセスで共有いただくだけ。技術作業は全てこちらで実施。",
+          "url": "https://azenflow.jp/email-assistant.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "テスト＆本番稼働",
+          "text": "実際のメールでテスト（50通以上）。問題なければ承認して本番稼働。24時間365日監視開始。稼働後もAzenFlowがサポート。",
+          "url": "https://azenflow.jp/email-assistant.html#step3"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://azenflow.jp/email-assistant.html#software",
+      "name": "AzenFlow メールアシスタント",
+      "alternateName": "アゼンフロー メールアシスタント",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Email Automation Software",
+      "operatingSystem": "Cloud-based (Gmail, Outlook, IMAP)",
+      "availableOnDevice": ["Desktop", "Mobile", "Tablet"],
+      "offers": {
+        "@type": "Offer",
+        "price": "49990",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "Gmail/Outlook統合（OAuth 2.0認証）",
+        "カスタム分類6つ込み",
+        "返信時間3分以内（平均）",
+        "メール自動ブラックリスト機能",
+        "リアルタイム通知（メールアラート/カテゴリー別）",
+        "スレッド追跡・会話記憶",
+        "ドキュメント読み込み（マニュアル・FAQ対応）",
+        "月間3,000メールまで処理",
+        "自動エスカレーション（4通目以降）",
+        "AIエージェント（RAG対応）",
+        "PostgreSQL会話履歴管理",
+        "GDPR準拠・暗号化ストレージ",
+        "スパム自動除外"
+      ],
+      "screenshot": "https://azenflow.jp/images/og-share-image.jpg",
+      "author": {
+        "@id": "https://azenflow.jp/#organization"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://azenflow.jp/email-assistant.html#product",
+      "name": "AzenFlow メールアシスタント",
+      "description": "受信メールを自動分類・優先順位付け・返信生成するAIアシスタント。月額¥49,990、初期費用¥49,990〜。月間16万円以上の人件費削減を実現。",
+      "brand": {
+        "@type": "Brand",
+        "name": "AzenFlow"
+      },
+      "manufacturer": {
+        "@id": "https://azenflow.jp/#organization"
+      },
+      "category": "ソフトウェア > ビジネスソフトウェア > メール自動化",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "49990",
+        "highPrice": "99000",
+        "priceCurrency": "JPY",
+        "offerCount": "2",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://azenflow.jp/email-assistant.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://azenflow.jp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "メールアシスタント",
+          "item": "https://azenflow.jp/email-assistant.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -1303,7 +1553,7 @@
         </div>
     </section>
 
-    <section style="padding: 6rem 0; background: white;" itemscope itemtype="https://schema.org/FAQPage">
+    <section style="padding: 6rem 0; background: white;">
 
     <style>
         /* Style pour l'entête de la question (cliquable) */
@@ -1380,13 +1630,13 @@
                 <div id="setup-pricing-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
                     <div style="padding: 0 2rem;">
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="Email Assistantとは何ですか？どんなサービス？" data-en="What is Email Assistant? What does it do?">Email Assistantとは何ですか？どんなサービス？</h4>
+                                <h4 data-ja="Email Assistantとは何ですか？どんなサービス？" data-en="What is Email Assistant? What does it do?">Email Assistantとは何ですか？どんなサービス？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="Email AssistantはAIを活用したメール自動化サービスです。受信メールを自動分類し、カテゴリーに応じて通知送信や返信草案を作成します。中小企業向けに設計され、メール対応業務を80%削減し、担当者は重要な業務に集中できます。24時間365日稼働し、深夜のメールも翌朝には対応準備が整います。" data-en="Email Assistant is an AI-powered email automation service for SMEs. It automatically classifies incoming emails, sends notifications, and generates reply drafts based on categories. Designed for small businesses, it reduces email workload by 80%, letting staff focus on critical tasks. Operates 24/7—overnight emails ready by morning.">
                                         Email AssistantはAIを活用したメール自動化サービスです。受信メールを自動分類し、カテゴリーに応じて通知送信や返信草案を作成します。中小企業向けに設計され、メール対応業務を80%削減し、担当者は重要な業務に集中できます。24時間365日稼働し、深夜のメールも翌朝には対応準備が整います。
                                     </p>
@@ -1394,13 +1644,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="料金は月額いくらですか？初期費用も含めた総額は？" data-en="What's the monthly cost? What's the total including setup fees?">料金は月額いくらですか？初期費用も含めた総額は？</h4>
+                                <h4 data-ja="料金は月額いくらですか？初期費用も含めた総額は？" data-en="What's the monthly cost? What's the total including setup fees?">料金は月額いくらですか？初期費用も含めた総額は？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="月額¥49,990（税抜）です。初期設定費用も¥49,990（1回限り、Gmail・Google Workspace・Outlook・Microsoft 365の場合）、その他のメールシステムは¥99,000です。初月の総額は約¥100,000、2ヶ月目以降は月額¥49,990のみです。3,000通/月まで対応、超過時は¥1,500/500通で追加可能です。利用量が90%（2,700通）に達すると自動アラートが送信され、追加購入が可能です。" data-en="¥49,990/month (excl. tax). Setup fee also ¥49,990 one-time (Gmail/Google Workspace/Outlook/Microsoft 365) or ¥99,000 (other platforms). First month total ~¥100,000, then ¥49,990/month after. Includes 3,000 emails/month; additional 500 emails cost ¥1,500. Auto-alert at 90% usage (2,700 emails)—purchase extra volume before exceeding limit.">
                                         月額¥49,990（税抜）です。初期設定費用も¥49,990（1回限り、Gmail・Google Workspace・Outlook・Microsoft 365の場合）、その他のメールシステムは¥99,000です。初月の総額は約¥100,000、2ヶ月目以降は月額¥49,990のみです。3,000通/月まで対応、超過時は¥1,500/500通で追加可能です。利用量が90%（2,700通）に達すると自動アラートが送信され、追加購入が可能です。
                                     </p>
@@ -1408,13 +1658,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="Google Workspace（独自ドメインのGmail）でも使えますか？" data-en="Does it work with Google Workspace (custom domain Gmail)?">Google Workspace（独自ドメインのGmail）でも使えますか？</h4>
+                                <h4 data-ja="Google Workspace（独自ドメインのGmail）でも使えますか？" data-en="Does it work with Google Workspace (custom domain Gmail)?">Google Workspace（独自ドメインのGmail）でも使えますか？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、完全対応しています。Google Workspace、無料Gmail、Microsoft 365、Outlook.comすべて標準料金（初期費用¥49,990）で利用可能です。info@yourcompany.comのような独自ドメインでも追加料金は不要です。OAuth 2.0による公式API連携で、1〜2営業日で導入完了します。" data-en="Yes, fully compatible. Google Workspace, free Gmail, Microsoft 365, Outlook.com all work at standard rate (¥49,990 setup). Custom domains like info@yourcompany.com included—no extra charge. Official API via OAuth 2.0, setup complete in 1-2 business days.">
                                         はい、完全対応しています。Google Workspace、無料Gmail、Microsoft 365、Outlook.comすべて標準料金（初期費用¥49,990）で利用可能です。info@yourcompany.comのような独自ドメインでも追加料金は不要です。OAuth 2.0による公式API連携で、1〜2営業日で導入完了します。
                                     </p>
@@ -1422,13 +1672,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="導入までどのくらい時間がかかりますか？技術知識は必要？" data-en="How long does setup take? Do I need technical knowledge?">導入までどのくらい時間がかかりますか？技術知識は必要？</h4>
+                                <h4 data-ja="導入までどのくらい時間がかかりますか？技術知識は必要？" data-en="How long does setup take? Do I need technical knowledge?">導入までどのくらい時間がかかりますか？技術知識は必要？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="Gmail・Outlookは1〜2営業日、その他は3〜5営業日で完了します。技術知識は一切不要です。AzenFlowのコンサルタントが、メール接続・カテゴリー設定・AI学習・テストまで全て代行します。お客様はFAQや社内資料を共有いただくだけで、あとは弊社が設定します。" data-en="1-2 business days for Gmail/Outlook, 3-5 for others. Zero technical knowledge required. AzenFlow consultant handles everything: email connection, category setup, AI training, testing. You simply share FAQs/docs—we handle all configuration.">
                                         Gmail・Outlookは1〜2営業日、その他は3〜5営業日で完了します。技術知識は一切不要です。AzenFlowのコンサルタントが、メール接続・カテゴリー設定・AI学習・テストまで全て代行します。お客様はFAQや社内資料を共有いただくだけで、あとは弊社が設定します。
                                     </p>
@@ -1452,13 +1702,13 @@
                 <div id="features-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
                     <div style="padding: 0 2rem;">
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="AIの返信は自動送信？それとも下書き保存？" data-en="Are AI replies sent automatically or saved as drafts?">AIの返信は自動送信？それとも下書き保存？</h4>
+                                <h4 data-ja="AIの返信は自動送信？それとも下書き保存？" data-en="Are AI replies sent automatically or saved as drafts?">AIの返信は自動送信？それとも下書き保存？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="カテゴリーごとに設定可能です。「新規顧客」や「緊急対応」は3分以内に自動送信、「サポート依頼」や「見積もり」は下書き保存して担当者確認後に送信、など業務に合わせて柔軟に設定できます。誤送信を防ぎたい重要カテゴリーは下書きモード、定型的な問い合わせは自動送信モードを選択可能です。" data-en="Configurable per category. 'New Clients' or 'Urgent' can auto-send in under 3 minutes; 'Support' or 'Quotes' saved as drafts for staff review. Flexible setup matches your workflow—use draft mode for critical categories to prevent errors, auto-send for routine inquiries.">
                                         カテゴリーごとに設定可能です。「新規顧客」や「緊急対応」は3分以内に自動送信、「サポート依頼」や「見積もり」は下書き保存して担当者確認後に送信、など業務に合わせて柔軟に設定できます。誤送信を防ぎたい重要カテゴリーは下書きモード、定型的な問い合わせは自動送信モードを選択可能です。
                                     </p>
@@ -1466,13 +1716,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="メール分類カテゴリーは自由にカスタマイズできる？" data-en="Can I fully customize email classification categories?">メール分類カテゴリーは自由にカスタマイズできる？</h4>
+                                <h4 data-ja="メール分類カテゴリーは自由にカスタマイズできる？" data-en="Can I fully customize email classification categories?">メール分類カテゴリーは自由にカスタマイズできる？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、完全自由です。基本プランに6カテゴリー含まれ、業種・業務に合わせて「請求書」「見積依頼」「クレーム」「採用応募」「配送確認」など自由に設定可能です。各カテゴリーごとに通知先・自動送信/下書き・返信テンプレートを個別設定できます。7つ目以降は月額¥2,000/カテゴリーで追加可能です。" data-en="Yes, fully customizable. Base plan includes 6 categories—freely set to match your industry: 'Invoices', 'Quotes', 'Complaints', 'Job Applications', 'Delivery Confirmations', etc. Configure notifications, auto-send/draft, reply templates per category. Add more for ¥2,000/month each after 6th.">
                                         はい、完全自由です。基本プランに6カテゴリー含まれ、業種・業務に合わせて「請求書」「見積依頼」「クレーム」「採用応募」「配送確認」など自由に設定可能です。各カテゴリーごとに通知先・自動送信/下書き・返信テンプレートを個別設定できます。7つ目以降は月額¥2,000/カテゴリーで追加可能です。
                                     </p>
@@ -1480,13 +1730,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="AIは会社のFAQやマニュアルを学習できますか？" data-en="Can AI learn from our company's FAQs and manuals?">AIは会社のFAQやマニュアルを学習できますか？</h4>
+                                <h4 data-ja="AIは会社のFAQやマニュアルを学習できますか？" data-en="Can AI learn from our company's FAQs and manuals?">AIは会社のFAQやマニュアルを学習できますか？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、RAG（Retrieval-Augmented Generation）技術で御社のFAQ、製品マニュアル、利用規約、社内Notionページなどを学習させられます。AIはこれらを参照しながら正確な返信を生成するため、汎用的なAI回答ではなく、御社固有の情報に基づいた信頼できる内容を提供します。" data-en="Yes, using RAG (Retrieval-Augmented Generation), AI learns from your FAQs, product manuals, terms of service, internal Notion pages, etc. AI references these to generate accurate replies—not generic responses, but content based on YOUR specific information.">
                                         はい、RAG（Retrieval-Augmented Generation）技術で御社のFAQ、製品マニュアル、利用規約、社内Notionページなどを学習させられます。AIはこれらを参照しながら正確な返信を生成するため、汎用的なAI回答ではなく、御社固有の情報に基づいた信頼できる内容を提供します。
                                     </p>
@@ -1494,13 +1744,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="AIは過去の会話履歴を記憶できますか？" data-en="Does AI remember past conversation history?">AIは過去の会話履歴を記憶できますか？</h4>
+                                <h4 data-ja="AIは過去の会話履歴を記憶できますか？" data-en="Does AI remember past conversation history?">AIは過去の会話履歴を記憶できますか？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、完全に記憶します。同じ顧客からの2通目以降のメールでも、前回のやり取りを踏まえて返信を生成します。「先週お伝えした配送先は東京でしたが、数量はいくつですか？」のような文脈を保持した自然な会話が可能です。4通以上のやり取りが続くと、自動的に担当者へエスカレーションします。" data-en="Yes, full memory. For follow-up emails from same customer, AI generates replies considering previous exchanges. Maintains context like 'As mentioned, delivery to Tokyo—how many items?' Natural conversation flow. Auto-escalates to staff after 4+ messages.">
                                         はい、完全に記憶します。同じ顧客からの2通目以降のメールでも、前回のやり取りを踏まえて返信を生成します。「先週お伝えした配送先は東京でしたが、数量はいくつですか？」のような文脈を保持した自然な会話が可能です。4通以上のやり取りが続くと、自動的に担当者へエスカレーションします。
                                     </p>
@@ -1524,13 +1774,13 @@
                 <div id="security-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
                     <div style="padding: 0 2rem;">
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="データのセキュリティは大丈夫？過去のメールも読まれる？" data-en="Is my data secure? Will past emails be accessed?">データのセキュリティは大丈夫？過去のメールも読まれる？</h4>
+                                <h4 data-ja="データのセキュリティは大丈夫？過去のメールも読まれる？" data-en="Is my data secure? Will past emails be accessed?">データのセキュリティは大丈夫？過去のメールも読まれる？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="OAuth 2.0認証で接続し、パスワード不要で安全です。連携後に受信した新着メールのみ処理し、過去メールには一切アクセスしません。会話履歴はPostgreSQLで暗号化保存、GDPR準拠です。AzenFlowスタッフも顧客メール内容を閲覧できない設計で、プライバシーを完全保護します。" data-en="OAuth 2.0 authentication—no password needed, fully secure. Only processes NEW emails received after setup; past emails never accessed. Conversation history encrypted in PostgreSQL, GDPR compliant. AzenFlow staff cannot view email content—complete privacy protection.">
                                         OAuth 2.0認証で接続し、パスワード不要で安全です。連携後に受信した新着メールのみ処理し、過去メールには一切アクセスしません。会話履歴はPostgreSQLで暗号化保存、GDPR準拠です。AzenFlowスタッフも顧客メール内容を閲覧できない設計で、プライバシーを完全保護します。
                                     </p>
@@ -1538,13 +1788,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="Slackを使っていない場合、通知はどうなりますか？" data-en="If we don't use Slack, how do notifications work?">Slackを使っていない場合、通知はどうなりますか？</h4>
+                                <h4 data-ja="Slackを使っていない場合、通知はどうなりますか？" data-en="If we don't use Slack, how do notifications work?">Slackを使っていない場合、通知はどうなりますか？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="基本プランではリアルタイムメール通知が標準で含まれます（カテゴリー別）。Slack、Microsoft Teams、Discord、Chatwork、LINEなどのチャットツール連携は追加オプション（¥3,000〜5,000/月）です。通知なしでGmailラベル自動付与のみも可能です。導入時にご相談ください。" data-en="Base plan includes real-time email notifications as standard (by category). Chat tool integrations (Slack, Microsoft Teams, Discord, Chatwork, LINE) are optional add-ons (¥3,000-5,000/month). Gmail auto-labeling without notifications also available. Discuss during setup.">
                                         基本プランではリアルタイムメール通知が標準で含まれます（カテゴリー別）。Slack、Microsoft Teams、Discord、Chatwork、LINEなどのチャットツール連携は追加オプション（¥3,000〜5,000/月）です。通知なしでGmailラベル自動付与のみも可能です。導入時にご相談ください。
                                     </p>
@@ -1552,13 +1802,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="Google Driveへの自動保存は含まれていますか？" data-en="Is Google Drive auto-save included in the base plan?">Google Driveへの自動保存は含まれていますか？</h4>
+                                <h4 data-ja="Google Driveへの自動保存は含まれていますか？" data-en="Is Google Drive auto-save included in the base plan?">Google Driveへの自動保存は含まれていますか？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="いいえ、Google Drive自動保存は追加オプションです（月額¥3,000）。基本プランでは、メールの分類・通知・返信生成が含まれます。添付ファイルをGoogle Driveへ自動アップロードしたい場合は、オプション追加をご検討ください。手動保存は常に可能です。" data-en="No, Google Drive auto-save is an optional add-on (¥3,000/month). Base plan includes email classification, notifications, and reply generation. If you want automatic attachment uploads to Google Drive, consider adding this option. Manual saving always available.">
                                         いいえ、Google Drive自動保存は追加オプションです（月額¥3,000）。基本プランでは、メールの分類・通知・返信生成が含まれます。添付ファイルをGoogle Driveへ自動アップロードしたい場合は、オプション追加をご検討ください。手動保存は常に可能です。
                                     </p>
@@ -1582,13 +1832,13 @@
                 <div id="support-questions" class="category-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
                     <div style="padding: 0 2rem;">
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="最低契約期間は？解約時に違約金はかかる？" data-en="Is there a minimum contract period? Any cancellation fees?">最低契約期間は？解約時に違約金はかかる？</h4>
+                                <h4 data-ja="最低契約期間は？解約時に違約金はかかる？" data-en="Is there a minimum contract period? Any cancellation fees?">最低契約期間は？解約時に違約金はかかる？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="最低契約期間はありません。月額サブスクリプション制で、いつでも解約可能です。解約時の違約金も一切発生しません。解約は30日前の事前通知で翌月から停止できます。会話履歴などのデータエクスポートもサポートしますので、安心してご利用いただけます。" data-en="No minimum contract period. Monthly subscription, cancel anytime. Zero cancellation fees—30 days' notice, stops next month. We support data export (conversation history, etc.) for peace of mind.">
                                         最低契約期間はありません。月額サブスクリプション制で、いつでも解約可能です。解約時の違約金も一切発生しません。解約は30日前の事前通知で翌月から停止できます。会話履歴などのデータエクスポートもサポートしますので、安心してご利用いただけます。
                                     </p>
@@ -1596,13 +1846,13 @@
                             </div>
                         </div>
 
-                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-item">
                             <div class="faq-question-header" onclick="toggleAnswer(this)">
-                                <h4 itemprop="name" data-ja="サポートは日本語で受けられますか？" data-en="Is support available in Japanese?">サポートは日本語で受けられますか？</h4>
+                                <h4 data-ja="サポートは日本語で受けられますか？" data-en="Is support available in Japanese?">サポートは日本語で受けられますか？</h4>
                                 <span class="faq-question-icon">+</span>
                             </div>
-                            <div class="faq-answer-wrapper" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <div itemprop="text">
+                            <div class="faq-answer-wrapper">
+                                <div>
                                     <p style="color: var(--text-secondary); line-height: 1.7; margin: 0;" data-ja="はい、完全日本語対応です。AzenFlowは日本企業向けに特化したサービスで、導入相談・設定・サポートすべて日本語で対応します。メール・Slack・オンラインミーティングいずれも日本語可能です。営業時間は平日9:00-18:00（日本時間）、緊急時は24時間以内に対応します。" data-en="Yes, full Japanese support. AzenFlow specializes in Japanese businesses—consultation, setup, support all in Japanese. Email, Slack, online meetings available in Japanese. Business hours: weekdays 9am-6pm JST; emergency response within 24 hours.">
                                         はい、完全日本語対応です。AzenFlowは日本企業向けに特化したサービスで、導入相談・設定・サポートすべて日本語で対応します。メール・Slack・オンラインミーティングいずれも日本語可能です。営業時間は平日9:00-18:00（日本時間）、緊急時は24時間以内に対応します。
                                     </p>

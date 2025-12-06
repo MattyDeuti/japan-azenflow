@@ -2,9 +2,16 @@
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
+    animation: fadeInUp 0.3s ease forwards; /* Réduit de 0.8s à 0.3s pour LCP */
     will-change: transform, opacity; /* Optimiser les animations */
     contain: layout; /* Évite CLS */
+}
+
+/* Hero title - pas d'animation pour optimiser LCP */
+.hero-title.fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
 }
 
 .fade-in-right {

@@ -7,11 +7,16 @@
     contain: layout; /* Évite CLS */
 }
 
-/* Hero title - pas d'animation pour optimiser LCP */
-.hero-title.fade-in-up {
-    animation: none;
-    opacity: 1;
-    transform: none;
+/* Hero elements - pas d'animation pour optimiser LCP */
+.hero-title.fade-in-up,
+.hero-text .fade-in-up,
+.hero .hero-subtitle-optimized.fade-in-up,
+.hero .hero-description-optimized.fade-in-up,
+.hero .hero-cta.fade-in-up,
+.hero .trial-offer.fade-in-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .fade-in-right {

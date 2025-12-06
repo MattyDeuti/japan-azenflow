@@ -41,7 +41,9 @@
       "Bash(move:*)",
       "Bash(mv:*)",
       "Bash(del:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(node clean-bilingual.js:*)",
+      "Bash(node clean-lang-refs.js:*)"
     ],
     "deny": [],
     "ask": []

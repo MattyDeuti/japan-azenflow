@@ -7,21 +7,8 @@
 (function() {
     'use strict';
 
-    // ============================================
-    // FONCTION : DÉTECTER LA LANGUE ACTUELLE
-    // ============================================
-    function getCurrentLanguage() {
-        // 1. Vérifier l'attribut lang du HTML
-        const htmlLang = document.documentElement.lang;
-        if (htmlLang === 'ja') return 'ja';
-        if (htmlLang === 'en') return 'en';
-
-        // 2. Fallback : détecter depuis le navigateur
-        const browserLang = navigator.language || navigator.userLanguage;
-        return browserLang.startsWith('ja') ? 'ja' : 'en';
-    }
-
-    const currentLang = getCurrentLanguage();
+    // Langue du site (japonais uniquement)
+    const currentLang = 'ja';
 
     // ============================================
     // DONNÉES : ORGANIZATION (ENTREPRISE)

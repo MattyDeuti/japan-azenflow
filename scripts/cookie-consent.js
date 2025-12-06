@@ -117,10 +117,6 @@
                 const banner = document.getElementById('cookie-banner');
                 if (banner) {
                     banner.style.display = 'flex';
-                    // Apply translations if language switcher is active
-                    if (window.LanguageSwitcher && window.LanguageSwitcher.currentLang) {
-                        window.LanguageSwitcher.applyTranslations();
-                    }
                 } else {
                     console.warn('[Cookie Consent] Banner element not found');
                 }

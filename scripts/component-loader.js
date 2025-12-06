@@ -20,12 +20,6 @@
 
             if (element) {
                 element.innerHTML = html;
-
-                // Appliquer immédiatement la langue si LanguageSwitcher est déjà chargé
-                if (window.LanguageSwitcher && typeof window.LanguageSwitcher.translateElement === 'function') {
-                    window.LanguageSwitcher.translateElement(element);
-                }
-
                 return true;
             } else {
                 console.error(`Element with id "${elementId}" not found`);

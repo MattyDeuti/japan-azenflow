@@ -154,22 +154,14 @@
 
     // Notification system
     function showNotification(type = 'success') {
-        const lang = window.LanguageSwitcher?.getCurrentLanguage() || 'ja';
-        
         const messages = {
-            success: {
-                ja: 'お問い合わせありがとうございます。担当者より折り返しご連絡させていただきます。',
-                en: 'Thank you for your inquiry. We will contact you shortly.'
-            },
-            error: {
-                ja: 'エラーが発生しました。もう一度お試しください。',
-                en: 'An error occurred. Please try again.'
-            }
+            success: 'お問い合わせありがとうございます。担当者より折り返しご連絡させていただきます。',
+            error: 'エラーが発生しました。もう一度お試しください。'
         };
 
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
-        notification.textContent = messages[type][lang];
+        notification.textContent = messages[type];
         notification.style.cssText = `
             position: fixed;
             top: 100px;

@@ -35,7 +35,7 @@
     // ==================== UTILITY FUNCTIONS ====================
 
     function getCurrentLanguage() {
-        return window.LanguageSwitcher?.getCurrentLanguage() || 'ja';
+        return 'ja';
     }
 
     function showError(inputElement, errorMessage) {

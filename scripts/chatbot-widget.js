@@ -50,10 +50,10 @@
     }
 
     /**
-     * Get current language
+     * Get current language (Japanese only)
      */
     function getCurrentLanguage() {
-        return window.LanguageSwitcher?.getCurrentLanguage() || 'ja';
+        return 'ja';
     }
 
     /**
@@ -969,23 +969,6 @@
         }, 500);
     }
 
-    /**
-     * Update chatbot text when language changes
-     */
-    function updateChatbotLanguage() {
-        // Note: We don't clear history on language change anymore
-        // The AI should respond in the new language automatically
-        console.log('[Chatbot] Language changed to:', getCurrentLanguage());
-    }
-
-    /**
-     * Listen for language changes
-     */
-    document.addEventListener('click', (e) => {
-        if (e.target.closest('#langSwitcher')) {
-            setTimeout(updateChatbotLanguage, 100);
-        }
-    });
 
     /**
      * Initialize chatbot

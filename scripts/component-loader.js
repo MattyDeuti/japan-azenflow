@@ -62,23 +62,23 @@
 
     // Initialiser le chargement des composants
     async function initComponents() {
-        // Charger le header
-        const headerLoaded = await loadComponent('header-placeholder', 'components/header.html');
+        // Charger le header (chemin absolu pour fonctionner depuis tous les sous-dossiers)
+        const headerLoaded = await loadComponent('header-placeholder', '/components/header.html');
 
         // Charger le footer
-        const footerLoaded = await loadComponent('footer-placeholder', 'components/footer.html');
+        const footerLoaded = await loadComponent('footer-placeholder', '/components/footer.html');
 
         // Charger la bulle flottante CTA
-        const floatingCtaLoaded = await loadComponent('floating-cta-placeholder', 'components/floating-cta.html');
+        const floatingCtaLoaded = await loadComponent('floating-cta-placeholder', '/components/floating-cta.html');
 
         // Charger le bouton back-to-top
-        const backToTopLoaded = await loadComponent('back-to-top-placeholder', 'components/back-to-top.html');
+        const backToTopLoaded = await loadComponent('back-to-top-placeholder', '/components/back-to-top.html');
 
         // Charger le chatbot widget
-        const chatbotLoaded = await loadComponent('chatbot-widget-placeholder', 'components/chatbot-widget.html');
+        const chatbotLoaded = await loadComponent('chatbot-widget-placeholder', '/components/chatbot-widget.html');
 
         // Charger la bannière de cookies
-        const cookieBannerLoaded = await loadComponent('cookie-banner-placeholder', 'components/cookie-banner.html');
+        const cookieBannerLoaded = await loadComponent('cookie-banner-placeholder', '/components/cookie-banner.html');
 
         // Si tous sont chargés, initialiser les fonctionnalités
         if (headerLoaded && footerLoaded && floatingCtaLoaded && backToTopLoaded && chatbotLoaded && cookieBannerLoaded) {

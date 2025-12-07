@@ -335,8 +335,10 @@ html, body {
     position: relative;
     border-radius: var(--border-radius-xl);
     overflow: hidden;
-    background: #FFFFFF;
-    border: 2px solid #E5E7EB;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(139, 111, 71, 0.15);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
 }
 
@@ -1156,7 +1158,9 @@ html, body {
     align-items: center;
     gap: 1rem;
     padding: 0.75rem 1rem; /* Légèrement réduit */
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     transition: all 0.2s ease;
@@ -1334,7 +1338,10 @@ html, body {
 }
 
 .pillar-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 111, 71, 0.1);
     border-radius: 24px;
     padding: 3rem 2.5rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
@@ -1415,7 +1422,7 @@ html, body {
 /* ==================== COMPARISON SECTION ==================== */
 .comparison-section {
     padding: 8rem 0;
-    background: white;
+    /* Background transparent pour laisser voir le gradient du site */
 }
 
 .comparison-table-wrapper {
@@ -1429,7 +1436,9 @@ html, body {
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .comparison-table thead {
@@ -1510,7 +1519,7 @@ html, body {
 /* ==================== BENEFITS SECTION ==================== */
 .benefits-section {
     padding: 8rem 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.04) 0%, rgba(118, 75, 162, 0.04) 100%);
+    /* Background transparent pour laisser voir le gradient du site */
 }
 
 .benefits-grid {
@@ -1521,7 +1530,10 @@ html, body {
 }
 
 .benefit-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 111, 71, 0.1);
     border-radius: 20px;
     padding: 2.5rem 2rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
@@ -1793,7 +1805,7 @@ html, body {
     margin: 0;
     padding: 1rem 1.25rem;
     padding-left: 3rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-lg);
@@ -2834,7 +2846,7 @@ html, body {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9375rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .detailed-comparison-table thead {

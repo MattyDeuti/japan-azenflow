@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17R5RQY64S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-17R5RQY64S');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Principal -->
+    <title>LINEチャットボット導入完全ガイド【2025年最新版】｜仕組み・費用・作り方を徹底解説</title>
+    <meta name="description" content="LINE公式アカウントにAIチャットボットを導入する方法を徹底解説。シナリオ型・AI型の違い、導入費用の相場（月額19,990円〜）、準備から公開までの全ステップ、業界別活用事例まで網羅した完全ガイド。">
+    <meta name="keywords" content="LINEチャットボット, LINE Bot 導入, LINE公式アカウント 自動化, AIチャットボット 作り方, チャットボット 費用, 24時間対応, 問い合わせ自動化, 中小企業 DX">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AzenFlow Japan">
+
+    <link rel="canonical" href="https://azenflow.jp/column/line-chatbot-kanzen-guide/">
+    <link rel="help" href="https://azenflow.jp/llms.txt" type="text/plain" title="LLMs Information">
+    <link rel="icon" href="/images/favicon.webp" type="image/webp">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://azenflow.jp/column/line-chatbot-kanzen-guide/">
+    <meta property="og:title" content="LINEチャットボット導入完全ガイド【2025年最新版】｜仕組み・費用・作り方">
+    <meta property="og:description" content="LINE公式アカウントにAIチャットボットを導入する方法を徹底解説。費用相場、導入手順、活用事例まで網羅。">
+    <meta property="og:site_name" content="AzenFlow">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="article:published_time" content="2025-01-20">
+    <meta property="article:modified_time" content="2025-01-20">
+    <meta property="article:author" content="AzenFlow Japan">
+    <meta property="article:section" content="ガイド">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LINEチャットボット導入完全ガイド【2025年最新版】">
+    <meta name="twitter:description" content="LINE公式アカウントにAIチャットボットを導入する方法を徹底解説。費用相場、導入手順、活用事例まで。">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    <link rel="stylesheet" href="/styles/components/floating-cta.css">
+    <link rel="stylesheet" href="/styles/components/back-to-top.css">
+    <link rel="stylesheet" href="/styles/components/cookie-banner.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+
+    <!-- Article Styles -->
+    <style>
+        /* ==================== ARTICLE PAGE STYLES ==================== */
+        
+        .article-page {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 50%, #FFFFFF 100%);
+        }
+
+        /* Hero Section */
+        .article-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%);
+        }
+
+        .article-hero .container {
+            max-width: 900px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .breadcrumb .separator {
+            color: var(--text-light);
+        }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .popular-badge {
+            background: linear-gradient(135deg, #E53E3E 0%, #F56565 100%);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .publish-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-excerpt {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: 40px 0;
+            background: white;
+        }
+
+        .toc-section .container {
+            max-width: 900px;
+        }
+
+        .toc-box {
+            background: #F8FAFB;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .toc-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        .toc-list .toc-h3 {
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 60px 0;
+            background: linear-gradient(180deg, white 0%, #F0F9FF 50%, white 100%);
+        }
+
+        .article-content .container {
+            max-width: 800px;
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-primary);
+        }
+
+        .article-body h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 0.75rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .article-body strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.08) 0%, rgba(166, 138, 92, 0.08) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .highlight-box p:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #EFF8FF;
+            border: 1px solid #BFDBFE;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .info-box-title {
+            font-weight: 700;
+            color: #1E40AF;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #1E3A5F;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #FEF3C7;
+            border: 1px solid #F59E0B;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .warning-box-title {
+            font-weight: 700;
+            color: #92400E;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #78350F;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #F8FAFB;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(139, 111, 71, 0.05);
+        }
+
+        /* Internal Link Box */
+        .internal-link-box {
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .internal-link-box:hover {
+            background: rgba(139, 111, 71, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.15);
+        }
+
+        .internal-link-label {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .internal-link-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .internal-link-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* CTA Box in Article */
+        .article-cta-box {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .article-cta-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0 1rem;
+        }
+
+        .article-cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-cta-box .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-cta-box .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-cta-badges {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Related Articles */
+        .related-section {
+            padding: 60px 0;
+            background: #F8FAFB;
+        }
+
+        .related-section .container {
+            max-width: 900px;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .related-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .related-card-category {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-hero {
+                padding: 100px 0 40px;
+            }
+
+            .article-title {
+                font-size: 1.75rem;
+            }
+
+            .article-excerpt {
+                font-size: 1rem;
+            }
+
+            .article-body {
+                font-size: 1rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.2rem;
+            }
+
+            .toc-box {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-cta-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .highlight-box,
+            .info-box,
+            .warning-box {
+                padding: 1.25rem 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://azenflow.jp/column/line-chatbot-kanzen-guide/#article",
+                "headline": "LINEチャットボット導入完全ガイド【2025年最新版】｜仕組み・費用・作り方を徹底解説",
+                "description": "LINE公式アカウントにAIチャットボットを導入する方法を徹底解説。シナリオ型・AI型の違い、導入費用の相場、準備から公開までの全ステップ、業界別活用事例まで網羅した完全ガイド。",
+                "datePublished": "2025-01-20",
+                "dateModified": "2025-01-20",
+                "author": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://azenflow.jp/column/line-chatbot-kanzen-guide/"
+                },
+                "articleSection": "ガイド",
+                "keywords": ["LINEチャットボット", "LINE Bot", "導入ガイド", "費用", "作り方", "AI自動応答"],
+                "wordCount": 4500,
+                "inLanguage": "ja-JP"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://azenflow.jp/column/line-chatbot-kanzen-guide/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "ホーム",
+                        "item": "https://azenflow.jp/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "コラム",
+                        "item": "https://azenflow.jp/column/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "LINEチャットボット導入完全ガイド",
+                        "item": "https://azenflow.jp/column/line-chatbot-kanzen-guide/"
+                    }
+                ]
+            },
+            {
+                "@type": "HowTo",
+                "@id": "https://azenflow.jp/column/line-chatbot-kanzen-guide/#howto",
+                "name": "LINEチャットボットの導入方法",
+                "description": "LINE公式アカウントにAIチャットボットを導入する手順",
+                "totalTime": "P1D",
+                "estimatedCost": {
+                    "@type": "MonetaryAmount",
+                    "currency": "JPY",
+                    "value": "19990",
+                    "minValue": "19990",
+                    "maxValue": "50000"
+                },
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "LINE公式アカウントの準備",
+                        "text": "LINE公式アカウントを作成または既存アカウントを確認する"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "チャットボットサービスの選定",
+                        "text": "シナリオ型・AI型・ハイブリッド型から最適なサービスを選ぶ"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "FAQ・資料の準備",
+                        "text": "よくある質問、製品情報、営業時間などの資料を整理する"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "連携設定",
+                        "text": "LINE公式アカウントとチャットボットを連携させる"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 5,
+                        "name": "テストと公開",
+                        "text": "動作テストを行い、問題なければ公開する"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="article-page">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <div id="floating-cta-placeholder"></div>
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="article-hero">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <a href="/">ホーム</a>
+                <span class="separator">›</span>
+                <a href="/column/">コラム</a>
+                <span class="separator">›</span>
+                <span>LINEチャットボット導入ガイド</span>
+            </nav>
+
+            <!-- Article Meta -->
+            <div class="article-meta-top">
+                <span class="category-badge">ガイド</span>
+                <span class="popular-badge">人気</span>
+                <time class="publish-date" datetime="2025-01-20">2025.01.20</time>
+            </div>
+
+            <!-- Title -->
+            <h1 class="article-title">LINEチャットボット導入完全ガイド【2025年最新版】｜仕組み・費用・作り方を徹底解説</h1>
+
+            <!-- Excerpt -->
+            <p class="article-excerpt">
+                LINE公式アカウントにAIチャットボットを導入する方法を、初心者にもわかりやすく解説します。シナリオ型とAI型の違い、導入費用の相場、準備から公開までの全ステップ、業界別の活用事例まで、この記事を読めばLINEチャットボット導入のすべてがわかります。
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== TABLE OF CONTENTS ==================== -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-box">
+                <h2 class="toc-title">📋 目次</h2>
+                <ol class="toc-list">
+                    <li><a href="#what-is">LINEチャットボットとは？基本の仕組みを解説</a></li>
+                    <li><a href="#types">チャットボットの種類｜シナリオ型・AI型・ハイブリッド型の違い</a></li>
+                    <li><a href="#benefits">LINEチャットボット導入のメリット5選</a></li>
+                    <li><a href="#cost">導入費用の相場｜初期費用・月額・隠れコスト</a></li>
+                    <li><a href="#how-to">導入の流れ｜準備から公開までの5ステップ</a></li>
+                    <li><a href="#use-cases">業界別の活用事例</a></li>
+                    <li><a href="#failures">よくある失敗パターンと回避方法</a></li>
+                    <li><a href="#choose">自社に合ったサービスの選び方</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ARTICLE CONTENT ==================== -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-body">
+
+                <!-- Section 1 -->
+                <h2 id="what-is">LINEチャットボットとは？基本の仕組みを解説</h2>
+
+                <p>LINEチャットボットとは、LINE公式アカウントに導入することで、顧客からのメッセージに自動で応答するプログラムのことです。日本では約9,600万人がLINEを利用しており、企業と顧客のコミュニケーションツールとして最も身近な存在となっています。</p>
+
+                <p>従来、LINE公式アカウントへの問い合わせは、スタッフが一件一件手動で対応する必要がありました。しかし、チャットボットを導入することで、よくある質問への回答、営業時間の案内、予約の受付などを24時間365日、自動で行えるようになります。</p>
+
+                <h3>LINEチャットボットの基本的な仕組み</h3>
+
+                <p>LINEチャットボットの動作は、大きく分けて以下の流れで行われます。</p>
+
+                <ol>
+                    <li><strong>メッセージ受信</strong>：顧客がLINE公式アカウントにメッセージを送信</li>
+                    <li><strong>内容解析</strong>：チャットボットがメッセージの内容を解析し、意図を理解</li>
+                    <li><strong>回答生成</strong>：事前に設定したルールやAIによって最適な回答を生成</li>
+                    <li><strong>メッセージ送信</strong>：生成した回答を顧客に送信（通常3秒以内）</li>
+                </ol>
+
+                <p>この一連の流れが自動で行われるため、スタッフが対応しなくても顧客は即座に回答を得ることができます。</p>
+
+                <h3>LINE公式アカウントの「自動応答」との違い</h3>
+
+                <p>LINE公式アカウントには標準で「自動応答メッセージ」機能が搭載されていますが、これはチャットボットとは異なります。</p>
+
+                <p>自動応答メッセージは、特定のキーワードに対して決まった回答を返す単純な機能です。例えば「営業時間」というキーワードに対して「営業時間は10:00〜19:00です」と返す、といった具合です。</p>
+
+                <p>一方、AIを搭載したチャットボットは、文脈を理解して自然な会話ができます。「明日の午後って空いてますか？」のような曖昧な質問にも、予約状況を確認して適切に回答できるのです。</p>
+
+                <div class="highlight-box">
+                    <p><strong>ポイント</strong>：LINE公式アカウントの標準機能だけでは、複雑な問い合わせや自然な会話には対応できません。顧客対応を本格的に自動化したい場合は、専用のチャットボットサービスの導入が必要です。</p>
+                </div>
+
+
+                <!-- Section 2 -->
+                <h2 id="types">チャットボットの種類｜シナリオ型・AI型・ハイブリッド型の違い</h2>
+
+                <p>LINEチャットボットは、その仕組みによって大きく3つの種類に分けられます。それぞれの特徴を理解し、自社のニーズに合ったものを選ぶことが重要です。</p>
+
+                <h3>シナリオ型（ルールベース型）</h3>
+
+                <p>シナリオ型は、あらかじめ設定したルール（シナリオ）に基づいて回答するチャットボットです。「Aという質問が来たらBと答える」というルールを大量に設定することで、様々な問い合わせに対応します。</p>
+
+                <p><strong>メリット</strong></p>
+                <ul>
+                    <li>回答内容を完全にコントロールできる</li>
+                    <li>想定外の回答をするリスクがない</li>
+                    <li>導入コストが比較的安い</li>
+                </ul>
+
+                <p><strong>デメリット</strong></p>
+                <ul>
+                    <li>想定外の質問には対応できない</li>
+                    <li>シナリオの作成・更新に手間がかかる</li>
+                    <li>会話が機械的になりがち</li>
+                </ul>
+
+                <h3>AI型（機械学習型）</h3>
+
+                <p>AI型は、人工知能（AI）を活用して、ユーザーの質問の意図を理解し、適切な回答を生成するチャットボットです。事前に学習させた知識（FAQ、マニュアル、製品情報など）をもとに、自然な会話で回答します。</p>
+
+                <p><strong>メリット</strong></p>
+                <ul>
+                    <li>自然な会話ができる</li>
+                    <li>想定外の質問にも柔軟に対応</li>
+                    <li>シナリオ作成の手間が少ない</li>
+                    <li>学習データを更新するだけで回答内容を改善できる</li>
+                </ul>
+
+                <p><strong>デメリット</strong></p>
+                <ul>
+                    <li>導入コストがやや高め</li>
+                    <li>AIの回答精度に依存する</li>
+                    <li>学習データの品質が重要</li>
+                </ul>
+
+                <h3>ハイブリッド型</h3>
+
+                <p>ハイブリッド型は、シナリオ型とAI型を組み合わせたチャットボットです。基本的な質問はシナリオで対応し、複雑な質問はAIが処理するという使い分けができます。</p>
+
+                <p><strong>メリット</strong></p>
+                <ul>
+                    <li>シナリオ型とAI型の良いとこ取りができる</li>
+                    <li>重要な回答は確実にコントロールできる</li>
+                    <li>柔軟性と正確性のバランスが取れる</li>
+                </ul>
+
+                <p><strong>デメリット</strong></p>
+                <ul>
+                    <li>設定が複雑になることがある</li>
+                    <li>コストが高くなる傾向がある</li>
+                </ul>
+
+                <h3>3種類の比較表</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>シナリオ型</th>
+                            <th>AI型</th>
+                            <th>ハイブリッド型</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>会話の自然さ</td>
+                            <td>△ 機械的</td>
+                            <td>◎ 自然</td>
+                            <td>○ やや自然</td>
+                        </tr>
+                        <tr>
+                            <td>想定外への対応</td>
+                            <td>✕ 不可</td>
+                            <td>◎ 可能</td>
+                            <td>○ 部分的に可能</td>
+                        </tr>
+                        <tr>
+                            <td>回答の正確性</td>
+                            <td>◎ 高い</td>
+                            <td>○ AIに依存</td>
+                            <td>◎ 高い</td>
+                        </tr>
+                        <tr>
+                            <td>導入コスト</td>
+                            <td>◎ 安い</td>
+                            <td>△ やや高い</td>
+                            <td>△ やや高い</td>
+                        </tr>
+                        <tr>
+                            <td>運用の手間</td>
+                            <td>△ 多い</td>
+                            <td>◎ 少ない</td>
+                            <td>○ 中程度</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a href="/column/chatbot-hikaku/" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">【2025年版】AIチャットボット比較｜種類別の特徴とAzenFlowの強み</div>
+                    <p class="internal-link-desc">各チャットボットサービスの詳細な比較と、選び方のポイントを解説しています。</p>
+                </a>
+
+
+                <!-- Section 3 -->
+                <h2 id="benefits">LINEチャットボット導入のメリット5選</h2>
+
+                <p>LINEチャットボットを導入することで、企業は多くのメリットを得ることができます。ここでは、特に重要な5つのメリットを解説します。</p>
+
+                <h3>1. 24時間365日の顧客対応が可能に</h3>
+
+                <p>チャットボットは休むことなく稼働するため、深夜や休日の問い合わせにも即座に対応できます。これにより、営業時間外に発生していた「機会損失」を防ぐことができます。</p>
+
+                <p>実際、消費者の約40%は営業時間外に問い合わせを行うというデータがあります。これまで翌営業日まで待たせていた顧客に、即座に回答を提供できるようになるのは大きなメリットです。</p>
+
+                <h3>2. 問い合わせ対応の80%を自動化</h3>
+
+                <p>多くの企業では、問い合わせの内容は似たようなものが繰り返されています。「営業時間は？」「料金はいくら？」「予約したい」といった定型的な質問が全体の80%以上を占めることも珍しくありません。</p>
+
+                <p>チャットボットはこれらの定型的な問い合わせを自動で処理し、スタッフは複雑な相談や重要な商談に集中できるようになります。</p>
+
+                <h3>3. 人件費の大幅削減</h3>
+
+                <p>カスタマーサポートの人件費は、多くの企業にとって大きな負担です。チャットボットを導入することで、問い合わせ対応に必要な人員を削減できます。</p>
+
+                <p>例えば、月額19,990円のチャットボットで、パートタイムスタッフ1人分（時給1,200円×4時間×20日=約96,000円）の業務を代替できれば、年間約90万円のコスト削減になります。</p>
+
+                <h3>4. 顧客満足度の向上</h3>
+
+                <p>顧客は「待たされること」を最も嫌います。チャットボットは3秒以内に回答を返すため、顧客のストレスを大幅に軽減できます。</p>
+
+                <p>また、深夜や休日でも対応できることで、「いつでも相談できる」という安心感を顧客に提供できます。これが顧客満足度の向上、ひいてはリピート率の向上につながります。</p>
+
+                <h3>5. 顧客データの蓄積と分析</h3>
+
+                <p>チャットボットを通じた会話は、すべてデータとして蓄積されます。どのような質問が多いのか、どの時間帯に問い合わせが集中するのか、顧客がどのような言葉を使っているのか――これらのデータは、商品開発やマーケティング戦略に活用できます。</p>
+
+                <a href="/column/hitodebusoku-ai-guide/" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">人手不足をAIで解決｜中小企業の業務自動化完全ガイド</div>
+                    <p class="internal-link-desc">チャットボット以外のAI活用方法も含めた、業務自動化の総合ガイドです。</p>
+                </a>
+
+
+                <!-- Section 4 -->
+                <h2 id="cost">導入費用の相場｜初期費用・月額・隠れコスト</h2>
+
+                <p>LINEチャットボットの導入を検討する際、最も気になるのが費用でしょう。ここでは、費用の相場と、見落としがちな隠れコストについて解説します。</p>
+
+                <h3>費用の構成要素</h3>
+
+                <p>チャットボットの費用は、主に以下の3つで構成されます。</p>
+
+                <ul>
+                    <li><strong>初期費用</strong>：導入時に一度だけ発生する費用（設定、カスタマイズなど）</li>
+                    <li><strong>月額費用</strong>：毎月発生する利用料金</li>
+                    <li><strong>追加オプション費用</strong>：機能追加や従量課金など</li>
+                </ul>
+
+                <h3>費用相場の目安</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>サービスタイプ</th>
+                            <th>初期費用</th>
+                            <th>月額費用</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>シナリオ型（低価格帯）</td>
+                            <td>0円〜50,000円</td>
+                            <td>5,000円〜15,000円</td>
+                        </tr>
+                        <tr>
+                            <td>AI型（中価格帯）</td>
+                            <td>0円〜100,000円</td>
+                            <td>15,000円〜50,000円</td>
+                        </tr>
+                        <tr>
+                            <td>エンタープライズ向け</td>
+                            <td>300,000円〜</td>
+                            <td>100,000円〜</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>AzenFlowの料金体系</h3>
+
+                <p>参考として、AzenFlowのLINEチャットボットサービスの料金をご紹介します。</p>
+
+                <div class="highlight-box">
+                    <p><strong>AzenFlow LINEチャットボット</strong></p>
+                    <p>初期費用：<strong>0円</strong></p>
+                    <p>月額費用：<strong>19,990円（税抜）</strong></p>
+                    <p>含まれる内容：月3,000メッセージ、7,500文字のナレッジベース、24時間対応、日本語サポート、月2回のナレッジベース更新</p>
+                    <p>無料トライアル：<strong>2週間</strong>（クレジットカード不要）</p>
+                </div>
+
+                <h3>見落としがちな隠れコスト</h3>
+
+                <p>チャットボットの導入を検討する際、以下のような「隠れコスト」にも注意が必要です。</p>
+
+                <ul>
+                    <li><strong>メッセージ従量課金</strong>：月間メッセージ数を超えると追加料金が発生するサービスが多い</li>
+                    <li><strong>シナリオ作成費用</strong>：自社で作成する場合は人件費、外注する場合は制作費が発生</li>
+                    <li><strong>更新・メンテナンス費用</strong>：FAQの追加や修正に費用がかかる場合がある</li>
+                    <li><strong>LINE公式アカウントの費用</strong>：月間メッセージ数によってはLINE側の費用も発生</li>
+                </ul>
+
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ 注意点</div>
+                    <p>「初期費用0円」をうたっていても、シナリオ作成やカスタマイズに別途費用がかかるサービスもあります。契約前に、総額でいくらかかるのかを必ず確認しましょう。</p>
+                </div>
+
+                <a href="/column/chatbot-hiyou-roi/" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">チャットボット導入費用の相場｜料金体系・隠れコスト・ROI計算方法</div>
+                    <p class="internal-link-desc">費用対効果の計算方法や投資回収期間のシミュレーションを詳しく解説しています。</p>
+                </a>
+
+
+                <!-- Section 5 -->
+                <h2 id="how-to">導入の流れ｜準備から公開までの5ステップ</h2>
+
+                <p>LINEチャットボットの導入は、以下の5つのステップで進めます。AzenFlowの場合、最短1日で導入が完了します。</p>
+
+                <h3>ステップ1：LINE公式アカウントの準備</h3>
+
+                <p>まず、LINE公式アカウントが必要です。すでにお持ちの場合はそのまま使用できます。まだ作成していない場合は、LINE公式アカウントの管理画面から無料で作成できます。</p>
+
+                <p>チャットボットとの連携には、「Messaging API」の設定が必要です。これは管理画面から数クリックで有効化できます。不安な方は、チャットボットサービスのサポートに相談すれば、設定を代行してもらえることが多いです。</p>
+
+                <h3>ステップ2：チャットボットサービスの選定</h3>
+
+                <p>次に、どのチャットボットサービスを使うかを決めます。選定のポイントは以下の通りです。</p>
+
+                <ul>
+                    <li>自社の問い合わせ内容に合った種類（シナリオ型/AI型）か</li>
+                    <li>予算に合った価格帯か</li>
+                    <li>導入サポートが充実しているか</li>
+                    <li>無料トライアルがあるか</li>
+                </ul>
+
+                <h3>ステップ3：FAQ・資料の準備</h3>
+
+                <p>チャットボットが回答するための「知識」を準備します。具体的には以下のような資料です。</p>
+
+                <ul>
+                    <li>よくある質問と回答（FAQ）</li>
+                    <li>製品・サービスの説明資料</li>
+                    <li>営業時間、所在地、連絡先などの基本情報</li>
+                    <li>料金表</li>
+                    <li>予約や問い合わせの受付ルール</li>
+                </ul>
+
+                <p>AI型チャットボットの場合、これらの資料をそのまま読み込ませるだけで、自動的に回答を生成できるようになります。シナリオ型の場合は、質問と回答のペアを一つずつ設定する必要があります。</p>
+
+                <h3>ステップ4：連携設定とカスタマイズ</h3>
+
+                <p>LINE公式アカウントとチャットボットを連携させ、必要なカスタマイズを行います。</p>
+
+                <ul>
+                    <li>LINE公式アカウントとの連携設定</li>
+                    <li>チャットボットの口調・話し方の設定</li>
+                    <li>人間のスタッフへの転送条件の設定</li>
+                    <li>送信するリンクや資料の設定</li>
+                </ul>
+
+                <p>AzenFlowでは、これらの設定はすべて弊社が代行します。お客様は資料を共有し、希望を伝えるだけで完了です。</p>
+
+                <h3>ステップ5：テストと公開</h3>
+
+                <p>設定が完了したら、実際に動作テストを行います。想定される質問をいくつか送信し、適切に回答できるかを確認します。</p>
+
+                <p>問題がなければ、公開（本番稼働）です。最初は様子を見ながら運用し、必要に応じて回答内容を調整していきます。</p>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 AzenFlowの場合</div>
+                    <p>資料をお送りいただいてから最短1日で導入が完了します。技術的な知識は一切不要です。また、2週間の無料トライアル期間があるため、リスクなく試すことができます。</p>
+                </div>
+
+
+                <!-- Article CTA -->
+                <div class="article-cta-box">
+                    <h3>LINEチャットボットの導入をお考えですか？</h3>
+                    <p>AzenFlowなら、初期費用0円・月額19,990円で、最短1日で導入完了。<br>まずは2週間の無料トライアルでお試しください。</p>
+                    <a href="/contact.html" class="cta-button">無料相談を予約する</a>
+                    <div class="article-cta-badges">✓ 初期費用0円 ✓ 2週間無料トライアル ✓ クレジットカード不要</div>
+                </div>
+
+
+                <!-- Section 6 -->
+                <h2 id="use-cases">業界別の活用事例</h2>
+
+                <p>LINEチャットボットは、様々な業界で活用されています。ここでは、代表的な業界別の活用事例を紹介します。</p>
+
+                <h3>飲食店</h3>
+
+                <p>飲食店では、以下のような用途でチャットボットが活用されています。</p>
+
+                <ul>
+                    <li><strong>予約受付の自動化</strong>：日時、人数、コースの選択を自動で受け付け</li>
+                    <li><strong>メニュー・料金の案内</strong>：写真付きでメニューを紹介</li>
+                    <li><strong>営業時間・アクセスの案内</strong>：定休日や駐車場情報も自動回答</li>
+                    <li><strong>リマインド送信</strong>：予約前日に自動でリマインドを送信し、無断キャンセルを防止</li>
+                </ul>
+
+                <p>特に、電話対応の負担が大きい繁忙時間帯に、チャットボットが問い合わせを引き受けることで、スタッフは接客に集中できるようになります。</p>
+
+                <h3>クリニック・医療機関</h3>
+
+                <p>クリニックでは、以下のような活用が効果的です。</p>
+
+                <ul>
+                    <li><strong>診療時間・休診日の案内</strong>：曜日ごとの診療時間を自動回答</li>
+                    <li><strong>予約受付</strong>：空き状況の確認と予約の受付</li>
+                    <li><strong>持ち物・準備の案内</strong>：初診時に必要なもの、検査前の注意事項など</li>
+                    <li><strong>症状に応じた案内</strong>：「熱がある」→「発熱外来の予約方法」など</li>
+                </ul>
+
+                <h3>美容サロン</h3>
+
+                <p>美容サロンでは、以下のような活用が見られます。</p>
+
+                <ul>
+                    <li><strong>メニュー・料金の案内</strong>：カット、カラー、パーマなどの料金を自動回答</li>
+                    <li><strong>予約受付</strong>：担当スタイリストの指名も含めた予約受付</li>
+                    <li><strong>キャンセル待ち登録</strong>：希望日時のキャンセル待ちを自動で登録</li>
+                    <li><strong>リピート促進</strong>：前回来店から一定期間経過した顧客へ自動メッセージ</li>
+                </ul>
+
+                <h3>ECサイト・小売店</h3>
+
+                <p>EC・小売では、以下のような活用が効果的です。</p>
+
+                <ul>
+                    <li><strong>商品の問い合わせ対応</strong>：在庫確認、サイズ・色の質問に自動回答</li>
+                    <li><strong>注文状況の確認</strong>：配送状況や到着予定日を自動で案内</li>
+                    <li><strong>返品・交換の案内</strong>：手続き方法を自動で説明</li>
+                    <li><strong>おすすめ商品の紹介</strong>：好みに合わせた商品をレコメンド</li>
+                </ul>
+
+                <a href="/column/gyoshu-betsu-chatbot/" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">業種別AIチャットボット活用ガイド｜飲食店・クリニック・美容サロン</div>
+                    <p class="internal-link-desc">各業種の詳細な活用方法と導入効果を解説しています。</p>
+                </a>
+
+
+                <!-- Section 7 -->
+                <h2 id="failures">よくある失敗パターンと回避方法</h2>
+
+                <p>チャットボットの導入で失敗しないために、よくある失敗パターンとその回避方法を紹介します。</p>
+
+                <h3>失敗パターン1：回答できない質問が多すぎる</h3>
+
+                <p><strong>原因</strong>：準備したFAQや資料が不十分で、想定外の質問に回答できない。</p>
+
+                <p><strong>回避方法</strong>：導入前に、過去の問い合わせ履歴を分析し、よくある質問を網羅的に洗い出す。また、AI型チャットボットを選べば、想定外の質問にも柔軟に対応できます。</p>
+
+                <h3>失敗パターン2：人間への転送がうまくいかない</h3>
+
+                <p><strong>原因</strong>：チャットボットが回答できない質問を、適切に人間のスタッフへ転送できない。</p>
+
+                <p><strong>回避方法</strong>：「人間に転送する条件」を明確に設定する。例えば「クレームを含む内容」「3回以上やり取りしても解決しない場合」などのルールを決めておく。</p>
+
+                <h3>失敗パターン3：導入後のメンテナンスを怠る</h3>
+
+                <p><strong>原因</strong>：商品情報や営業時間が変わっても、チャットボットの回答内容を更新しない。</p>
+
+                <p><strong>回避方法</strong>：定期的な回答内容の見直しをスケジュール化する。また、更新が簡単にできるサービスを選ぶ。AzenFlowでは月2回のナレッジベース更新が含まれています。</p>
+
+                <h3>失敗パターン4：顧客がチャットボットを使わない</h3>
+
+                <p><strong>原因</strong>：チャットボットの存在が顧客に認知されていない、または使い方がわからない。</p>
+
+                <p><strong>回避方法</strong>：LINE公式アカウントのリッチメニューにチャットボットへの導線を設置する。友だち追加時のあいさつメッセージでチャットボットの使い方を案内する。</p>
+
+                <h3>失敗パターン5：費用対効果が見合わない</h3>
+
+                <p><strong>原因</strong>：高額なサービスを導入したが、問い合わせ数が少なく元が取れない。</p>
+
+                <p><strong>回避方法</strong>：導入前に、現在の問い合わせ数と対応時間を把握し、ROIをシミュレーションする。まずは低コストのサービスから始めるのも一つの手です。</p>
+
+                <a href="/column/ai-ningen-tsukawake/" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">AIチャットボットと人間対応の使い分け｜最適なハイブリッド戦略</div>
+                    <p class="internal-link-desc">AIと人間の役割分担を最適化する方法を詳しく解説しています。</p>
+                </a>
+
+
+                <!-- Section 8 -->
+                <h2 id="choose">自社に合ったサービスの選び方</h2>
+
+                <p>最後に、自社に合ったチャットボットサービスを選ぶためのポイントを整理します。</p>
+
+                <h3>選び方のチェックリスト</h3>
+
+                <p><strong>1. 問い合わせの性質を確認する</strong></p>
+                <ul>
+                    <li>定型的な質問が多い → シナリオ型でもOK</li>
+                    <li>多様な質問がある → AI型がおすすめ</li>
+                    <li>重要な回答は確実にコントロールしたい → ハイブリッド型</li>
+                </ul>
+
+                <p><strong>2. 予算を明確にする</strong></p>
+                <ul>
+                    <li>初期費用にいくらかけられるか</li>
+                    <li>月額費用の上限はいくらか</li>
+                    <li>追加費用（従量課金など）も含めた総額を確認</li>
+                </ul>
+
+                <p><strong>3. 社内のリソースを確認する</strong></p>
+                <ul>
+                    <li>シナリオ作成を自社で行えるか</li>
+                    <li>定期的なメンテナンスに時間を割けるか</li>
+                    <li>技術的な設定ができる人材がいるか</li>
+                </ul>
+
+                <p><strong>4. サポート体制を確認する</strong></p>
+                <ul>
+                    <li>導入時のサポートはあるか</li>
+                    <li>問い合わせ対応の時間・手段は</li>
+                    <li>日本語でサポートを受けられるか</li>
+                </ul>
+
+                <p><strong>5. 無料トライアルを活用する</strong></p>
+                <ul>
+                    <li>契約前に実際の使い勝手を確認</li>
+                    <li>回答精度を自社のデータで検証</li>
+                    <li>サポートの質も確認できる</li>
+                </ul>
+
+                <h3>AzenFlowが選ばれる理由</h3>
+
+                <p>AzenFlowは、特に以下のようなお客様に選ばれています。</p>
+
+                <ul>
+                    <li><strong>技術知識がない</strong>：資料を共有するだけで、設定はすべて弊社が代行</li>
+                    <li><strong>できるだけ早く導入したい</strong>：最短1日で導入完了</li>
+                    <li><strong>コストを抑えたい</strong>：初期費用0円、月額19,990円から</li>
+                    <li><strong>まずは試してみたい</strong>：2週間の無料トライアル（クレジットカード不要）</li>
+                    <li><strong>日本語でサポートを受けたい</strong>：日本人スタッフが対応</li>
+                </ul>
+
+
+                <!-- Section 9 -->
+                <h2 id="summary">まとめ</h2>
+
+                <p>この記事では、LINEチャットボットの導入について、仕組みから費用、導入手順、活用事例まで網羅的に解説しました。</p>
+
+                <p><strong>主なポイントをまとめると：</strong></p>
+
+                <ul>
+                    <li>LINEチャットボットは、顧客対応を24時間365日自動化できるツール</li>
+                    <li>種類は「シナリオ型」「AI型」「ハイブリッド型」の3つ</li>
+                    <li>導入費用の相場は、初期費用0円〜10万円、月額5,000円〜5万円程度</li>
+                    <li>導入は5ステップ、最短1日で完了可能</li>
+                    <li>飲食店、クリニック、美容サロン、ECなど幅広い業界で活用されている</li>
+                    <li>失敗を避けるには、事前準備とサービス選定が重要</li>
+                </ul>
+
+                <p>人手不足が深刻化する中、チャットボットによる顧客対応の自動化は、もはや「あったらいい」ではなく「なければならない」ツールになりつつあります。</p>
+
+                <p>まずは無料トライアルで、自社の問い合わせにチャットボットがどのように回答するかを体験してみることをおすすめします。</p>
+
+
+                <!-- Final CTA -->
+                <div class="article-cta-box">
+                    <h3>LINEチャットボットを無料で試してみませんか？</h3>
+                    <p>AzenFlowなら、2週間の無料トライアルで実際の効果を体験できます。<br>初期費用0円、クレジットカード登録も不要です。</p>
+                    <a href="/line-chatbot.html" class="cta-button">サービス詳細を見る</a>
+                    <div class="article-cta-badges">✓ 初期費用0円 ✓ 月額19,990円〜 ✓ 最短1日で導入</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RELATED ARTICLES ==================== -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="related-title">関連記事</h2>
+            <div class="related-grid">
+                <a href="/column/chatbot-hikaku/" class="related-card">
+                    <div class="related-card-category">比較</div>
+                    <div class="related-card-title">【2025年版】AIチャットボット比較｜種類別の特徴とAzenFlowの強み</div>
+                </a>
+                <a href="/column/hitodebusoku-ai-guide/" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">人手不足をAIで解決｜中小企業の業務自動化完全ガイド</div>
+                </a>
+                <a href="/column/chatbot-hiyou-roi/" class="related-card">
+                    <div class="related-card-category">比較</div>
+                    <div class="related-card-title">チャットボット導入費用の相場｜料金体系・隠れコスト・ROI計算方法</div>
+                </a>
+                <a href="/column/24jikan-taiou-guide/" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <div id="chatbot-widget-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+    (function(){'use strict';const CONFIG={STORAGE_KEY:'azenflow_cookie_consent',EXPIRY_DAYS:395,GA_MEASUREMENT_ID:'G-17R5RQY64S',CONSENT_STATES:{ACCEPTED:'accepted',REJECTED:'rejected',PENDING:'pending'}};const CookieConsent={init(){if(this.isDoNotTrackEnabled()){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);return}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>this.setup())}else{this.setup()}},setup(){const consent=this.getConsent();if(consent.status===CONFIG.CONSENT_STATES.PENDING||this.isConsentExpired(consent)){this.showBanner()}else if(consent.status===CONFIG.CONSENT_STATES.ACCEPTED){this.initGoogleAnalytics()}this.attachEventListeners()},getConsent(){try{const stored=localStorage.getItem(CONFIG.STORAGE_KEY);if(!stored)return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null};return JSON.parse(stored)}catch(e){return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null}}},saveConsent(status){try{localStorage.setItem(CONFIG.STORAGE_KEY,JSON.stringify({status:status,timestamp:Date.now(),version:'1.0'}))}catch(e){}},isConsentExpired(consent){if(!consent.timestamp)return true;return(Date.now()-consent.timestamp)>CONFIG.EXPIRY_DAYS*24*60*60*1000},isDoNotTrackEnabled(){return navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.msDoNotTrack==='1'},showBanner(){const show=()=>{const banner=document.getElementById('cookie-banner');if(banner){banner.style.display='flex';}};if(document.getElementById('cookie-banner')){show()}else{document.addEventListener('componentsLoaded',show)}},hideBanner(){const banner=document.getElementById('cookie-banner');if(banner){banner.classList.add('hiding');setTimeout(()=>{banner.style.display='none';banner.classList.remove('hiding')},400)}},attachEventListeners(){document.addEventListener('click',(e)=>{if(e.target.id==='cookie-accept'||e.target.closest('#cookie-accept')){e.preventDefault();this.handleAccept()}else if(e.target.id==='cookie-decline'||e.target.closest('#cookie-decline')){e.preventDefault();this.handleDecline()}});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){const banner=document.getElementById('cookie-banner');if(banner&&banner.style.display!=='none'){this.handleDecline()}}})},handleAccept(){this.saveConsent(CONFIG.CONSENT_STATES.ACCEPTED);this.hideBanner();this.initGoogleAnalytics();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.ACCEPTED}}))},handleDecline(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);this.hideBanner();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.REJECTED}}))},initGoogleAnalytics(){if(CONFIG.GA_MEASUREMENT_ID==='G-XXXXXXXXXX')return;if(window.gtag||document.querySelector('script[src*="googletagmanager.com/gtag/js"]'))return;const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.GA_MEASUREMENT_ID;document.head.appendChild(script);window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',CONFIG.GA_MEASUREMENT_ID,{'anonymize_ip':true,'cookie_flags':'SameSite=None;Secure'})},hasAnalyticsConsent(){const consent=this.getConsent();return consent.status===CONFIG.CONSENT_STATES.ACCEPTED&&!this.isConsentExpired(consent)},revokeConsent(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);window.location.reload()}};window.CookieConsent=CookieConsent;CookieConsent.init()})();
+    </script>
+    <script src="/scripts/component-loader.js" defer></script>
+    <script src="/scripts/animations.js" defer></script>
+    <script src="/scripts/chatbot-widget.js" defer></script>
+    <script src="/scripts/floating-cta.js" defer></script>
+    <script src="/scripts/back-to-top.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+
+    <!-- Smooth scroll for TOC -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

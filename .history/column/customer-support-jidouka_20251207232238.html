@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17R5RQY64S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-17R5RQY64S');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Principal -->
+    <title>カスタマーサポートを自動化する方法｜LINE・Web・メール別の完全戦略【2025年版】</title>
+    <meta name="description" content="顧客対応の80%を自動化する方法をチャネル別に徹底解説。LINE公式アカウント、Webチャットボット、メール自動応答それぞれの導入戦略、費用相場、人間対応との最適な役割分担まで網羅した完全ガイド。">
+    <meta name="keywords" content="カスタマーサポート 自動化, 問い合わせ対応 効率化, 顧客対応 AI, LINEチャットボット, Webチャットボット, メール自動応答, 24時間対応, 人手不足 対策">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AzenFlow Japan">
+
+    <link rel="canonical" href="https://azenflow.jp/column/customer-support-jidouka.html">
+    <link rel="help" href="https://azenflow.jp/llms.txt" type="text/plain" title="LLMs Information">
+    <link rel="icon" href="/images/favicon.webp" type="image/webp">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://azenflow.jp/column/customer-support-jidouka.html">
+    <meta property="og:title" content="カスタマーサポートを自動化する方法｜LINE・Web・メール別の完全戦略">
+    <meta property="og:description" content="顧客対応の80%を自動化する方法をチャネル別に解説。導入戦略と人間対応との最適な役割分担。">
+    <meta property="og:site_name" content="AzenFlow">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="article:published_time" content="2025-01-17">
+    <meta property="article:modified_time" content="2025-01-17">
+    <meta property="article:author" content="AzenFlow Japan">
+    <meta property="article:section" content="ガイド">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="カスタマーサポートを自動化する方法｜LINE・Web・メール別">
+    <meta name="twitter:description" content="顧客対応の80%を自動化する方法をチャネル別に解説。導入戦略と役割分担の完全ガイド。">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    <link rel="stylesheet" href="/styles/components/floating-cta.css">
+    <link rel="stylesheet" href="/styles/components/back-to-top.css">
+    <link rel="stylesheet" href="/styles/components/cookie-banner.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+
+    <!-- Article Styles -->
+    <style>
+        /* ==================== ARTICLE PAGE STYLES ==================== */
+        
+        .article-page {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 50%, #FFFFFF 100%);
+        }
+
+        /* Hero Section */
+        .article-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%);
+        }
+
+        .article-hero .container {
+            max-width: 900px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .breadcrumb .separator {
+            color: var(--text-light);
+        }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .publish-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-excerpt {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: 40px 0;
+            background: white;
+        }
+
+        .toc-section .container {
+            max-width: 900px;
+        }
+
+        .toc-box {
+            background: #F8FAFB;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .toc-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 60px 0;
+            background: linear-gradient(180deg, white 0%, #F0F9FF 50%, white 100%);
+        }
+
+        .article-content .container {
+            max-width: 800px;
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-primary);
+        }
+
+        .article-body h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 0.75rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .article-body strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.08) 0%, rgba(166, 138, 92, 0.08) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .highlight-box p:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #EFF8FF;
+            border: 1px solid #BFDBFE;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .info-box-title {
+            font-weight: 700;
+            color: #1E40AF;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #1E3A5F;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #FEF3C7;
+            border: 1px solid #F59E0B;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .warning-box-title {
+            font-weight: 700;
+            color: #92400E;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #78350F;
+        }
+
+        /* Channel Box */
+        .channel-box {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .channel-box-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .channel-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .channel-icon.line {
+            background: #06C755;
+            color: white;
+        }
+
+        .channel-icon.web {
+            background: #3B82F6;
+            color: white;
+        }
+
+        .channel-icon.email {
+            background: #8B5CF6;
+            color: white;
+        }
+
+        .channel-box-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .channel-box-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #F8FAFB;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(139, 111, 71, 0.05);
+        }
+
+        /* Internal Link Box */
+        .internal-link-box {
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .internal-link-box:hover {
+            background: rgba(139, 111, 71, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.15);
+        }
+
+        .internal-link-label {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .internal-link-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .internal-link-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Service Link Box */
+        .service-link-box {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.05) 0%, rgba(166, 138, 92, 0.05) 100%);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .service-link-box:hover {
+            background: rgba(139, 111, 71, 0.1);
+            transform: translateX(4px);
+        }
+
+        .service-link-content {
+            flex: 1;
+        }
+
+        .service-link-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .service-link-price {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .service-link-arrow {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* CTA Box in Article */
+        .article-cta-box {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .article-cta-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0 1rem;
+        }
+
+        .article-cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-cta-box .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-cta-box .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-cta-badges {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Related Articles */
+        .related-section {
+            padding: 60px 0;
+            background: #F8FAFB;
+        }
+
+        .related-section .container {
+            max-width: 900px;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .related-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .related-card-category {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-hero {
+                padding: 100px 0 40px;
+            }
+
+            .article-title {
+                font-size: 1.75rem;
+            }
+
+            .article-excerpt {
+                font-size: 1rem;
+            }
+
+            .article-body {
+                font-size: 1rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.2rem;
+            }
+
+            .toc-box {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-cta-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .highlight-box,
+            .info-box,
+            .warning-box,
+            .channel-box {
+                padding: 1.25rem 1.5rem;
+            }
+
+            .service-link-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://azenflow.jp/column/customer-support-jidouka.html#article",
+                "headline": "カスタマーサポートを自動化する方法｜LINE・Web・メール別の完全戦略",
+                "description": "顧客対応の80%を自動化する方法をチャネル別に徹底解説。LINE公式アカウント、Webチャットボット、メール自動応答それぞれの導入戦略と人間対応との最適な役割分担。",
+                "datePublished": "2025-01-17",
+                "dateModified": "2025-01-17",
+                "author": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://azenflow.jp/column/customer-support-jidouka.html"
+                },
+                "articleSection": "ガイド",
+                "keywords": ["カスタマーサポート", "自動化", "チャットボット", "LINE", "Web", "メール", "AI"],
+                "wordCount": 4800,
+                "inLanguage": "ja-JP"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://azenflow.jp/column/customer-support-jidouka.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "ホーム",
+                        "item": "https://azenflow.jp/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "コラム",
+                        "item": "https://azenflow.jp/column/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "カスタマーサポートを自動化する方法",
+                        "item": "https://azenflow.jp/column/customer-support-jidouka.html"
+                    }
+                ]
+            },
+            {
+                "@type": "HowTo",
+                "@id": "https://azenflow.jp/column/customer-support-jidouka.html#howto",
+                "name": "カスタマーサポートを自動化する方法",
+                "description": "LINE、Web、メールの各チャネルで顧客対応を自動化する手順",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "現状分析",
+                        "text": "問い合わせ内容を分析し、自動化できるものを特定する"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "チャネル選定",
+                        "text": "顧客の利用状況に合わせて優先するチャネルを決める"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "ツール導入",
+                        "text": "各チャネルに適したチャットボット・自動化ツールを導入する"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "役割分担設計",
+                        "text": "AIと人間の対応範囲を明確に設計する"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 5,
+                        "name": "運用・改善",
+                        "text": "データを分析しながら継続的に改善する"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="article-page">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <div id="floating-cta-placeholder"></div>
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="article-hero">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <a href="/">ホーム</a>
+                <span class="separator">›</span>
+                <a href="/column/">コラム</a>
+                <span class="separator">›</span>
+                <span>カスタマーサポート自動化</span>
+            </nav>
+
+            <!-- Article Meta -->
+            <div class="article-meta-top">
+                <span class="category-badge">ガイド</span>
+                <time class="publish-date" datetime="2025-01-17">2025.01.17</time>
+            </div>
+
+            <!-- Title -->
+            <h1 class="article-title">カスタマーサポートを自動化する方法｜LINE・Web・メール別の完全戦略【2025年版】</h1>
+
+            <!-- Excerpt -->
+            <p class="article-excerpt">
+                「問い合わせ対応に追われて本業に集中できない」「人手不足で顧客対応が後回しになっている」——そんな悩みを抱える中小企業は少なくありません。この記事では、LINE、Webサイト、メールの各チャネルで顧客対応の80%を自動化する方法を、具体的な戦略とともに解説します。
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== TABLE OF CONTENTS ==================== -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-box">
+                <h2 class="toc-title">📋 目次</h2>
+                <ol class="toc-list">
+                    <li><a href="#why">なぜカスタマーサポートの自動化が必要なのか</a></li>
+                    <li><a href="#80-rule">自動化できる問い合わせの「80/20ルール」</a></li>
+                    <li><a href="#line">【LINE編】LINE公式アカウントの自動化戦略</a></li>
+                    <li><a href="#web">【Web編】Webチャットボットの自動化戦略</a></li>
+                    <li><a href="#email">【メール編】メール対応の自動化戦略</a></li>
+                    <li><a href="#comparison">チャネル別比較｜どれから始めるべきか</a></li>
+                    <li><a href="#human-ai">人間とAIの最適な役割分担</a></li>
+                    <li><a href="#cost">導入費用と投資対効果</a></li>
+                    <li><a href="#steps">導入ステップ｜明日から始める自動化</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ARTICLE CONTENT ==================== -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-body">
+
+                <!-- Section 1 -->
+                <h2 id="why">なぜカスタマーサポートの自動化が必要なのか</h2>
+
+                <p>日本の中小企業が直面している最大の課題の一つが「人手不足」です。特にカスタマーサポート部門では、限られた人員で増え続ける問い合わせに対応しなければならず、スタッフの負担は増すばかりです。</p>
+
+                <p>総務省の調査によると、日本の生産年齢人口は2050年には現在より約2,000万人減少すると予測されています。つまり、今後ますます「人を増やして対応する」という従来の方法は困難になっていきます。</p>
+
+                <h3>カスタマーサポートが抱える3つの課題</h3>
+
+                <p><strong>課題1：対応の遅延による顧客離れ</strong></p>
+                <p>顧客は「待つこと」を嫌います。特にデジタルネイティブ世代は、即座に回答が得られることを期待しています。問い合わせへの回答が遅れるほど、顧客満足度は低下し、競合他社に流れるリスクが高まります。</p>
+
+                <p><strong>課題2：営業時間外の機会損失</strong></p>
+                <p>多くの消費者は、仕事が終わった夜間や休日に商品・サービスの検討を行います。しかし、その時間帯に問い合わせに対応できる体制がなければ、せっかくの購買意欲も翌日には冷めてしまうかもしれません。</p>
+
+                <p><strong>課題3：単純作業によるスタッフの疲弊</strong></p>
+                <p>「営業時間は何時ですか？」「料金はいくらですか？」——このような単純な質問に何度も回答することは、スタッフにとって大きなストレスになります。本来注力すべき複雑な相談や重要な商談に時間を割けなくなるのです。</p>
+
+                <div class="highlight-box">
+                    <p><strong>自動化の本質</strong>：カスタマーサポートの自動化とは、「人間の仕事を奪う」ことではありません。「人間にしかできない価値の高い仕事に集中できる環境を作る」ことです。</p>
+                </div>
+
+
+                <!-- Section 2 -->
+                <h2 id="80-rule">自動化できる問い合わせの「80/20ルール」</h2>
+
+                <p>カスタマーサポートの世界には「80/20ルール」と呼ばれる法則があります。これは、問い合わせ全体の80%は、わずか20%のパターンで占められているという経験則です。</p>
+
+                <h3>自動化に適した問い合わせの特徴</h3>
+
+                <p>以下のような特徴を持つ問い合わせは、自動化に非常に適しています。</p>
+
+                <ul>
+                    <li><strong>定型的な質問</strong>：営業時間、所在地、料金、サービス内容など、回答が決まっている質問</li>
+                    <li><strong>繰り返し発生する質問</strong>：多くの顧客から同じ質問が寄せられるもの</li>
+                    <li><strong>情報の参照で解決する質問</strong>：FAQ、マニュアル、料金表などを参照すれば回答できる質問</li>
+                    <li><strong>単純な手続き</strong>：予約の確認、配送状況の確認、パスワードリセットなど</li>
+                </ul>
+
+                <h3>人間対応が必要な問い合わせの特徴</h3>
+
+                <p>一方、以下のような問い合わせは、人間が対応すべきです。</p>
+
+                <ul>
+                    <li><strong>感情的なクレーム</strong>：怒りや不満を抱えている顧客への対応</li>
+                    <li><strong>複雑な相談</strong>：複数の要素が絡み合う個別の相談</li>
+                    <li><strong>判断が必要なケース</strong>：例外的な対応や特別な配慮が必要な場合</li>
+                    <li><strong>高額な商談</strong>：重要な取引に関わる問い合わせ</li>
+                </ul>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>自動化に適した問い合わせ</th>
+                            <th>人間対応が必要な問い合わせ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>営業時間・定休日の確認</td>
+                            <td>クレーム対応</td>
+                        </tr>
+                        <tr>
+                            <td>料金・プランの説明</td>
+                            <td>特別な値引き交渉</td>
+                        </tr>
+                        <tr>
+                            <td>予約の受付・確認</td>
+                            <td>複雑なスケジュール調整</td>
+                        </tr>
+                        <tr>
+                            <td>配送状況の確認</td>
+                            <td>配送トラブルの対応</td>
+                        </tr>
+                        <tr>
+                            <td>よくある質問への回答</td>
+                            <td>個別の専門的な相談</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a href="ai-ningen-tsukawake.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">AIチャットボットと人間対応の使い分け｜最適なハイブリッド戦略</div>
+                    <p class="internal-link-desc">AIと人間の役割分担をより詳しく解説しています。</p>
+                </a>
+
+
+                <!-- Section 3: LINE -->
+                <h2 id="line">【LINE編】LINE公式アカウントの自動化戦略</h2>
+
+                <div class="channel-box">
+                    <div class="channel-box-header">
+                        <div class="channel-icon line">💬</div>
+                        <div>
+                            <div class="channel-box-title">LINEチャットボット</div>
+                            <div class="channel-box-subtitle">日本で最も利用されているメッセージアプリでの自動対応</div>
+                        </div>
+                    </div>
+
+                    <p>日本ではLINEの月間アクティブユーザー数が約9,600万人に達しています。多くの顧客にとって、LINEは最も身近なコミュニケーション手段です。LINE公式アカウントを持つ企業が増える中、チャットボットによる自動対応は差別化の鍵となります。</p>
+
+                    <h4>LINEチャットボットで自動化できること</h4>
+                    <ul>
+                        <li>よくある質問への自動回答</li>
+                        <li>予約の受付・確認・リマインド</li>
+                        <li>商品・サービスの案内</li>
+                        <li>営業時間・アクセス情報の案内</li>
+                        <li>クーポン・キャンペーン情報の配信</li>
+                    </ul>
+
+                    <h4>LINEが向いている業種</h4>
+                    <ul>
+                        <li>飲食店（予約、メニュー案内）</li>
+                        <li>美容サロン（予約、施術内容の相談）</li>
+                        <li>クリニック（予約、診療時間の確認）</li>
+                        <li>小売店（商品在庫の確認、セール情報）</li>
+                        <li>教育・塾（入会案内、スケジュール確認）</li>
+                    </ul>
+                </div>
+
+                <a href="/line-chatbot.html" class="service-link-box">
+                    <div class="service-link-content">
+                        <div class="service-link-title">AzenFlow LINEチャットボット</div>
+                        <div class="service-link-price">月額19,990円〜｜初期費用0円｜2週間無料トライアル</div>
+                    </div>
+                    <span class="service-link-arrow">→</span>
+                </a>
+
+                <a href="line-chatbot-kanzen-guide.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">LINEチャットボット導入完全ガイド【2025年最新版】</div>
+                    <p class="internal-link-desc">LINEチャットボットの詳しい導入方法を解説しています。</p>
+                </a>
+
+
+                <!-- Section 4: Web -->
+                <h2 id="web">【Web編】Webチャットボットの自動化戦略</h2>
+
+                <div class="channel-box">
+                    <div class="channel-box-header">
+                        <div class="channel-icon web">🌐</div>
+                        <div>
+                            <div class="channel-box-title">Webチャットボット</div>
+                            <div class="channel-box-subtitle">Webサイト訪問者への即座の対応</div>
+                        </div>
+                    </div>
+
+                    <p>Webサイトは多くの企業にとって最も重要な集客チャネルです。しかし、せっかくサイトを訪れた見込み客が、疑問を解消できずに離脱してしまうケースは少なくありません。Webチャットボットは、サイト訪問者の疑問に即座に答え、離脱を防ぎます。</p>
+
+                    <h4>Webチャットボットで自動化できること</h4>
+                    <ul>
+                        <li>サイト訪問者への即座のウェルカムメッセージ</li>
+                        <li>商品・サービスに関する質問への回答</li>
+                        <li>お問い合わせフォームへの誘導</li>
+                        <li>資料請求・見積もり依頼の受付</li>
+                        <li>よくある質問への案内</li>
+                    </ul>
+
+                    <h4>Webチャットボットが向いている業種</h4>
+                    <ul>
+                        <li>BtoB企業（製品説明、資料請求）</li>
+                        <li>ECサイト（商品案内、配送・返品の説明）</li>
+                        <li>不動産（物件案内、内見予約）</li>
+                        <li>旅行・宿泊（予約、施設案内）</li>
+                        <li>士業・コンサルティング（サービス説明、相談予約）</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 Webチャットボットの効果</div>
+                    <p>Webサイトにチャットボットを設置することで、問い合わせ数が平均30%増加するというデータがあります。これは、フォーム入力よりもチャットの方が心理的なハードルが低いためです。</p>
+                </div>
+
+                <a href="/web-chatbot.html" class="service-link-box">
+                    <div class="service-link-content">
+                        <div class="service-link-title">AzenFlow Webチャットボット</div>
+                        <div class="service-link-price">月額29,990円〜｜初期費用0円｜2週間無料トライアル</div>
+                    </div>
+                    <span class="service-link-arrow">→</span>
+                </a>
+
+
+                <!-- Section 5: Email -->
+                <h2 id="email">【メール編】メール対応の自動化戦略</h2>
+
+                <div class="channel-box">
+                    <div class="channel-box-header">
+                        <div class="channel-icon email">📧</div>
+                        <div>
+                            <div class="channel-box-title">メール自動化AI</div>
+                            <div class="channel-box-subtitle">受信トレイの自動整理と返信文の生成</div>
+                        </div>
+                    </div>
+
+                    <p>ビジネスにおいて、メールは依然として主要なコミュニケーション手段です。しかし、毎日大量に届くメールを処理することは、多くのビジネスパーソンにとって大きな負担となっています。AI技術を活用したメール自動化で、この負担を大幅に軽減できます。</p>
+
+                    <h4>メール自動化でできること</h4>
+                    <ul>
+                        <li>受信メールの自動分類（問い合わせ、クレーム、スパムなど）</li>
+                        <li>優先度の自動判定</li>
+                        <li>返信文の自動生成（確認後に送信）</li>
+                        <li>定型的な問い合わせへの自動返信</li>
+                        <li>担当者への自動振り分け</li>
+                    </ul>
+
+                    <h4>メール自動化が向いている業種</h4>
+                    <ul>
+                        <li>ECサイト（注文確認、配送案内）</li>
+                        <li>カスタマーサポート部門（問い合わせ対応）</li>
+                        <li>人材・採用（応募受付、面接日程調整）</li>
+                        <li>BtoB営業（見積もり依頼対応）</li>
+                        <li>管理部門（社内問い合わせ対応）</li>
+                    </ul>
+                </div>
+
+                <a href="/email-assistant.html" class="service-link-box">
+                    <div class="service-link-content">
+                        <div class="service-link-title">AzenFlow メール自動化AI</div>
+                        <div class="service-link-price">月額49,990円〜｜初期費用0円｜2週間無料トライアル</div>
+                    </div>
+                    <span class="service-link-arrow">→</span>
+                </a>
+
+                <a href="mail-jidouka-guide.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">ビジネスメール対応を自動化する方法｜AI活用で処理時間70%削減</div>
+                    <p class="internal-link-desc">メール自動化の詳しい方法と効果を解説しています。</p>
+                </a>
+
+
+                <!-- Section 6 -->
+                <h2 id="comparison">チャネル別比較｜どれから始めるべきか</h2>
+
+                <p>LINE、Web、メールの3つのチャネルの中で、どれから自動化を始めるべきでしょうか。それぞれの特徴を比較してみましょう。</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>比較項目</th>
+                            <th>LINE</th>
+                            <th>Web</th>
+                            <th>メール</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>導入の手軽さ</td>
+                            <td>◎ 最も手軽</td>
+                            <td>○ やや手間</td>
+                            <td>○ やや手間</td>
+                        </tr>
+                        <tr>
+                            <td>顧客の利用率</td>
+                            <td>◎ BtoC向き</td>
+                            <td>○ 幅広い</td>
+                            <td>◎ BtoB向き</td>
+                        </tr>
+                        <tr>
+                            <td>即時性</td>
+                            <td>◎ リアルタイム</td>
+                            <td>◎ リアルタイム</td>
+                            <td>△ やや遅延</td>
+                        </tr>
+                        <tr>
+                            <td>プッシュ通知</td>
+                            <td>◎ 可能</td>
+                            <td>△ 限定的</td>
+                            <td>○ 可能</td>
+                        </tr>
+                        <tr>
+                            <td>費用（AzenFlow）</td>
+                            <td>19,990円/月</td>
+                            <td>29,990円/月</td>
+                            <td>49,990円/月</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>業種別のおすすめチャネル</h3>
+
+                <p><strong>BtoC（個人向けビジネス）</strong></p>
+                <p>飲食店、美容サロン、クリニック、小売店などのBtoCビジネスでは、<strong>LINEから始める</strong>ことをおすすめします。顧客の多くがLINEを日常的に使用しており、友だち追加のハードルも低いためです。</p>
+
+                <p><strong>BtoB（法人向けビジネス）</strong></p>
+                <p>製造業、IT企業、コンサルティングなどのBtoBビジネスでは、<strong>Webチャットボットまたはメール自動化</strong>から始めることをおすすめします。企業の担当者は、Webサイトやメールでの問い合わせを好む傾向があります。</p>
+
+                <p><strong>両方のバランス型</strong></p>
+                <p>個人顧客と法人顧客の両方を持つビジネスでは、まず<strong>Webチャットボット</strong>から始め、効果を見ながらLINEやメールにも拡大していくアプローチが有効です。</p>
+
+
+                <!-- Article CTA -->
+                <div class="article-cta-box">
+                    <h3>どのチャネルから始めるべきか迷っていますか？</h3>
+                    <p>AzenFlowでは、無料相談で貴社に最適な自動化戦略をご提案します。<br>まずはお気軽にご相談ください。</p>
+                    <a href="/contact.html" class="cta-button">無料相談を予約する</a>
+                    <div class="article-cta-badges">✓ 相談無料 ✓ 強引な営業なし ✓ オンライン対応可</div>
+                </div>
+
+
+                <!-- Section 7 -->
+                <h2 id="human-ai">人間とAIの最適な役割分担</h2>
+
+                <p>カスタマーサポートの自動化で最も重要なのは、AIと人間の役割分担を明確にすることです。すべてをAIに任せるのでも、すべてを人間が対応するのでもなく、それぞれの強みを活かした「ハイブリッド」なアプローチが効果的です。</p>
+
+                <h3>AIが担当すべき領域</h3>
+
+                <ul>
+                    <li><strong>一次対応</strong>：最初の挨拶、用件の確認</li>
+                    <li><strong>情報提供</strong>：FAQ、料金、営業時間などの定型情報</li>
+                    <li><strong>振り分け</strong>：問い合わせ内容に応じた担当者への振り分け</li>
+                    <li><strong>24時間対応</strong>：営業時間外の問い合わせ受付</li>
+                    <li><strong>データ収集</strong>：顧客情報、問い合わせ内容の記録</li>
+                </ul>
+
+                <h3>人間が担当すべき領域</h3>
+
+                <ul>
+                    <li><strong>クレーム対応</strong>：感情的な対応が必要なケース</li>
+                    <li><strong>複雑な相談</strong>：個別の状況を踏まえた判断が必要なケース</li>
+                    <li><strong>重要な商談</strong>：高額な取引や長期契約に関わるケース</li>
+                    <li><strong>例外対応</strong>：通常のルールから外れる特別な対応</li>
+                    <li><strong>関係構築</strong>：VIP顧客との関係性を深める対応</li>
+                </ul>
+
+                <h3>エスカレーション（転送）の設計</h3>
+
+                <p>AIから人間への引き継ぎ（エスカレーション）をスムーズに行うことが、顧客満足度を維持する鍵です。以下のようなルールを事前に設計しておきましょう。</p>
+
+                <ul>
+                    <li>AIが3回以上やり取りしても解決しない場合は人間に転送</li>
+                    <li>「クレーム」「返金」「解約」などのキーワードが含まれる場合は即座に人間に転送</li>
+                    <li>顧客が「人間と話したい」と明示的に要求した場合は転送</li>
+                    <li>営業時間内は人間がすぐに対応、営業時間外は翌営業日に連絡する旨を伝える</li>
+                </ul>
+
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ 注意点</div>
+                    <p>エスカレーション時には、AIがそれまでに収集した情報（顧客名、問い合わせ内容、やり取りの履歴）を人間の担当者に確実に引き継ぐ仕組みが必要です。顧客に同じ説明を繰り返させることは、大きな不満につながります。</p>
+                </div>
+
+                <a href="ai-ningen-tsukawake.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">AIチャットボットと人間対応の使い分け｜最適なハイブリッド戦略</div>
+                    <p class="internal-link-desc">より詳細な役割分担の設計方法を解説しています。</p>
+                </a>
+
+
+                <!-- Section 8 -->
+                <h2 id="cost">導入費用と投資対効果</h2>
+
+                <p>カスタマーサポートの自動化にかかる費用と、期待できる効果を整理しましょう。</p>
+
+                <h3>AzenFlowの料金体系</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>サービス</th>
+                            <th>月額費用</th>
+                            <th>初期費用</th>
+                            <th>含まれる内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LINEチャットボット</td>
+                            <td>19,990円</td>
+                            <td>0円</td>
+                            <td>月3,000メッセージ、24時間対応、日本語サポート</td>
+                        </tr>
+                        <tr>
+                            <td>Webチャットボット</td>
+                            <td>29,990円</td>
+                            <td>0円</td>
+                            <td>月5,000メッセージ、Webサイト埋め込み、24時間対応</td>
+                        </tr>
+                        <tr>
+                            <td>メール自動化AI</td>
+                            <td>49,990円</td>
+                            <td>0円</td>
+                            <td>月1,000メール処理、自動分類、返信生成</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>すべてのサービスで2週間の無料トライアルが可能です。クレジットカードの登録も不要なので、リスクなく試すことができます。</p>
+
+                <h3>投資対効果（ROI）の考え方</h3>
+
+                <p>カスタマーサポートの自動化による効果は、主に以下の3つで測定できます。</p>
+
+                <p><strong>1. 人件費の削減</strong></p>
+                <p>問い合わせ対応に費やしていた時間が削減されることで、人件費を削減できます。例えば、月に100件の問い合わせがあり、1件あたり15分かかっていたとすると、月25時間の削減になります。時給1,500円として、月37,500円の削減効果です。</p>
+
+                <p><strong>2. 機会損失の回避</strong></p>
+                <p>営業時間外の問い合わせに対応できるようになることで、これまで逃していた見込み客を獲得できます。24時間対応が可能になることで、問い合わせ数が20〜30%増加するケースも珍しくありません。</p>
+
+                <p><strong>3. 顧客満足度の向上</strong></p>
+                <p>即座に回答が得られることで顧客満足度が向上し、リピート率や口コミによる紹介が増加します。これは長期的な売上向上につながります。</p>
+
+                <a href="chatbot-hiyou-roi.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">チャットボット導入費用の相場｜料金体系・隠れコスト・ROI計算方法</div>
+                    <p class="internal-link-desc">ROIの具体的な計算方法を解説しています。</p>
+                </a>
+
+
+                <!-- Section 9 -->
+                <h2 id="steps">導入ステップ｜明日から始める自動化</h2>
+
+                <p>カスタマーサポートの自動化を始めるための具体的なステップを解説します。</p>
+
+                <h3>ステップ1：現状分析（1〜2日）</h3>
+
+                <p>まず、現在の問い合わせ対応の状況を分析します。</p>
+
+                <ul>
+                    <li>月間の問い合わせ件数は何件か</li>
+                    <li>どのチャネル（電話、メール、LINE、Web）からの問い合わせが多いか</li>
+                    <li>よくある質問のパターンは何か</li>
+                    <li>1件あたりの対応にどれくらい時間がかかっているか</li>
+                    <li>営業時間外の問い合わせはどれくらいあるか</li>
+                </ul>
+
+                <h3>ステップ2：優先チャネルの決定（1日）</h3>
+
+                <p>分析結果をもとに、どのチャネルから自動化を始めるかを決めます。問い合わせ数が多いチャネル、または対応に時間がかかっているチャネルから始めるのが効果的です。</p>
+
+                <h3>ステップ3：FAQ・資料の整理（2〜3日）</h3>
+
+                <p>チャットボットが回答するための「知識」を整理します。</p>
+
+                <ul>
+                    <li>よくある質問と回答のリスト</li>
+                    <li>商品・サービスの説明資料</li>
+                    <li>料金表</li>
+                    <li>営業時間、所在地、連絡先</li>
+                </ul>
+
+                <h3>ステップ4：サービス選定と契約（1日）</h3>
+
+                <p>自社に合ったサービスを選び、契約（または無料トライアル）を開始します。AzenFlowでは、2週間の無料トライアルが可能です。</p>
+
+                <h3>ステップ5：設定とテスト（1〜3日）</h3>
+
+                <p>チャットボットの設定を行い、想定される質問に正しく回答できるかテストします。AzenFlowでは、設定は弊社が代行するため、お客様は資料を共有するだけで完了します。</p>
+
+                <h3>ステップ6：公開と運用開始</h3>
+
+                <p>テストが完了したら、本番稼働を開始します。最初の1〜2週間は回答内容をモニタリングし、必要に応じて調整を行います。</p>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 AzenFlowなら最短1日で導入完了</div>
+                    <p>AzenFlowでは、資料をお送りいただいてから最短1日で導入が完了します。技術的な知識は一切不要です。</p>
+                </div>
+
+
+                <!-- Section 10 -->
+                <h2 id="summary">まとめ</h2>
+
+                <p>この記事では、カスタマーサポートを自動化する方法について、LINE、Web、メールの各チャネル別に解説しました。</p>
+
+                <p><strong>主なポイントをまとめると：</strong></p>
+
+                <ul>
+                    <li>問い合わせの80%は自動化できる定型的なものである</li>
+                    <li>LINEはBtoC、メールはBtoB、Webは両方に適している</li>
+                    <li>AIと人間の役割分担を明確にすることが成功の鍵</li>
+                    <li>エスカレーション（転送）の設計が顧客満足度を左右する</li>
+                    <li>月額19,990円から始められ、投資対効果は高い</li>
+                    <li>最短1日で導入が可能</li>
+                </ul>
+
+                <p>人手不足が深刻化する中、カスタマーサポートの自動化はもはや「選択肢」ではなく「必須」になりつつあります。まずは1つのチャネルから始めて、効果を実感してみてください。</p>
+
+
+                <!-- Final CTA -->
+                <div class="article-cta-box">
+                    <h3>カスタマーサポートの自動化を始めませんか？</h3>
+                    <p>AzenFlowでは、LINE・Web・メールすべてのチャネルに対応。<br>2週間の無料トライアルで効果を実感してください。</p>
+                    <a href="/contact.html" class="cta-button">無料相談を予約する</a>
+                    <div class="article-cta-badges">✓ 初期費用0円 ✓ 最短1日で導入 ✓ 日本語サポート</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RELATED ARTICLES ==================== -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="related-title">関連記事</h2>
+            <div class="related-grid">
+                <a href="line-chatbot-kanzen-guide.html" class="related-card">
+                    <div class="related-card-category">ガイド</div>
+                    <div class="related-card-title">LINEチャットボット導入完全ガイド【2025年最新版】</div>
+                </a>
+                <a href="hitodebusoku-ai-guide.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">人手不足をAIで解決｜中小企業の業務自動化完全ガイド</div>
+                </a>
+                <a href="ai-ningen-tsukawake.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">AIチャットボットと人間対応の使い分け｜最適なハイブリッド戦略</div>
+                </a>
+                <a href="24jikan-taiou-guide.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <div id="chatbot-widget-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+    (function(){'use strict';const CONFIG={STORAGE_KEY:'azenflow_cookie_consent',EXPIRY_DAYS:395,GA_MEASUREMENT_ID:'G-17R5RQY64S',CONSENT_STATES:{ACCEPTED:'accepted',REJECTED:'rejected',PENDING:'pending'}};const CookieConsent={init(){if(this.isDoNotTrackEnabled()){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);return}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>this.setup())}else{this.setup()}},setup(){const consent=this.getConsent();if(consent.status===CONFIG.CONSENT_STATES.PENDING||this.isConsentExpired(consent)){this.showBanner()}else if(consent.status===CONFIG.CONSENT_STATES.ACCEPTED){this.initGoogleAnalytics()}this.attachEventListeners()},getConsent(){try{const stored=localStorage.getItem(CONFIG.STORAGE_KEY);if(!stored)return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null};return JSON.parse(stored)}catch(e){return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null}}},saveConsent(status){try{localStorage.setItem(CONFIG.STORAGE_KEY,JSON.stringify({status:status,timestamp:Date.now(),version:'1.0'}))}catch(e){}},isConsentExpired(consent){if(!consent.timestamp)return true;return(Date.now()-consent.timestamp)>CONFIG.EXPIRY_DAYS*24*60*60*1000},isDoNotTrackEnabled(){return navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.msDoNotTrack==='1'},showBanner(){const show=()=>{const banner=document.getElementById('cookie-banner');if(banner){banner.style.display='flex';}};if(document.getElementById('cookie-banner')){show()}else{document.addEventListener('componentsLoaded',show)}},hideBanner(){const banner=document.getElementById('cookie-banner');if(banner){banner.classList.add('hiding');setTimeout(()=>{banner.style.display='none';banner.classList.remove('hiding')},400)}},attachEventListeners(){document.addEventListener('click',(e)=>{if(e.target.id==='cookie-accept'||e.target.closest('#cookie-accept')){e.preventDefault();this.handleAccept()}else if(e.target.id==='cookie-decline'||e.target.closest('#cookie-decline')){e.preventDefault();this.handleDecline()}});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){const banner=document.getElementById('cookie-banner');if(banner&&banner.style.display!=='none'){this.handleDecline()}}})},handleAccept(){this.saveConsent(CONFIG.CONSENT_STATES.ACCEPTED);this.hideBanner();this.initGoogleAnalytics();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.ACCEPTED}}))},handleDecline(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);this.hideBanner();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.REJECTED}}))},initGoogleAnalytics(){if(CONFIG.GA_MEASUREMENT_ID==='G-XXXXXXXXXX')return;if(window.gtag||document.querySelector('script[src*="googletagmanager.com/gtag/js"]'))return;const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.GA_MEASUREMENT_ID;document.head.appendChild(script);window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',CONFIG.GA_MEASUREMENT_ID,{'anonymize_ip':true,'cookie_flags':'SameSite=None;Secure'})},hasAnalyticsConsent(){const consent=this.getConsent();return consent.status===CONFIG.CONSENT_STATES.ACCEPTED&&!this.isConsentExpired(consent)},revokeConsent(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);window.location.reload()}};window.CookieConsent=CookieConsent;CookieConsent.init()})();
+    </script>
+    <script src="/scripts/component-loader.js" defer></script>
+    <script src="/scripts/animations.js" defer></script>
+    <script src="/scripts/chatbot-widget.js" defer></script>
+    <script src="/scripts/floating-cta.js" defer></script>
+    <script src="/scripts/back-to-top.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+
+    <!-- Smooth scroll for TOC -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

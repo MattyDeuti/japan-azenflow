@@ -113,7 +113,7 @@
                     text.includes('無料相談を予約')) {
                     e.preventDefault();
                     // Redirect to contact page or open modal
-                    window.location.href = 'contact.html';
+                    window.location.href = '/contact.html';
                 }
             });
         });

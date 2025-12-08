@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17R5RQY64S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-17R5RQY64S');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Principal -->
+    <title>業種別AIチャットボット活用ガイド｜飲食店・クリニック・美容サロン【2025年版】</title>
+    <meta name="description" content="飲食店の予約自動化、クリニックの問診・予約対応、美容サロンのリピート率向上まで。業種ごとの課題とAIチャットボットによる解決策、導入効果を具体的に解説。月額19,990円〜で24時間対応を実現。">
+    <meta name="keywords" content="飲食店 チャットボット, クリニック 予約システム, 美容サロン LINE予約, 業種別 AI活用, 予約自動化, 問い合わせ対応 自動化, 店舗 DX">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AzenFlow Japan">
+
+    <link rel="canonical" href="https://azenflow.jp/column/gyoshu-betsu-chatbot.html">
+    <link rel="help" href="https://azenflow.jp/llms.txt" type="text/plain" title="LLMs Information">
+    <link rel="icon" href="/images/favicon.webp" type="image/webp">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://azenflow.jp/column/gyoshu-betsu-chatbot.html">
+    <meta property="og:title" content="業種別AIチャットボット活用ガイド｜飲食店・クリニック・美容サロン">
+    <meta property="og:description" content="飲食店の予約自動化、クリニックの問診・予約対応、美容サロンのリピート率向上まで。業種別の活用方法を解説。">
+    <meta property="og:site_name" content="AzenFlow">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="article:published_time" content="2025-01-13">
+    <meta property="article:modified_time" content="2025-01-13">
+    <meta property="article:author" content="AzenFlow Japan">
+    <meta property="article:section" content="事例">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="業種別AIチャットボット活用ガイド｜飲食店・クリニック・美容サロン">
+    <meta name="twitter:description" content="飲食店の予約自動化、クリニックの問診・予約対応、美容サロンのリピート率向上まで。">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    <link rel="stylesheet" href="/styles/components/floating-cta.css">
+    <link rel="stylesheet" href="/styles/components/back-to-top.css">
+    <link rel="stylesheet" href="/styles/components/cookie-banner.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+
+    <!-- Article Styles -->
+    <style>
+        /* ==================== ARTICLE PAGE STYLES ==================== */
+        
+        .article-page {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 50%, #FFFFFF 100%);
+        }
+
+        /* Hero Section */
+        .article-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%);
+        }
+
+        .article-hero .container {
+            max-width: 900px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .breadcrumb .separator {
+            color: var(--text-light);
+        }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .publish-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-excerpt {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: 40px 0;
+            background: white;
+        }
+
+        .toc-section .container {
+            max-width: 900px;
+        }
+
+        .toc-box {
+            background: #F8FAFB;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .toc-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        .toc-list .toc-h3 {
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 60px 0;
+            background: linear-gradient(180deg, white 0%, #F0F9FF 50%, white 100%);
+        }
+
+        .article-content .container {
+            max-width: 800px;
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-primary);
+        }
+
+        .article-body h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 0.75rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .article-body strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.08) 0%, rgba(166, 138, 92, 0.08) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .highlight-box p:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        /* Industry Box */
+        .industry-box {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .industry-box-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .industry-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .industry-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #EFF8FF;
+            border: 1px solid #BFDBFE;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .info-box-title {
+            font-weight: 700;
+            color: #1E40AF;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #1E3A5F;
+        }
+
+        /* Success Box */
+        .success-box {
+            background: #ECFDF5;
+            border: 1px solid #10B981;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .success-box-title {
+            font-weight: 700;
+            color: #065F46;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .success-box p {
+            margin: 0;
+            color: #064E3B;
+        }
+
+        /* Problem List */
+        .problem-list {
+            background: #FEF2F2;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .problem-list-title {
+            font-weight: 700;
+            color: #991B1B;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .problem-list ul {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+
+        .problem-list li {
+            color: #7F1D1D;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Solution List */
+        .solution-list {
+            background: #F0FDF4;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .solution-list-title {
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .solution-list ul {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+
+        .solution-list li {
+            color: #14532D;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #F8FAFB;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(139, 111, 71, 0.05);
+        }
+
+        /* Internal Link Box */
+        .internal-link-box {
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .internal-link-box:hover {
+            background: rgba(139, 111, 71, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.15);
+        }
+
+        .internal-link-label {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .internal-link-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .internal-link-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Service Link Box */
+        .service-link-box {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.05) 0%, rgba(166, 138, 92, 0.1) 100%);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .service-link-box:hover {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.1) 0%, rgba(166, 138, 92, 0.15) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.2);
+        }
+
+        .service-link-label {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-link-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-link-price {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* CTA Box in Article */
+        .article-cta-box {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .article-cta-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0 1rem;
+        }
+
+        .article-cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-cta-box .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-cta-box .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-cta-badges {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Related Articles */
+        .related-section {
+            padding: 60px 0;
+            background: #F8FAFB;
+        }
+
+        .related-section .container {
+            max-width: 900px;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .related-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .related-card-category {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-hero {
+                padding: 100px 0 40px;
+            }
+
+            .article-title {
+                font-size: 1.75rem;
+            }
+
+            .article-excerpt {
+                font-size: 1rem;
+            }
+
+            .article-body {
+                font-size: 1rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.2rem;
+            }
+
+            .toc-box {
+                padding: 1.5rem;
+            }
+
+            .industry-box {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-cta-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .highlight-box,
+            .info-box,
+            .success-box,
+            .problem-list,
+            .solution-list {
+                padding: 1.25rem 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://azenflow.jp/column/gyoshu-betsu-chatbot.html#article",
+                "headline": "業種別AIチャットボット活用ガイド｜飲食店・クリニック・美容サロン【2025年版】",
+                "description": "飲食店の予約自動化、クリニックの問診・予約対応、美容サロンのリピート率向上まで。業種ごとの課題とAIチャットボットによる解決策、導入効果を具体的に解説。",
+                "datePublished": "2025-01-13",
+                "dateModified": "2025-01-13",
+                "author": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://azenflow.jp/column/gyoshu-betsu-chatbot.html"
+                },
+                "articleSection": "事例",
+                "keywords": ["飲食店 チャットボット", "クリニック 予約", "美容サロン LINE", "業種別 AI活用"],
+                "wordCount": 4200,
+                "inLanguage": "ja-JP"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://azenflow.jp/column/gyoshu-betsu-chatbot.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "ホーム",
+                        "item": "https://azenflow.jp/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "コラム",
+                        "item": "https://azenflow.jp/column/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "業種別AIチャットボット活用ガイド",
+                        "item": "https://azenflow.jp/column/gyoshu-betsu-chatbot.html"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="article-page">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <div id="floating-cta-placeholder"></div>
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="article-hero">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <a href="/">ホーム</a>
+                <span class="separator">›</span>
+                <a href="/column/">コラム</a>
+                <span class="separator">›</span>
+                <span>業種別AIチャットボット活用ガイド</span>
+            </nav>
+
+            <!-- Article Meta -->
+            <div class="article-meta-top">
+                <span class="category-badge">事例</span>
+                <time class="publish-date" datetime="2025-01-13">2025.01.13</time>
+            </div>
+
+            <!-- Title -->
+            <h1 class="article-title">業種別AIチャットボット活用ガイド｜飲食店・クリニック・美容サロン【2025年版】</h1>
+
+            <!-- Excerpt -->
+            <p class="article-excerpt">
+                飲食店の予約自動化、クリニックの問診・予約対応、美容サロンのリピート率向上まで。業種によって異なる課題と、AIチャットボットによる具体的な解決策を詳しく解説します。導入効果のデータと、すぐに実践できる活用方法をお伝えします。
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== TABLE OF CONTENTS ==================== -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-box">
+                <h2 class="toc-title">📋 目次</h2>
+                <ol class="toc-list">
+                    <li><a href="#intro">業種別にチャットボットを活用すべき理由</a></li>
+                    <li><a href="#restaurant">【飲食店】予約受付・メニュー案内の自動化</a></li>
+                    <li><a href="#clinic">【クリニック】予約・問診・患者対応の効率化</a></li>
+                    <li><a href="#salon">【美容サロン】予約管理とリピート率向上</a></li>
+                    <li><a href="#ec">【EC・小売】商品問い合わせと注文対応</a></li>
+                    <li><a href="#common">業種共通の導入ステップ</a></li>
+                    <li><a href="#cost">費用対効果の考え方</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ARTICLE CONTENT ==================== -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-body">
+
+                <!-- Section 1: Intro -->
+                <h2 id="intro">業種別にチャットボットを活用すべき理由</h2>
+
+                <p>AIチャットボットは、どの業種でも同じように導入すれば良いわけではありません。飲食店、クリニック、美容サロン、ECサイトなど、業種によって顧客からの問い合わせ内容や、求められる対応は大きく異なります。</p>
+
+                <p>例えば、飲食店では「今日の19時、4名で予約できますか？」という問い合わせが多いのに対し、クリニックでは「この症状で受診できますか？」「保険は使えますか？」といった医療に関する質問が中心になります。</p>
+
+                <p>チャットボットを効果的に活用するためには、自社の業種特有の課題を理解し、それに合わせた設定・運用を行うことが重要です。</p>
+
+                <h3>店舗ビジネスに共通する3つの課題</h3>
+
+                <p>業種を問わず、店舗ビジネスには以下の共通課題があります。</p>
+
+                <ul>
+                    <li><strong>電話対応の負担</strong>：営業中の電話対応で接客が中断される</li>
+                    <li><strong>営業時間外の機会損失</strong>：閉店後や休日の問い合わせに対応できない</li>
+                    <li><strong>同じ質問の繰り返し</strong>：営業時間、料金、アクセスなど同じ質問に何度も答える</li>
+                </ul>
+
+                <p>AIチャットボットは、これらの課題を24時間自動で解決します。ここからは、業種別の具体的な活用方法を詳しく見ていきましょう。</p>
+
+                <a href="line-chatbot-kanzen-guide.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">LINEチャットボット導入完全ガイド【2025年最新版】</div>
+                    <p class="internal-link-desc">チャットボットの基本的な仕組みと導入方法を解説しています。</p>
+                </a>
+
+
+                <!-- Section 2: Restaurant -->
+                <h2 id="restaurant">【飲食店】予約受付・メニュー案内の自動化</h2>
+
+                <div class="industry-box">
+                    <div class="industry-box-header">
+                        <div class="industry-icon">🍽️</div>
+                        <div class="industry-name">飲食店・レストラン・居酒屋</div>
+                    </div>
+
+                    <div class="problem-list">
+                        <div class="problem-list-title">❌ よくある課題</div>
+                        <ul>
+                            <li>ピーク時の電話対応で調理・接客が中断される</li>
+                            <li>営業時間外の予約問い合わせを取りこぼしている</li>
+                            <li>無断キャンセル（ノーショー）が多い</li>
+                            <li>「今日空いてますか？」の電話が多すぎる</li>
+                            <li>外国人観光客への対応に困っている</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-list">
+                        <div class="solution-list-title">✅ チャットボットによる解決策</div>
+                        <ul>
+                            <li>LINE経由で24時間予約受付を自動化</li>
+                            <li>空席状況の自動案内（予約システムと連携可能）</li>
+                            <li>予約前日のリマインド自動送信でノーショー防止</li>
+                            <li>メニュー・料金・アクセス情報の即時回答</li>
+                            <li>多言語対応で外国人観光客にも対応</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>飲食店での具体的な活用シーン</h3>
+
+                <h4>予約受付の自動化</h4>
+
+                <p>最も効果が高いのが、予約受付の自動化です。チャットボットが以下の情報を順番に確認し、予約を完了させます。</p>
+
+                <ol>
+                    <li>希望日時の確認（「12月15日の19時で予約したいです」）</li>
+                    <li>人数の確認（「4名です」）</li>
+                    <li>コース・席の希望確認（「個室を希望します」）</li>
+                    <li>連絡先・名前の確認</li>
+                    <li>予約確定の案内</li>
+                </ol>
+
+                <p>この流れを完全に自動化できれば、スタッフは電話対応から解放され、目の前のお客様へのサービスに集中できます。</p>
+
+                <h4>営業情報の案内</h4>
+
+                <p>「今日は何時まで？」「駐車場ある？」「子連れで行ける？」といった質問は、飲食店への問い合わせの大部分を占めます。これらの定型的な質問をチャットボットが自動回答することで、電話の本数を大幅に減らせます。</p>
+
+                <h4>リマインド送信によるノーショー対策</h4>
+
+                <p>予約の前日に「明日のご予約、お忘れではないですか？」というリマインドメッセージを自動送信できます。これにより、無断キャンセル率を大幅に下げることができます。もし都合が悪くなった場合も、LINE上で簡単にキャンセルや変更ができるため、お客様にとっても便利です。</p>
+
+                <div class="success-box">
+                    <div class="success-box-title">📊 導入効果の目安</div>
+                    <p>電話対応件数：50〜70%削減<br>
+                    無断キャンセル率：30〜50%改善<br>
+                    予約数：10〜20%増加（24時間受付により）</p>
+                </div>
+
+                <a href="/line-chatbot.html" class="service-link-box">
+                    <div class="service-link-label">おすすめサービス</div>
+                    <div class="service-link-title">AzenFlow LINE チャットボット</div>
+                    <div class="service-link-price">月額 19,990円（税抜）〜 ｜ 初期費用0円 ｜ 2週間無料トライアル</div>
+                </a>
+
+
+                <!-- Section 3: Clinic -->
+                <h2 id="clinic">【クリニック】予約・問診・患者対応の効率化</h2>
+
+                <div class="industry-box">
+                    <div class="industry-box-header">
+                        <div class="industry-icon">🏥</div>
+                        <div class="industry-name">クリニック・歯科医院・医療機関</div>
+                    </div>
+
+                    <div class="problem-list">
+                        <div class="problem-list-title">❌ よくある課題</div>
+                        <ul>
+                            <li>診療時間中の電話対応で受付業務が滞る</li>
+                            <li>「今日の午後、空いてますか？」の問い合わせが多すぎる</li>
+                            <li>初診の患者への説明（持ち物、保険証など）が毎回同じ</li>
+                            <li>休診日や診療時間の問い合わせが多い</li>
+                            <li>症状に応じた適切な案内が難しい</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-list">
+                        <div class="solution-list-title">✅ チャットボットによる解決策</div>
+                        <ul>
+                            <li>診療予約の自動受付（Web予約システムと連携可能）</li>
+                            <li>診療時間・休診日の即時案内</li>
+                            <li>初診時の持ち物・準備事項の自動説明</li>
+                            <li>症状に応じた受診科目の案内</li>
+                            <li>予防接種・健康診断の予約受付</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>クリニックでの具体的な活用シーン</h3>
+
+                <h4>診療予約の効率化</h4>
+
+                <p>チャットボットを使えば、患者は24時間いつでもLINEから診療予約ができます。特に、仕事で日中に電話できない方や、電話が苦手な若い世代にとって、LINEでの予約は大きなメリットです。</p>
+
+                <p>予約時に以下の情報を自動で収集することも可能です。</p>
+
+                <ul>
+                    <li>希望日時</li>
+                    <li>初診か再診か</li>
+                    <li>主な症状・受診目的</li>
+                    <li>保険証の種類</li>
+                </ul>
+
+                <h4>初診患者への事前案内</h4>
+
+                <p>初めて来院される患者には、「保険証をお持ちください」「問診票は事前にダウンロードできます」「駐車場は〇〇にあります」といった案内を自動で送信できます。これにより、当日の受付がスムーズになり、患者の待ち時間短縮にもつながります。</p>
+
+                <h4>症状に応じた案内</h4>
+
+                <p>「熱がある」「咳が出る」といった症状を入力すると、発熱外来の予約方法や、来院時の注意事項（マスク着用、入口の案内など）を自動で案内できます。</p>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 医療機関での注意点</div>
+                    <p>チャットボットで診断や医療行為に関わる回答をすることはできません。症状の相談に対しては「詳しくは医師の診察をお受けください」と案内し、あくまで予約受付や一般的な情報案内に限定することが重要です。</p>
+                </div>
+
+                <div class="success-box">
+                    <div class="success-box-title">📊 導入効果の目安</div>
+                    <p>電話問い合わせ数：40〜60%削減<br>
+                    受付業務の効率化：1日あたり30分〜1時間の時間短縮<br>
+                    患者満足度：待ち時間短縮により向上</p>
+                </div>
+
+
+                <!-- Section 4: Salon -->
+                <h2 id="salon">【美容サロン】予約管理とリピート率向上</h2>
+
+                <div class="industry-box">
+                    <div class="industry-box-header">
+                        <div class="industry-icon">💇</div>
+                        <div class="industry-name">美容室・ネイルサロン・エステサロン</div>
+                    </div>
+
+                    <div class="problem-list">
+                        <div class="problem-list-title">❌ よくある課題</div>
+                        <ul>
+                            <li>施術中に電話が鳴っても出られない</li>
+                            <li>営業時間外の予約問い合わせを逃している</li>
+                            <li>指名予約の調整が煩雑</li>
+                            <li>リピート率を上げたいが、DMを送る時間がない</li>
+                            <li>キャンセル待ちの管理が面倒</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-list">
+                        <div class="solution-list-title">✅ チャットボットによる解決策</div>
+                        <ul>
+                            <li>24時間予約受付（スタイリスト指名も可能）</li>
+                            <li>メニュー・料金の案内</li>
+                            <li>空き状況の自動案内</li>
+                            <li>キャンセル待ちの自動登録・通知</li>
+                            <li>来店後のフォローアップメッセージ自動送信</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>美容サロンでの具体的な活用シーン</h3>
+
+                <h4>施術中でも予約を取りこぼさない</h4>
+
+                <p>美容師やネイリストは施術中に手が離せないため、電話に出られないことがよくあります。チャットボットを導入すれば、施術中でもLINEが自動で予約を受け付けてくれます。</p>
+
+                <p>「今週の土曜日、空いていますか？」という問い合わせに対して、空き状況を自動で案内し、そのまま予約確定まで完了できます。</p>
+
+                <h4>指名予約への対応</h4>
+
+                <p>美容サロンでは「〇〇さんを指名したい」という要望が多くあります。チャットボットで担当スタッフを選択できるようにすれば、指名予約もスムーズに受け付けられます。</p>
+
+                <h4>リピート促進の自動化</h4>
+
+                <p>前回の来店から一定期間が経過した顧客に、自動でメッセージを送ることができます。</p>
+
+                <ul>
+                    <li>「前回のご来店から1ヶ月が経ちました。そろそろカットの時期ではないでしょうか？」</li>
+                    <li>「ネイルのお直し時期です。ご予約はこちらから」</li>
+                </ul>
+
+                <p>このような自動メッセージにより、リピート率の向上が期待できます。</p>
+
+                <h4>キャンセル待ち機能</h4>
+
+                <p>人気の時間帯は予約が埋まりやすいですが、キャンセルが出ることもあります。チャットボットでキャンセル待ちを受け付け、空きが出たら自動で通知することで、予約枠を無駄なく活用できます。</p>
+
+                <div class="success-box">
+                    <div class="success-box-title">📊 導入効果の目安</div>
+                    <p>予約取りこぼし：70〜90%削減<br>
+                    リピート率：5〜15%向上（自動フォローアップにより）<br>
+                    キャンセル枠の埋め戻し率：30〜50%向上</p>
+                </div>
+
+
+                <!-- Section 5: EC -->
+                <h2 id="ec">【EC・小売】商品問い合わせと注文対応</h2>
+
+                <div class="industry-box">
+                    <div class="industry-box-header">
+                        <div class="industry-icon">🛒</div>
+                        <div class="industry-name">ECサイト・小売店・通販</div>
+                    </div>
+
+                    <div class="problem-list">
+                        <div class="problem-list-title">❌ よくある課題</div>
+                        <ul>
+                            <li>「在庫ありますか？」「サイズは？」の問い合わせが多い</li>
+                            <li>配送状況の問い合わせ対応に時間を取られる</li>
+                            <li>返品・交換の手続き説明が面倒</li>
+                            <li>カート放棄率が高い</li>
+                            <li>24時間対応したいが人員が足りない</li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-list">
+                        <div class="solution-list-title">✅ チャットボットによる解決策</div>
+                        <ul>
+                            <li>商品の在庫・サイズ・色の自動案内</li>
+                            <li>配送状況の自動確認</li>
+                            <li>返品・交換手続きの自動説明</li>
+                            <li>カート放棄後のフォローアップ</li>
+                            <li>おすすめ商品のレコメンド</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>EC・小売での具体的な活用シーン</h3>
+
+                <h4>商品に関する問い合わせ対応</h4>
+
+                <p>ECサイトでは、「このシャツのMサイズはありますか？」「この商品と似たものはありますか？」といった問い合わせが多く発生します。チャットボットが商品情報をもとに即座に回答することで、顧客は待たずに購入を決断できます。</p>
+
+                <h4>注文・配送状況の確認</h4>
+
+                <p>「注文した商品はいつ届きますか？」は、EC事業者への問い合わせで最も多いものの一つです。チャットボットと配送システムを連携させれば、注文番号を入力するだけで、現在のステータス（発送準備中、配送中、お届け完了など）を自動で案内できます。</p>
+
+                <h4>返品・交換対応</h4>
+
+                <p>返品・交換の手続きは、説明することが多く、対応に時間がかかります。チャットボットが返品条件（期限、状態など）を確認し、手続き方法を案内することで、スタッフの負担を軽減できます。</p>
+
+                <a href="/web-chatbot.html" class="service-link-box">
+                    <div class="service-link-label">EC向けおすすめサービス</div>
+                    <div class="service-link-title">AzenFlow Web チャットボット</div>
+                    <div class="service-link-price">月額 29,990円（税抜）〜 ｜ 初期費用0円 ｜ Webサイトに設置可能</div>
+                </a>
+
+
+                <!-- Article CTA -->
+                <div class="article-cta-box">
+                    <h3>あなたの業種に合ったチャットボットをご提案</h3>
+                    <p>飲食店、クリニック、美容サロン、ECサイトなど、<br>業種に合わせた最適な導入プランをご案内します。</p>
+                    <a href="/contact.html" class="cta-button">無料相談を予約する</a>
+                    <div class="article-cta-badges">✓ 初期費用0円 ✓ 2週間無料トライアル ✓ 業種別の設定サポート</div>
+                </div>
+
+
+                <!-- Section 6: Common Steps -->
+                <h2 id="common">業種共通の導入ステップ</h2>
+
+                <p>業種に関わらず、チャットボットの導入は以下のステップで進めます。</p>
+
+                <h3>ステップ1：現状の問い合わせを分析する</h3>
+
+                <p>まず、現在どのような問い合わせが多いかを把握します。電話、メール、SNSなど、すべてのチャネルからの問い合わせを1〜2週間記録し、以下を分析します。</p>
+
+                <ul>
+                    <li>どんな質問が多いか（TOP10をリストアップ）</li>
+                    <li>問い合わせが多い時間帯</li>
+                    <li>対応にかかっている時間</li>
+                    <li>自動化できそうな問い合わせの割合</li>
+                </ul>
+
+                <h3>ステップ2：自動化する範囲を決める</h3>
+
+                <p>すべての問い合わせを自動化する必要はありません。まずは、定型的で回答が決まっている問い合わせから自動化します。</p>
+
+                <p><strong>自動化に向いている問い合わせ</strong></p>
+                <ul>
+                    <li>営業時間、定休日、アクセス</li>
+                    <li>料金、メニュー、サービス内容</li>
+                    <li>予約の受付</li>
+                    <li>よくある質問（FAQ）への回答</li>
+                </ul>
+
+                <p><strong>人間が対応すべき問い合わせ</strong></p>
+                <ul>
+                    <li>クレームや不満</li>
+                    <li>複雑な相談</li>
+                    <li>緊急性の高い問い合わせ</li>
+                    <li>個別の交渉が必要なもの</li>
+                </ul>
+
+                <h3>ステップ3：必要な資料を準備する</h3>
+
+                <p>チャットボットが回答するための「知識」を整理します。</p>
+
+                <ul>
+                    <li>FAQ（よくある質問と回答）</li>
+                    <li>サービス・商品の説明</li>
+                    <li>料金表</li>
+                    <li>営業時間・定休日</li>
+                    <li>アクセス情報</li>
+                    <li>予約・注文のルール</li>
+                </ul>
+
+                <h3>ステップ4：サービスを選んで導入する</h3>
+
+                <p>業種や予算に合ったチャットボットサービスを選び、導入します。AzenFlowの場合、資料をお送りいただければ、最短1日で導入が完了します。</p>
+
+                <h3>ステップ5：運用しながら改善する</h3>
+
+                <p>導入して終わりではありません。実際の問い合わせログを確認し、回答できなかった質問や、回答精度が低い質問を特定して、継続的に改善していきます。</p>
+
+                <a href="ai-ningen-tsukawake.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">AIチャットボットと人間対応の使い分け｜最適なハイブリッド戦略</div>
+                    <p class="internal-link-desc">AIと人間の役割分担を最適化する方法を解説しています。</p>
+                </a>
+
+
+                <!-- Section 7: Cost -->
+                <h2 id="cost">費用対効果の考え方</h2>
+
+                <p>チャットボット導入の投資対効果（ROI）を考える際は、以下の観点で計算します。</p>
+
+                <h3>削減できるコスト</h3>
+
+                <p><strong>1. 人件費の削減</strong></p>
+                <p>問い合わせ対応にかかっている時間を金額換算します。例えば、1日2時間の問い合わせ対応を自動化できれば、時給1,200円として月間約57,600円の削減になります。</p>
+
+                <p><strong>2. 機会損失の削減</strong></p>
+                <p>営業時間外の問い合わせに対応できるようになることで、これまで逃していた予約や注文を獲得できます。</p>
+
+                <h3>業種別の費用対効果の目安</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>業種</th>
+                            <th>月額コスト</th>
+                            <th>期待効果</th>
+                            <th>投資回収目安</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>飲食店</td>
+                            <td>19,990円〜</td>
+                            <td>電話対応50%削減、予約増</td>
+                            <td>1〜2ヶ月</td>
+                        </tr>
+                        <tr>
+                            <td>クリニック</td>
+                            <td>19,990円〜</td>
+                            <td>受付業務効率化、患者満足度向上</td>
+                            <td>1〜3ヶ月</td>
+                        </tr>
+                        <tr>
+                            <td>美容サロン</td>
+                            <td>19,990円〜</td>
+                            <td>予約取りこぼし削減、リピート率向上</td>
+                            <td>1〜2ヶ月</td>
+                        </tr>
+                        <tr>
+                            <td>EC・小売</td>
+                            <td>29,990円〜</td>
+                            <td>問い合わせ対応60%削減、CV率向上</td>
+                            <td>2〜3ヶ月</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <p><strong>ポイント</strong>：月額2万円程度の投資で、パートタイムスタッフ1人分以上の業務を自動化できるケースが多いです。特に、24時間対応による機会損失の削減効果は、数字に表れにくいですが非常に大きいです。</p>
+                </div>
+
+                <a href="chatbot-hiyou-roi.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">チャットボット導入費用の相場｜料金体系・隠れコスト・ROI計算方法</div>
+                    <p class="internal-link-desc">費用対効果の詳しい計算方法を解説しています。</p>
+                </a>
+
+
+                <!-- Section 8: Summary -->
+                <h2 id="summary">まとめ</h2>
+
+                <p>この記事では、飲食店、クリニック、美容サロン、ECサイトそれぞれの業種における、AIチャットボットの活用方法を解説しました。</p>
+
+                <p><strong>主なポイントをまとめると：</strong></p>
+
+                <ul>
+                    <li>業種によって顧客からの問い合わせ内容は異なる</li>
+                    <li>自社の課題に合わせたチャットボットの設定が重要</li>
+                    <li>飲食店では予約自動化とノーショー対策が効果的</li>
+                    <li>クリニックでは予約受付と患者案内の効率化に有効</li>
+                    <li>美容サロンでは予約管理とリピート促進に活用</li>
+                    <li>ECでは商品問い合わせと配送状況の案内を自動化</li>
+                    <li>導入は5ステップ、最短1日で完了可能</li>
+                    <li>投資回収は1〜3ヶ月が目安</li>
+                </ul>
+
+                <p>どの業種でも、チャットボットを導入することで、スタッフの負担を減らしながら、顧客サービスの質を向上させることができます。</p>
+
+                <p>まずは無料トライアルで、自社の業種に合った活用方法を体験してみてください。</p>
+
+
+                <!-- Final CTA -->
+                <div class="article-cta-box">
+                    <h3>あなたの業種専用のチャットボットを試してみませんか？</h3>
+                    <p>2週間の無料トライアルで、実際の効果を体験できます。<br>業種に合わせた設定はすべて無料でサポートします。</p>
+                    <a href="/line-chatbot.html" class="cta-button">サービス詳細を見る</a>
+                    <div class="article-cta-badges">✓ 初期費用0円 ✓ 月額19,990円〜 ✓ 最短1日で導入</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RELATED ARTICLES ==================== -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="related-title">関連記事</h2>
+            <div class="related-grid">
+                <a href="/column/line-chatbot-kanzen-guide.html" class="related-card">
+                    <div class="related-card-category">ガイド</div>
+                    <div class="related-card-title">LINEチャットボット導入完全ガイド【2025年最新版】</div>
+                </a>
+                <a href="/column/chatbot-hikaku.html" class="related-card">
+                    <div class="related-card-category">比較</div>
+                    <div class="related-card-title">【2025年版】AIチャットボット比較｜種類別の特徴とAzenFlowの強み</div>
+                </a>
+                <a href="/column/hitodebusoku-ai-guide.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">人手不足をAIで解決｜中小企業の業務自動化完全ガイド</div>
+                </a>
+                <a href="/column/24jikan-taiou-guide.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <div id="chatbot-widget-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+    (function(){'use strict';const CONFIG={STORAGE_KEY:'azenflow_cookie_consent',EXPIRY_DAYS:395,GA_MEASUREMENT_ID:'G-17R5RQY64S',CONSENT_STATES:{ACCEPTED:'accepted',REJECTED:'rejected',PENDING:'pending'}};const CookieConsent={init(){if(this.isDoNotTrackEnabled()){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);return}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>this.setup())}else{this.setup()}},setup(){const consent=this.getConsent();if(consent.status===CONFIG.CONSENT_STATES.PENDING||this.isConsentExpired(consent)){this.showBanner()}else if(consent.status===CONFIG.CONSENT_STATES.ACCEPTED){this.initGoogleAnalytics()}this.attachEventListeners()},getConsent(){try{const stored=localStorage.getItem(CONFIG.STORAGE_KEY);if(!stored)return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null};return JSON.parse(stored)}catch(e){return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null}}},saveConsent(status){try{localStorage.setItem(CONFIG.STORAGE_KEY,JSON.stringify({status:status,timestamp:Date.now(),version:'1.0'}))}catch(e){}},isConsentExpired(consent){if(!consent.timestamp)return true;return(Date.now()-consent.timestamp)>CONFIG.EXPIRY_DAYS*24*60*60*1000},isDoNotTrackEnabled(){return navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.msDoNotTrack==='1'},showBanner(){const show=()=>{const banner=document.getElementById('cookie-banner');if(banner){banner.style.display='flex';}};if(document.getElementById('cookie-banner')){show()}else{document.addEventListener('componentsLoaded',show)}},hideBanner(){const banner=document.getElementById('cookie-banner');if(banner){banner.classList.add('hiding');setTimeout(()=>{banner.style.display='none';banner.classList.remove('hiding')},400)}},attachEventListeners(){document.addEventListener('click',(e)=>{if(e.target.id==='cookie-accept'||e.target.closest('#cookie-accept')){e.preventDefault();this.handleAccept()}else if(e.target.id==='cookie-decline'||e.target.closest('#cookie-decline')){e.preventDefault();this.handleDecline()}});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){const banner=document.getElementById('cookie-banner');if(banner&&banner.style.display!=='none'){this.handleDecline()}}})},handleAccept(){this.saveConsent(CONFIG.CONSENT_STATES.ACCEPTED);this.hideBanner();this.initGoogleAnalytics();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.ACCEPTED}}))},handleDecline(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);this.hideBanner();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.REJECTED}}))},initGoogleAnalytics(){if(CONFIG.GA_MEASUREMENT_ID==='G-XXXXXXXXXX')return;if(window.gtag||document.querySelector('script[src*="googletagmanager.com/gtag/js"]'))return;const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.GA_MEASUREMENT_ID;document.head.appendChild(script);window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',CONFIG.GA_MEASUREMENT_ID,{'anonymize_ip':true,'cookie_flags':'SameSite=None;Secure'})},hasAnalyticsConsent(){const consent=this.getConsent();return consent.status===CONFIG.CONSENT_STATES.ACCEPTED&&!this.isConsentExpired(consent)},revokeConsent(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);window.location.reload()}};window.CookieConsent=CookieConsent;CookieConsent.init()})();
+    </script>
+    <script src="/scripts/component-loader.js" defer></script>
+    <script src="/scripts/animations.js" defer></script>
+    <script src="/scripts/chatbot-widget.js" defer></script>
+    <script src="/scripts/floating-cta.js" defer></script>
+    <script src="/scripts/back-to-top.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+
+    <!-- Smooth scroll for TOC -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

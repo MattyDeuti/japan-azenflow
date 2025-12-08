@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17R5RQY64S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-17R5RQY64S');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Principal -->
+    <title>24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略【2025年版】</title>
+    <meta name="description" content="スタッフを増やさずに24時間365日の顧客対応を実現する方法を徹底解説。営業時間外の機会損失データ、AIチャットボットによる自動対応の仕組み、人間対応が必要なケースの判断基準、導入コストまで網羅。">
+    <meta name="keywords" content="24時間対応, 営業時間外対応, AIチャットボット, 機会損失, 顧客対応自動化, 人手不足対策, 夜間対応, 休日対応, カスタマーサポート">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AzenFlow Japan">
+
+    <link rel="canonical" href="https://azenflow.jp/column/24jikan-taiou-guide.html">
+    <link rel="help" href="https://azenflow.jp/llms.txt" type="text/plain" title="LLMs Information">
+    <link rel="icon" href="/images/favicon.webp" type="image/webp">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://azenflow.jp/column/24jikan-taiou-guide.html">
+    <meta property="og:title" content="24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略">
+    <meta property="og:description" content="スタッフを増やさずに24時間365日の顧客対応を実現する方法。機会損失データから導入コストまで徹底解説。">
+    <meta property="og:site_name" content="AzenFlow">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="article:published_time" content="2025-01-14">
+    <meta property="article:modified_time" content="2025-01-14">
+    <meta property="article:author" content="AzenFlow Japan">
+    <meta property="article:section" content="ノウハウ">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略">
+    <meta name="twitter:description" content="スタッフを増やさずに24時間365日の顧客対応を実現する方法を徹底解説。">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    <link rel="stylesheet" href="/styles/components/floating-cta.css">
+    <link rel="stylesheet" href="/styles/components/back-to-top.css">
+    <link rel="stylesheet" href="/styles/components/cookie-banner.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+
+    <!-- Article Styles -->
+    <style>
+        /* ==================== ARTICLE PAGE STYLES ==================== */
+        
+        .article-page {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 50%, #FFFFFF 100%);
+        }
+
+        /* Hero Section */
+        .article-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%);
+        }
+
+        .article-hero .container {
+            max-width: 900px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .breadcrumb .separator {
+            color: var(--text-light);
+        }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .publish-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-excerpt {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: 40px 0;
+            background: white;
+        }
+
+        .toc-section .container {
+            max-width: 900px;
+        }
+
+        .toc-box {
+            background: #F8FAFB;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .toc-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 60px 0;
+            background: linear-gradient(180deg, white 0%, #F0F9FF 50%, white 100%);
+        }
+
+        .article-content .container {
+            max-width: 800px;
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-primary);
+        }
+
+        .article-body h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 0.75rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .article-body strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.08) 0%, rgba(166, 138, 92, 0.08) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .highlight-box p:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #EFF8FF;
+            border: 1px solid #BFDBFE;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .info-box-title {
+            font-weight: 700;
+            color: #1E40AF;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #1E3A5F;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #FEF3C7;
+            border: 1px solid #F59E0B;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .warning-box-title {
+            font-weight: 700;
+            color: #92400E;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #78350F;
+        }
+
+        /* Stats Box */
+        .stats-box {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #92400E;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-label {
+            font-size: 1.1rem;
+            color: #78350F;
+            font-weight: 600;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #F8FAFB;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(139, 111, 71, 0.05);
+        }
+
+        /* Internal Link Box */
+        .internal-link-box {
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .internal-link-box:hover {
+            background: rgba(139, 111, 71, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.15);
+        }
+
+        .internal-link-label {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .internal-link-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .internal-link-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Service Link Box */
+        .service-link-box {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border: 2px solid #10B981;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .service-link-box:hover {
+            background: rgba(16, 185, 129, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .service-link-label {
+            font-size: 0.85rem;
+            color: #059669;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-link-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .service-link-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* CTA Box in Article */
+        .article-cta-box {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .article-cta-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0 1rem;
+        }
+
+        .article-cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-cta-box .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-cta-box .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-cta-badges {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Related Articles */
+        .related-section {
+            padding: 60px 0;
+            background: #F8FAFB;
+        }
+
+        .related-section .container {
+            max-width: 900px;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .related-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .related-card-category {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-hero {
+                padding: 100px 0 40px;
+            }
+
+            .article-title {
+                font-size: 1.75rem;
+            }
+
+            .article-excerpt {
+                font-size: 1rem;
+            }
+
+            .article-body {
+                font-size: 1rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.2rem;
+            }
+
+            .toc-box {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-cta-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .highlight-box,
+            .info-box,
+            .warning-box {
+                padding: 1.25rem 1.5rem;
+            }
+
+            .stats-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://azenflow.jp/column/24jikan-taiou-guide.html#article",
+                "headline": "24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略",
+                "description": "スタッフを増やさずに24時間365日の顧客対応を実現する方法を徹底解説。営業時間外の機会損失データ、AIチャットボットによる自動対応の仕組み、人間対応が必要なケースの判断基準まで。",
+                "datePublished": "2025-01-14",
+                "dateModified": "2025-01-14",
+                "author": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://azenflow.jp/column/24jikan-taiou-guide.html"
+                },
+                "articleSection": "ノウハウ",
+                "keywords": ["24時間対応", "AIチャットボット", "機会損失", "顧客対応自動化", "夜間対応"],
+                "wordCount": 4200,
+                "inLanguage": "ja-JP"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://azenflow.jp/column/24jikan-taiou-guide.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "ホーム",
+                        "item": "https://azenflow.jp/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "コラム",
+                        "item": "https://azenflow.jp/column/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "24時間対応を人員増加なしで実現",
+                        "item": "https://azenflow.jp/column/24jikan-taiou-guide.html"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="article-page">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <div id="floating-cta-placeholder"></div>
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="article-hero">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <a href="/">ホーム</a>
+                <span class="separator">›</span>
+                <a href="/column/">コラム</a>
+                <span class="separator">›</span>
+                <span>24時間対応を実現する方法</span>
+            </nav>
+
+            <!-- Article Meta -->
+            <div class="article-meta-top">
+                <span class="category-badge">ノウハウ</span>
+                <time class="publish-date" datetime="2025-01-14">2025.01.14</time>
+            </div>
+
+            <!-- Title -->
+            <h1 class="article-title">24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略</h1>
+
+            <!-- Excerpt -->
+            <p class="article-excerpt">
+                「夜間や休日の問い合わせに対応できない」「人を増やすと人件費が…」。こんな悩みを抱える中小企業は少なくありません。この記事では、スタッフを増やさずに24時間365日の顧客対応を実現する方法を、具体的なデータと実践的なノウハウとともに解説します。
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== TABLE OF CONTENTS ==================== -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-box">
+                <h2 class="toc-title">📋 目次</h2>
+                <ol class="toc-list">
+                    <li><a href="#loss">営業時間外の機会損失｜データで見る「逃している顧客」</a></li>
+                    <li><a href="#options">24時間対応の3つの選択肢｜コストと効果を比較</a></li>
+                    <li><a href="#ai-mechanism">AIチャットボットによる自動対応の仕組み</a></li>
+                    <li><a href="#what-can">自動化できる問い合わせの種類</a></li>
+                    <li><a href="#human-needed">人間対応が必要なケースの判断基準</a></li>
+                    <li><a href="#channel">チャネル別の24時間対応戦略</a></li>
+                    <li><a href="#cost">導入コストと投資回収期間</a></li>
+                    <li><a href="#cases">業種別の活用事例</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ARTICLE CONTENT ==================== -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-body">
+
+                <!-- Section 1 -->
+                <h2 id="loss">営業時間外の機会損失｜データで見る「逃している顧客」</h2>
+
+                <p>まず、営業時間外にどれだけの顧客を逃しているのか、データで確認してみましょう。多くの企業が想像以上の機会損失を発生させています。</p>
+
+                <h3>消費者の問い合わせ行動の実態</h3>
+
+                <p>調査によると、消費者が企業に問い合わせを行う時間帯は、営業時間内に限りません。特にインターネット経由の問い合わせは、以下のような傾向があります。</p>
+
+                <ul>
+                    <li><strong>平日夜間（18時〜23時）</strong>：問い合わせ全体の約25%</li>
+                    <li><strong>土日祝日</strong>：問い合わせ全体の約20%</li>
+                    <li><strong>深夜〜早朝（23時〜8時）</strong>：問い合わせ全体の約10%</li>
+                </ul>
+
+                <p>つまり、営業時間を平日9時〜18時としている企業は、<strong>全問い合わせの約55%に即座に対応できていない</strong>計算になります。</p>
+
+                <div class="stats-box">
+                    <div class="stats-number">55%</div>
+                    <div class="stats-label">営業時間外の問い合わせ割合</div>
+                </div>
+
+                <h3>「待たされる」ことによる離脱</h3>
+
+                <p>さらに重要なのは、「待たされた顧客」がどのような行動を取るかです。</p>
+
+                <p>ある調査では、問い合わせへの返答が1時間以内にないと、顧客の約50%が「競合他社を検討し始める」と回答しています。24時間以上待たされると、その割合は80%以上に上昇します。</p>
+
+                <p>これは、営業時間外の問い合わせを翌営業日まで放置することが、どれだけの機会損失につながるかを示しています。</p>
+
+                <h3>機会損失の金額換算</h3>
+
+                <p>具体的に、機会損失を金額で考えてみましょう。</p>
+
+                <p>例えば、1件の成約が平均10万円の売上になる企業で、月間100件の問い合わせがあるとします。営業時間外の問い合わせが55%（55件）で、そのうち30%が競合に流れるとすると…</p>
+
+                <div class="highlight-box">
+                    <p><strong>機会損失の計算例</strong></p>
+                    <p>55件 × 30%離脱 × 10万円 = <strong>月間165万円の機会損失</strong></p>
+                    <p>年間では約2,000万円の売上を逃している計算になります。</p>
+                </div>
+
+                <p>もちろん、業種や単価によってこの数字は大きく変わりますが、「営業時間外に対応できない」ことのコストは、多くの企業が認識している以上に大きいのです。</p>
+
+
+                <!-- Section 2 -->
+                <h2 id="options">24時間対応の3つの選択肢｜コストと効果を比較</h2>
+
+                <p>24時間対応を実現するには、主に3つの選択肢があります。それぞれのメリット・デメリットとコストを比較してみましょう。</p>
+
+                <h3>選択肢1：人員を増やす（シフト制）</h3>
+
+                <p>最もシンプルな方法は、夜間・休日に対応できるスタッフを雇用することです。</p>
+
+                <p><strong>メリット</strong></p>
+                <ul>
+                    <li>複雑な問い合わせにも柔軟に対応できる</li>
+                    <li>顧客との関係構築がしやすい</li>
+                    <li>即座に導入できる</li>
+                </ul>
+
+                <p><strong>デメリット</strong></p>
+                <ul>
+                    <li>人件費が大幅に増加する</li>
+                    <li>夜勤・休日出勤の人材確保が困難</li>
+                    <li>深夜手当・休日手当でコストがさらに増加</li>
+                    <li>採用・教育のコストと時間がかかる</li>
+                </ul>
+
+                <p><strong>コスト目安</strong>：月額50万円〜100万円以上（フルタイム2〜3名のシフト制の場合）</p>
+
+                <h3>選択肢2：コールセンター外注</h3>
+
+                <p>24時間対応のコールセンターに電話・メール対応を外注する方法です。</p>
+
+                <p><strong>メリット</strong></p>
+                <ul>
+                    <li>自社で人材を確保する必要がない</li>
+                    <li>プロのオペレーターが対応</li>
+                    <li>繁忙期・閑散期に合わせた調整が可能</li>
+                </ul>
+
+                <p><strong>デメリット</strong></p>
+                <ul>
+                    <li>自社の商品・サービスへの理解が浅い</li>
+                    <li>対応品質のコントロールが難しい</li>
+                    <li>従量課金で問い合わせが多いと高額になる</li>
+                    <li>顧客データが外部に出る</li>
+                </ul>
+
+                <p><strong>コスト目安</strong>：月額20万円〜50万円（件数・対応内容による）</p>
+
+                <h3>選択肢3：AIチャットボット導入</h3>
+
+                <p>AIチャットボットを導入し、定型的な問い合わせを自動で処理する方法です。</p>
+
+                <p><strong>メリット</strong></p>
+                <ul>
+                    <li>24時間365日、即座に対応可能</li>
+                    <li>一度設定すれば追加の人件費不要</li>
+                    <li>同時に何件でも対応可能</li>
+                    <li>対応品質が一定（疲れない、ミスしない）</li>
+                    <li>会話データを蓄積・分析できる</li>
+                </ul>
+
+                <p><strong>デメリット</strong></p>
+                <ul>
+                    <li>複雑な相談には対応できない</li>
+                    <li>初期設定（FAQ準備など）が必要</li>
+                    <li>人間味のある対応は苦手</li>
+                </ul>
+
+                <p><strong>コスト目安</strong>：月額1万円〜5万円程度</p>
+
+                <h3>3つの選択肢の比較表</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>人員増加</th>
+                            <th>外注</th>
+                            <th>AIチャットボット</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>月額コスト</td>
+                            <td>50〜100万円</td>
+                            <td>20〜50万円</td>
+                            <td>1〜5万円</td>
+                        </tr>
+                        <tr>
+                            <td>応答速度</td>
+                            <td>数分〜</td>
+                            <td>数分〜</td>
+                            <td>3秒以内</td>
+                        </tr>
+                        <tr>
+                            <td>複雑な対応</td>
+                            <td>◎</td>
+                            <td>○</td>
+                            <td>△</td>
+                        </tr>
+                        <tr>
+                            <td>品質の安定性</td>
+                            <td>△（人による）</td>
+                            <td>○</td>
+                            <td>◎</td>
+                        </tr>
+                        <tr>
+                            <td>導入スピード</td>
+                            <td>1〜3ヶ月</td>
+                            <td>2週間〜1ヶ月</td>
+                            <td>最短1日</td>
+                        </tr>
+                        <tr>
+                            <td>スケーラビリティ</td>
+                            <td>△</td>
+                            <td>○</td>
+                            <td>◎</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 最適な組み合わせ</div>
+                    <p>多くの企業にとって最適なのは、<strong>AIチャットボットをベースに、必要な場合のみ人間が対応する「ハイブリッド型」</strong>です。定型的な問い合わせの80%をAIが処理し、残り20%の複雑な相談を人間が担当することで、コストを抑えながら品質を維持できます。</p>
+                </div>
+
+
+                <!-- Section 3 -->
+                <h2 id="ai-mechanism">AIチャットボットによる自動対応の仕組み</h2>
+
+                <p>では、AIチャットボットは具体的にどのような仕組みで顧客の問い合わせに対応するのでしょうか。</p>
+
+                <h3>基本的な動作フロー</h3>
+
+                <p>AIチャットボットは、以下のような流れで問い合わせに対応します。</p>
+
+                <ol>
+                    <li><strong>メッセージ受信</strong>：顧客からのメッセージを受け取る</li>
+                    <li><strong>意図理解</strong>：自然言語処理（NLP）技術で、顧客が「何を知りたいのか」を解析</li>
+                    <li><strong>情報検索</strong>：事前に登録されたFAQや資料から、関連する情報を検索</li>
+                    <li><strong>回答生成</strong>：検索結果をもとに、自然な文章で回答を生成</li>
+                    <li><strong>メッセージ送信</strong>：生成した回答を顧客に送信（通常3秒以内）</li>
+                </ol>
+
+                <p>この一連のプロセスは完全に自動化されており、人間の介在なしに24時間稼働します。</p>
+
+                <h3>「学習」による精度向上</h3>
+
+                <p>最新のAIチャットボットは、会話データを蓄積・学習することで、徐々に回答精度を向上させます。</p>
+
+                <ul>
+                    <li><strong>よく聞かれる質問の特定</strong>：どのような質問が多いかを分析し、回答を充実させる</li>
+                    <li><strong>表現のバリエーション学習</strong>：同じ意味の質問でも、様々な聞き方に対応できるようになる</li>
+                    <li><strong>回答できなかった質問の分析</strong>：回答できなかった質問を特定し、知識を追加</li>
+                </ul>
+
+                <h3>人間への引き継ぎ（エスカレーション）</h3>
+
+                <p>AIチャットボットが対応できない質問や、人間の判断が必要なケースでは、スムーズに人間のスタッフへ引き継ぐことができます。</p>
+
+                <ul>
+                    <li><strong>自動エスカレーション</strong>：「この質問にはお答えできません。担当者に引き継ぎます」と自動で転送</li>
+                    <li><strong>顧客の希望による切り替え</strong>：「人間と話したい」という要望に応じて切り替え</li>
+                    <li><strong>会話履歴の引き継ぎ</strong>：それまでの会話内容を人間に共有し、顧客に同じことを聞かない</li>
+                </ul>
+
+                <a href="ai-ningen-tsukawake.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">AIチャットボットと人間対応の使い分け｜最適なハイブリッド戦略</div>
+                    <p class="internal-link-desc">AIと人間の役割分担を最適化する方法を詳しく解説しています。</p>
+                </a>
+
+
+                <!-- Section 4 -->
+                <h2 id="what-can">自動化できる問い合わせの種類</h2>
+
+                <p>AIチャットボットで自動化できる問い合わせと、人間が対応すべき問い合わせを明確に理解しておくことが重要です。</p>
+
+                <h3>自動化に適した問い合わせ（80%）</h3>
+
+                <p>以下のような「定型的な問い合わせ」は、AIチャットボットでの自動化に非常に適しています。</p>
+
+                <p><strong>1. 基本情報の問い合わせ</strong></p>
+                <ul>
+                    <li>営業時間・定休日</li>
+                    <li>所在地・アクセス方法</li>
+                    <li>電話番号・メールアドレス</li>
+                    <li>駐車場の有無</li>
+                </ul>
+
+                <p><strong>2. 商品・サービスの情報</strong></p>
+                <ul>
+                    <li>料金・価格</li>
+                    <li>メニュー・プラン内容</li>
+                    <li>在庫状況</li>
+                    <li>サービスの特徴・違い</li>
+                </ul>
+
+                <p><strong>3. 手続き・操作方法</strong></p>
+                <ul>
+                    <li>予約の取り方</li>
+                    <li>キャンセル方法</li>
+                    <li>支払い方法</li>
+                    <li>会員登録の手順</li>
+                </ul>
+
+                <p><strong>4. よくある質問（FAQ）</strong></p>
+                <ul>
+                    <li>返品・交換のルール</li>
+                    <li>保証・アフターサービス</li>
+                    <li>配送にかかる日数</li>
+                    <li>対応エリア</li>
+                </ul>
+
+                <h3>人間対応が必要な問い合わせ（20%）</h3>
+
+                <p>一方、以下のような問い合わせは、人間が対応すべきです。</p>
+
+                <ul>
+                    <li><strong>クレーム・苦情</strong>：感情的な対応が必要で、AIでは不適切</li>
+                    <li><strong>複雑な相談</strong>：複数の要素が絡む個別のケース</li>
+                    <li><strong>重要な意思決定を伴う相談</strong>：高額商品の購入相談など</li>
+                    <li><strong>イレギュラーな対応</strong>：通常のルールでは対応できない例外的なケース</li>
+                    <li><strong>人間との会話を希望するケース</strong>：顧客が明示的に人間との対話を求める場合</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>80/20ルール</strong></p>
+                    <p>多くの企業で、問い合わせの約80%は定型的な内容で、残り20%が個別対応を要するものです。AIチャットボットで80%を自動化するだけで、スタッフの負担は大幅に軽減されます。</p>
+                </div>
+
+
+                <!-- Section 5 -->
+                <h2 id="human-needed">人間対応が必要なケースの判断基準</h2>
+
+                <p>AIチャットボットを運用する上で重要なのは、「いつ人間に引き継ぐか」の判断基準を明確にしておくことです。</p>
+
+                <h3>自動エスカレーションの条件設定</h3>
+
+                <p>以下のような条件で、自動的に人間への引き継ぎを行うことをおすすめします。</p>
+
+                <p><strong>1. キーワードベースの判断</strong></p>
+                <ul>
+                    <li>「クレーム」「苦情」「怒り」などのネガティブワード</li>
+                    <li>「人間」「スタッフ」「担当者」への接続要望</li>
+                    <li>「緊急」「至急」などの緊急性を示す言葉</li>
+                </ul>
+
+                <p><strong>2. 会話の状況ベースの判断</strong></p>
+                <ul>
+                    <li>3回以上やり取りしても解決しない場合</li>
+                    <li>AIが回答できない質問が続いた場合</li>
+                    <li>顧客が同じ質問を繰り返している場合</li>
+                </ul>
+
+                <p><strong>3. 内容ベースの判断</strong></p>
+                <ul>
+                    <li>金額の大きい取引に関する相談</li>
+                    <li>個人情報の取り扱いに関する問い合わせ</li>
+                    <li>契約内容の変更・解約に関する要望</li>
+                </ul>
+
+                <h3>営業時間外のエスカレーション対応</h3>
+
+                <p>24時間対応の場合、深夜に人間への引き継ぎが発生することもあります。この場合の対応方法は以下の通りです。</p>
+
+                <p><strong>パターンA：翌営業日対応を案内</strong></p>
+                <p>「このご質問には担当者からの回答が必要です。翌営業日（○月○日）の営業時間内にご連絡いたします。」</p>
+
+                <p><strong>パターンB：連絡先を取得して折り返し</strong></p>
+                <p>「担当者から折り返しご連絡いたします。ご連絡先とご都合の良い時間帯を教えてください。」</p>
+
+                <p><strong>パターンC：緊急連絡先の案内</strong></p>
+                <p>「緊急のご用件の場合は、こちらの電話番号（○○○-○○○○）までご連絡ください。」</p>
+
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ 注意点</div>
+                    <p>「人間に引き継ぐ」と言ったまま放置することは、顧客満足度を大きく下げます。翌営業日に必ず対応する体制を整えてから、エスカレーション機能を有効にしましょう。</p>
+                </div>
+
+
+                <!-- Section 6 -->
+                <h2 id="channel">チャネル別の24時間対応戦略</h2>
+
+                <p>顧客との接点（チャネル）ごとに、24時間対応の戦略は異なります。主要なチャネル別に解説します。</p>
+
+                <h3>LINE公式アカウント</h3>
+
+                <p>日本で最も普及しているメッセージングアプリであるLINEは、顧客対応のチャネルとして非常に効果的です。</p>
+
+                <p><strong>24時間対応のポイント</strong></p>
+                <ul>
+                    <li>友だち追加時のあいさつメッセージで「24時間対応」をアピール</li>
+                    <li>リッチメニューでよくある質問へ誘導</li>
+                    <li>予約・問い合わせ・FAQ対応を自動化</li>
+                    <li>人間対応が必要な場合は、翌営業日の連絡を約束</li>
+                </ul>
+
+                <a href="/line-chatbot.html" class="service-link-box">
+                    <div class="service-link-label">サービスページ</div>
+                    <div class="service-link-title">LINE公式アカウント向けAIチャットボット｜月額19,990円〜</div>
+                    <p class="service-link-desc">24時間対応、問い合わせ80%削減を実現するLINE Bot導入サービス</p>
+                </a>
+
+                <h3>Webサイト（Webチャットボット）</h3>
+
+                <p>自社Webサイトにチャットボットを設置することで、サイト訪問者からの問い合わせに24時間対応できます。</p>
+
+                <p><strong>24時間対応のポイント</strong></p>
+                <ul>
+                    <li>サイト訪問者が迷っているタイミングでポップアップ表示</li>
+                    <li>ページ内容に応じた自動あいさつメッセージ</li>
+                    <li>資料請求・見積もり依頼のフォーム連携</li>
+                    <li>コンバージョン率の向上に直結</li>
+                </ul>
+
+                <a href="/web-chatbot.html" class="service-link-box">
+                    <div class="service-link-label">サービスページ</div>
+                    <div class="service-link-title">Webサイト向けAIチャットボット｜月額29,990円〜</div>
+                    <p class="service-link-desc">サイト訪問者の疑問を即座に解決し、離脱を防止するWeb Bot導入サービス</p>
+                </a>
+
+                <h3>メール</h3>
+
+                <p>メールは24時間送信できるため、顧客側の利便性は高いですが、企業側の対応が遅れがちなチャネルです。</p>
+
+                <p><strong>24時間対応のポイント</strong></p>
+                <ul>
+                    <li>受信メールの自動分類（カテゴリ別に振り分け）</li>
+                    <li>定型的な問い合わせへの自動返信</li>
+                    <li>返信文の下書き自動生成</li>
+                    <li>対応優先度の自動判定</li>
+                </ul>
+
+                <a href="/email-assistant.html" class="service-link-box">
+                    <div class="service-link-label">サービスページ</div>
+                    <div class="service-link-title">メール対応AIアシスタント｜月額49,990円〜</div>
+                    <p class="service-link-desc">メール処理時間を70%削減するAIメール自動化サービス</p>
+                </a>
+
+
+                <!-- Article CTA -->
+                <div class="article-cta-box">
+                    <h3>24時間対応を実現しませんか？</h3>
+                    <p>AzenFlowのAIチャットボットなら、初期費用0円・最短1日で導入完了。<br>まずは2週間の無料トライアルでお試しください。</p>
+                    <a href="/contact.html" class="cta-button">無料相談を予約する</a>
+                    <div class="article-cta-badges">✓ 初期費用0円 ✓ 2週間無料トライアル ✓ クレジットカード不要</div>
+                </div>
+
+
+                <!-- Section 7 -->
+                <h2 id="cost">導入コストと投資回収期間</h2>
+
+                <p>AIチャットボットを導入する際、最も気になるのが「コストに見合う効果が得られるか」という点でしょう。ここでは、具体的な数字で投資対効果を計算します。</p>
+
+                <h3>AIチャットボット導入のコスト</h3>
+
+                <p>AzenFlowのLINEチャットボットを例に、導入コストを確認します。</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>金額</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>初期費用</td>
+                            <td>0円</td>
+                        </tr>
+                        <tr>
+                            <td>月額費用</td>
+                            <td>19,990円（税抜）</td>
+                        </tr>
+                        <tr>
+                            <td>年間コスト</td>
+                            <td>約24万円</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>削減できるコスト</h3>
+
+                <p>次に、チャットボット導入によって削減できるコストを計算します。</p>
+
+                <p><strong>1. 人件費の削減</strong></p>
+                <p>問い合わせ対応に1日2時間かけていたスタッフが、チャットボット導入後は30分で済むようになったとします。</p>
+
+                <ul>
+                    <li>削減時間：1.5時間/日 × 20日 = 30時間/月</li>
+                    <li>時給換算（1,500円と仮定）：30時間 × 1,500円 = <strong>45,000円/月</strong></li>
+                </ul>
+
+                <p><strong>2. 機会損失の回避</strong></p>
+                <p>営業時間外の問い合わせに対応できるようになることで、機会損失を回避できます。</p>
+
+                <ul>
+                    <li>営業時間外の問い合わせ：月20件</li>
+                    <li>これまで離脱していた割合：30%（6件）</li>
+                    <li>1件あたりの平均売上：5万円</li>
+                    <li>回避できる機会損失：6件 × 5万円 = <strong>30万円/月</strong></li>
+                </ul>
+
+                <h3>投資対効果（ROI）の計算</h3>
+
+                <div class="highlight-box">
+                    <p><strong>月間の投資対効果</strong></p>
+                    <p>導入コスト：約2万円/月</p>
+                    <p>削減・回避できるコスト：人件費4.5万円 + 機会損失30万円 = <strong>34.5万円/月</strong></p>
+                    <p>ROI：(34.5万円 - 2万円) ÷ 2万円 × 100 = <strong>1,625%</strong></p>
+                </div>
+
+                <p>この計算はあくまで例ですが、多くの企業でチャットボット導入の投資対効果は非常に高いものとなります。特に、「機会損失の回避」という観点では、計算以上の効果が期待できます。</p>
+
+                <a href="chatbot-hiyou-roi.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">チャットボット導入費用の相場｜料金体系・隠れコスト・ROI計算方法</div>
+                    <p class="internal-link-desc">より詳細なROI計算方法と、業種別の投資回収期間を解説しています。</p>
+                </a>
+
+
+                <!-- Section 8 -->
+                <h2 id="cases">業種別の活用事例</h2>
+
+                <p>24時間対応のAIチャットボットは、様々な業種で活用されています。代表的な活用事例を紹介します。</p>
+
+                <h3>飲食店</h3>
+
+                <p><strong>課題</strong>：ランチタイムやディナータイムの繁忙時に電話対応ができない。閉店後の予約問い合わせに対応できない。</p>
+
+                <p><strong>解決策</strong>：LINEチャットボットで24時間予約受付を自動化。空席状況の確認、予約の受付・変更・キャンセルをすべて自動で処理。</p>
+
+                <p><strong>効果</strong></p>
+                <ul>
+                    <li>電話対応が70%削減</li>
+                    <li>閉店後の予約が月20件増加</li>
+                    <li>予約前日の自動リマインドでキャンセル率が15%低下</li>
+                </ul>
+
+                <h3>クリニック・医療機関</h3>
+
+                <p><strong>課題</strong>：診療時間外の問い合わせに対応できない。電話が混み合い、患者を待たせてしまう。</p>
+
+                <p><strong>解決策</strong>：Webチャットボットで24時間の問い合わせ対応。診療時間、予約方法、持ち物、よくある症状への対応などを自動回答。</p>
+
+                <p><strong>効果</strong></p>
+                <ul>
+                    <li>電話問い合わせが50%削減</li>
+                    <li>受付スタッフの残業がほぼゼロに</li>
+                    <li>患者満足度が向上</li>
+                </ul>
+
+                <h3>ECサイト・通販</h3>
+
+                <p><strong>課題</strong>：深夜・休日の購入前の質問に対応できず、カート離脱が発生。</p>
+
+                <p><strong>解決策</strong>：Webチャットボットで商品の質問、在庫確認、配送についての問い合わせに24時間対応。</p>
+
+                <p><strong>効果</strong></p>
+                <ul>
+                    <li>カート離脱率が20%改善</li>
+                    <li>深夜帯のコンバージョン率が30%向上</li>
+                    <li>問い合わせメールが60%削減</li>
+                </ul>
+
+                <h3>美容サロン</h3>
+
+                <p><strong>課題</strong>：施術中は電話に出られない。営業時間外の予約希望を取りこぼしている。</p>
+
+                <p><strong>解決策</strong>：LINEチャットボットで予約受付を24時間自動化。メニューの説明、空き状況の確認、担当者の指名も自動対応。</p>
+
+                <p><strong>効果</strong></p>
+                <ul>
+                    <li>予約数が25%増加</li>
+                    <li>施術中の電話対応がゼロに</li>
+                    <li>リピート率が向上（自動フォローアップメッセージ）</li>
+                </ul>
+
+                <a href="gyoshu-betsu-chatbot.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">業種別AIチャットボット活用ガイド｜飲食店・クリニック・美容サロン</div>
+                    <p class="internal-link-desc">各業種の詳細な活用方法と導入ステップを解説しています。</p>
+                </a>
+
+
+                <!-- Section 9 -->
+                <h2 id="summary">まとめ</h2>
+
+                <p>この記事では、人員を増やさずに24時間対応を実現する方法について解説しました。</p>
+
+                <p><strong>主なポイントをまとめると：</strong></p>
+
+                <ul>
+                    <li>営業時間外の問い合わせは全体の約55%を占め、大きな機会損失が発生している</li>
+                    <li>24時間対応の選択肢は「人員増加」「外注」「AIチャットボット」の3つ</li>
+                    <li>AIチャットボットは月額1〜5万円で導入可能、コストパフォーマンスが最も高い</li>
+                    <li>問い合わせの80%は定型的な内容で、AIで自動化可能</li>
+                    <li>残り20%の複雑な相談は人間が対応する「ハイブリッド型」が最適</li>
+                    <li>LINE、Web、メールなど、チャネル別に適切な戦略を立てることが重要</li>
+                </ul>
+
+                <p>人手不足が深刻化する中、24時間対応をスタッフの増員で実現することは、多くの中小企業にとって現実的ではありません。AIチャットボットを活用することで、低コストで顧客満足度を向上させ、機会損失を防ぐことができます。</p>
+
+                <p>まずは無料トライアルで、自社の問い合わせにAIがどのように対応するかを体験してみてください。</p>
+
+
+                <!-- Final CTA -->
+                <div class="article-cta-box">
+                    <h3>24時間対応を無料で試してみませんか？</h3>
+                    <p>AzenFlowなら、2週間の無料トライアルで実際の効果を体験できます。<br>初期費用0円、クレジットカード登録も不要です。</p>
+                    <a href="/line-chatbot.html" class="cta-button">サービス詳細を見る</a>
+                    <div class="article-cta-badges">✓ 初期費用0円 ✓ 月額19,990円〜 ✓ 最短1日で導入</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RELATED ARTICLES ==================== -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="related-title">関連記事</h2>
+            <div class="related-grid">
+                <a href="/column/line-chatbot-kanzen-guide.html" class="related-card">
+                    <div class="related-card-category">ガイド</div>
+                    <div class="related-card-title">LINEチャットボット導入完全ガイド【2025年最新版】</div>
+                </a>
+                <a href="/column/hitodebusoku-ai-guide.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">人手不足をAIで解決｜中小企業の業務自動化完全ガイド</div>
+                </a>
+                <a href="/column/ai-ningen-tsukawake.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">AIチャットボットと人間対応の使い分け｜最適なハイブリッド戦略</div>
+                </a>
+                <a href="/column/customer-support-jidouka.html" class="related-card">
+                    <div class="related-card-category">ガイド</div>
+                    <div class="related-card-title">カスタマーサポートを自動化する方法｜LINE・Web・メール別の完全戦略</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <div id="chatbot-widget-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+    (function(){'use strict';const CONFIG={STORAGE_KEY:'azenflow_cookie_consent',EXPIRY_DAYS:395,GA_MEASUREMENT_ID:'G-17R5RQY64S',CONSENT_STATES:{ACCEPTED:'accepted',REJECTED:'rejected',PENDING:'pending'}};const CookieConsent={init(){if(this.isDoNotTrackEnabled()){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);return}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>this.setup())}else{this.setup()}},setup(){const consent=this.getConsent();if(consent.status===CONFIG.CONSENT_STATES.PENDING||this.isConsentExpired(consent)){this.showBanner()}else if(consent.status===CONFIG.CONSENT_STATES.ACCEPTED){this.initGoogleAnalytics()}this.attachEventListeners()},getConsent(){try{const stored=localStorage.getItem(CONFIG.STORAGE_KEY);if(!stored)return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null};return JSON.parse(stored)}catch(e){return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null}}},saveConsent(status){try{localStorage.setItem(CONFIG.STORAGE_KEY,JSON.stringify({status:status,timestamp:Date.now(),version:'1.0'}))}catch(e){}},isConsentExpired(consent){if(!consent.timestamp)return true;return(Date.now()-consent.timestamp)>CONFIG.EXPIRY_DAYS*24*60*60*1000},isDoNotTrackEnabled(){return navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.msDoNotTrack==='1'},showBanner(){const show=()=>{const banner=document.getElementById('cookie-banner');if(banner){banner.style.display='flex';}};if(document.getElementById('cookie-banner')){show()}else{document.addEventListener('componentsLoaded',show)}},hideBanner(){const banner=document.getElementById('cookie-banner');if(banner){banner.classList.add('hiding');setTimeout(()=>{banner.style.display='none';banner.classList.remove('hiding')},400)}},attachEventListeners(){document.addEventListener('click',(e)=>{if(e.target.id==='cookie-accept'||e.target.closest('#cookie-accept')){e.preventDefault();this.handleAccept()}else if(e.target.id==='cookie-decline'||e.target.closest('#cookie-decline')){e.preventDefault();this.handleDecline()}});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){const banner=document.getElementById('cookie-banner');if(banner&&banner.style.display!=='none'){this.handleDecline()}}})},handleAccept(){this.saveConsent(CONFIG.CONSENT_STATES.ACCEPTED);this.hideBanner();this.initGoogleAnalytics();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.ACCEPTED}}))},handleDecline(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);this.hideBanner();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.REJECTED}}))},initGoogleAnalytics(){if(CONFIG.GA_MEASUREMENT_ID==='G-XXXXXXXXXX')return;if(window.gtag||document.querySelector('script[src*="googletagmanager.com/gtag/js"]'))return;const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.GA_MEASUREMENT_ID;document.head.appendChild(script);window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',CONFIG.GA_MEASUREMENT_ID,{'anonymize_ip':true,'cookie_flags':'SameSite=None;Secure'})},hasAnalyticsConsent(){const consent=this.getConsent();return consent.status===CONFIG.CONSENT_STATES.ACCEPTED&&!this.isConsentExpired(consent)},revokeConsent(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);window.location.reload()}};window.CookieConsent=CookieConsent;CookieConsent.init()})();
+    </script>
+    <script src="/scripts/component-loader.js" defer></script>
+    <script src="/scripts/animations.js" defer></script>
+    <script src="/scripts/chatbot-widget.js" defer></script>
+    <script src="/scripts/floating-cta.js" defer></script>
+    <script src="/scripts/back-to-top.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+
+    <!-- Smooth scroll for TOC -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

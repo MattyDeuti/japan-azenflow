@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17R5RQY64S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-17R5RQY64S');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Principal -->
+    <title>ビジネスメール対応を自動化する方法｜AI活用で処理時間70%削減【実践ガイド】</title>
+    <meta name="description" content="毎日のメール対応をAIで効率化する実践ガイド。受信トレイの自動分類、返信文の自動生成、Gmail・Outlook別の設定方法、セキュリティ対策まで徹底解説。月額49,990円で導入可能。">
+    <meta name="keywords" content="メール自動化, メール対応 効率化, AI メール返信, 受信トレイ 自動分類, Gmail 自動化, Outlook 自動化, ビジネスメール AI, 業務効率化">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AzenFlow Japan">
+
+    <link rel="canonical" href="https://azenflow.jp/column/mail-jidouka-guide.html">
+    <link rel="help" href="https://azenflow.jp/llms.txt" type="text/plain" title="LLMs Information">
+    <link rel="icon" href="/images/favicon.webp" type="image/webp">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://azenflow.jp/column/mail-jidouka-guide.html">
+    <meta property="og:title" content="ビジネスメール対応を自動化する方法｜AI活用で処理時間70%削減">
+    <meta property="og:description" content="毎日のメール対応をAIで効率化する実践ガイド。受信トレイの自動分類、返信文の自動生成まで徹底解説。">
+    <meta property="og:site_name" content="AzenFlow">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="article:published_time" content="2025-01-15">
+    <meta property="article:modified_time" content="2025-01-15">
+    <meta property="article:author" content="AzenFlow Japan">
+    <meta property="article:section" content="ガイド">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ビジネスメール対応を自動化する方法｜AI活用で処理時間70%削減">
+    <meta name="twitter:description" content="毎日のメール対応をAIで効率化する実践ガイド。受信トレイの自動分類、返信文の自動生成まで。">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    <link rel="stylesheet" href="/styles/components/floating-cta.css">
+    <link rel="stylesheet" href="/styles/components/back-to-top.css">
+    <link rel="stylesheet" href="/styles/components/cookie-banner.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+
+    <!-- Article Styles -->
+    <style>
+        /* ==================== ARTICLE PAGE STYLES ==================== */
+        
+        .article-page {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 50%, #FFFFFF 100%);
+        }
+
+        /* Hero Section */
+        .article-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%);
+        }
+
+        .article-hero .container {
+            max-width: 900px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .breadcrumb .separator {
+            color: var(--text-light);
+        }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .publish-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-excerpt {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: 40px 0;
+            background: white;
+        }
+
+        .toc-section .container {
+            max-width: 900px;
+        }
+
+        .toc-box {
+            background: #F8FAFB;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .toc-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        /* Article Content */
+        .article-content {
+            padding: 60px 0;
+            background: linear-gradient(180deg, white 0%, #F0F9FF 50%, white 100%);
+        }
+
+        .article-content .container {
+            max-width: 800px;
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-primary);
+        }
+
+        .article-body h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .article-body h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 0.75rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .article-body strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 111, 71, 0.08) 0%, rgba(166, 138, 92, 0.08) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .highlight-box p:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #EFF8FF;
+            border: 1px solid #BFDBFE;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .info-box-title {
+            font-weight: 700;
+            color: #1E40AF;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #1E3A5F;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #FEF3C7;
+            border: 1px solid #F59E0B;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .warning-box-title {
+            font-weight: 700;
+            color: #92400E;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #78350F;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #F8FAFB;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(139, 111, 71, 0.05);
+        }
+
+        /* Internal Link Box */
+        .internal-link-box {
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .internal-link-box:hover {
+            background: rgba(139, 111, 71, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.15);
+        }
+
+        .internal-link-label {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .internal-link-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .internal-link-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* CTA Box in Article */
+        .article-cta-box {
+            background: linear-gradient(135deg, #8B6F47 0%, #A68A5C 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .article-cta-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0 1rem;
+        }
+
+        .article-cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-cta-box .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-cta-box .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-cta-badges {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Related Articles */
+        .related-section {
+            padding: 60px 0;
+            background: #F8FAFB;
+        }
+
+        .related-section .container {
+            max-width: 900px;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .related-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .related-card-category {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-hero {
+                padding: 100px 0 40px;
+            }
+
+            .article-title {
+                font-size: 1.75rem;
+            }
+
+            .article-excerpt {
+                font-size: 1rem;
+            }
+
+            .article-body {
+                font-size: 1rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.2rem;
+            }
+
+            .toc-box {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-cta-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .highlight-box,
+            .info-box,
+            .warning-box {
+                padding: 1.25rem 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://azenflow.jp/column/mail-jidouka-guide.html#article",
+                "headline": "ビジネスメール対応を自動化する方法｜AI活用で処理時間70%削減【実践ガイド】",
+                "description": "毎日のメール対応をAIで効率化する実践ガイド。受信トレイの自動分類、返信文の自動生成、Gmail・Outlook別の設定方法、セキュリティ対策まで徹底解説。",
+                "datePublished": "2025-01-15",
+                "dateModified": "2025-01-15",
+                "author": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "AzenFlow Japan",
+                    "@id": "https://azenflow.jp/#organization"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://azenflow.jp/column/mail-jidouka-guide.html"
+                },
+                "articleSection": "ガイド",
+                "keywords": ["メール自動化", "AI", "Gmail", "Outlook", "業務効率化", "返信生成"],
+                "wordCount": 4200,
+                "inLanguage": "ja-JP"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://azenflow.jp/column/mail-jidouka-guide.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "ホーム",
+                        "item": "https://azenflow.jp/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "コラム",
+                        "item": "https://azenflow.jp/column/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "ビジネスメール対応を自動化する方法",
+                        "item": "https://azenflow.jp/column/mail-jidouka-guide.html"
+                    }
+                ]
+            },
+            {
+                "@type": "HowTo",
+                "@id": "https://azenflow.jp/column/mail-jidouka-guide.html#howto",
+                "name": "ビジネスメールを自動化する方法",
+                "description": "AIを活用してメール対応を70%効率化する手順",
+                "totalTime": "P2D",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "メール業務の現状分析",
+                        "text": "1日に処理するメール数、よくある問い合わせの種類、対応に要する時間を把握する"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "自動化ツールの選定",
+                        "text": "Gmail、Outlook対応のAIメール自動化サービスを比較検討する"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "分類ルールの設計",
+                        "text": "メールの優先度、カテゴリ分けのルールを決める"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "返信テンプレートの準備",
+                        "text": "よくある問い合わせへの回答テンプレートをAIに学習させる"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 5,
+                        "name": "テストと本番運用",
+                        "text": "テスト期間を設けて精度を確認し、本番運用を開始する"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="article-page">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <div id="floating-cta-placeholder"></div>
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="article-hero">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <a href="/">ホーム</a>
+                <span class="separator">›</span>
+                <a href="/column/">コラム</a>
+                <span class="separator">›</span>
+                <span>メール自動化ガイド</span>
+            </nav>
+
+            <!-- Article Meta -->
+            <div class="article-meta-top">
+                <span class="category-badge">ガイド</span>
+                <time class="publish-date" datetime="2025-01-15">2025.01.15</time>
+            </div>
+
+            <!-- Title -->
+            <h1 class="article-title">ビジネスメール対応を自動化する方法｜AI活用で処理時間70%削減【実践ガイド】</h1>
+
+            <!-- Excerpt -->
+            <p class="article-excerpt">
+                毎日のメール対応に追われていませんか？この記事では、AIを活用してメール業務を効率化する実践的な方法を解説します。受信トレイの自動分類、返信文の自動生成、Gmail・Outlook別の設定方法、セキュリティ対策まで、メール自動化のすべてがわかります。
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== TABLE OF CONTENTS ==================== -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-box">
+                <h2 class="toc-title">📋 目次</h2>
+                <ol class="toc-list">
+                    <li><a href="#problem">メール対応に費やす時間の実態</a></li>
+                    <li><a href="#what-can">AIで自動化できるメール業務の種類</a></li>
+                    <li><a href="#classification">受信トレイ自動分類の仕組み</a></li>
+                    <li><a href="#reply">AI返信生成の仕組みと活用法</a></li>
+                    <li><a href="#platform">Gmail・Outlook別の設定方法</a></li>
+                    <li><a href="#security">セキュリティとプライバシーの考慮点</a></li>
+                    <li><a href="#roi">費用対効果の計算方法</a></li>
+                    <li><a href="#steps">導入ステップと注意点</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ARTICLE CONTENT ==================== -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-body">
+
+                <!-- Section 1 -->
+                <h2 id="problem">メール対応に費やす時間の実態</h2>
+
+                <p>ビジネスパーソンが1日にメール対応に費やす時間は、平均して2〜3時間と言われています。年間で換算すると、約500〜750時間。これは約2〜3ヶ月分の労働時間に相当します。</p>
+
+                <p>特に中小企業では、限られた人員で多くの業務を回す必要があるため、メール対応の負担は深刻です。顧客からの問い合わせ、取引先との連絡、社内調整――これらのメールが1日に数十通、多い人では100通以上届くこともあります。</p>
+
+                <h3>メール対応で時間がかかる原因</h3>
+
+                <p>メール対応に時間がかかる主な原因は、以下の4つです。</p>
+
+                <ul>
+                    <li><strong>仕分け作業</strong>：重要なメールと不要なメールを判別する作業。スパムや営業メールの中から、本当に対応が必要なメールを探し出す時間。</li>
+                    <li><strong>返信文の作成</strong>：適切な言葉遣いや敬語を考えながら、一から文章を作成する時間。特に日本語は敬語表現が複雑で、文面作成に時間がかかりがち。</li>
+                    <li><strong>情報の検索</strong>：過去のやり取りや、製品情報、価格表などを確認する時間。「あのメールどこだっけ？」と探す時間は想像以上に多い。</li>
+                    <li><strong>対応の優先順位付け</strong>：どのメールから対応すべきか判断する時間。緊急度と重要度を考慮しながら優先順位をつける作業。</li>
+                </ul>
+
+                <p>これらの作業の多くは、AIを活用することで大幅に効率化できます。実際に、メール自動化を導入した企業では、メール対応時間を70%削減した事例もあります。</p>
+
+                <div class="highlight-box">
+                    <p><strong>ポイント</strong>：メール対応の70%は「よくある質問への回答」「定型的な案内」「単純な転送・振り分け」など、パターン化できる業務です。これらをAIに任せることで、人間は本当に判断が必要な業務に集中できます。</p>
+                </div>
+
+
+                <!-- Section 2 -->
+                <h2 id="what-can">AIで自動化できるメール業務の種類</h2>
+
+                <p>メール業務のすべてをAIに任せられるわけではありませんが、多くの作業は自動化が可能です。ここでは、AIで自動化できるメール業務を具体的に解説します。</p>
+
+                <h3>1. 受信メールの自動分類</h3>
+
+                <p>受信したメールを、内容に応じて自動的にカテゴリ分けする機能です。例えば、以下のような分類が可能です。</p>
+
+                <ul>
+                    <li><strong>緊急対応</strong>：クレームや至急の問い合わせ</li>
+                    <li><strong>問い合わせ</strong>：製品・サービスに関する質問</li>
+                    <li><strong>見積もり依頼</strong>：価格や納期の確認</li>
+                    <li><strong>営業メール</strong>：セールスやプロモーション（自動スキップ可能）</li>
+                    <li><strong>社内連絡</strong>：社内からの連絡事項</li>
+                    <li><strong>請求・支払い</strong>：請求書や支払い関連</li>
+                </ul>
+
+                <p>分類されたメールは、優先度に応じて担当者に通知されます。緊急のクレームは即座に通知、営業メールは後回し、といった対応が自動で行われます。</p>
+
+                <h3>2. 返信文の自動生成</h3>
+
+                <p>よくある質問に対して、AIが適切な返信文を自動生成します。完全な自動送信ではなく、「返信案」として提示されるため、人間が確認・編集してから送信できます。</p>
+
+                <p>返信生成が有効なケース：</p>
+
+                <ul>
+                    <li>営業時間・休業日の問い合わせ</li>
+                    <li>製品の仕様・価格に関する質問</li>
+                    <li>配送状況の確認</li>
+                    <li>予約・申し込み方法の案内</li>
+                    <li>よくある技術的な質問</li>
+                </ul>
+
+                <h3>3. 自動転送・エスカレーション</h3>
+
+                <p>メールの内容に応じて、適切な担当者に自動転送する機能です。例えば、「返品」というキーワードを含むメールはカスタマーサポートへ、「見積もり」を含むメールは営業部へ、といった振り分けが自動で行われます。</p>
+
+                <p>また、やり取りが一定回数を超えた場合（例：4通目以降）は、自動的に人間のスタッフにエスカレーションする設定も可能です。</p>
+
+                <h3>4. スパム・不要メールの自動除外</h3>
+
+                <p>営業メール、スパムメール、ニュースレターなど、対応不要なメールを自動的に除外またはアーカイブします。これにより、本当に対応が必要なメールだけが受信トレイに残ります。</p>
+
+                <h3>5. 会話履歴の自動追跡</h3>
+
+                <p>同じ顧客とのやり取りを自動的に追跡し、過去の会話内容を踏まえた対応ができるようになります。「前回のお問い合わせの続きですが」といった文脈を、AIが自動的に把握します。</p>
+
+                <a href="customer-support-jidouka.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">カスタマーサポートを自動化する方法｜LINE・Web・メール別の完全戦略</div>
+                    <p class="internal-link-desc">メール以外のチャネル（LINE、Web）も含めた、カスタマーサポート全体の自動化戦略を解説。</p>
+                </a>
+
+
+                <!-- Section 3 -->
+                <h2 id="classification">受信トレイ自動分類の仕組み</h2>
+
+                <p>受信トレイの自動分類は、AIがメールの内容を解析し、あらかじめ設定したカテゴリに振り分ける仕組みです。ここでは、その仕組みと設定方法を詳しく解説します。</p>
+
+                <h3>AIによるメール解析の流れ</h3>
+
+                <p>自動分類の流れは、以下のようになります。</p>
+
+                <ol>
+                    <li><strong>メール受信</strong>：新しいメールが届く</li>
+                    <li><strong>内容解析</strong>：AIが件名、本文、送信者情報を解析</li>
+                    <li><strong>カテゴリ判定</strong>：学習済みのルールに基づいてカテゴリを判定</li>
+                    <li><strong>アクション実行</strong>：ラベル付け、転送、通知などのアクションを実行</li>
+                </ol>
+
+                <p>AIは単純なキーワードマッチングではなく、文脈を理解して分類を行います。例えば、「返品したい」と「返品ポリシーを教えて」は異なる意図として認識され、適切なカテゴリに分類されます。</p>
+
+                <h3>分類カテゴリの設計例</h3>
+
+                <p>一般的な企業で使われる分類カテゴリの例を紹介します。</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>カテゴリ</th>
+                            <th>含まれる内容</th>
+                            <th>アクション例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>緊急・クレーム</td>
+                            <td>苦情、至急の依頼、トラブル報告</td>
+                            <td>即時通知、担当者に転送</td>
+                        </tr>
+                        <tr>
+                            <td>問い合わせ</td>
+                            <td>製品・サービスに関する質問</td>
+                            <td>返信案を自動生成</td>
+                        </tr>
+                        <tr>
+                            <td>見積もり・商談</td>
+                            <td>価格確認、商談依頼</td>
+                            <td>営業担当に転送</td>
+                        </tr>
+                        <tr>
+                            <td>請求・経理</td>
+                            <td>請求書、支払い確認</td>
+                            <td>経理担当に転送</td>
+                        </tr>
+                        <tr>
+                            <td>営業メール</td>
+                            <td>セールス、プロモーション</td>
+                            <td>自動アーカイブ</td>
+                        </tr>
+                        <tr>
+                            <td>その他</td>
+                            <td>上記以外</td>
+                            <td>受信トレイに保持</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>分類精度を高めるコツ</h3>
+
+                <p>AI分類の精度を高めるためのポイントは以下の通りです。</p>
+
+                <ul>
+                    <li><strong>カテゴリ数を絞る</strong>：最初は6〜8カテゴリ程度に絞り、運用しながら調整</li>
+                    <li><strong>具体例を学習させる</strong>：過去のメールをサンプルとして学習させる</li>
+                    <li><strong>定期的な見直し</strong>：誤分類されたメールを確認し、ルールを改善</li>
+                    <li><strong>送信者情報も活用</strong>：特定のドメインや送信者を特別扱いするルールも有効</li>
+                </ul>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 AzenFlowの場合</div>
+                    <p>AzenFlowのメールアシスタントでは、標準で6つのカスタム分類カテゴリを設定できます。導入時に、お客様の業務に合わせた最適なカテゴリ設計をサポートしています。</p>
+                </div>
+
+
+                <!-- Section 4 -->
+                <h2 id="reply">AI返信生成の仕組みと活用法</h2>
+
+                <p>AI返信生成は、受信したメールに対して適切な返信文を自動的に作成する機能です。単なるテンプレートの挿入ではなく、メールの内容を理解した上で、文脈に合った返信を生成します。</p>
+
+                <h3>返信生成の仕組み</h3>
+
+                <p>AI返信生成は、以下の情報を組み合わせて返信文を作成します。</p>
+
+                <ul>
+                    <li><strong>受信メールの内容</strong>：質問の意図、求められている情報</li>
+                    <li><strong>ナレッジベース</strong>：事前に登録した製品情報、FAQ、マニュアルなど</li>
+                    <li><strong>会話履歴</strong>：同じ相手との過去のやり取り</li>
+                    <li><strong>トーン設定</strong>：丁寧語、敬語レベルの設定</li>
+                </ul>
+
+                <p>これらの情報を元に、AIが最適な返信文を生成します。生成された返信は「案」として提示されるため、送信前に人間が確認・編集できます。</p>
+
+                <h3>返信生成が有効なケース</h3>
+
+                <p>AI返信生成は、以下のようなケースで特に効果を発揮します。</p>
+
+                <p><strong>営業時間・アクセス情報の問い合わせ</strong></p>
+                <p>「営業時間を教えてください」「場所はどこですか」といった定型的な質問には、正確な情報を即座に返信できます。</p>
+
+                <p><strong>製品・サービスの仕様確認</strong></p>
+                <p>「この製品のサイズは？」「対応しているOSは？」といった質問に、製品情報を参照して回答します。</p>
+
+                <p><strong>手続き方法の案内</strong></p>
+                <p>「返品の手続き方法を教えて」「予約の変更はどうすれば」といった質問に、手順を案内します。</p>
+
+                <p><strong>よくある質問への回答</strong></p>
+                <p>FAQに載っているような質問には、該当する回答を返信文として提示します。</p>
+
+                <h3>返信生成の注意点</h3>
+
+                <p>AI返信生成を活用する際の注意点です。</p>
+
+                <ul>
+                    <li><strong>完全自動送信は避ける</strong>：最初は必ず人間が確認してから送信</li>
+                    <li><strong>ナレッジベースを最新に保つ</strong>：古い情報が返信されないよう、定期的に更新</li>
+                    <li><strong>複雑な案件は人間が対応</strong>：クレーム、交渉、判断が必要な案件はAIに任せない</li>
+                    <li><strong>トーンの確認</strong>：自社のブランドイメージに合った文体になっているか確認</li>
+                </ul>
+
+
+                <!-- Section 5 -->
+                <h2 id="platform">Gmail・Outlook別の設定方法</h2>
+
+                <p>メール自動化サービスは、GmailやOutlookなどの主要なメールプラットフォームと連携して動作します。ここでは、各プラットフォームでの連携方法を解説します。</p>
+
+                <h3>Gmail / Google Workspace の場合</h3>
+
+                <p>Gmailとの連携は、OAuth 2.0という安全な認証方式で行われます。パスワードを共有する必要はありません。</p>
+
+                <p><strong>連携の流れ：</strong></p>
+                <ol>
+                    <li>メール自動化サービスの管理画面から「Gmail連携」を選択</li>
+                    <li>Googleアカウントにログイン</li>
+                    <li>アクセス許可を承認（メールの読み取り、送信など）</li>
+                    <li>連携完了、自動処理が開始</li>
+                </ol>
+
+                <p>Google Workspaceを利用している企業では、管理者がドメイン全体での連携を許可する設定が必要な場合があります。</p>
+
+                <h3>Outlook / Microsoft 365 の場合</h3>
+
+                <p>Outlookとの連携も、同様にOAuth 2.0で安全に行われます。</p>
+
+                <p><strong>連携の流れ：</strong></p>
+                <ol>
+                    <li>メール自動化サービスの管理画面から「Outlook連携」を選択</li>
+                    <li>Microsoftアカウントにログイン</li>
+                    <li>アクセス許可を承認</li>
+                    <li>連携完了</li>
+                </ol>
+
+                <p>Microsoft 365を利用している企業では、Azure ADの設定が必要になる場合があります。IT管理者に相談することをおすすめします。</p>
+
+                <h3>その他のメールシステム</h3>
+
+                <p>Yahoo! Mail Business、独自のIMAPサーバー、レガシーシステム（Lotus Notesなど）を使用している場合は、カスタム連携が必要になります。</p>
+
+                <p>AzenFlowでは、Gmail/Outlook以外のメールシステムについても、カスタム連携で対応しています。ただし、初期費用が99,000円（税抜）となります。</p>
+
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ セキュリティに関する注意</div>
+                    <p>メール連携を行う際は、必ずOAuth 2.0などの安全な認証方式を使用しているサービスを選んでください。パスワードを直接入力するタイプのサービスは、セキュリティリスクがあります。</p>
+                </div>
+
+
+                <!-- Section 6 -->
+                <h2 id="security">セキュリティとプライバシーの考慮点</h2>
+
+                <p>メール自動化を導入する際、セキュリティとプライバシーは最も重要な検討事項です。ここでは、確認すべきポイントを解説します。</p>
+
+                <h3>確認すべきセキュリティ項目</h3>
+
+                <p><strong>1. データの暗号化</strong></p>
+                <p>メールデータは、転送時（通信中）と保存時（サーバー上）の両方で暗号化されている必要があります。TLS 1.2以上での通信、AES-256での保存暗号化が業界標準です。</p>
+
+                <p><strong>2. 認証方式</strong></p>
+                <p>OAuth 2.0など、パスワードを直接渡さない認証方式を使用しているか確認してください。また、二要素認証に対応しているとより安全です。</p>
+
+                <p><strong>3. データの保管場所</strong></p>
+                <p>データがどの国・地域のサーバーに保管されるかを確認してください。日本企業であれば、日本国内または適切な法規制がある国でのデータ保管が望ましいです。</p>
+
+                <p><strong>4. アクセス権限の管理</strong></p>
+                <p>サービス提供者がメール内容にアクセスできる範囲を確認してください。AIの学習にメールデータが使用されるかどうかも重要なポイントです。</p>
+
+                <p><strong>5. 法令遵守</strong></p>
+                <p>GDPRやAPPIなど、適用される個人情報保護法への準拠を確認してください。</p>
+
+                <h3>社内での導入時の注意点</h3>
+
+                <ul>
+                    <li><strong>IT部門との連携</strong>：導入前にIT部門やセキュリティ担当者に相談</li>
+                    <li><strong>利用規約の確認</strong>：サービスの利用規約でデータの取り扱いを確認</li>
+                    <li><strong>従業員への説明</strong>：メールがAIで処理されることを従業員に説明</li>
+                    <li><strong>対象メールの限定</strong>：最初は特定のメールアドレスのみで試験運用</li>
+                </ul>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 AzenFlowのセキュリティ対策</div>
+                    <p>AzenFlowでは、OAuth 2.0認証、GDPR準拠、暗号化ストレージを標準採用しています。メール内容がAIの学習データとして使用されることはありません。</p>
+                </div>
+
+
+                <!-- Article CTA -->
+                <div class="article-cta-box">
+                    <h3>メール対応の自動化をお考えですか？</h3>
+                    <p>AzenFlowなら、Gmail・Outlook対応で最短1〜2営業日で導入完了。<br>まずは無料相談で、貴社の課題をお聞かせください。</p>
+                    <a href="/contact.html" class="cta-button">無料相談を予約する</a>
+                    <div class="article-cta-badges">✓ Gmail/Outlook対応 ✓ OAuth 2.0認証 ✓ 日本語サポート</div>
+                </div>
+
+
+                <!-- Section 7 -->
+                <h2 id="roi">費用対効果の計算方法</h2>
+
+                <p>メール自動化の導入を検討する際、費用対効果（ROI）の試算は欠かせません。ここでは、具体的な計算方法を解説します。</p>
+
+                <h3>コスト削減効果の計算</h3>
+
+                <p>メール自動化による主なコスト削減は「人件費」です。以下の式で試算できます。</p>
+
+                <div class="highlight-box">
+                    <p><strong>月間削減額 = メール対応時間 × 時給 × 削減率</strong></p>
+                    <p>例：1日2時間 × 22日 × 時給2,500円 × 70%削減 = <strong>月間77,000円の削減</strong></p>
+                </div>
+
+                <h3>AzenFlowの料金との比較</h3>
+
+                <p>AzenFlowのメールアシスタントの料金は以下の通りです。</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>Gmail/Outlook</th>
+                            <th>カスタム連携</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>初期費用（税抜）</td>
+                            <td>49,990円</td>
+                            <td>99,000円</td>
+                        </tr>
+                        <tr>
+                            <td>月額費用（税抜）</td>
+                            <td>49,990円</td>
+                            <td>49,990円</td>
+                        </tr>
+                        <tr>
+                            <td>含まれるメール数</td>
+                            <td colspan="2">月間3,000通</td>
+                        </tr>
+                        <tr>
+                            <td>カスタム分類</td>
+                            <td colspan="2">6カテゴリまで</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>投資回収期間の目安</h3>
+
+                <p>先ほどの例（月間77,000円の削減）で計算すると：</p>
+
+                <ul>
+                    <li>初期費用：49,990円</li>
+                    <li>月額費用：49,990円</li>
+                    <li>月間削減額：77,000円</li>
+                    <li>月間純効果：77,000円 - 49,990円 = 27,010円</li>
+                    <li>初期費用回収：49,990円 ÷ 27,010円 = <strong>約2ヶ月</strong></li>
+                </ul>
+
+                <p>つまり、導入から約2ヶ月で初期費用を回収し、3ヶ月目以降は毎月約27,000円の純削減効果が得られる計算です。</p>
+
+                <h3>コスト削減以外の効果</h3>
+
+                <p>数値化しにくいですが、以下の効果も考慮に値します。</p>
+
+                <ul>
+                    <li><strong>対応スピードの向上</strong>：即時返信による顧客満足度アップ</li>
+                    <li><strong>対応品質の均一化</strong>：誰が対応しても同じ品質を維持</li>
+                    <li><strong>機会損失の防止</strong>：見逃しや対応遅れによる失注を防止</li>
+                    <li><strong>従業員の負担軽減</strong>：単純作業からの解放によるモチベーション向上</li>
+                </ul>
+
+                <a href="chatbot-hiyou-roi.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">チャットボット導入費用の相場｜料金体系・隠れコスト・ROI計算方法</div>
+                    <p class="internal-link-desc">チャットボット全般のROI計算方法と、投資回収期間のシミュレーションを詳しく解説。</p>
+                </a>
+
+
+                <!-- Section 8 -->
+                <h2 id="steps">導入ステップと注意点</h2>
+
+                <p>メール自動化を成功させるための導入ステップと、各段階での注意点を解説します。</p>
+
+                <h3>ステップ1：現状分析</h3>
+
+                <p>まず、現在のメール業務の実態を把握します。</p>
+
+                <ul>
+                    <li>1日に受信するメールの数</li>
+                    <li>対応に要している時間</li>
+                    <li>よくある問い合わせの種類（上位5〜10パターン）</li>
+                    <li>対応に困っているケース</li>
+                </ul>
+
+                <p>1週間程度、メール対応の記録をつけると、正確な実態が把握できます。</p>
+
+                <h3>ステップ2：サービス選定</h3>
+
+                <p>自社のニーズに合ったメール自動化サービスを選びます。選定のポイントは以下の通りです。</p>
+
+                <ul>
+                    <li>使用しているメールシステム（Gmail、Outlookなど）に対応しているか</li>
+                    <li>必要な機能（分類、返信生成など）が揃っているか</li>
+                    <li>セキュリティ要件を満たしているか</li>
+                    <li>日本語対応、日本語サポートがあるか</li>
+                    <li>予算に合った価格帯か</li>
+                </ul>
+
+                <h3>ステップ3：分類ルールの設計</h3>
+
+                <p>どのようなカテゴリでメールを分類するか、各カテゴリにどのようなアクション（通知、転送、返信生成など）を設定するかを決めます。</p>
+
+                <p>最初から完璧を目指す必要はありません。まずは5〜6カテゴリ程度で始め、運用しながら調整していくのがおすすめです。</p>
+
+                <h3>ステップ4：ナレッジベースの準備</h3>
+
+                <p>AI返信生成を使う場合、AIが参照する「知識」を準備します。</p>
+
+                <ul>
+                    <li>よくある質問と回答（FAQ）</li>
+                    <li>製品・サービスの説明資料</li>
+                    <li>価格表、営業時間などの基本情報</li>
+                    <li>手続き方法のマニュアル</li>
+                </ul>
+
+                <h3>ステップ5：テスト運用</h3>
+
+                <p>本番運用の前に、テスト期間を設けます。</p>
+
+                <ul>
+                    <li>最初は自動送信をオフにし、返信案の確認のみ行う</li>
+                    <li>50通以上のメールでテストし、精度を確認</li>
+                    <li>誤分類や不適切な返信がないかチェック</li>
+                    <li>必要に応じてルールを調整</li>
+                </ul>
+
+                <h3>ステップ6：本番運用開始</h3>
+
+                <p>テストで問題がなければ、本番運用を開始します。</p>
+
+                <ul>
+                    <li>最初の1〜2週間は、送信前の確認を徹底</li>
+                    <li>定期的に処理結果をレビュー</li>
+                    <li>新しいパターンの質問があれば、ナレッジベースに追加</li>
+                </ul>
+
+                <div class="info-box">
+                    <div class="info-box-title">💡 AzenFlowの導入サポート</div>
+                    <p>AzenFlowでは、ステップ3〜5の作業を弊社が代行します。お客様は、必要な資料を共有いただくだけで、Gmail/Outlookなら1〜2営業日で本番稼働が可能です。</p>
+                </div>
+
+
+                <!-- Section 9 -->
+                <h2 id="summary">まとめ</h2>
+
+                <p>この記事では、ビジネスメール対応をAIで自動化する方法について、仕組みから導入ステップまで詳しく解説しました。</p>
+
+                <p><strong>主なポイントをまとめると：</strong></p>
+
+                <ul>
+                    <li>ビジネスパーソンは1日2〜3時間をメール対応に費やしている</li>
+                    <li>メール業務の70%は、AIで自動化可能</li>
+                    <li>受信トレイの自動分類で、重要なメールを見逃さない</li>
+                    <li>AI返信生成で、よくある質問への対応を効率化</li>
+                    <li>Gmail、Outlookと安全に連携（OAuth 2.0認証）</li>
+                    <li>セキュリティ対策は導入前に必ず確認</li>
+                    <li>投資回収期間は約2ヶ月が目安</li>
+                </ul>
+
+                <p>人手不足が深刻化する中、メール対応の自動化は、限られた人員で業務を回すための現実的な解決策です。まずは現状のメール業務を分析し、自動化できる部分を見つけることから始めてみてください。</p>
+
+                <a href="hitodebusoku-ai-guide.html" class="internal-link-box">
+                    <div class="internal-link-label">関連記事</div>
+                    <div class="internal-link-title">人手不足をAIで解決｜中小企業の業務自動化完全ガイド</div>
+                    <p class="internal-link-desc">メール以外も含めた、中小企業のAI活用・業務自動化の総合ガイド。</p>
+                </a>
+
+
+                <!-- Final CTA -->
+                <div class="article-cta-box">
+                    <h3>メール自動化を始めてみませんか？</h3>
+                    <p>AzenFlowのメールアシスタントなら、Gmail・Outlook対応で最短1〜2営業日で導入完了。<br>まずは無料相談で、貴社の課題をお聞かせください。</p>
+                    <a href="/email-assistant.html" class="cta-button">サービス詳細を見る</a>
+                    <div class="article-cta-badges">✓ 月額49,990円〜 ✓ 月間3,000メール処理 ✓ 日本語サポート</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RELATED ARTICLES ==================== -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="related-title">関連記事</h2>
+            <div class="related-grid">
+                <a href="/column/customer-support-jidouka.html" class="related-card">
+                    <div class="related-card-category">ガイド</div>
+                    <div class="related-card-title">カスタマーサポートを自動化する方法｜LINE・Web・メール別の完全戦略</div>
+                </a>
+                <a href="/column/hitodebusoku-ai-guide.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">人手不足をAIで解決｜中小企業の業務自動化完全ガイド</div>
+                </a>
+                <a href="/column/chatbot-hiyou-roi.html" class="related-card">
+                    <div class="related-card-category">比較</div>
+                    <div class="related-card-title">チャットボット導入費用の相場｜料金体系・隠れコスト・ROI計算方法</div>
+                </a>
+                <a href="/column/24jikan-taiou-guide.html" class="related-card">
+                    <div class="related-card-category">ノウハウ</div>
+                    <div class="related-card-title">24時間対応を人員増加なしで実現｜AIチャットボット活用の完全戦略</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <div id="chatbot-widget-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+    (function(){'use strict';const CONFIG={STORAGE_KEY:'azenflow_cookie_consent',EXPIRY_DAYS:395,GA_MEASUREMENT_ID:'G-17R5RQY64S',CONSENT_STATES:{ACCEPTED:'accepted',REJECTED:'rejected',PENDING:'pending'}};const CookieConsent={init(){if(this.isDoNotTrackEnabled()){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);return}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>this.setup())}else{this.setup()}},setup(){const consent=this.getConsent();if(consent.status===CONFIG.CONSENT_STATES.PENDING||this.isConsentExpired(consent)){this.showBanner()}else if(consent.status===CONFIG.CONSENT_STATES.ACCEPTED){this.initGoogleAnalytics()}this.attachEventListeners()},getConsent(){try{const stored=localStorage.getItem(CONFIG.STORAGE_KEY);if(!stored)return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null};return JSON.parse(stored)}catch(e){return{status:CONFIG.CONSENT_STATES.PENDING,timestamp:null}}},saveConsent(status){try{localStorage.setItem(CONFIG.STORAGE_KEY,JSON.stringify({status:status,timestamp:Date.now(),version:'1.0'}))}catch(e){}},isConsentExpired(consent){if(!consent.timestamp)return true;return(Date.now()-consent.timestamp)>CONFIG.EXPIRY_DAYS*24*60*60*1000},isDoNotTrackEnabled(){return navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.msDoNotTrack==='1'},showBanner(){const show=()=>{const banner=document.getElementById('cookie-banner');if(banner){banner.style.display='flex';}};if(document.getElementById('cookie-banner')){show()}else{document.addEventListener('componentsLoaded',show)}},hideBanner(){const banner=document.getElementById('cookie-banner');if(banner){banner.classList.add('hiding');setTimeout(()=>{banner.style.display='none';banner.classList.remove('hiding')},400)}},attachEventListeners(){document.addEventListener('click',(e)=>{if(e.target.id==='cookie-accept'||e.target.closest('#cookie-accept')){e.preventDefault();this.handleAccept()}else if(e.target.id==='cookie-decline'||e.target.closest('#cookie-decline')){e.preventDefault();this.handleDecline()}});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){const banner=document.getElementById('cookie-banner');if(banner&&banner.style.display!=='none'){this.handleDecline()}}})},handleAccept(){this.saveConsent(CONFIG.CONSENT_STATES.ACCEPTED);this.hideBanner();this.initGoogleAnalytics();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.ACCEPTED}}))},handleDecline(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);this.hideBanner();window.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:CONFIG.CONSENT_STATES.REJECTED}}))},initGoogleAnalytics(){if(CONFIG.GA_MEASUREMENT_ID==='G-XXXXXXXXXX')return;if(window.gtag||document.querySelector('script[src*="googletagmanager.com/gtag/js"]'))return;const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.GA_MEASUREMENT_ID;document.head.appendChild(script);window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',CONFIG.GA_MEASUREMENT_ID,{'anonymize_ip':true,'cookie_flags':'SameSite=None;Secure'})},hasAnalyticsConsent(){const consent=this.getConsent();return consent.status===CONFIG.CONSENT_STATES.ACCEPTED&&!this.isConsentExpired(consent)},revokeConsent(){this.saveConsent(CONFIG.CONSENT_STATES.REJECTED);window.location.reload()}};window.CookieConsent=CookieConsent;CookieConsent.init()})();
+    </script>
+    <script src="/scripts/component-loader.js" defer></script>
+    <script src="/scripts/animations.js" defer></script>
+    <script src="/scripts/chatbot-widget.js" defer></script>
+    <script src="/scripts/floating-cta.js" defer></script>
+    <script src="/scripts/back-to-top.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+
+    <!-- Smooth scroll for TOC -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

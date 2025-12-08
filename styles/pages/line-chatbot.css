@@ -72,6 +72,13 @@ html, body {
     overflow: hidden;
 }
 
+/* Desktop: Lower hero text position */
+@media (min-width: 769px) {
+    .hero {
+        padding-top: 140px;
+    }
+}
+
 /* === HERO BACKGROUND === */
 .hero-background {
     position: absolute;
